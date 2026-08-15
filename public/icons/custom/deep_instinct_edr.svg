@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Endpoint security event stream</title>
+  <desc id="desc">A neutral shield containing a connected event path</desc>
+  <path fill="#1F6FEB" d="M32 3 56 12v17c0 15.2-9.4 26.6-24 32C17.4 55.6 8 44.2 8 29V12L32 3Z"/>
+  <path fill="#FFF" d="M32 10.2 49 16.6v12.2c0 10.8-6.3 19.2-17 24-10.7-4.8-17-13.2-17-24V16.6l17-6.4Z"/>
+  <path fill="none" stroke="#1F6FEB" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m21 36 7-8 7 7 8-11"/>
+  <circle cx="21" cy="36" r="3" fill="#12B886"/>
+  <circle cx="28" cy="28" r="3" fill="#12B886"/>
+  <circle cx="35" cy="35" r="3" fill="#12B886"/>
+  <circle cx="43" cy="24" r="3" fill="#12B886"/>
+</svg>

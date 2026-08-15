@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Network manager audit logs">
+  <rect width="64" height="64" rx="12" fill="#334155"/>
+  <path d="M18 20h28v8H18zm0 16h28v8H18z" fill="#e2e8f0"/>
+  <circle cx="23" cy="24" r="2" fill="#38bdf8"/><circle cx="23" cy="40" r="2" fill="#38bdf8"/>
+  <path d="M30 24h11M30 40h11" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+</svg>

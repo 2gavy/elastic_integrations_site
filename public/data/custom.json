@@ -1,0 +1,748 @@
+[
+  {
+    "slug": "arista_eos",
+    "name": "Arista EOS",
+    "description": "Collect bounded Arista EOS configuration syslog over TCP, TLS, or UDP.",
+    "version": "0.1.2",
+    "created": "4 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "arista-logo.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/arista_eos",
+    "source": "custom"
+  },
+  {
+    "slug": "deep_instinct_edr",
+    "name": "Deep Instinct EDR",
+    "description": "Collect bounded Deep Instinct D-Appliance LEEF 2.0 security events over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "14 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "deep-instinct-edr.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/deep_instinct_edr",
+    "source": "custom"
+  },
+  {
+    "slug": "dell_switch",
+    "name": "Dell Switch",
+    "description": "Collect syslog from Dell Networking and SmartFabric OS10 switches.",
+    "version": "0.2.0",
+    "created": "4 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "dell-switch.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/dell_switch",
+    "source": "custom"
+  },
+  {
+    "slug": "dell_emc_powerstore",
+    "name": "Dell EMC PowerStore",
+    "description": "Collect bounded PowerStore audit and system-alert syslog over TCP or UDP.",
+    "version": "0.1.1",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "dell_emc_powerstore.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/dell_emc_powerstore",
+    "source": "custom"
+  },
+  {
+    "slug": "forcepoint_dlp",
+    "name": "Forcepoint DLP",
+    "description": "Collect Forcepoint DLP incidents, cases, audit records, and system logs.",
+    "version": "0.1.1",
+    "created": "4 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "forcepoint.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/forcepoint_dlp",
+    "source": "custom"
+  },
+  {
+    "slug": "forcepoint_firewall",
+    "name": "Forcepoint NGFW / SMC",
+    "description": "Collect bounded generic CEF from Forcepoint NGFW and SMC over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "forcepoint-ngfw.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/forcepoint_firewall",
+    "source": "custom"
+  },
+  {
+    "slug": "imanage",
+    "name": "iManage",
+    "description": "Receive iManage audit and security events from a customer-managed HTTPS relay.",
+    "version": "0.1.1",
+    "created": "4 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "imanage.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/imanage",
+    "source": "custom"
+  },
+  {
+    "slug": "intel_471",
+    "name": "Intel 471",
+    "description": "Collect threat intelligence indicators from the Verity471 API.",
+    "version": "0.1.10",
+    "created": "7 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security",
+      "Threat Intelligence",
+      "Web"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs",
+      "Threat Intelligence"
+    ],
+    "icon": "intel471-icon.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/intel_471",
+    "source": "custom"
+  },
+  {
+    "slug": "kemp_loadmaster",
+    "name": "Kemp LoadMaster",
+    "description": "Collect the bounded current LoadMaster system-log envelope over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "kemp-loadmaster.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/kemp_loadmaster",
+    "source": "custom"
+  },
+  {
+    "slug": "m365_secure_score_inventory",
+    "name": "Microsoft 365 Secure Score Inventory",
+    "description": "Collect tenant Secure Score history and control-profile inventory through Microsoft Graph v1.0.",
+    "version": "0.1.0",
+    "created": "13 August 2026",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Monitoring"
+    ],
+    "solutions": [
+      "Observability"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "m365-secure-score-inventory.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/m365_secure_score_inventory",
+    "source": "custom"
+  },
+  {
+    "slug": "menlo_votiro_cdr",
+    "name": "Menlo Security Votiro CDR",
+    "description": "Collect bounded current audit and legacy SDS CEF over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "13 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "menlo-votiro-cdr.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/menlo_votiro_cdr",
+    "source": "custom"
+  },
+  {
+    "slug": "mde_inventory_extension",
+    "name": "Microsoft Defender Endpoint Inventory Extension",
+    "description": "Collect automated investigations and security recommendation inventory through the Defender API.",
+    "version": "0.1.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Monitoring",
+      "Security",
+      "Web"
+    ],
+    "solutions": [
+      "Observability",
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "mde-inventory-extension.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/mde_inventory_extension",
+    "source": "custom"
+  },
+  {
+    "slug": "netskope",
+    "name": "Netskope",
+    "description": "Collect security events directly from the REST API v2 or through supported log-streaming inputs.",
+    "version": "3.2.2",
+    "created": "7 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security",
+      "Web"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "netskope-logo.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/netskope",
+    "source": "custom"
+  },
+  {
+    "slug": "sap_rise",
+    "name": "SAP RISE",
+    "description": "Collect SAP BTP Cloud Foundry audit records through the Audit Log Retrieval API.",
+    "version": "0.1.1",
+    "created": "7 August 2026",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security",
+      "Web"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "sap-rise.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/sap_rise",
+    "source": "custom"
+  },
+  {
+    "slug": "sap_powerconnect",
+    "name": "SAP PowerConnect",
+    "description": "Receive SAP Application and Audit records through a bounded HEC-compatible HTTPS endpoint.",
+    "version": "0.1.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "sap_powerconnect.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/sap_powerconnect",
+    "source": "custom"
+  },
+  {
+    "slug": "solarwinds",
+    "name": "SolarWinds",
+    "description": "Collect monitoring data from SolarWinds Orion through the SWIS REST API.",
+    "version": "0.6.14",
+    "created": "26 July 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Monitoring",
+      "Web"
+    ],
+    "solutions": [
+      "Observability"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "logo_solarwinds.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/solarwinds",
+    "source": "custom"
+  },
+  {
+    "slug": "sangfor_ngfw",
+    "name": "Sangfor NGFW Application Control",
+    "description": "Collect bounded NGAF/Network Secure Application Control events over UDP.",
+    "version": "0.1.1",
+    "created": "13 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "sangfor_ngfw.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/sangfor_ngfw",
+    "source": "custom"
+  },
+  {
+    "slug": "silverfort",
+    "name": "Silverfort",
+    "description": "Collect bounded generic CEF from Silverfort Admin Console over TCP.",
+    "version": "0.1.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "silverfort.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/silverfort",
+    "source": "custom"
+  },
+  {
+    "slug": "skyhigh_swg",
+    "name": "Skyhigh Secure Web Gateway",
+    "description": "Collect bounded generic CEF from on-premises Skyhigh SWG over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "skyhigh-swg.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/skyhigh_swg",
+    "source": "custom"
+  },
+  {
+    "slug": "symantec_email_gateway",
+    "name": "Symantec Messaging Gateway",
+    "description": "Collect audit and Message Audit fragments from SMG syslog over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "symantec_email_gateway.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/symantec_email_gateway",
+    "source": "custom"
+  },
+  {
+    "slug": "synology_dsm",
+    "name": "Synology DSM",
+    "description": "Collect authentication, file-service, system, and generic DSM syslog over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "synology-dsm.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/synology_dsm",
+    "source": "custom"
+  },
+  {
+    "slug": "trend_micro_dda",
+    "name": "Trend Micro Deep Discovery Analyzer",
+    "description": "Collect DDA 7.6 CEF events over TCP or UDP, with field-aware normalization for three tested event families.",
+    "version": "0.1.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "trend-micro-dda.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/trend_micro_dda",
+    "source": "custom"
+  },
+  {
+    "slug": "trellix_etp",
+    "name": "Trellix Email Threat Prevention",
+    "description": "Collect advanced email threat alerts from the Trellix Email Security Cloud API.",
+    "version": "0.1.1",
+    "created": "7 August 2026",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security",
+      "Web"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "trellix-logo.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/trellix_etp",
+    "source": "custom"
+  },
+  {
+    "slug": "trellix_epo_onprem",
+    "name": "Trellix ePO On-Prem",
+    "description": "Collect bounded DLP CEF plus McAfee Agent and Endpoint Security RFC 5424 XML over TCP.",
+    "version": "0.2.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "trellix-epo-onprem.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/trellix_epo_onprem",
+    "source": "custom"
+  },
+  {
+    "slug": "vmware_nsx_firewall",
+    "name": "VMware NSX Firewall",
+    "description": "Collect current and legacy NSX Distributed Firewall packet logs over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "12 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "vmware-nsx-firewall.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/vmware_nsx_firewall",
+    "source": "custom"
+  },
+  {
+    "slug": "wasabi",
+    "name": "Wasabi Hot Cloud Storage",
+    "description": "Collect Wasabi bucket Event Notifications delivered through AWS SNS HTTPS.",
+    "version": "0.1.5",
+    "created": "4 August 2026",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "wasabi.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/wasabi",
+    "source": "custom"
+  },
+  {
+    "slug": "windows_firewall_text",
+    "name": "Windows Firewall Text Logs",
+    "description": "Collect bounded Windows Defender Firewall `pfirewall.log` text files with filestream.",
+    "version": "0.1.0",
+    "created": "14 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "windows-firewall-text.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/windows_firewall_text",
+    "source": "custom"
+  },
+  {
+    "slug": "ibm_zos_leef",
+    "name": "IBM z/OS LEEF",
+    "description": "Collect bounded IBM zSecure-generated z/OS SMF events in LEEF format over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "14 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "ibm-zos-leef.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/ibm_zos_leef",
+    "source": "custom"
+  },
+  {
+    "slug": "rubrik_security_cloud_events",
+    "name": "Rubrik Security Cloud Events",
+    "description": "Collect activity-series and user-audit events through the Rubrik Security Cloud GraphQL API.",
+    "version": "0.1.0",
+    "created": "15 August 2026",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security",
+      "Web"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "rubrik-security-cloud-events.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/rubrik_security_cloud_events",
+    "source": "custom"
+  },
+  {
+    "slug": "vmware_nsx_manager_logs",
+    "name": "VMware NSX Manager Logs",
+    "description": "Collect structured audit records through the VMware NSX Management Plane API.",
+    "version": "0.1.0",
+    "created": "15 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security",
+      "Web"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "vmware-nsx-manager-logs.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/vmware_nsx_manager_logs",
+    "source": "custom"
+  },
+  {
+    "slug": "forcepoint_ngfw_native",
+    "name": "Forcepoint NGFW Native Firewall Logs",
+    "description": "Collect bounded Forcepoint NGFW 6.5.4 native Packet Filtering syslog over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "15 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "forcepoint-ngfw-native.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/forcepoint_ngfw_native",
+    "source": "custom"
+  },
+  {
+    "slug": "skyhigh_swg_nitro",
+    "name": "Skyhigh SWG SIEM/Nitro Access Logs",
+    "description": "Collect the bounded 20-field Skyhigh SWG SIEM/Nitro access format over TCP or UDP.",
+    "version": "0.1.0",
+    "created": "15 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "skyhigh-swg-nitro.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/skyhigh_swg_nitro",
+    "source": "custom"
+  },
+  {
+    "slug": "sap_btp_audit",
+    "name": "SAP BTP Audit Log",
+    "description": "Collect Cloud Foundry Audit Log Retrieval API v2 records from SAP BTP.",
+    "version": "0.1.0",
+    "created": "15 August 2026",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security",
+      "Web"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "sap_btp_audit.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/sap_btp_audit",
+    "source": "custom"
+  },
+  {
+    "slug": "workspace_one_uem_classic",
+    "name": "Workspace ONE UEM Classic",
+    "description": "Collect bounded Workspace ONE UEM 2209 classic Event Log records over TCP/TLS syslog.",
+    "version": "0.1.0",
+    "created": "15 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "workspace-one-uem-classic.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/workspace_one_uem_classic",
+    "source": "custom"
+  }
+]

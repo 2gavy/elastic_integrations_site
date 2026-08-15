@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Trellix ePO On-Prem">
+  <rect width="64" height="64" rx="12" fill="#6f42c1"/>
+  <path d="M13 16h38v10H37v30H27V26H13V16Z" fill="#fff"/>
+</svg>

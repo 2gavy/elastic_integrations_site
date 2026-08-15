@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cloud audit records">
+  <rect width="64" height="64" rx="12" fill="#0b64dd"/>
+  <path d="M18 40h29a9 9 0 0 0 1-17.9A15 15 0 0 0 20.2 20 10 10 0 0 0 18 40Z" fill="#fff" opacity=".94"/>
+  <path d="M26 30h13M26 35h13M26 40h8" stroke="#0b64dd" stroke-width="3" stroke-linecap="round"/>
+</svg>

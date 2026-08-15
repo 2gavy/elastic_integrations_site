@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title">
+  <title id="title">Mainframe event stream</title>
+  <rect x="3" y="5" width="26" height="22" rx="3" fill="#315B7D"/>
+  <rect x="7" y="9" width="18" height="4" rx="1" fill="#FFFFFF"/>
+  <rect x="7" y="16" width="18" height="3" rx="1" fill="#7CD6C5"/>
+  <circle cx="9" cy="23" r="1.5" fill="#FFFFFF"/>
+  <circle cx="14" cy="23" r="1.5" fill="#FFFFFF"/>
+  <path d="M19 23h6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-labelledby="title">
+  <title id="title">PowerStore storage events</title>
+  <rect x="3" y="5" width="26" height="9" rx="2" fill="#1BA9F5"/>
+  <rect x="3" y="18" width="26" height="9" rx="2" fill="#00BFB3"/>
+  <circle cx="8" cy="9.5" r="1.5" fill="#fff"/><circle cx="8" cy="22.5" r="1.5" fill="#fff"/>
+  <path d="M13 9.5h11M13 22.5h11" stroke="#172B4D" stroke-width="2" stroke-linecap="round"/>
+</svg>

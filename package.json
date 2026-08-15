@@ -1,0 +1,28 @@
+{
+  "name": "elastic-integrations-ai",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vite --config vite.pages.config.ts",
+    "build:pages": "vite build --config vite.pages.config.ts && node scripts/generate-custom-pages.mjs",
+    "refresh:official": "node scripts/refresh-official.mjs",
+    "validate:catalog": "node scripts/validate-catalog.mjs",
+    "test": "node scripts/validate-catalog.mjs && node --test tests/catalog.test.mjs",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "typescript": "5.9.3",
+    "vite": "8.0.13"
+  },
+  "type": "module"
+}
