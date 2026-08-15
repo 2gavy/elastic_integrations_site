@@ -1811,9 +1811,9 @@
   {
     "slug": "intel_471",
     "name": "Intel 471",
-    "description": "Collect threat intelligence indicators from the Verity471 API.",
-    "version": "0.1.10",
-    "created": "7 August 2026",
+    "description": "Collect bounded threat indicators from the current Verity471 or legacy Titan API.",
+    "version": "0.2.0",
+    "created": "15 August 2026",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -2121,6 +2121,16 @@
         "field": "threat.software.name",
         "description": "The name of the software used by this threat to conduct behavior commonly modeled using MITRE ATT&CK\u00ae. While not required, you can use a MITRE ATT&CK\u00ae software name.",
         "type": "keyword"
+      },
+      {
+        "field": "event.code",
+        "description": "Identification code for this event, if one exists. Some event sources use event codes to identify messages unambiguously, regardless of message language or wording adjustments over time. An example of this is the Windows Event ID.",
+        "type": "keyword"
+      },
+      {
+        "field": "intel_471.titan_indicator.raw",
+        "description": "Original Intel 471 TITAN indicator object, retained without mapping expansion.",
+        "type": "flattened"
       }
     ]
   },
