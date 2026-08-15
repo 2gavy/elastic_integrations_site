@@ -161,7 +161,7 @@ function Catalogue({ items }: { items: Integration[] }) {
             <span className="eyebrow">OFFICIAL + CUSTOM</span>
             <h1>Elastic Integrations <span>(AI)</span></h1>
             <p>Connect your data from every source. Search official integrations alongside AI-built custom integrations in one complete catalogue.</p>
-            <div className="notice">Community maintained · Not an official Elastic website</div>
+            <div className="notice">Nick &amp; Zing maintained. Not an official Elastic website.</div>
           </div>
         </section>
 
