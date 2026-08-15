@@ -77,6 +77,21 @@ footer p { margin:0; }
 .detail-meta dt { color:#6b7988; font-size:13px; }.detail-meta dd { margin:0; font-weight:600; font-size:14px; }
 .primary-link { display:inline-flex; gap:8px; padding:13px 18px; border-radius:3px; background:#087fa9; color:white; text-decoration:none; font-weight:600; font-size:14px; }
 .protected-note { font-size:12px; color:#778494; }
+.exported-fields { margin-top:58px; padding-top:42px; border-top:1px solid #dbe3e9; }
+.fields-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:10px; }
+.fields-heading .eyebrow { margin-bottom:8px; color:#0785ad; }
+.fields-heading h2 { margin:0; font-family:"Space Grotesk",sans-serif; font-size:30px; letter-spacing:-.035em; }
+.field-count { flex:none; border-radius:999px; padding:7px 11px; color:#456075; background:#eef3f6; font-size:12px; font-weight:600; }
+.exported-fields>p { margin:0 0 22px; color:#647486; font-size:14px; }
+.fields-table-wrap { max-width:100%; overflow:auto; border:1px solid #d5dee6; border-radius:3px; }
+.fields-table-wrap table { width:100%; min-width:720px; border-collapse:collapse; text-align:left; font-size:12px; line-height:1.5; }
+.fields-table-wrap th { position:sticky; top:0; z-index:1; padding:12px 14px; background:#edf3f6; color:#31475b; border-bottom:1px solid #cdd8e1; font-size:11px; letter-spacing:.06em; text-transform:uppercase; }
+.fields-table-wrap td { padding:12px 14px; vertical-align:top; color:#526376; border-bottom:1px solid #e4e9ed; }
+.fields-table-wrap tr:last-child td { border-bottom:0; }
+.fields-table-wrap tbody tr:nth-child(even) { background:#fafcfd; }
+.fields-table-wrap th:first-child,.fields-table-wrap td:first-child { width:28%; }
+.fields-table-wrap th:last-child,.fields-table-wrap td:last-child { width:16%; }
+.fields-table-wrap code { color:#173d59; font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:11px; overflow-wrap:anywhere; }
 @media (max-width:900px) { .card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }.catalogue { width:min(100% - 28px,760px); }.hero { min-height:360px; } }
-@media (max-width:620px) { .topbar { height:66px; padding:0 18px; }.brand { font-size:16px; }.about-link { display:none; }.hero { min-height:390px; padding:56px 20px 80px; }.hero p { font-size:16px; }.catalogue { width:calc(100% - 24px); padding-bottom:60px; }.search-box { margin-top:-82px; height:58px; }.solution-tabs { gap:0; justify-content:space-between; overflow-x:auto; }.solution-tabs button { font-size:12px; white-space:nowrap; }.source-row { flex-direction:column; gap:9px; }.category-list { justify-content:flex-start; flex-wrap:nowrap; overflow-x:auto; padding-bottom:10px; margin-bottom:32px; }.category-list button { white-space:nowrap; }.card-grid { grid-template-columns:1fr; }.integration-card { min-height:235px; }.about { padding:68px 20px; } footer { flex-direction:column; gap:8px; text-align:center; }.detail-meta { grid-template-columns:1fr; gap:5px; }.detail-meta dd { margin-bottom:10px; } }
+@media (max-width:620px) { .topbar { height:66px; padding:0 18px; }.brand { font-size:16px; }.about-link { display:none; }.hero { min-height:390px; padding:56px 20px 80px; }.hero p { font-size:16px; }.catalogue { width:calc(100% - 24px); padding-bottom:60px; }.search-box { margin-top:-82px; height:58px; }.solution-tabs { gap:0; justify-content:space-between; overflow-x:auto; }.solution-tabs button { font-size:12px; white-space:nowrap; }.source-row { flex-direction:column; gap:9px; }.category-list { justify-content:flex-start; flex-wrap:nowrap; overflow-x:auto; padding-bottom:10px; margin-bottom:32px; }.category-list button { white-space:nowrap; }.card-grid { grid-template-columns:1fr; }.integration-card { min-height:235px; }.about { padding:68px 20px; } footer { text-align:center; justify-content:center; }.detail-meta { grid-template-columns:1fr; gap:5px; }.detail-meta dd { margin-bottom:10px; }.fields-heading { align-items:flex-start; flex-direction:column; }.fields-table-wrap { margin-right:-18px; }.exported-fields { margin-top:46px; padding-top:34px; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }

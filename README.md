@@ -6,4 +6,4 @@ Visit the catalogue at [2gavy.github.io/elastic_integrations_site](https://2gavy
 
 Official entries link to Elastic's public documentation. Custom entries expose only approved public metadata and link authorized users to the protected source repository. This community project is not an official Elastic website and is not endorsed or supported by Elastic.
 
-Developed by Nick & Zing.
+Nick & Zing maintained. Not an official Elastic website.

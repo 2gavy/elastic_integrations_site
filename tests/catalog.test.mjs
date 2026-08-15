@@ -17,4 +17,6 @@ test("keeps custom metadata protected and namespaced", () => {
   assert.ok(custom.every((item) => item.source === "custom"));
   assert.ok(custom.every((item) => item.repositoryUrl.startsWith("https://github.com/2gavy/elastic_integrations/tree/main/")));
   assert.ok(custom.every((item) => !("download" in item) && !("readme" in item)));
+  assert.ok(custom.every((item) => Array.isArray(item.fields) && item.fields.length > 0));
+  assert.ok(custom.every((item) => item.fields.every((field) => field.field && field.description && field.type)));
 });

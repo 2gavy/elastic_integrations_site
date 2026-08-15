@@ -4,6 +4,12 @@ import "./app.css";
 
 type Source = "official" | "custom";
 
+type ExportedField = {
+  field: string;
+  description: string;
+  type: string;
+};
+
 type Integration = {
   slug: string;
   name: string;
@@ -17,6 +23,7 @@ type Integration = {
   destinationUrl?: string;
   repositoryUrl?: string;
   created?: string;
+  fields?: ExportedField[];
 };
 
 const base = import.meta.env.BASE_URL;
@@ -69,6 +76,30 @@ function DetailPage({ item }: { item: Integration }) {
             Open protected repository <span aria-hidden="true">↗</span>
           </a>
           <p className="protected-note">Repository access is limited to authorized GitHub users.</p>
+          <section className="exported-fields" aria-labelledby="exported-fields-heading">
+            <div className="fields-heading">
+              <div>
+                <span className="eyebrow">DATA REFERENCE</span>
+                <h2 id="exported-fields-heading">Exported fields</h2>
+              </div>
+              <span className="field-count">{item.fields?.length ?? 0} fields</span>
+            </div>
+            <p>Fields exported by this integration package, generated from its Fleet documentation.</p>
+            <div className="fields-table-wrap">
+              <table>
+                <thead><tr><th scope="col">Field</th><th scope="col">Description</th><th scope="col">Type</th></tr></thead>
+                <tbody>
+                  {(item.fields ?? []).map((field, index) => (
+                    <tr key={`${field.field}-${field.type}-${index}`}>
+                      <td><code>{field.field}</code></td>
+                      <td>{field.description}</td>
+                      <td><code>{field.type}</code></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
         </article>
       </main>
       <Footer />
@@ -79,8 +110,7 @@ function DetailPage({ item }: { item: Integration }) {
 function Footer() {
   return (
     <footer>
-      <p>Community maintained. Not an official Elastic website.</p>
-      <p>Developed by Nick &amp; Zing</p>
+      <p>Nick &amp; Zing maintained. Not an official Elastic website.</p>
     </footer>
   );
 }
