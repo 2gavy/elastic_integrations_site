@@ -15355,5 +15355,419 @@
         "type": "keyword"
       }
     ]
+  },
+  {
+    "slug": "barracuda_webfilter",
+    "name": "Barracuda Web Security Gateway",
+    "description": "Collect bounded Web Traffic policy-format syslog from Barracuda Web Security Gateway over UDP.",
+    "version": "0.1.0",
+    "created": "16 August 2026",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "barracuda-webfilter.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/barracuda_webfilter",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "data_stream.type",
+        "description": "|-",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "|-",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "|-",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "|-",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "|-",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "@timestamp",
+        "description": "|-",
+        "type": "date"
+      },
+      {
+        "field": "destination.address",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.as.number",
+        "description": "Unique number allocated to the autonomous system. The autonomous system number (ASN) uniquely identifies each network on the Internet.",
+        "type": "long"
+      },
+      {
+        "field": "destination.as.organization.name",
+        "description": "Organization name.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.city_name",
+        "description": "City name.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.continent_code",
+        "description": "Two-letter code representing continent's name.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.country_iso_code",
+        "description": "Country ISO code.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.country_name",
+        "description": "Country name.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.location",
+        "description": "Longitude and latitude.",
+        "type": "geo_point"
+      },
+      {
+        "field": "destination.geo.region_iso_code",
+        "description": "Region ISO code.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.region_name",
+        "description": "Region name.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.ip",
+        "description": "IP address of the destination (IPv4 or IPv6).",
+        "type": "ip"
+      },
+      {
+        "field": "ecs.version",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.action",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "event.reason",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "event.timezone",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "event.type",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "http.request.referrer",
+        "description": "Referrer for this HTTP request.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.level",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "log.syslog.facility.code",
+        "description": "|-",
+        "type": "long"
+      },
+      {
+        "field": "log.syslog.facility.name",
+        "description": "The Syslog text-based facility of the log event, if available.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.syslog.priority",
+        "description": "|-",
+        "type": "long"
+      },
+      {
+        "field": "log.syslog.severity.code",
+        "description": "|-",
+        "type": "long"
+      },
+      {
+        "field": "log.syslog.severity.name",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "message",
+        "description": "|-",
+        "type": "match_only_text"
+      },
+      {
+        "field": "network.transport",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "observer.hostname",
+        "description": "Hostname of the observer.",
+        "type": "keyword"
+      },
+      {
+        "field": "observer.product",
+        "description": "The product name of the observer.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Vendor name of the observer.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "process.name",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "process.pid",
+        "description": "Process id.",
+        "type": "long"
+      },
+      {
+        "field": "related.ip",
+        "description": "All of the IPs seen on your event.",
+        "type": "ip"
+      },
+      {
+        "field": "related.user",
+        "description": "All the user names or other user identifiers seen on the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.address",
+        "description": "|-",
+        "type": "keyword"
+      },
+      {
+        "field": "source.as.number",
+        "description": "Unique number allocated to the autonomous system. The autonomous system number (ASN) uniquely identifies each network on the Internet.",
+        "type": "long"
+      },
+      {
+        "field": "source.as.organization.name",
+        "description": "Organization name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.city_name",
+        "description": "City name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.continent_code",
+        "description": "Two-letter code representing continent's name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.country_iso_code",
+        "description": "Country ISO code.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.country_name",
+        "description": "Country name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.location",
+        "description": "Longitude and latitude.",
+        "type": "geo_point"
+      },
+      {
+        "field": "source.geo.region_iso_code",
+        "description": "Region ISO code.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.region_name",
+        "description": "Region name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.ip",
+        "description": "IP address of the source (IPv4 or IPv6).",
+        "type": "ip"
+      },
+      {
+        "field": "tags",
+        "description": "List of keywords used to tag each event.",
+        "type": "keyword"
+      },
+      {
+        "field": "url.original",
+        "description": "|-",
+        "type": "wildcard"
+      },
+      {
+        "field": "user.name",
+        "description": "Short name or login of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.unresolved_post_epoch",
+        "description": "Unlabelled positional value immediately after the body epoch. No session or event identifier semantics are assigned.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.content_type",
+        "description": "Content type value recorded by Web Security Gateway, or a dash sentinel.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.secondary_source_ip",
+        "description": "Second source-like IP position documented by Barracuda. No intermediary semantics are assigned.",
+        "type": "ip"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.data_size",
+        "description": "Content size recorded in the Web Traffic body.",
+        "type": "long"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.marker",
+        "description": "Static transparent-proxy marker. Supported records contain BYF.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.format_version",
+        "description": "Positional policy-engine format version. This data stream supports version 2 only.",
+        "type": "long"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.match",
+        "description": "Whether the policy rule matched, converted only from documented values 0 and 1.",
+        "type": "boolean"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.time_qualified",
+        "description": "Whether the policy rule was time-qualified, converted only from documented values 0 and 1.",
+        "type": "boolean"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.policy.action_type",
+        "description": "Barracuda policy action type enum from 0 through 6.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.policy.source_type",
+        "description": "Barracuda policy source type enum from 0 through 5.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.policy.source_detail",
+        "description": "Detail associated with the matched policy source.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.policy.destination_type",
+        "description": "Barracuda policy destination type enum from 0 through 8.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.policy.destination_detail",
+        "description": "Detail associated with the matched policy destination.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.policy.matched_part",
+        "description": "Request portion or value matched by the policy rule.",
+        "type": "wildcard"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.policy.matched_category",
+        "description": "Raw matched category value without inferred list splitting or taxonomy normalization.",
+        "type": "wildcard"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.spyware.type",
+        "description": "Barracuda spyware policy enum from 0 through 2.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.spyware.id",
+        "description": "Spyware identifier or source sentinel.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.spyware.infection_score",
+        "description": "Infection score recorded by Web Security Gateway without inferred scale normalization.",
+        "type": "long"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.user_info",
+        "description": "Anonymous-user sentinel retained when no authenticated user can be mapped to ECS.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.referer.url",
+        "description": "Referer URL sentinel retained when referer tracking is disabled.",
+        "type": "wildcard"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.referer.domain",
+        "description": "Raw referer domain value or dash sentinel.",
+        "type": "keyword"
+      },
+      {
+        "field": "barracuda_webfilter.web_traffic.referer.category",
+        "description": "Raw referer category value without inferred list splitting or taxonomy normalization.",
+        "type": "wildcard"
+      }
+    ]
   }
 ]
