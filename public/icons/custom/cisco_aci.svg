@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title desc">
+  <title id="title">Network fabric log integration</title>
+  <desc id="desc">A neutral network fabric made of connected controller and switch nodes.</desc>
+  <metadata>Original neutral artwork created for this integration; no vendor trademark or third-party asset is incorporated.</metadata>
+  <rect width="32" height="32" rx="7" fill="#F4F7FA"/>
+  <path d="M16 8 8.5 13v8L16 25l7.5-4v-8L16 8Z" fill="none" stroke="#285B78" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="m16 8v8m-7.5-3 7.5 3 7.5-3M8.5 21l7.5-5 7.5 5" fill="none" stroke="#285B78" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="16" cy="8" r="2.3" fill="#F4B942"/>
+  <circle cx="8.5" cy="13" r="2.1" fill="#3AA6A0"/>
+  <circle cx="23.5" cy="13" r="2.1" fill="#3AA6A0"/>
+  <circle cx="8.5" cy="21" r="2.1" fill="#285B78"/>
+  <circle cx="23.5" cy="21" r="2.1" fill="#285B78"/>
+  <circle cx="16" cy="25" r="2.3" fill="#F4B942"/>
+</svg>
