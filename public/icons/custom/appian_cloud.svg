@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Appian Cloud logs">
+  <rect width="64" height="64" rx="12" fill="#1F3A5F"/>
+  <path d="M18 42h29a8 8 0 0 0 1-15.94A15 15 0 0 0 19.3 22.2 10 10 0 0 0 18 42Z" fill="#E8F1FA"/>
+  <path d="M25 34h14M25 29h10M25 39h18" fill="none" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+</svg>
