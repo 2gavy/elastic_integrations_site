@@ -857,7 +857,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.24.0",
+    "version": "3.24.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/auditd"
   },
   {
@@ -875,7 +875,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.20.0",
+    "version": "1.20.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/auditd_manager"
   },
   {
@@ -2076,7 +2076,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.21.0",
+    "version": "1.21.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/hid_bravura_monitor"
   },
   {
@@ -2912,7 +2912,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/unifiedlogs"
   },
   {
@@ -2970,7 +2970,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.6.0",
+    "version": "2.6.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/winlog"
   },
   {
@@ -3636,7 +3636,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.17.0",
+    "version": "1.17.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/fim"
   },
   {
@@ -3994,7 +3994,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.6.1",
+    "version": "3.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/gitlab"
   },
   {
@@ -5668,7 +5668,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.24.0",
+    "version": "3.24.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/auditd"
   },
   {
@@ -5800,7 +5800,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/macos"
   },
   {
@@ -5992,7 +5992,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.27.0",
+    "version": "1.27.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/microsoft_dhcp"
   },
   {
@@ -6011,7 +6011,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/microsoft_dnsserver"
   },
   {
@@ -6069,7 +6069,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/microsoft_exchange_server"
   },
   {
@@ -6560,7 +6560,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.34.2",
+    "version": "1.34.3",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/network_traffic"
   },
   {
@@ -6710,7 +6710,7 @@
       "Entities"
     ],
     "source": "official",
-    "version": "3.5.0",
+    "version": "3.5.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/entityanalytics_okta"
   },
   {
@@ -6896,7 +6896,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.24.1",
+    "version": "1.24.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/osquery"
   },
   {
@@ -8330,7 +8330,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.9.0",
+    "version": "1.9.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/sysmon_linux"
   },
   {
@@ -8370,7 +8370,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.11.0",
+    "version": "1.11.1",
     "destinationUrl": "https://www.elastic.co/guide/en/beats/auditbeat/current/auditbeat-module-system.html#_how_it_works_3"
   },
   {
