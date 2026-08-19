@@ -215,7 +215,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "1.32.2",
+    "version": "1.33.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_otx"
   },
   {
@@ -662,7 +662,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "2.8.3",
+    "version": "2.9.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_anomali"
   },
   {
@@ -702,7 +702,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.2.3",
+    "version": "1.3.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_anyrun"
   },
   {
@@ -1311,7 +1311,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "0.12.0",
+    "version": "0.13.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure_ai_foundry"
   },
   {
@@ -1329,7 +1329,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure_app_service"
   },
   {
@@ -1608,7 +1608,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "0.15.0",
+    "version": "0.16.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure_functions"
   },
   {
@@ -1668,7 +1668,7 @@
       "Logs and metrics"
     ],
     "source": "official",
-    "version": "1.14.0",
+    "version": "1.15.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure_openai"
   },
   {
@@ -2058,7 +2058,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.5.1",
+    "version": "3.5.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/box_events"
   },
   {
@@ -2280,7 +2280,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.45.13",
+    "version": "2.45.14",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/cisco_asa"
   },
   {
@@ -2633,7 +2633,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "1.20.2",
+    "version": "1.21.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_cif3"
   },
   {
@@ -2874,7 +2874,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "2.10.0",
+    "version": "2.11.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_crowdstrike"
   },
   {
@@ -2931,7 +2931,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.8.3",
+    "version": "1.9.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_custom"
   },
   {
@@ -3080,7 +3080,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "1.36.2",
+    "version": "1.37.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_cybersixgill"
   },
   {
@@ -3226,7 +3226,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.6.1",
+    "version": "1.7.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_domaintools"
   },
   {
@@ -3332,7 +3332,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "1.7.2",
+    "version": "1.8.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_eclecticiq"
   },
   {
@@ -3526,7 +3526,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.11.2",
+    "version": "1.12.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_eset"
   },
   {
@@ -4516,7 +4516,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_google_threat_intelligence"
   },
   {
@@ -4718,7 +4718,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "0.4.3",
+    "version": "0.4.4",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/hpe_aruba_cx"
   },
   {
@@ -5340,7 +5340,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.27.2",
+    "version": "1.27.3",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/juniper_srx"
   },
   {
@@ -5819,7 +5819,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "1.8.2",
+    "version": "1.9.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_maltiverse"
   },
   {
@@ -5839,7 +5839,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "1.44.3",
+    "version": "1.45.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_misp"
   },
   {
@@ -5858,7 +5858,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "1.11.1",
+    "version": "1.12.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_mandiant_advantage"
   },
   {
@@ -6225,7 +6225,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "5.15.1",
+    "version": "5.15.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/m365_defender"
   },
   {
@@ -6763,7 +6763,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.15.3",
+    "version": "2.16.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_opencti"
   },
   {
@@ -7194,7 +7194,7 @@
       "Rules"
     ],
     "source": "official",
-    "version": "9.5.3",
+    "version": "9.5.4",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/security_detection_engine"
   },
   {
@@ -7412,7 +7412,7 @@
       "Vulnerabilities"
     ],
     "source": "official",
-    "version": "6.19.4",
+    "version": "6.20.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/qualys_vmdr"
   },
   {
@@ -7488,7 +7488,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.10.3",
+    "version": "2.11.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_rapid7_threat_command"
   },
   {
@@ -7507,7 +7507,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "2.7.3",
+    "version": "2.8.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_recordedfuture"
   },
   {
@@ -7867,7 +7867,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.5.1",
+    "version": "3.6.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/snyk"
   },
   {
@@ -7923,7 +7923,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.23.1",
+    "version": "1.24.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/sophos_central"
   },
   {
@@ -7978,7 +7978,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.1.3",
+    "version": "1.2.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/splunk"
   },
   {
@@ -8140,7 +8140,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_strider"
   },
   {
@@ -8158,7 +8158,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.13.0",
+    "version": "1.14.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/sublime_security"
   },
   {
@@ -8178,7 +8178,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.27.0",
+    "version": "2.27.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/suricata"
   },
   {
@@ -8253,7 +8253,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.4.1",
+    "version": "2.5.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/sysdig"
   },
   {
@@ -8388,7 +8388,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.17.0",
+    "version": "1.18.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/tanium"
   },
   {
@@ -8424,7 +8424,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.6.3",
+    "version": "1.7.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/teleport"
   },
   {
@@ -8442,7 +8442,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.1.1",
+    "version": "2.2.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/tenable_ot_security.html"
   },
   {
@@ -8460,7 +8460,7 @@
       "Vulnerabilities"
     ],
     "source": "official",
-    "version": "2.3.1",
+    "version": "2.4.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/tenable_sc"
   },
   {
@@ -8478,7 +8478,7 @@
       "Vulnerabilities"
     ],
     "source": "official",
-    "version": "4.12.2",
+    "version": "4.13.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/tenable_io"
   },
   {
@@ -8497,7 +8497,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/tencent_cloud"
   },
   {
@@ -8516,7 +8516,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "2.3.1",
+    "version": "2.4.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_threatconnect"
   },
   {
@@ -8535,7 +8535,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "1.39.3",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_threatq"
   },
   {
@@ -8553,7 +8553,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.12.1",
+    "version": "1.13.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/thycotic_ss"
   },
   {
@@ -8572,7 +8572,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_ticura"
   },
   {
@@ -8591,7 +8591,7 @@
       "Actions"
     ],
     "source": "official",
-    "version": "1.17.1",
+    "version": "1.18.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/tines"
   },
   {
@@ -8671,7 +8671,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.9.0",
+    "version": "1.10.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/trellix_edr_cloud"
   },
   {
@@ -8689,7 +8689,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.16.1",
+    "version": "1.17.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/trellix_epo_cloud"
   },
   {
@@ -8707,7 +8707,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.9.0",
+    "version": "2.10.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/trendmicro"
   },
   {
@@ -8815,7 +8815,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/varonis"
   },
   {
@@ -8834,7 +8834,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.14.0",
+    "version": "1.15.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/vectra_detect"
   },
   {
@@ -9020,7 +9020,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "4.6.1",
+    "version": "4.7.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/wiz"
   },
   {
@@ -9038,7 +9038,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/workday"
   },
   {
@@ -9118,7 +9118,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/zeronetworks"
   },
   {
@@ -9136,7 +9136,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.30.1",
+    "version": "1.31.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/zerofox"
   },
   {
@@ -9177,7 +9177,7 @@
       "Content"
     ],
     "source": "official",
-    "version": "1.27.1",
+    "version": "1.28.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/zoom"
   },
   {
@@ -9196,7 +9196,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "4.2.1",
+    "version": "4.3.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/zscaler_zia"
   },
   {
@@ -9215,7 +9215,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.23.3",
+    "version": "1.24.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/zscaler_zpa"
   }
 ]
