@@ -1,0 +1,13 @@
+<!--
+  Original neutral catalogue artwork created for this community package.
+  It is not a DigiCert logo and does not imply vendor endorsement.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title desc">
+  <title id="title">Account audit events</title>
+  <desc id="desc">A neutral shield and audit-list symbol.</desc>
+  <rect width="32" height="32" rx="6" fill="#101C3F"/>
+  <path d="M16 5l8 3v7c0 5.3-3.2 9.7-8 12-4.8-2.3-8-6.7-8-12V8l8-3z" fill="#48EFCF"/>
+  <rect x="12" y="11" width="8" height="2" rx="1" fill="#101C3F"/>
+  <rect x="12" y="15" width="8" height="2" rx="1" fill="#101C3F"/>
+  <rect x="12" y="19" width="5" height="2" rx="1" fill="#101C3F"/>
+</svg>
