@@ -18879,5 +18879,289 @@
         "type": "keyword"
       }
     ]
+  },
+  {
+    "slug": "cloudian_hyperstore",
+    "name": "Cloudian HyperStore",
+    "description": "Collect S3 request, CMC administrative, and Object Lock/WORM audit records from Cloudian HyperStore local log files.",
+    "version": "0.1.0",
+    "created": "20 August 2026",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "cloudian_hyperstore.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/cloudian_hyperstore",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "cloudian.hyperstore.cmc.Action",
+        "description": "CMC user administration action.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.cmc.AdminID",
+        "description": "Original URL-encoded composite administrator identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.cmc.CanonicalUserId",
+        "description": "Canonical identifier of the target user, when present.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.cmc.DateTime",
+        "description": "Original local timestamp from the CMC audit record.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.cmc.GroupId",
+        "description": "Target group identifier, when present.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.cmc.Result",
+        "description": "Original result reported by HyperStore.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.cmc.SourceIP",
+        "description": "Original administrator client IP address.",
+        "type": "ip"
+      },
+      {
+        "field": "cloudian.hyperstore.cmc.UserId",
+        "description": "Target user identifier, when present.",
+        "type": "keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.action",
+        "description": "The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "This is one of four ECS Categorization Fields, and indicates the second level in the ECS category hierarchy. `event.category` represents the \"big buckets\" of ECS categories. For example, filtering on `event.category:process` yields all events relating to process activity. This field is closely related to `event.type`, which is used as a subcategory. This field is an array. This will allow proper categorization of some events that fall in multiple categories.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Name of the dataset. If an event source publishes more than one type of log or events (e.g. access log, error log), the dataset is used to specify which one the event comes from. It's recommended but not required to start the dataset name with the module name, followed by a dot, then the dataset name.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Name of the module this data is coming from. If your monitoring agent supports the concept of modules or plugins to process events of a given source (e.g. Apache logs), `event.module` should contain the name of this module.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Raw text message of entire event. Used to demonstrate log integrity or where the full log message (before splitting it up in multiple parts) may be required, e.g. for reindex. This field is not indexed and doc_values are disabled. It cannot be searched, but it can be retrieved from `_source`. If users wish to override this and index this field, please see `Field data types` in the `Elasticsearch Reference`.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.outcome",
+        "description": "This is one of four ECS Categorization Fields, and indicates the lowest level in the ECS category hierarchy. `event.outcome` simply denotes whether the event represents a success or a failure from the perspective of the entity that produced the event. Note that when a single transaction is described in multiple events, each event may populate different values of `event.outcome`, according to their perspective. Also note that in the case of a compound event (a single event that contains multiple logical events), this field should be populated with the value that best captures the overall success or failure from the perspective of the event producer. Further note that not all events will have an associated outcome. For example, this field is generally not populated for metric events, events with `event.type:info`, or any events for which an outcome does not make logical sense.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.timezone",
+        "description": "This field should be populated when the event's timestamp does not include timezone information already (e.g. default Syslog timestamps). It's optional otherwise. Acceptable timezone formats are: a canonical ID (e.g. \"Europe/Amsterdam\"), abbreviated (e.g. \"EST\") or an HH:mm differential (e.g. \"-05:00\").",
+        "type": "keyword"
+      },
+      {
+        "field": "event.type",
+        "description": "This is one of four ECS Categorization Fields, and indicates the third level in the ECS category hierarchy. `event.type` represents a categorization \"sub-bucket\" that, when used along with the `event.category` field values, enables filtering events down to a level appropriate for single visualization. This field is an array. This will allow proper categorization of some events that fall in multiple event types.",
+        "type": "keyword"
+      },
+      {
+        "field": "group.id",
+        "description": "Unique identifier for the group on the system/platform.",
+        "type": "keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.file.path",
+        "description": "Full path to the log file this event came from, including the file name. It should include the drive letter, when appropriate. If the event wasn't read from a log file, do not populate this field.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "observer.product",
+        "description": "The product name of the observer.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.type",
+        "description": "The type of the observer the data is coming from. There is no predefined list of observer types. Some examples are `forwarder`, `firewall`, `ids`, `ips`, `proxy`, `poller`, `sensor`, `APM server`.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Vendor name of the observer.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "related.ip",
+        "description": "All of the IPs seen on your event.",
+        "type": "ip"
+      },
+      {
+        "field": "related.user",
+        "description": "All the user names or other user identifiers seen on the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.ip",
+        "description": "IP address of the source (IPv4 or IPv6).",
+        "type": "ip"
+      },
+      {
+        "field": "tags",
+        "description": "List of keywords used to tag each event.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.group.id",
+        "description": "Unique identifier for the group on the system/platform.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.id",
+        "description": "Unique identifier of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.target.id",
+        "description": "Unique identifier of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.iam.user.canonical_id",
+        "description": "Canonical identifier of the IAM user that submitted the request.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.s3.bucket.name",
+        "description": "Name of the bucket targeted by the request.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.s3.object.name",
+        "description": "Object key targeted by the request.",
+        "type": "wildcard"
+      },
+      {
+        "field": "cloudian.hyperstore.s3.object.version_id",
+        "description": "Version identifier of the object targeted by the request.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.user.canonical_id",
+        "description": "Canonical identifier of the parent account user.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.worm.default_retention.mode",
+        "description": "Compact default retention mode code.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.worm.default_retention.unit",
+        "description": "Compact default retention period unit code.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloudian.hyperstore.worm.default_retention.value",
+        "description": "Default retention period in the coded unit.",
+        "type": "long"
+      },
+      {
+        "field": "cloudian.hyperstore.worm.headers",
+        "description": "Object Lock headers or compact bucket default Object Lock configuration code.",
+        "type": "wildcard"
+      },
+      {
+        "field": "cloudian.hyperstore.worm.object_lock_enabled",
+        "description": "Indicates that Object Lock is enabled on the bucket.",
+        "type": "boolean"
+      },
+      {
+        "field": "host.name",
+        "description": "Name of the host. It can contain what hostname returns on Unix systems, the fully qualified domain name (FQDN), or a name specified by the user. The recommended value is the lowercase FQDN of the host.",
+        "type": "keyword"
+      },
+      {
+        "field": "http.request.id",
+        "description": "A unique identifier for each HTTP request to correlate logs between clients and servers in transactions. The id may be contained in a non-standard HTTP header, such as `X-Request-ID` or `X-Correlation-ID`.",
+        "type": "keyword"
+      },
+      {
+        "field": "http.response.status_code",
+        "description": "HTTP response status code.",
+        "type": "long"
+      },
+      {
+        "field": "message",
+        "description": "For log events the message field contains the log message, optimized for viewing in a log viewer. For structured logs without an original message field, other fields can be concatenated to form a human-readable summary of the event. If multiple messages exist, they can be combined into one message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "related.hosts",
+        "description": "All hostnames or other host identifiers seen on your event. Example identifiers include FQDNs, domain names, workstation names, or aliases.",
+        "type": "keyword"
+      }
+    ]
   }
 ]
