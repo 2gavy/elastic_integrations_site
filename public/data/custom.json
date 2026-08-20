@@ -5,6 +5,7 @@
     "description": "Collect bounded Arista EOS configuration syslog over TCP, TLS, or UDP.",
     "version": "0.1.2",
     "created": "4 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -278,6 +279,7 @@
     "description": "Collect bounded Deep Instinct D-Appliance LEEF 2.0 security events over TCP or UDP.",
     "version": "0.1.0",
     "created": "14 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -467,6 +469,7 @@
     "description": "Collect syslog from Dell Networking and SmartFabric OS10 switches.",
     "version": "0.2.0",
     "created": "4 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -785,6 +788,7 @@
     "description": "Collect bounded PowerStore audit and system-alert syslog over TCP or UDP.",
     "version": "0.1.1",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -989,6 +993,7 @@
     "description": "Collect Forcepoint DLP incidents, cases, audit records, and system logs.",
     "version": "0.1.1",
     "created": "4 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -1482,6 +1487,7 @@
     "description": "Collect bounded generic CEF from Forcepoint NGFW and SMC over TCP or UDP.",
     "version": "0.1.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -1656,6 +1662,7 @@
     "description": "Receive iManage audit and security events from a customer-managed HTTPS relay.",
     "version": "0.1.1",
     "created": "4 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -1814,6 +1821,7 @@
     "description": "Collect bounded threat indicators from the current Verity471 or legacy Titan API.",
     "version": "0.2.0",
     "created": "15 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -2140,6 +2148,7 @@
     "description": "Collect the bounded current LoadMaster system-log envelope over TCP or UDP.",
     "version": "0.1.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -2263,6 +2272,7 @@
     "description": "Collect tenant Secure Score history and control-profile inventory through Microsoft Graph v1.0.",
     "version": "0.1.0",
     "created": "13 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Cloud",
       "Custom",
@@ -2392,6 +2402,7 @@
     "description": "Collect bounded current audit and legacy SDS CEF over TCP or UDP.",
     "version": "0.1.0",
     "created": "13 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -2581,6 +2592,7 @@
     "description": "Collect automated investigations and security recommendation inventory through the Defender API.",
     "version": "0.1.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -2892,6 +2904,7 @@
     "description": "Collect security events directly from the REST API v2 or through supported log-streaming inputs.",
     "version": "3.2.2",
     "created": "7 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -7391,6 +7404,7 @@
     "description": "Collect SAP BTP Cloud Foundry audit records through the Audit Log Retrieval API.",
     "version": "0.1.1",
     "created": "7 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Cloud",
       "Custom",
@@ -7601,6 +7615,7 @@
     "description": "Receive SAP Application and Audit records through a bounded HEC-compatible HTTPS endpoint.",
     "version": "0.1.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -7754,6 +7769,7 @@
     "description": "Collect monitoring data from SolarWinds Orion through the SWIS REST API.",
     "version": "0.6.14",
     "created": "26 July 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -8898,6 +8914,7 @@
     "description": "Collect bounded NGAF/Network Secure Application Control events over UDP.",
     "version": "0.1.1",
     "created": "13 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -9091,6 +9108,7 @@
     "description": "Collect bounded generic CEF from Silverfort Admin Console over TCP.",
     "version": "0.1.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -9285,6 +9303,7 @@
     "description": "Collect bounded generic CEF from on-premises Skyhigh SWG over TCP or UDP.",
     "version": "0.1.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -9509,6 +9528,7 @@
     "description": "Collect audit and Message Audit fragments from SMG syslog over TCP or UDP.",
     "version": "0.1.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -9753,6 +9773,7 @@
     "description": "Collect authentication, file-service, system, and generic DSM syslog over TCP or UDP.",
     "version": "0.1.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -10031,6 +10052,7 @@
     "description": "Collect DDA 7.6 CEF events over TCP or UDP, with field-aware normalization for three tested event families.",
     "version": "0.1.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -10320,6 +10342,7 @@
     "description": "Collect advanced email threat alerts from the Trellix Email Security Cloud API.",
     "version": "0.1.1",
     "created": "7 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Cloud",
       "Custom",
@@ -10630,6 +10653,7 @@
     "description": "Collect bounded DLP CEF plus McAfee Agent and Endpoint Security RFC 5424 XML over TCP.",
     "version": "0.2.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -10964,6 +10988,7 @@
     "description": "Collect current and legacy NSX Distributed Firewall packet logs over TCP or UDP.",
     "version": "0.1.0",
     "created": "12 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -11193,6 +11218,7 @@
     "description": "Collect Wasabi bucket Event Notifications delivered through AWS SNS HTTPS.",
     "version": "0.1.5",
     "created": "4 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Cloud",
       "Custom",
@@ -11411,6 +11437,7 @@
     "description": "Collect bounded Windows Defender Firewall `pfirewall.log` text files with filestream.",
     "version": "0.1.0",
     "created": "14 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -11725,6 +11752,7 @@
     "description": "Collect bounded IBM zSecure-generated z/OS SMF events in LEEF format over TCP or UDP.",
     "version": "0.1.0",
     "created": "14 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -11894,6 +11922,7 @@
     "description": "Collect activity-series and user-audit events through the Rubrik Security Cloud GraphQL API.",
     "version": "0.1.0",
     "created": "15 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Cloud",
       "Custom",
@@ -12084,6 +12113,7 @@
     "description": "Collect structured audit records through the VMware NSX Management Plane API.",
     "version": "0.1.0",
     "created": "15 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -12274,6 +12304,7 @@
     "description": "Collect bounded Forcepoint NGFW 6.5.4 native Packet Filtering syslog over TCP or UDP.",
     "version": "0.1.0",
     "created": "15 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -12483,6 +12514,7 @@
     "description": "Collect the bounded 20-field Skyhigh SWG SIEM/Nitro access format over TCP or UDP.",
     "version": "0.1.0",
     "created": "15 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -12721,6 +12753,7 @@
     "description": "Collect Cloud Foundry Audit Log Retrieval API v2 records from SAP BTP.",
     "version": "0.1.0",
     "created": "15 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Cloud",
       "Custom",
@@ -12926,6 +12959,7 @@
     "description": "Collect bounded Workspace ONE UEM 2209 classic Event Log records over TCP/TLS syslog.",
     "version": "0.1.0",
     "created": "15 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -13154,6 +13188,7 @@
     "description": "Collect bounded Akamai DataStream 2 CDN delivery JSON from Amazon S3.",
     "version": "0.1.0",
     "created": "15 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled"
@@ -13356,6 +13391,7 @@
     "description": "Collect configuration audit and network flow logs through the Tailscale API.",
     "version": "0.1.2",
     "created": "15 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -13636,6 +13672,7 @@
     "description": "Collect account SIEM events through the Absolute Secure Endpoint API.",
     "version": "0.1.0",
     "created": "15 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -13815,6 +13852,7 @@
     "description": "Collect bounded access, administrative, and connector-health JSON from Akamai EAA Unified Log Streamer.",
     "version": "0.1.0",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled"
@@ -14022,6 +14060,7 @@
     "description": "Collect bounded AlgoSec ASMS CEF history records from the local system log.",
     "version": "0.1.0",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -14275,6 +14314,7 @@
     "description": "Collect bounded Appian Cloud GZIP NDJSON log envelopes from Amazon S3.",
     "version": "0.1.0",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Cloud",
       "Custom",
@@ -14423,6 +14463,7 @@
     "description": "Collect bounded AlphaSOC OCSF 1.2 detection findings through the REST API.",
     "version": "0.1.0",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -14546,6 +14587,7 @@
     "description": "Collect bounded App Control 8.11 event records through the v1 REST API.",
     "version": "0.1.0",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -15134,6 +15176,7 @@
     "description": "Collect bounded installed-application syslog from BeyondTrust Remote Support over TCP or UDP.",
     "version": "0.1.0",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -15362,6 +15405,7 @@
     "description": "Collect bounded Web Traffic policy-format syslog from Barracuda Web Security Gateway over UDP.",
     "version": "0.1.0",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -15776,6 +15820,7 @@
     "description": "Collect DNS query activity from the BlueCat Edge Cloud v3 API.",
     "version": "0.1.1",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Cloud",
       "Custom",
@@ -16190,6 +16235,7 @@
     "description": "Collect bounded enhanced Policy Server access audit records from local smaccess.log files.",
     "version": "0.1.0",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -16493,6 +16539,7 @@
     "description": "Collect bounded CipherTrust Manager server audit records over RFC 5424 syslog using TCP/TLS.",
     "version": "0.1.0",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -16782,6 +16829,7 @@
     "description": "Collect bounded default-format Cisco ACI fault, event, audit, and session syslog over TCP or UDP.",
     "version": "0.1.0",
     "created": "16 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -17001,6 +17049,7 @@
     "description": "Collect organization and user administration audit log events from the Censys Platform API.",
     "version": "0.1.0",
     "created": "17 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -17320,6 +17369,7 @@
     "description": "Collect Censys ASM risk instance lifecycle events delivered by the Censys webhook integration.",
     "version": "0.1.0",
     "created": "17 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled"
@@ -17557,6 +17607,7 @@
     "description": "Collect WAAP security events from the F5 Distributed Cloud App Security API.",
     "version": "0.1.0",
     "created": "18 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Cloud",
       "Custom",
@@ -18387,6 +18438,7 @@
     "description": "Collect event, traffic, and security/attack logs from Fortinet FortiADC application delivery controllers via syslog.",
     "version": "0.1.0",
     "created": "18 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -18886,6 +18938,7 @@
     "description": "Collect S3 request, CMC administrative, and Object Lock/WORM audit records from Cloudian HyperStore local log files.",
     "version": "0.1.0",
     "created": "20 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Cloud",
       "Custom",
@@ -19170,6 +19223,7 @@
     "description": "Collect bounded Audit, System, Session, and Insight records from ClearPass Policy Manager Syslog Export Filters.",
     "version": "0.1.0",
     "created": "20 August 2026",
+    "buildDuration": "Not recorded",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -19554,6 +19608,7 @@
     "description": "Receive bounded Cohesity DataProtect alert notifications through an HTTP webhook.",
     "version": "0.1.0",
     "created": "20 August 2026",
+    "buildDuration": "~30 minutes",
     "categories": [
       "Custom",
       "Elastic Agent Enabled"
