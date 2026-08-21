@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Privileged session shield</title>
+  <desc id="desc">Neutral original integration artwork: a blue shield containing a white session path.</desc>
+  <metadata>Original neutral SVG authored for this community package on 2026-08-21. No vendor artwork or trademark was copied.</metadata>
+  <path fill="#2563EB" d="M32 3 55 12v17c0 15-9.4 26.2-23 32C18.4 55.2 9 44 9 29V12z"/>
+  <path fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M20 23h18l-6-6m6 6-6 6M44 41H26l6 6m-6-6 6-6"/>
+</svg>
