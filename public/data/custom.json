@@ -21906,5 +21906,233 @@
         "type": "keyword"
       }
     ]
+  },
+  {
+    "slug": "ninjaone",
+    "name": "NinjaOne",
+    "description": "Collect a capture-gated bounded NinjaOne activity window through regional OAuth2 and `/v2/activities`; exact-head synthetic pipeline/CEL validation passed while live tenant continuity remains on hold.",
+    "version": "0.1.0",
+    "created": "22 August 2026",
+    "buildDuration": "~1 hour 20 minutes",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "ninjaone.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/ninjaone",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.code",
+        "description": "Collector diagnostic code.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.id",
+        "description": "Collector diagnostic identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.action",
+        "description": "The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "This is one of four ECS Categorization Fields, and indicates the second level in the ECS category hierarchy. `event.category` represents the \"big buckets\" of ECS categories. For example, filtering on `event.category:process` yields all events relating to process activity. This field is closely related to `event.type`, which is used as a subcategory. This field is an array. This will allow proper categorization of some events that fall in multiple categories.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.code",
+        "description": "Identification code for this event, if one exists. Some event sources use event codes to identify messages unambiguously, regardless of message language or wording adjustments over time. An example of this is the Windows Event ID.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Name of the dataset. If an event source publishes more than one type of log or events (e.g. access log, error log), the dataset is used to specify which one the event comes from. It's recommended but not required to start the dataset name with the module name, followed by a dot, then the dataset name.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Name of the module this data is coming from. If your monitoring agent supports the concept of modules or plugins to process events of a given source (e.g. Apache logs), `event.module` should contain the name of this module.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Raw text message of entire event. Used to demonstrate log integrity or where the full log message (before splitting it up in multiple parts) may be required, e.g. for reindex. This field is not indexed and doc_values are disabled. It cannot be searched, but it can be retrieved from `_source`. If users wish to override this and index this field, please see `Field data types` in the `Elasticsearch Reference`.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.outcome",
+        "description": "This is one of four ECS Categorization Fields, and indicates the lowest level in the ECS category hierarchy. `event.outcome` simply denotes whether the event represents a success or a failure from the perspective of the entity that produced the event. Note that when a single transaction is described in multiple events, each event may populate different values of `event.outcome`, according to their perspective. Also note that in the case of a compound event (a single event that contains multiple logical events), this field should be populated with the value that best captures the overall success or failure from the perspective of the event producer. Further note that not all events will have an associated outcome. For example, this field is generally not populated for metric events, events with `event.type:info`, or any events for which an outcome does not make logical sense.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.reason",
+        "description": "Reason why this event happened, according to the source. This describes the why of a particular action or outcome captured in the event. Where `event.action` captures the action from the event, `event.reason` describes why that action was taken. For example, a web proxy with an `event.action` which denied the request may also populate `event.reason` with the reason why (e.g. `blocked site`).",
+        "type": "keyword"
+      },
+      {
+        "field": "event.type",
+        "description": "This is one of four ECS Categorization Fields, and indicates the third level in the ECS category hierarchy. `event.type` represents a categorization \"sub-bucket\" that, when used along with the `event.category` field values, enables filtering events down to a level appropriate for single visualization. This field is an array. This will allow proper categorization of some events that fall in multiple event types.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.id",
+        "description": "Unique host id. As hostname is not always unique, use values that are meaningful in your environment. Example: The current usage of `beat.name`.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.activityResult",
+        "description": "Activity result.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.activityTime",
+        "description": "Raw vendor timestamp number with unresolved unit.",
+        "type": "double"
+      },
+      {
+        "field": "ninjaone.activity.activityType",
+        "description": "Activity family.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.data",
+        "description": "Open status-specific activity data.",
+        "type": "flattened"
+      },
+      {
+        "field": "ninjaone.activity.deviceId",
+        "description": "NinjaOne device identifier.",
+        "type": "long"
+      },
+      {
+        "field": "ninjaone.activity.id",
+        "description": "Activity identifier; occurrence uniqueness is not proven.",
+        "type": "long"
+      },
+      {
+        "field": "ninjaone.activity.message",
+        "description": "Human-readable activity message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "ninjaone.activity.priority",
+        "description": "Activity priority.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.raw",
+        "description": "Complete source Activity object, including unknown future fields.",
+        "type": "flattened"
+      },
+      {
+        "field": "ninjaone.activity.seriesUid",
+        "description": "Job or condition series correlation UUID.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.severity",
+        "description": "Activity severity.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.sourceConfigUid",
+        "description": "Related source configuration UUID.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.sourceName",
+        "description": "Source configuration name.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.status",
+        "description": "Human-readable activity status.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.statusCode",
+        "description": "Detailed activity status code.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.subject",
+        "description": "Activity subject.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.type",
+        "description": "Vendor activity type description.",
+        "type": "keyword"
+      },
+      {
+        "field": "ninjaone.activity.userId",
+        "description": "NinjaOne user identifier.",
+        "type": "long"
+      },
+      {
+        "field": "ninjaone.diagnostic.message",
+        "description": "Identity-free collector diagnostic message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "ninjaone.diagnostic.type",
+        "description": "Identity-free collector diagnostic type.",
+        "type": "keyword"
+      },
+      {
+        "field": "tags",
+        "description": "List of keywords used to tag each event.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.id",
+        "description": "Unique identifier of the user.",
+        "type": "keyword"
+      }
+    ]
   }
 ]
