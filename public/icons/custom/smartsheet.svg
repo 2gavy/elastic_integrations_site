@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Smartsheet Event Reporting">
+  <rect width="64" height="64" rx="12" fill="#0b6b5d"/>
+  <path d="M16 17h32v8H16zm0 13h32v8H16zm0 13h20v8H16z" fill="#fff"/>
+  <circle cx="46" cy="47" r="7" fill="#8ee3cf"/>
+</svg>
