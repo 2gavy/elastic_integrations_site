@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">HashiCorp Boundary integration</title>
+  <desc id="desc">Neutral original boundary gateway symbol</desc>
+  <rect width="64" height="64" rx="12" fill="#1f2937"/>
+  <path d="M15 18h34v8H23v12h26v8H15z" fill="#d1d5db"/>
+  <circle cx="43" cy="32" r="4" fill="#7dd3fc"/>
+</svg>
