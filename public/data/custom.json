@@ -21343,5 +21343,263 @@
         "type": "match_only_text"
       }
     ]
+  },
+  {
+    "slug": "strongdm",
+    "name": "StrongDM",
+    "description": "Collect capture-gated Enterprise Log Stream activity and query NDJSON from Amazon S3; pipeline/index validation passed, while live S3/SQS delivery and production completeness remain on hold.",
+    "version": "0.1.0",
+    "created": "22 August 2026",
+    "buildDuration": "~50 minutes",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "strongdm.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/strongdm",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.action",
+        "description": "The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "This is one of four ECS Categorization Fields, and indicates the second level in the ECS category hierarchy. `event.category` represents the \"big buckets\" of ECS categories. For example, filtering on `event.category:process` yields all events relating to process activity. This field is closely related to `event.type`, which is used as a subcategory. This field is an array. This will allow proper categorization of some events that fall in multiple categories.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Name of the dataset. If an event source publishes more than one type of log or events (e.g. access log, error log), the dataset is used to specify which one the event comes from. It's recommended but not required to start the dataset name with the module name, followed by a dot, then the dataset name.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.id",
+        "description": "Unique ID to describe the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Name of the module this data is coming from. If your monitoring agent supports the concept of modules or plugins to process events of a given source (e.g. Apache logs), `event.module` should contain the name of this module.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Raw text message of entire event. Used to demonstrate log integrity or where the full log message (before splitting it up in multiple parts) may be required, e.g. for reindex. This field is not indexed and doc_values are disabled. It cannot be searched, but it can be retrieved from `_source`. If users wish to override this and index this field, please see `Field data types` in the `Elasticsearch Reference`.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.type",
+        "description": "This is one of four ECS Categorization Fields, and indicates the third level in the ECS category hierarchy. `event.type` represents a categorization \"sub-bucket\" that, when used along with the `event.category` field values, enables filtering events down to a level appropriate for single visualization. This field is an array. This will allow proper categorization of some events that fall in multiple event types.",
+        "type": "keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of Elastic Agent input used to collect the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "message",
+        "description": "For log events the message field contains the log message, optimized for viewing in a log viewer. For structured logs without an original message field, other fields can be concatenated to form a human-readable summary of the event. If multiple messages exist, they can be combined into one message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "organization.id",
+        "description": "Unique identifier for the organization.",
+        "type": "keyword"
+      },
+      {
+        "field": "related.ip",
+        "description": "All of the IPs seen on your event.",
+        "type": "ip"
+      },
+      {
+        "field": "related.user",
+        "description": "All the user names or other user identifiers seen on the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.ip",
+        "description": "IP address of the source (IPv4 or IPv6).",
+        "type": "ip"
+      },
+      {
+        "field": "strongdm.activity.activity",
+        "description": "Activity performed in StrongDM.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.actorAccountID",
+        "description": "StrongDM account identifier of the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.actorEmail",
+        "description": "Email address of the actor when the activity occurred.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.actorExternalID",
+        "description": "External account identifier of the actor when the activity occurred.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.actorFirstName",
+        "description": "Given name of the actor when the activity occurred.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.actorLastName",
+        "description": "Family name of the actor when the activity occurred.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.actorName",
+        "description": "Full name of the actor when the activity occurred.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.description",
+        "description": "Human-readable description of the activity.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "strongdm.activity.entities",
+        "description": "Entities involved in the activity; the vendor documents this as an open array.",
+        "type": "flattened"
+      },
+      {
+        "field": "strongdm.activity.formatVersion",
+        "description": "Version of the StrongDM Log Stream record format.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.id",
+        "description": "Unique identifier of the StrongDM activity.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.ipAddress",
+        "description": "Source IP address detected by the StrongDM control plane.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.logType",
+        "description": "StrongDM Log Stream family; activities for this data stream.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.sdmOrgId",
+        "description": "Identifier of the StrongDM organization that emitted the activity.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.activity.timestamp",
+        "description": "Time at which the activity occurred.",
+        "type": "date"
+      },
+      {
+        "field": "strongdm.activity.userAgent",
+        "description": "User agent supplied when the activity was performed.",
+        "type": "keyword"
+      },
+      {
+        "field": "tags",
+        "description": "List of keywords used to tag each event.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.email",
+        "description": "User email address.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.full_name",
+        "description": "User's full name, if available.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.full_name.text",
+        "description": "Multi-field of `user.full_name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "user.id",
+        "description": "Unique identifier of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user_agent",
+        "description": "The user_agent fields normally come from a browser request. They often show up in web service logs coming from the parsed user agent string.",
+        "type": "group"
+      },
+      {
+        "field": "event.duration",
+        "description": "Duration of the event in nanoseconds. If `event.start` and `event.end` are known this value should be the difference between the end and start time.",
+        "type": "long"
+      },
+      {
+        "field": "observer.id",
+        "description": "Identifier of the StrongDM egress node. Declared locally because the ECS 9.3 build reference does not resolve this standard field path.",
+        "type": "keyword"
+      },
+      {
+        "field": "resource.id",
+        "description": "Identifier of the accessed StrongDM resource. Declared locally because the ECS 9.3 build reference does not resolve this standard field path.",
+        "type": "keyword"
+      },
+      {
+        "field": "resource.name",
+        "description": "Name of the accessed StrongDM resource. Declared locally because the ECS 9.3 build reference does not resolve this standard field path.",
+        "type": "keyword"
+      },
+      {
+        "field": "strongdm.query",
+        "description": "Complete StrongDM query object, including open and sensitive query, command, authorization, header, tag, and metadata fields.",
+        "type": "flattened"
+      }
+    ]
   }
 ]
