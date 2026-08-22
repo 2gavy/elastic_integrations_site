@@ -24239,5 +24239,219 @@
         "type": "keyword"
       }
     ]
+  },
+  {
+    "slug": "asana",
+    "name": "Asana",
+    "description": "Collect capture-gated Asana Enterprise audit events through a durable-offset CEL stream; exact-head synthetic TLS collector and pipeline validation passed while licensed live-tenant continuity and 90-day recovery remain on hold.",
+    "version": "0.1.0",
+    "created": "23 August 2026",
+    "buildDuration": "~1 hour 10 minutes",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "asana.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/asana",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "asana.audit.actor",
+        "description": "Entity that triggered the audit event.",
+        "type": "flattened"
+      },
+      {
+        "field": "asana.audit.context",
+        "description": "Request client authentication and automation context.",
+        "type": "flattened"
+      },
+      {
+        "field": "asana.audit.created_at",
+        "description": "Time at which Asana created the audit event.",
+        "type": "date"
+      },
+      {
+        "field": "asana.audit.details",
+        "description": "Open event-specific audit details which may contain sensitive values.",
+        "type": "flattened"
+      },
+      {
+        "field": "asana.audit.event_category",
+        "description": "Asana category assigned to the event type.",
+        "type": "keyword"
+      },
+      {
+        "field": "asana.audit.event_type",
+        "description": "Open Asana audit event type.",
+        "type": "keyword"
+      },
+      {
+        "field": "asana.audit.gid",
+        "description": "Globally unique immutable Asana audit event identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "asana.audit.raw",
+        "description": "Complete Asana AuditLogEvent object exactly as emitted by the collector.",
+        "type": "flattened"
+      },
+      {
+        "field": "asana.audit.resource",
+        "description": "Asana resource affected by the event.",
+        "type": "flattened"
+      },
+      {
+        "field": "asana.diagnostic.cursor_retained",
+        "description": "Whether the previously committed audit cursor was retained.",
+        "type": "boolean"
+      },
+      {
+        "field": "asana.diagnostic.http_status",
+        "description": "HTTP status associated with the collector diagnostic.",
+        "type": "long"
+      },
+      {
+        "field": "asana.diagnostic.message",
+        "description": "Collector diagnostic message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "asana.diagnostic.type",
+        "description": "Collector diagnostic type.",
+        "type": "keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.code",
+        "description": "Error code describing the error.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.action",
+        "description": "The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.id",
+        "description": "Unique ID to describe the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Raw text message of entire event. Used to demonstrate log integrity or where the full log message (before splitting it up in multiple parts) may be required, e.g. for reindex. This field is not indexed and doc_values are disabled. It cannot be searched, but it can be retrieved from `_source`. If users wish to override this and index this field, please see `Field data types` in the `Elasticsearch Reference`.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.provider",
+        "description": "Source of the event. Event transports such as Syslog or the Windows Event Log typically mention the source of an event. It can be the name of the software that generated the event (e.g. Sysmon, httpd), or of a subsystem of the operating system (kernel, Microsoft-Windows-Security-Auditing).",
+        "type": "keyword"
+      },
+      {
+        "field": "http.response.status_code",
+        "description": "HTTP response status code.",
+        "type": "long"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of Filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "organization.id",
+        "description": "Unique identifier for the organization.",
+        "type": "keyword"
+      },
+      {
+        "field": "related.ip",
+        "description": "All of the IPs seen on your event.",
+        "type": "ip"
+      },
+      {
+        "field": "related.user",
+        "description": "All the user names or other user identifiers seen on the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.ip",
+        "description": "IP address of the source (IPv4 or IPv6).",
+        "type": "ip"
+      },
+      {
+        "field": "user.email",
+        "description": "User email address.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.id",
+        "description": "Unique identifier of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.name",
+        "description": "Short name or login of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.name.text",
+        "description": "Multi-field of `user.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "user_agent.original",
+        "description": "Unparsed user_agent string.",
+        "type": "keyword"
+      },
+      {
+        "field": "user_agent.original.text",
+        "description": "Multi-field of `user_agent.original`.",
+        "type": "match_only_text"
+      }
+    ]
   }
 ]
