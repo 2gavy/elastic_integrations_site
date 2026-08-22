@@ -24453,5 +24453,239 @@
         "type": "match_only_text"
       }
     ]
+  },
+  {
+    "slug": "cisco_webex",
+    "name": "Cisco Webex Control Hub",
+    "description": "Collect capture-gated Control Hub administrator audit events through a bounded CEL stream; exact-head synthetic TLS collector and pipeline validation passed while licensed live-organization continuity remains on hold.",
+    "version": "0.1.0",
+    "created": "23 August 2026",
+    "buildDuration": "~55 minutes",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "cisco_webex.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/cisco_webex",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "cisco_webex.audit.action_text",
+        "description": "Cisco Webex human-readable description of the action.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "cisco_webex.audit.actor_org.id",
+        "description": "Identifier of the organization associated with the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.actor_org.name",
+        "description": "Name of the organization associated with the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.created",
+        "description": "Time at which Cisco Webex created the audit event.",
+        "type": "date"
+      },
+      {
+        "field": "cisco_webex.audit.diagnostic.cursor_retained",
+        "description": "Whether the previously committed collection window remains retained.",
+        "type": "boolean"
+      },
+      {
+        "field": "cisco_webex.audit.diagnostic.http_status",
+        "description": "HTTP response status when available.",
+        "type": "long"
+      },
+      {
+        "field": "cisco_webex.audit.diagnostic.message",
+        "description": "Bounded collector diagnostic message.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.diagnostic.type",
+        "description": "Collector diagnostic type.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.event_category",
+        "description": "Open Cisco Webex audit event category.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.event_description",
+        "description": "Cisco Webex description of the audit event.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "cisco_webex.audit.id",
+        "description": "Cisco Webex audit event identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.raw",
+        "description": "Complete Cisco Webex administrator audit event object.",
+        "type": "flattened"
+      },
+      {
+        "field": "cisco_webex.audit.target.id",
+        "description": "Identifier of the affected Cisco Webex resource.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.target.name",
+        "description": "Name of the affected Cisco Webex resource.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.target.type",
+        "description": "Type of the affected Cisco Webex resource.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.target_org.id",
+        "description": "Identifier of the organization associated with the target.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.target_org.name",
+        "description": "Name of the organization associated with the target.",
+        "type": "keyword"
+      },
+      {
+        "field": "cisco_webex.audit.tracking_id",
+        "description": "Cisco Webex request or audit sub-event correlation identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.code",
+        "description": "Error code describing the error.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.id",
+        "description": "Unique ID to describe the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Raw text message of entire event. Used to demonstrate log integrity or where the full log message (before splitting it up in multiple parts) may be required, e.g. for reindex. This field is not indexed and doc_values are disabled. It cannot be searched, but it can be retrieved from `_source`. If users wish to override this and index this field, please see `Field data types` in the `Elasticsearch Reference`.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.provider",
+        "description": "Source of the event. Event transports such as Syslog or the Windows Event Log typically mention the source of an event. It can be the name of the software that generated the event (e.g. Sysmon, httpd), or of a subsystem of the operating system (kernel, Microsoft-Windows-Security-Auditing).",
+        "type": "keyword"
+      },
+      {
+        "field": "http.response.status_code",
+        "description": "HTTP response status code.",
+        "type": "long"
+      },
+      {
+        "field": "message",
+        "description": "For log events the message field contains the log message, optimized for viewing in a log viewer. For structured logs without an original message field, other fields can be concatenated to form a human-readable summary of the event. If multiple messages exist, they can be combined into one message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "organization.id",
+        "description": "Unique identifier for the organization.",
+        "type": "keyword"
+      },
+      {
+        "field": "related.ip",
+        "description": "All of the IPs seen on your event.",
+        "type": "ip"
+      },
+      {
+        "field": "related.user",
+        "description": "All the user names or other user identifiers seen on the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.ip",
+        "description": "IP address of the source (IPv4 or IPv6).",
+        "type": "ip"
+      },
+      {
+        "field": "user.email",
+        "description": "User email address.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.id",
+        "description": "Unique identifier of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.name",
+        "description": "Short name or login of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.name.text",
+        "description": "Multi-field of `user.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "user.roles",
+        "description": "Array of user roles at the time of the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "user_agent.original",
+        "description": "Unparsed user_agent string.",
+        "type": "keyword"
+      },
+      {
+        "field": "user_agent.original.text",
+        "description": "Multi-field of `user_agent.original`.",
+        "type": "match_only_text"
+      }
+    ]
   }
 ]
