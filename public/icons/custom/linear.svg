@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Linear Enterprise Audit</title>
+  <desc id="desc">Original neutral geometric audit-stream mark.</desc>
+  <rect width="64" height="64" rx="12" fill="#252A34"/>
+  <path d="M17 18h30v7H24v14h23v7H17z" fill="#E9EEF5"/>
+  <circle cx="45" cy="42" r="8" fill="#6EA8FE"/>
+  <path d="m41 42 3 3 6-7" fill="none" stroke="#17202A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
