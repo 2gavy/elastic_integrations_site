@@ -27987,5 +27987,259 @@
         "type": "match_only_text"
       }
     ]
+  },
+  {
+    "slug": "postman",
+    "name": "Postman Enterprise Audit Logs",
+    "description": "Collect capture-gated Postman Enterprise team audit events through bounded date-window CEL pagination; exact-head synthetic TLS collector and strict pipeline validation passed while licensed-live completeness and lossless guarantees remain on hold.",
+    "version": "0.1.0",
+    "created": "24 August 2026",
+    "buildDuration": "~4 hours 45 minutes",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "postman.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/postman",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.action",
+        "description": "The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Name of the dataset. If an event source publishes more than one type of log or events (e.g. access log, error log), the dataset is used to specify which one the event comes from. It's recommended but not required to start the dataset name with the module name, followed by a dot, then the dataset name.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.id",
+        "description": "Unique ID to describe the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Name of the module this data is coming from. If your monitoring agent supports the concept of modules or plugins to process events of a given source (e.g. Apache logs), `event.module` should contain the name of this module.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Raw text message of entire event. Used to demonstrate log integrity or where the full log message (before splitting it up in multiple parts) may be required, e.g. for reindex. This field is not indexed and doc_values are disabled. It cannot be searched, but it can be retrieved from `_source`. If users wish to override this and index this field, please see `Field data types` in the `Elasticsearch Reference`.",
+        "type": "keyword"
+      },
+      {
+        "field": "message",
+        "description": "For log events the message field contains the log message, optimized for viewing in a log viewer. For structured logs without an original message field, other fields can be concatenated to form a human-readable summary of the event. If multiple messages exist, they can be combined into one message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "organization.id",
+        "description": "Unique identifier for the organization.",
+        "type": "keyword"
+      },
+      {
+        "field": "organization.name",
+        "description": "Organization name.",
+        "type": "keyword"
+      },
+      {
+        "field": "organization.name.text",
+        "description": "Multi-field of `organization.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "postman.audit.action",
+        "description": "Open Postman audit action code.",
+        "type": "keyword"
+      },
+      {
+        "field": "postman.audit.data.actor.active",
+        "description": "Whether the actor is active.",
+        "type": "boolean"
+      },
+      {
+        "field": "postman.audit.data.actor.email",
+        "description": "Email address of the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "postman.audit.data.actor.id",
+        "description": "Numeric identifier of the actor.",
+        "type": "long"
+      },
+      {
+        "field": "postman.audit.data.actor.name",
+        "description": "Display name of the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "postman.audit.data.actor.username",
+        "description": "Username of the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "postman.audit.data.team.id",
+        "description": "Numeric identifier of the affected Postman team.",
+        "type": "long"
+      },
+      {
+        "field": "postman.audit.data.team.name",
+        "description": "Name of the affected Postman team.",
+        "type": "keyword"
+      },
+      {
+        "field": "postman.audit.data.user.email",
+        "description": "Email address of the affected user.",
+        "type": "keyword"
+      },
+      {
+        "field": "postman.audit.data.user.id",
+        "description": "Numeric identifier of the affected user.",
+        "type": "long"
+      },
+      {
+        "field": "postman.audit.data.user.name",
+        "description": "Display name of the affected user.",
+        "type": "keyword"
+      },
+      {
+        "field": "postman.audit.data.user.username",
+        "description": "Username of the affected user.",
+        "type": "keyword"
+      },
+      {
+        "field": "postman.audit.data.variables",
+        "description": "Open action-specific variables supplied by Postman; values can contain sensitive data.",
+        "type": "flattened"
+      },
+      {
+        "field": "postman.audit.id",
+        "description": "Stable numeric identifier of the Postman audit event.",
+        "type": "long"
+      },
+      {
+        "field": "postman.audit.ip",
+        "description": "Original nullable IP value supplied by Postman.",
+        "type": "keyword"
+      },
+      {
+        "field": "postman.audit.message",
+        "description": "Human-readable description supplied by Postman.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "postman.audit.timestamp",
+        "description": "Original timestamp value supplied by Postman.",
+        "type": "keyword"
+      },
+      {
+        "field": "postman.audit.userAgent",
+        "description": "Original nullable user agent value supplied by Postman.",
+        "type": "keyword"
+      },
+      {
+        "field": "related.ip",
+        "description": "All of the IPs seen on your event.",
+        "type": "ip"
+      },
+      {
+        "field": "related.user",
+        "description": "All the user names or other user identifiers seen on the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.ip",
+        "description": "IP address of the source (IPv4 or IPv6).",
+        "type": "ip"
+      },
+      {
+        "field": "tags",
+        "description": "List of keywords used to tag each event.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.email",
+        "description": "User email address.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.full_name",
+        "description": "User's full name, if available.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.full_name.text",
+        "description": "Multi-field of `user.full_name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "user.id",
+        "description": "Unique identifier of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.name",
+        "description": "Short name or login of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.name.text",
+        "description": "Multi-field of `user.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "user_agent.original",
+        "description": "Unparsed user_agent string.",
+        "type": "keyword"
+      },
+      {
+        "field": "user_agent.original.text",
+        "description": "Multi-field of `user_agent.original`.",
+        "type": "match_only_text"
+      }
+    ]
   }
 ]
