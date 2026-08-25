@@ -2317,7 +2317,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.13.11",
+    "version": "3.13.12",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/cisco_ftd"
   },
   {
@@ -3843,7 +3843,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.36.9",
+    "version": "1.36.10",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/fortinet_fortigate"
   },
   {
@@ -6672,7 +6672,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/nozomi_networks"
   },
   {
@@ -7175,7 +7175,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.9.0",
+    "version": "3.9.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/windows"
   },
   {
@@ -7394,7 +7394,7 @@
       "Entities"
     ],
     "source": "official",
-    "version": "0.10.0",
+    "version": "0.10.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/qualys_gav"
   },
   {
@@ -7941,7 +7941,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.17.1",
+    "version": "3.17.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/sophos"
   },
   {
@@ -7960,7 +7960,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.17.1",
+    "version": "3.17.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/sophos"
   },
   {
@@ -8312,7 +8312,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.9.0",
+    "version": "3.9.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/windows"
   },
   {
@@ -8984,7 +8984,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "3.9.0",
+    "version": "3.9.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/windows"
   },
   {
