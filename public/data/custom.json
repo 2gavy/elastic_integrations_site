@@ -30335,7 +30335,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "edb-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/edb_postgres_advanced_server",
     "source": "custom",
     "fields": [
@@ -30529,7 +30529,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "mariadb-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/mariadb_enterprise_audit",
     "source": "custom",
     "fields": [
@@ -30742,7 +30742,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "mikrotik-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/mikrotik_routeros",
     "source": "custom",
     "fields": [
