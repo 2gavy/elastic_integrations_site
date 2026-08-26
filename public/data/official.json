@@ -273,7 +273,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -296,7 +296,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -317,7 +317,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -338,7 +338,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -360,7 +360,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -379,7 +379,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -398,7 +398,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -458,7 +458,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -477,7 +477,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -498,7 +498,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -541,7 +541,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -580,7 +580,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -622,7 +622,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -643,7 +643,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -933,7 +933,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -952,7 +952,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -971,7 +971,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -993,7 +993,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1013,7 +1013,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1054,7 +1054,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1092,7 +1092,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1112,7 +1112,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1130,7 +1130,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1149,7 +1149,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1170,7 +1170,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1190,7 +1190,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1210,7 +1210,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1230,7 +1230,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "7.3.0",
+    "version": "8.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -2467,7 +2467,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.18.6",
+    "version": "1.19.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/citrix_adc.html"
   },
   {
@@ -2740,6 +2740,24 @@
     "source": "official",
     "version": "0.6.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/containerd.html"
+  },
+  {
+    "slug": "contrast-security",
+    "name": "Contrast Security",
+    "description": "Receive attack events, incidents, and issues from Contrast Security ADR (Application Detection and Response).",
+    "icon": "https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/bltb82bcbadd05389fe/6a8c74928bbe58f2d290f9c1/logo-integrations-contrast-security.png",
+    "categories": [
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "source": "official",
+    "version": "0.1.0",
+    "destinationUrl": "https://www.elastic.co/docs/reference/integrations/contrast_security"
   },
   {
     "slug": "coredns",
@@ -3584,7 +3602,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.28.0",
+    "version": "1.29.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/f5_bigip"
   },
   {
@@ -4537,7 +4555,7 @@
       "Content"
     ],
     "source": "official",
-    "version": "3.6.0",
+    "version": "3.7.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/google_workspace"
   },
   {
@@ -5707,7 +5725,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.5.0",
+    "version": "2.5.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/filestream"
   },
   {
@@ -6225,7 +6243,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "5.16.0",
+    "version": "5.17.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/m365_defender"
   },
   {
@@ -6916,7 +6934,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.33.0",
+    "version": "1.34.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/osquery_manager"
   },
   {
@@ -8370,7 +8388,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.11.1",
+    "version": "1.11.2",
     "destinationUrl": "https://www.elastic.co/guide/en/beats/auditbeat/current/auditbeat-module-system.html#_how_it_works_3"
   },
   {
