@@ -70,7 +70,7 @@
       "Threat Intelligence"
     ],
     "source": "official",
-    "version": "4.2.0",
+    "version": "5.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/ti_abusech"
   },
   {
@@ -235,7 +235,7 @@
       "Logs and metrics"
     ],
     "source": "official",
-    "version": "1.7.0",
+    "version": "2.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws_bedrock"
   },
   {
@@ -273,7 +273,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -296,7 +296,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -317,7 +317,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -338,7 +338,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -360,7 +360,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -379,7 +379,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -398,7 +398,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -437,7 +437,7 @@
       "Logs and metrics"
     ],
     "source": "official",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws_mq"
   },
   {
@@ -458,7 +458,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -477,7 +477,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -498,7 +498,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -541,7 +541,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -580,7 +580,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -622,7 +622,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -643,7 +643,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -933,7 +933,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -952,7 +952,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -971,7 +971,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -993,7 +993,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1013,7 +1013,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1054,7 +1054,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1092,7 +1092,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1112,7 +1112,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1130,7 +1130,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1149,7 +1149,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1170,7 +1170,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1190,7 +1190,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1210,7 +1210,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1230,7 +1230,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
@@ -1270,7 +1270,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -1292,7 +1292,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -1348,7 +1348,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -1408,7 +1408,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -1551,7 +1551,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -1571,7 +1571,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -1687,7 +1687,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -1706,7 +1706,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -1788,7 +1788,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -2873,7 +2873,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "4.8.0",
+    "version": "4.9.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/crowdstrike"
   },
   {
@@ -3116,7 +3116,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "0.11.0",
+    "version": "0.11.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/cyera"
   },
   {
@@ -4515,7 +4515,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.7.0",
+    "version": "2.8.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/google_scc"
   },
   {
@@ -4555,7 +4555,7 @@
       "Content"
     ],
     "source": "official",
-    "version": "3.7.0",
+    "version": "3.7.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/google_workspace"
   },
   {
@@ -5744,7 +5744,7 @@
       "Metrics"
     ],
     "source": "official",
-    "version": "2.11.1",
+    "version": "2.11.3",
     "destinationUrl": "https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-module-logstash.html"
   },
   {
@@ -6051,7 +6051,7 @@
       "Entities"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -6106,7 +6106,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/azure"
   },
   {
@@ -6180,7 +6180,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/microsoft_sentinel.html"
   },
   {
@@ -6224,7 +6224,7 @@
       "Content"
     ],
     "source": "official",
-    "version": "3.10.8",
+    "version": "3.11.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/o365"
   },
   {
@@ -6243,7 +6243,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "5.17.0",
+    "version": "5.18.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/m365_defender"
   },
   {
@@ -6690,7 +6690,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/nozomi_networks"
   },
   {
@@ -6971,7 +6971,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.8.0",
+    "version": "2.9.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/panw_cortex_xdr"
   },
   {
@@ -7193,7 +7193,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.9.1",
+    "version": "3.9.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/windows"
   },
   {
@@ -8176,7 +8176,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.14.0",
+    "version": "1.15.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/sublime_security"
   },
   {
@@ -8330,7 +8330,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.9.1",
+    "version": "3.9.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/windows"
   },
   {
@@ -8369,7 +8369,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "2.23.0",
+    "version": "2.23.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/system"
   },
   {
@@ -9002,7 +9002,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "3.9.1",
+    "version": "3.9.2",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/windows"
   },
   {
@@ -9214,7 +9214,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "4.3.0",
+    "version": "4.4.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/zscaler_zia"
   },
   {
