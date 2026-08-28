@@ -44598,5 +44598,521 @@
         "type": "keyword"
       }
     ]
+  },
+  {
+    "slug": "temporal_cloud",
+    "name": "Temporal Cloud",
+    "description": "Collect the bounded Temporal Cloud OpenMetrics v1 57-family gauge contract; live completeness, response ceiling, retry, cardinality, and production-lossless guarantees remain on hold.",
+    "version": "0.1.0",
+    "created": "28 August 2026",
+    "buildDuration": "54 minutes 50 seconds (measured)",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Monitoring"
+    ],
+    "solutions": [
+      "Observability"
+    ],
+    "capabilities": [
+      "Logs",
+      "Metrics"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/temporal_cloud",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "agent.ephemeral_id",
+        "description": "Ephemeral identifier of this agent (if one exists). This id normally changes across restarts, but `agent.id` does not.",
+        "type": "keyword"
+      },
+      {
+        "field": "agent.id",
+        "description": "Unique identifier of this agent (if one exists). Example: For Beats this would be beat.id.",
+        "type": "keyword"
+      },
+      {
+        "field": "agent.name",
+        "description": "Custom name of the agent. This is a name that can be given to an agent. This can be helpful if for example two Filebeat instances are running on the same host but a human readable separation is needed on which Filebeat instance data is coming from.",
+        "type": "keyword"
+      },
+      {
+        "field": "agent.type",
+        "description": "Type of the agent. The agent type always stays the same and should be given by the agent used. In case of Filebeat the agent would always be Filebeat also if two Filebeat instances are run on the same machine.",
+        "type": "keyword"
+      },
+      {
+        "field": "agent.version",
+        "description": "Version of the agent.",
+        "type": "keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "elastic_agent.id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "elastic_agent.snapshot",
+        "description": "No description provided.",
+        "type": "boolean"
+      },
+      {
+        "field": "elastic_agent.version",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.hostname",
+        "description": "Hostname of the host. It normally contains what the `hostname` command returns on the host machine.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.name",
+        "description": "Name of the host. It can contain what hostname returns on Unix systems, the fully qualified domain name (FQDN), or a name specified by the user. The recommended value is the lowercase FQDN of the host.",
+        "type": "keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Input type that collected the metric.",
+        "type": "keyword"
+      },
+      {
+        "field": "metricset.name",
+        "description": "Metricset name.",
+        "type": "keyword"
+      },
+      {
+        "field": "metricset.period",
+        "description": "Metric collection period.",
+        "type": "long"
+      },
+      {
+        "field": "observer.product",
+        "description": "The product name of the observer.",
+        "type": "keyword"
+      },
+      {
+        "field": "observer.type",
+        "description": "The type of the observer the data is coming from. There is no predefined list of observer types. Some examples are `forwarder`, `firewall`, `ids`, `ips`, `proxy`, `poller`, `sensor`, `APM server`.",
+        "type": "keyword"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Vendor name of the observer.",
+        "type": "keyword"
+      },
+      {
+        "field": "service.address",
+        "description": "Address where data about this service was collected from. This should be a URI, network address (ipv4:port or [ipv6]:port) or a resource path (sockets).",
+        "type": "keyword"
+      },
+      {
+        "field": "service.type",
+        "description": "The type of the service data is collected from. The type can be used to group and correlate logs and metrics from one service type. Example: If logs or metrics are collected from Elasticsearch, `service.type` would be `elasticsearch`.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.action_type",
+        "description": "Temporal Cloud OpenMetrics action_type dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.is_background",
+        "description": "Temporal Cloud OpenMetrics is_background dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.namespace_mode",
+        "description": "Temporal Cloud OpenMetrics namespace_mode dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.operation",
+        "description": "Temporal Cloud OpenMetrics operation dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.region",
+        "description": "Temporal Cloud OpenMetrics region dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.schedule_overlap_policy",
+        "description": "Temporal Cloud OpenMetrics schedule_overlap_policy dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.task_priority",
+        "description": "Temporal Cloud OpenMetrics task_priority dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.task_type",
+        "description": "Temporal Cloud OpenMetrics task_type dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.temporal_account",
+        "description": "Temporal Cloud OpenMetrics temporal_account dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.temporal_activity_type",
+        "description": "Temporal Cloud OpenMetrics temporal_activity_type dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.temporal_namespace",
+        "description": "Temporal Cloud OpenMetrics temporal_namespace dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.temporal_task_queue",
+        "description": "Temporal Cloud OpenMetrics temporal_task_queue dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.temporal_worker_build_id",
+        "description": "Temporal Cloud OpenMetrics temporal_worker_build_id dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.temporal_worker_deployment_name",
+        "description": "Temporal Cloud OpenMetrics temporal_worker_deployment_name dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.temporal_workflow_type",
+        "description": "Temporal Cloud OpenMetrics temporal_workflow_type dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.dimensions.timeout_type",
+        "description": "Temporal Cloud OpenMetrics timeout_type dimension.",
+        "type": "keyword"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_action_limit",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_action_on_demand_envelope_limit",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_cancel_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_fail_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_schedule_to_close_latency_p50",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_schedule_to_close_latency_p95",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_schedule_to_close_latency_p99",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_start_to_close_latency_p50",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_start_to_close_latency_p95",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_start_to_close_latency_p99",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_success_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_task_fail_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_task_timeout_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_terminate_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_activity_timeout_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_approximate_backlog_count",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_billable_action_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_namespace_open_workflows",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_no_poller_tasks_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_operations_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_operations_limit",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_operations_on_demand_envelope_limit",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_operations_throttled_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_poll_success_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_poll_success_sync_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_poll_timeout_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_poller_limit",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_provisioned_capacity_tru_count",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_replication_lag_p50",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_replication_lag_p95",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_replication_lag_p99",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_resource_exhausted_error_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_schedule_action_success_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_schedule_buffer_overruns_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_schedule_missed_catchup_window_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_schedule_overlap_skipped_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_schedule_rate_limited_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_service_error_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_service_latency_p50",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_service_latency_p95",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_service_latency_p99",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_service_pending_requests",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_service_request_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_service_request_limit",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_service_request_on_demand_envelope_limit",
+        "description": "Temporal Cloud Value measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_service_request_throttled_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_total_action_count",
+        "description": "Temporal Cloud UNSPECIFIED measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_total_action_throttled_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_workflow_cancel_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_workflow_continued_as_new_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_workflow_failed_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_workflow_schedule_to_close_latency_p50",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_workflow_schedule_to_close_latency_p95",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_workflow_schedule_to_close_latency_p99",
+        "description": "Temporal Cloud Latency measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_workflow_success_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_workflow_terminate_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      },
+      {
+        "field": "temporal.cloud.metrics.temporal_cloud_v1_workflow_timeout_count",
+        "description": "Temporal Cloud Rate measurement from the OpenMetrics v1 endpoint.",
+        "type": "double"
+      }
+    ]
   }
 ]
