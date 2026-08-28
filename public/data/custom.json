@@ -41348,5 +41348,144 @@
         "type": "keyword"
       }
     ]
+  },
+  {
+    "slug": "nvidia_nim",
+    "name": "NVIDIA NIM",
+    "description": "Collect the bounded NVIDIA NIM for LLMs 3.0.0 standard-mode startup JSONL contract; worker/Dynamo and broader logs, metrics, traces, transport durability, and production losslessness remain on hold.",
+    "version": "0.1.0",
+    "created": "28 August 2026",
+    "buildDuration": "35 minutes 31 seconds (measured)",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Monitoring"
+    ],
+    "solutions": [
+      "Observability"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/nvidia_nim",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Time when the log record was received.",
+        "type": "date"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.action",
+        "description": "The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "This is one of four ECS Categorization Fields, and indicates the second level in the ECS category hierarchy. `event.category` represents the \"big buckets\" of ECS categories. For example, filtering on `event.category:process` yields all events relating to process activity. This field is closely related to `event.type`, which is used as a subcategory. This field is an array. This will allow proper categorization of some events that fall in multiple categories.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Event dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Event module.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Raw text message of entire event. Used to demonstrate log integrity or where the full log message (before splitting it up in multiple parts) may be required, e.g. for reindex. This field is not indexed and doc_values are disabled. It cannot be searched, but it can be retrieved from `_source`. If users wish to override this and index this field, please see `Field data types` in the `Elasticsearch Reference`.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.type",
+        "description": "This is one of four ECS Categorization Fields, and indicates the third level in the ECS category hierarchy. `event.type` represents a categorization \"sub-bucket\" that, when used along with the `event.category` field values, enables filtering events down to a level appropriate for single visualization. This field is an array. This will allow proper categorization of some events that fall in multiple event types.",
+        "type": "keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Input type that collected the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.file.path",
+        "description": "Path to the file from which the event was collected.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.level",
+        "description": "Original log level of the log event. If the source of the event provides a log level or textual severity, this is the one that goes in `log.level`. If your source doesn't specify one, you may put your event transport's severity here (e.g. Syslog severity). Some examples are `warn`, `err`, `i`, `informational`.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "File byte offset of the event.",
+        "type": "long"
+      },
+      {
+        "field": "log.origin.file.line",
+        "description": "The line number of the file containing the source code which originated the log event.",
+        "type": "long"
+      },
+      {
+        "field": "log.origin.file.name",
+        "description": "The name of the file containing the source code which originated the log event. Note that this field is not meant to capture the log file. The correct field to capture the log file is `log.file.path`.",
+        "type": "keyword"
+      },
+      {
+        "field": "message",
+        "description": "For log events the message field contains the log message, optimized for viewing in a log viewer. For structured logs without an original message field, other fields can be concatenated to form a human-readable summary of the event. If multiple messages exist, they can be combined into one message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "nvidia.nim.log.time",
+        "description": "Zone-free producer timestamp retained exactly as text; @timestamp remains the receiver timestamp.",
+        "type": "keyword"
+      },
+      {
+        "field": "nvidia.nim.log.timezone",
+        "description": "Operator-supplied IANA time zone retained as configuration context and not used for timestamp promotion.",
+        "type": "keyword"
+      },
+      {
+        "field": "tags",
+        "description": "List of keywords used to tag each event.",
+        "type": "keyword"
+      }
+    ]
   }
 ]
