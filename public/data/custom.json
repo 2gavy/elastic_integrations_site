@@ -42182,5 +42182,1956 @@
         "type": "keyword"
       }
     ]
+  },
+  {
+    "slug": "panw_cortex_xdr",
+    "name": "Palo Alto Cortex XDR",
+    "description": "Preserve the maintained API and event-forwarding streams and receive the fixture-bounded Cortex XDR/XSIAM Management Audit CEF family over UDP, TCP, or TCP with TLS; framing and native delivery guarantees remain on hold.",
+    "version": "2.8.0",
+    "created": "28 August 2026",
+    "buildDuration": "20 minutes 11 seconds (measured)",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network",
+      "Security",
+      "Web"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "icon-cortex.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/panw_cortex_xdr",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "cloud.image.id",
+        "description": "Image ID for the cloud instance.",
+        "type": "keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset name.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Event dataset",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Event module",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "host.containerized",
+        "description": "If the host is a container.",
+        "type": "boolean"
+      },
+      {
+        "field": "host.os.build",
+        "description": "OS build information.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.os.codename",
+        "description": "OS codename, if any.",
+        "type": "keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of Filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.flags",
+        "description": "Flags for the log file.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Offset of the entry in the log file.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.action_country",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.action_external_hostname",
+        "description": "Any external hostname related to the specific event action.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.action_file_macro_sha256",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.action_local_ip",
+        "description": "No description provided.",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.action_local_ip_v6",
+        "description": "No description provided.",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.action_local_port",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.action_pretty",
+        "description": "Pretty description of the action type.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.action_process_causality_id",
+        "description": "The parent processor ID related to the action.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.action_process_signature_status",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.action_remote_ip",
+        "description": "No description provided.",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.action_remote_ip_v6",
+        "description": "No description provided.",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.action_remote_port",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_causality_id",
+        "description": "The parent process ID of the actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_process_causality_id",
+        "description": "The parent processor ID related to the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_process_command_line",
+        "description": "Actor full command line.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_process_image_md5",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_process_image_name",
+        "description": "Actor binary name.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_process_image_path",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_process_image_sha256",
+        "description": "SHA256 hash indentifier of the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_process_instance_id",
+        "description": "The process ID related to the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_process_os_pid",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_process_signature_status",
+        "description": "The signature of the actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_process_signature_vendor",
+        "description": "The signature vendor of the actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.actor_thread_thread_id",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.agent_data_collection_status",
+        "description": "Collection status of the agent.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.agent_host_boot_time",
+        "description": "Uptime of the host.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.agent_install_type",
+        "description": "Display name of the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.agent_ip_addresses_v6",
+        "description": "Agent ipv6 address",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.agent_is_vdi",
+        "description": "If agent is running inside a Virtual Desktop.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.agent_version",
+        "description": "Version of the XDR Endpoint agent.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.alert_id",
+        "description": "The ID of the alert.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.alert_type",
+        "description": "The type of the alert.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.association_strength",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.attempt_counter",
+        "description": "Attempts to block or stop the malicious process.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.bioc_category_enum_key",
+        "description": "Behavior Indicator type key.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.bioc_description",
+        "description": "A description of the related bioc event.",
+        "type": "flattened"
+      },
+      {
+        "field": "panw_cortex.xdr.bioc_indicator",
+        "description": "The Behavioral Indicator type matching to the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.case_id",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.category",
+        "description": "The Alert category.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.causality_actor_causality_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.causality_actor_process_command_line",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.causality_actor_process_execution_time",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.causality_actor_process_image_md5",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.causality_actor_process_image_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.causality_actor_process_image_path",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.causality_actor_process_image_sha256",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.causality_actor_process_signature_status",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.causality_actor_process_signature_vendor",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.cloud_provider",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.cluster_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.container_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.contains_featured_host",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.contains_featured_ip",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.contains_featured_user",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.deduplicate_tokens",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.description",
+        "description": "A description of the related event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.detection_timestamp",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.dns_query_name",
+        "description": "The related DNS query for the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.dss_country",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.dss_department",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.dss_groups",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.dss_job_title",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.dst_action_country",
+        "description": "The country related to the destination.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.dst_action_external_hostname",
+        "description": "The external hostname of the destination.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.dst_action_external_port",
+        "description": "The external (NAT) port of the destination.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.dst_agent_id",
+        "description": "The endpoint ID of a destination agent.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.dst_association_strength",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.dst_causality_actor_process_execution_time",
+        "description": "The process execution time of the destination process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.dynamic_fields",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.end_match_attempt_ts",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.endpoint_id",
+        "description": "The unique ID of the endpoint.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event_id",
+        "description": "The ID unique to the underlying event related to the alert.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event_sub_type",
+        "description": "Sub type of the event related to the alert.",
+        "type": "integer"
+      },
+      {
+        "field": "panw_cortex.xdr.event_timestamp",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.event_type",
+        "description": "Event type",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.action_country",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.action_external_hostname",
+        "description": "Any external hostname related to the specific event action.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.action_file_macro_sha256",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.action_process_causality_id",
+        "description": "The parent processor ID related to the action.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.actor_causality_id",
+        "description": "The parent process ID of the actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.actor_process_causality_id",
+        "description": "The parent processor ID related to the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.actor_process_command_line",
+        "description": "Actor full command line.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.actor_process_image_name",
+        "description": "Actor binary name.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.actor_process_image_sha256",
+        "description": "SHA256 hash indentifier of the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.actor_process_instance_id",
+        "description": "The process ID related to the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.actor_process_signature_status",
+        "description": "The signature of the actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.actor_process_signature_vendor",
+        "description": "The signature vendor of the actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.agent_host_boot_time",
+        "description": "Uptime of the host.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.events.agent_install_type",
+        "description": "Display name of the actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.association_strength",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.events.contains_featured_host",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.contains_featured_ip",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.contains_featured_user",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.dns_query_name",
+        "description": "The related DNS query for the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.dst_action_country",
+        "description": "The country related to the destination.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.dst_action_external_hostname",
+        "description": "The external hostname of the destination.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.dst_action_external_port",
+        "description": "The external (NAT) port of the destination.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.dst_agent_id",
+        "description": "The endpoint ID of a destination agent.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.dst_association_strength",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.events.dst_causality_actor_process_execution_time",
+        "description": "The process execution time of the destination process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.event_id",
+        "description": "The ID unique to the underlying event related to the alert.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.event_sub_type",
+        "description": "Sub type of the event related to the alert.",
+        "type": "integer"
+      },
+      {
+        "field": "panw_cortex.xdr.events.event_type",
+        "description": "Event type",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_app_category",
+        "description": "Layer 7 application category related to the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_app_id",
+        "description": "The layer 7 application ID from the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_app_subcategory",
+        "description": "Layer 7 application subcategory related to the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_app_technology",
+        "description": "Layer 7 application type related to the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_device_name",
+        "description": "Related firewall device.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_email_recipient",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_email_sender",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_email_subject",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_is_phishing",
+        "description": "If event is related to a phishing campaign.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_misc",
+        "description": "Additional information related to the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_url_domain",
+        "description": "Related domain to the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_vsys",
+        "description": "The related VSYS name if applicable.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.fw_xff",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.module_id",
+        "description": "The ID of the module that caught the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_causality_id",
+        "description": "The ID of the OS actor process",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_effective_username",
+        "description": "Username related to the OS actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_process_causality_id",
+        "description": "The ID of the parent process related to the OS actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_process_command_line",
+        "description": "OS actor full command line example.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_process_image_name",
+        "description": "OS actor binary name.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_process_image_path",
+        "description": "OS actor binary path.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_process_image_sha256",
+        "description": "SHA256 hash indentifier of the OS actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_process_instance_id",
+        "description": "The process ID related to the OS actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_process_os_pid",
+        "description": "The OS PID related to the related process.",
+        "type": "integer"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_process_signature_status",
+        "description": "Signature of the OS actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_process_signature_vendor",
+        "description": "Signature vendor of the OS actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.events.os_actor_thread_thread_id",
+        "description": "The thread ID related to the related OS actor process.",
+        "type": "integer"
+      },
+      {
+        "field": "panw_cortex.xdr.events.story_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.external_id",
+        "description": "External ID related to the Alert itself.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.filter_rule_id",
+        "description": "ID of the filter rule.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_app_category",
+        "description": "Layer 7 application category related to the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_app_id",
+        "description": "The layer 7 application ID from the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_app_subcategory",
+        "description": "Layer 7 application subcategory related to the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_app_technology",
+        "description": "Layer 7 application type related to the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_device_name",
+        "description": "Related firewall device.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_email_recipient",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_email_sender",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_email_subject",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_is_phishing",
+        "description": "If event is related to a phishing campaign.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_misc",
+        "description": "Additional information related to the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_url_domain",
+        "description": "Related domain to the firewall event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_vsys",
+        "description": "The related VSYS name if applicable.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.fw_xff",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.identity_sub_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.identity_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.image_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.is_pcap",
+        "description": "If alert contains pcap.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.is_whitelisted",
+        "description": "If process is whitelisted.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.last_modified_ts",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.local_insert_ts",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.mac",
+        "description": "Main MAC address of the agent.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.mac_address",
+        "description": "Array of all the MAC addresses related to the agent.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.mac_addresses",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.matching_service_rule_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.matching_status",
+        "description": "Matching status of the endpoint group.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.mitre_tactic_id_and_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.mitre_technique_id_and_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.module_id",
+        "description": "The ID of the module that caught the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.operation_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.original_tags",
+        "description": "Original tags for the asset.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_causality_id",
+        "description": "The ID of the OS actor process",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_effective_username",
+        "description": "Username related to the OS actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_process_causality_id",
+        "description": "The ID of the parent process related to the OS actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_process_command_line",
+        "description": "OS actor full command line example.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_process_image_name",
+        "description": "OS actor binary name.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_process_image_path",
+        "description": "OS actor binary path.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_process_image_sha256",
+        "description": "SHA256 hash indentifier of the OS actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_process_instance_id",
+        "description": "The process ID related to the OS actor.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_process_os_pid",
+        "description": "The OS PID related to the related process.",
+        "type": "integer"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_process_signature_status",
+        "description": "Signature of the OS actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_process_signature_vendor",
+        "description": "Signature vendor of the OS actor process.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.os_actor_thread_thread_id",
+        "description": "The thread ID related to the related OS actor process.",
+        "type": "integer"
+      },
+      {
+        "field": "panw_cortex.xdr.project",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.referenced_resource",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.resolution_comment",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.resolution_status",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.resource_sub_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.resource_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.severity",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.source",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.starred",
+        "description": "If alert type is prioritized (starred).",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.story_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.tags",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.user_agent",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.user_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "gcs.storage.bucket.name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "gcs.storage.object.content_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "gcs.storage.object.name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.boot_time",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.access_time",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.attributes",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.create_time",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.device_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.group",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.group_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.is_anonymous",
+        "description": "No description provided.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.last_writer_actor",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.md5",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.mod_time",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.mode",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.operation_flags",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.owner",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.owner_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.path",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.pe_info",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.prev_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.previous_file_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.previous_file_path",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.sha256",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.signature_is_embedded",
+        "description": "No description provided.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.signature_product",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.signature_status",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.signature_vendor",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.size",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.file.type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.local_ip",
+        "description": "No description provided.",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.local_port",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.base_address",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.boot_code_integrity",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.code_integrity",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.file_info",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.image_size",
+        "description": "No description provided.",
+        "type": "double"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.last_writer_actor",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.md5",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.other_load_location",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.page_protection",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.path",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.sha256",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.signature_is_embedded",
+        "description": "No description provided.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.signature_product",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.signature_status",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.signature_vendor",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.module.system_properties",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.network.connection_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.network.creation_time",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.network.is_server",
+        "description": "No description provided.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.network.protocol",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.network.stats_is_last",
+        "description": "No description provided.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.powered_off",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.fds",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.image_command_line",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.image_extension",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.image_md5",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.image_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.image_path",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.image_sha256",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.in_txn",
+        "description": "No description provided.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.instance_execution_time",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.instance_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.integrity_level",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.last_writer_actor",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.os_pid",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.pe_load_info",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.peb",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.peb32",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.privileges",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.scheduled_task_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.signature_is_embedded",
+        "description": "No description provided.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.signature_product",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.signature_status",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.signature_vendor",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.termination_code",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.termination_date",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.token",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.user_sid",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.process.username",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.registry.data",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.registry.file_path",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.registry.key_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.registry.old_key_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.registry.return_val",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.registry.value_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.registry.value_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_ip",
+        "description": "No description provided.",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_port",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.image_command_line",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.image_md5",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.image_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.image_path",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.image_sha256",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.instance_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.integrity_level",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.os_pid",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.signature_is_embedded",
+        "description": "No description provided.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.signature_product",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.signature_status",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.signature_vendor",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.thread_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.thread_start_address",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.user_sid",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.remote_process.username",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.socket_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.total_download",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.total_upload",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.user_is_local_session",
+        "description": "No description provided.",
+        "type": "boolean"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.user_session_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.user_status",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.user_status_sid",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.action.username",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.address_mapping",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.agent.content_version",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.agent.hostname",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.agent.id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.agent.interface_map",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.agent.ip_addresses",
+        "description": "No description provided.",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.event.agent.ip_addresses_v6",
+        "description": "No description provided.",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.event.agent.os_sub_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.agent.os_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.agent.version",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.event_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.event_rpc_func_opnum",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.event_rpc_interface_uuid",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.event_sub_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.event_timestamp",
+        "description": "No description provided.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.event.event_type",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.event_version",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.host_metadata.domain",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.host_metadata.hostname",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.host_metadata.interface_map",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.local_ip",
+        "description": "No description provided.",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.local_port",
+        "description": "No description provided.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.primary_user_sid",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.primary_username",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.process_command_line",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.process_image_md5",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.process_image_name",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.process_image_path",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.process_image_sha256",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.process_instance_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.process_logon_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.process_os_pid",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.process_signature_status",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.remote_ip",
+        "description": "No description provided.",
+        "type": "ip"
+      },
+      {
+        "field": "panw_cortex.xdr.event.os_actor.thread_thread_id",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.event.uuid",
+        "description": "No description provided.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.aggregated_score",
+        "description": "Aggregated incident score.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.alert_categories",
+        "description": "Categories for alerts contained in the incident.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.alert_count",
+        "description": "Count of alerts.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.alerts_grouping_status",
+        "description": "Is alert grouping enabled for this incident.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.assigned_user_mail",
+        "description": "Email for the assigned user.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.assigned_user_pretty_name",
+        "description": "Pretty name for the assigned user.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.creation_time",
+        "description": "Incident creation time.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.critical_severity_alert_count",
+        "description": "Count of critical severity alerts for this incident.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.detection_time",
+        "description": "Detection time.",
+        "type": "flattened"
+      },
+      {
+        "field": "panw_cortex.xdr.high_severity_alert_count",
+        "description": "Count of high severity alerts for this incident.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.host_count",
+        "description": "Count of hosts related to this incident.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.hosts",
+        "description": "Host names and host ID's related to this incident.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.incident_id",
+        "description": "Incident ID",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.incident_name",
+        "description": "Incident name",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.incident_sources",
+        "description": "Detection sources for this incident.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.low_severity_alert_count",
+        "description": "Count of low severity alerts for this incident.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.manual_description",
+        "description": "Manual incident description.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.manual_score",
+        "description": "Manual incident score.",
+        "type": "flattened"
+      },
+      {
+        "field": "panw_cortex.xdr.manual_severity",
+        "description": "Manual incident severity.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.med_severity_alert_count",
+        "description": "Count of medium severity alerts for this incident.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.mitre_tactics_ids_and_names",
+        "description": "MITRE tactic ID's and names",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.mitre_techniques_ids_and_names",
+        "description": "MITRE technique ID's and names",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.modification_time",
+        "description": "Incident modification time.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.notes",
+        "description": "Incident notes.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.predicted_score",
+        "description": "Predicted incident score.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.resolve_comment",
+        "description": "Incident resolution comment.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.resolved_timestamp",
+        "description": "Incident resolution timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "panw_cortex.xdr.rule_based_score",
+        "description": "Rule based incident score.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.status",
+        "description": "Incident status.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.user_count",
+        "description": "Count of users related to the incident.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.users",
+        "description": "Usernames related to the incident.",
+        "type": "keyword"
+      },
+      {
+        "field": "panw_cortex.xdr.wildfire_hits",
+        "description": "Count of Wildfire hits.",
+        "type": "long"
+      },
+      {
+        "field": "panw_cortex.xdr.xdr_url",
+        "description": "URL to Cortex XDR incident.",
+        "type": "keyword"
+      }
+    ]
   }
 ]
