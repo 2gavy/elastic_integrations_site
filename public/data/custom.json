@@ -44247,5 +44247,151 @@
         "type": "keyword"
       }
     ]
+  },
+  {
+    "slug": "mitre_attack",
+    "name": "MITRE ATT&CK",
+    "description": "Collect the bounded Enterprise ATT&CK v19.2 STIX 2.1 threat intelligence knowledge model across 16 object families through a guarded TAXII CEL lifecycle; rate, replay, late-arrival, and production-lossless guarantees remain on hold.",
+    "version": "0.0.1",
+    "created": "28 August 2026",
+    "buildDuration": "21 minutes 45 seconds (measured)",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security",
+      "Threat Intelligence"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs",
+      "Threat Intelligence"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/mitre_attack",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.action",
+        "description": "The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "This is one of four ECS Categorization Fields, and indicates the second level in the ECS category hierarchy. `event.category` represents the \"big buckets\" of ECS categories. For example, filtering on `event.category:process` yields all events relating to process activity. This field is closely related to `event.type`, which is used as a subcategory. This field is an array. This will allow proper categorization of some events that fall in multiple categories.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Raw text message of entire event. Used to demonstrate log integrity or where the full log message (before splitting it up in multiple parts) may be required, e.g. for reindex. This field is not indexed and doc_values are disabled. It cannot be searched, but it can be retrieved from `_source`. If users wish to override this and index this field, please see `Field data types` in the `Elasticsearch Reference`.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.type",
+        "description": "This is one of four ECS Categorization Fields, and indicates the third level in the ECS category hierarchy. `event.type` represents a categorization \"sub-bucket\" that, when used along with the `event.category` field values, enables filtering events down to a level appropriate for single visualization. This field is an array. This will allow proper categorization of some events that fall in multiple event types.",
+        "type": "keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Input type that collected the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "mitre_attack.stix.created",
+        "description": "STIX object creation time.",
+        "type": "date"
+      },
+      {
+        "field": "mitre_attack.stix.external_id",
+        "description": "Producer-provided external identifiers.",
+        "type": "keyword"
+      },
+      {
+        "field": "mitre_attack.stix.id",
+        "description": "Producer-assigned STIX identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "mitre_attack.stix.modified",
+        "description": "STIX object modification time.",
+        "type": "date"
+      },
+      {
+        "field": "mitre_attack.stix.name",
+        "description": "STIX object name.",
+        "type": "keyword"
+      },
+      {
+        "field": "mitre_attack.stix.object",
+        "description": "Complete bounded STIX 2.1 object.",
+        "type": "flattened"
+      },
+      {
+        "field": "mitre_attack.stix.relationship_type",
+        "description": "STIX relationship type.",
+        "type": "keyword"
+      },
+      {
+        "field": "mitre_attack.stix.revoked",
+        "description": "Whether the STIX object is revoked.",
+        "type": "boolean"
+      },
+      {
+        "field": "mitre_attack.stix.source_ref",
+        "description": "Source STIX object reference.",
+        "type": "keyword"
+      },
+      {
+        "field": "mitre_attack.stix.target_ref",
+        "description": "Target STIX object reference.",
+        "type": "keyword"
+      },
+      {
+        "field": "mitre_attack.stix.type",
+        "description": "STIX object type.",
+        "type": "keyword"
+      },
+      {
+        "field": "tags",
+        "description": "List of keywords used to tag each event.",
+        "type": "keyword"
+      }
+    ]
   }
 ]
