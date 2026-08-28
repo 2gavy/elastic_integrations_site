@@ -2082,7 +2082,7 @@
       },
       {
         "field": "threat.indicator.id",
-        "description": "The ID of the indicator used by this threat to conduct behavior commonly modeled using MITRE ATT&CK®. This field can have multiple values to allow for the identification of the same indicator across systems that use different ID formats. While not required, a common approach is to use a STIX 2.x indicator ID.",
+        "description": "The ID of the indicator used by this threat to conduct behavior commonly modeled using MITRE ATT&CK\u00ae. This field can have multiple values to allow for the identification of the same indicator across systems that use different ID formats. While not required, a common approach is to use a STIX 2.x indicator ID.",
         "type": "keyword"
       },
       {
@@ -2127,7 +2127,7 @@
       },
       {
         "field": "threat.software.name",
-        "description": "The name of the software used by this threat to conduct behavior commonly modeled using MITRE ATT&CK®. While not required, you can use a MITRE ATT&CK® software name.",
+        "description": "The name of the software used by this threat to conduct behavior commonly modeled using MITRE ATT&CK\u00ae. While not required, you can use a MITRE ATT&CK\u00ae software name.",
         "type": "keyword"
       },
       {
@@ -6733,12 +6733,12 @@
       },
       {
         "field": "netskope.transaction.cs_username",
-        "description": "The client’s username.",
+        "description": "The client\u2019s username.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.date",
-        "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the “x-cs-timestamp” field.",
+        "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
         "type": "date"
       },
       {
@@ -6748,7 +6748,7 @@
       },
       {
         "field": "netskope.transaction.s_ip",
-        "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it’s neither IPv4 or IPv6.",
+        "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it\u2019s neither IPv4 or IPv6.",
         "type": "ip"
       },
       {
@@ -6768,7 +6768,7 @@
       },
       {
         "field": "netskope.transaction.time",
-        "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the “x-cs-timestamp” field.",
+        "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
         "type": "keyword"
       },
       {
@@ -6778,12 +6778,12 @@
       },
       {
         "field": "netskope.transaction.x_c_browser",
-        "description": "Client’s browser.",
+        "description": "Client\u2019s browser.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.x_c_browser_version",
-        "description": "Client’s browser version.",
+        "description": "Client\u2019s browser version.",
         "type": "keyword"
       },
       {
@@ -6793,7 +6793,7 @@
       },
       {
         "field": "netskope.transaction.x_c_device",
-        "description": "Client’s device type.",
+        "description": "Client\u2019s device type.",
         "type": "keyword"
       },
       {
@@ -7043,12 +7043,12 @@
       },
       {
         "field": "netskope.transaction.x_cs_timestamp",
-        "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the “date” and “time” fields.",
+        "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the \u201cdate\u201d and \u201ctime\u201d fields.",
         "type": "date"
       },
       {
         "field": "netskope.transaction.x_cs_traffic_type",
-        "description": "Type of traffic could be “Web” or “CloudApp”. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
+        "description": "Type of traffic could be \u201cWeb\u201d or \u201cCloudApp\u201d. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
         "type": "keyword"
       },
       {
@@ -7108,12 +7108,12 @@
       },
       {
         "field": "netskope.transaction.x_policy_justification_reason",
-        "description": "The justification provided by the end user in case of “useralert” action.",
+        "description": "The justification provided by the end user in case of \u201cuseralert\u201d action.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.x_policy_justification_type",
-        "description": "The justification type selected by the end user in case of “useralert” action.",
+        "description": "The justification type selected by the end user in case of \u201cuseralert\u201d action.",
         "type": "keyword"
       },
       {
@@ -7183,7 +7183,7 @@
       },
       {
         "field": "netskope.transaction.x_r_cert_valid",
-        "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn’t reflect the action of the SSL Engine.",
+        "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn\u2019t reflect the action of the SSL Engine.",
         "type": "keyword"
       },
       {
@@ -7263,7 +7263,7 @@
       },
       {
         "field": "netskope.transaction.x_sc_notification_name",
-        "description": "The name of the user notification displayed to the end user in case of action “block” or “useralert”.",
+        "description": "The name of the user notification displayed to the end user in case of action \u201cblock\u201d or \u201cuseralert\u201d.",
         "type": "keyword"
       },
       {
@@ -7393,7 +7393,7 @@
       },
       {
         "field": "netskope.transaction.x_type",
-        "description": "The type of log message, which can be “http_transaction” or “WebSocket”.  NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
+        "description": "The type of log message, which can be \u201chttp_transaction\u201d or \u201cWebSocket\u201d.  NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
         "type": "keyword"
       }
     ]
@@ -40291,7 +40291,7 @@
       },
       {
         "field": "threat.technique.id",
-        "description": "The id of technique used by this threat. You can use a MITRE ATT&CK® technique, for example. (ex. https://attack.mitre.org/techniques/T1059/)",
+        "description": "The id of technique used by this threat. You can use a MITRE ATT&CK\u00ae technique, for example. (ex. https://attack.mitre.org/techniques/T1059/)",
         "type": "keyword"
       },
       {
@@ -41933,17 +41933,17 @@
       },
       {
         "field": "threat.tactic.id",
-        "description": "The id of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
+        "description": "The id of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
         "type": "keyword"
       },
       {
         "field": "threat.tactic.name",
-        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
+        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
         "type": "keyword"
       },
       {
         "field": "threat.tactic.reference",
-        "description": "The reference url of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
+        "description": "The reference url of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
         "type": "keyword"
       },
       {
@@ -45859,7 +45859,7 @@
       },
       {
         "field": "cisco.umbrella.traffic_source",
-        "description": "The source of the user-generated traffic (0-Unknown, 1-VPN,2–ZTNA or 3-Network Tunnel).",
+        "description": "The source of the user-generated traffic (0-Unknown, 1-VPN,2\u2013ZTNA or 3-Network Tunnel).",
         "type": "keyword"
       },
       {
@@ -46623,6 +46623,195 @@
         "field": "user.id",
         "description": "Unique identifier of the user.",
         "type": "keyword"
+      }
+    ]
+  },
+  {
+    "slug": "kiteworks",
+    "name": "Kiteworks Core",
+    "description": "Receive the bounded Kiteworks Core events.user.login webhook family with exact Authorization-header matching; other families, HMAC, retries, ordering, replay, completeness, and lossless delivery remain on hold.",
+    "version": "0.1.0",
+    "created": "29 August 2026",
+    "buildDuration": "25 minutes (measured)",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/kiteworks",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Date/time when the event originated. This is the date/time extracted from the event, typically representing when the event was generated by the source. If the event source has no original timestamp, this value is typically populated by the first time the event was received by the pipeline. Required field for all events.",
+        "type": "date"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "The field can contain anything that makes sense to signify the source of the data. Examples include `nginx.access`, `prometheus`, `endpoint` etc. For data streams that otherwise fit, but that do not have dataset set we use the value \"generic\" for the dataset value. `event.dataset` should have the same value as `data_stream.dataset`. Beyond the Elasticsearch data stream naming criteria noted above, the `dataset` value has additional restrictions:   * Must not contain `-`   * No longer than 100 characters",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "A user defined namespace. Namespaces are useful to allow grouping of data. Many users already organize their indices this way, and the data stream naming scheme now provides this best practice as a default. Many users will populate this field with `default`. If no value is used, it falls back to `default`. Beyond the Elasticsearch index naming criteria noted above, `namespace` value has the additional restrictions:   * Must not contain `-`   * No longer than 100 characters",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "An overarching type for the data stream. Currently allowed values are \"logs\" and \"metrics\". We expect to also add \"traces\" and \"synthetics\" in the near future.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "event.action",
+        "description": "The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "This is one of four ECS Categorization Fields, and indicates the second level in the ECS category hierarchy. `event.category` represents the \"big buckets\" of ECS categories. For example, filtering on `event.category:process` yields all events relating to process activity. This field is closely related to `event.type`, which is used as a subcategory. This field is an array. This will allow proper categorization of some events that fall in multiple categories.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Name of the dataset. If an event source publishes more than one type of log or events (e.g. access log, error log), the dataset is used to specify which one the event comes from. It's recommended but not required to start the dataset name with the module name, followed by a dot, then the dataset name.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Name of the module this data is coming from. If your monitoring agent supports the concept of modules or plugins to process events of a given source (e.g. Apache logs), `event.module` should contain the name of this module.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Raw text message of the entire event.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.outcome",
+        "description": "This is one of four ECS Categorization Fields, and indicates the lowest level in the ECS category hierarchy. `event.outcome` simply denotes whether the event represents a success or a failure from the perspective of the entity that produced the event. Note that when a single transaction is described in multiple events, each event may populate different values of `event.outcome`, according to their perspective. Also note that in the case of a compound event (a single event that contains multiple logical events), this field should be populated with the value that best captures the overall success or failure from the perspective of the event producer. Further note that not all events will have an associated outcome. For example, this field is generally not populated for metric events, events with `event.type:info`, or any events for which an outcome does not make logical sense.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.type",
+        "description": "This is one of four ECS Categorization Fields, and indicates the third level in the ECS category hierarchy. `event.type` represents a categorization \"sub-bucket\" that, when used along with the `event.category` field values, enables filtering events down to a level appropriate for single visualization. This field is an array. This will allow proper categorization of some events that fall in multiple event types.",
+        "type": "keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of Filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "kiteworks.user_login.created",
+        "description": "Producer creation time expressed as fractional Unix seconds; retained without replacing the receiver timestamp.",
+        "type": "double"
+      },
+      {
+        "field": "kiteworks.user_login.event",
+        "description": "Complete bounded Kiteworks events.user.login event.",
+        "type": "flattened"
+      },
+      {
+        "field": "kiteworks.user_login.guid",
+        "description": "Producer GUID retained without deriving event.id.",
+        "type": "keyword"
+      },
+      {
+        "field": "kiteworks.user_login.host",
+        "description": "Kiteworks host reported by the producer.",
+        "type": "keyword"
+      },
+      {
+        "field": "kiteworks.user_login.tenant_id",
+        "description": "Tenant identifier from the login payload.",
+        "type": "long"
+      },
+      {
+        "field": "kiteworks.user_login.transaction_id",
+        "description": "Producer transaction identifier retained without deriving event.id.",
+        "type": "keyword"
+      },
+      {
+        "field": "kiteworks.user_login.webhook_id",
+        "description": "Webhook identifier from the producer envelope.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "observer.product",
+        "description": "The product name of the observer.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Vendor name of the observer.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "related.ip",
+        "description": "All of the IPs seen on your event.",
+        "type": "ip"
+      },
+      {
+        "field": "related.user",
+        "description": "All the user names or other user identifiers seen on the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.ip",
+        "description": "IP address of the source (IPv4 or IPv6).",
+        "type": "ip"
+      },
+      {
+        "field": "tags",
+        "description": "List of keywords used to tag each event.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.email",
+        "description": "User email address.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.id",
+        "description": "Unique identifier of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user_agent.original",
+        "description": "Unparsed user_agent string.",
+        "type": "keyword"
+      },
+      {
+        "field": "user_agent.original.text",
+        "description": "Multi-field of `user_agent.original`.",
+        "type": "match_only_text"
       }
     ]
   }
