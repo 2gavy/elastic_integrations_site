@@ -2058,7 +2058,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.5.2",
+    "version": "4.0.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/box_events"
   },
   {
@@ -2467,7 +2467,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.19.0",
+    "version": "1.19.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/citrix_adc.html"
   },
   {
@@ -6398,7 +6398,7 @@
       "Content"
     ],
     "source": "official",
-    "version": "1.30.2",
+    "version": "1.30.3",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/mysql"
   },
   {
@@ -7029,7 +7029,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "4.3.0",
+    "version": "4.3.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/palo-alto-intro"
   },
   {
