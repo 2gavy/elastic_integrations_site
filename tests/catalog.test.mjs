@@ -39,3 +39,14 @@ test("publishes the bounded FortiDDoS experimental contract", () => {
   assert.match(item.experimentalReason, /real-appliance captures/);
   assert.ok(item.fields.some((field) => field.field === "fortinet_fortiddos.log.type"));
 });
+
+test("publishes the bounded DigitalArts i-FILTER experimental contract", () => {
+  const item = custom.find((record) => record.slug === "digitalarts_ifilter");
+  assert.ok(item);
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.validationStatus, "Static validated");
+  assert.match(item.experimentalReason, /exact 250-byte official Ver\.10/);
+  assert.match(item.experimentalReason, /current real-source records/);
+  assert.ok(item.fields.some((field) => field.field === "digitalarts_ifilter.access.checksum"));
+});
