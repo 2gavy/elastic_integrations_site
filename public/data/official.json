@@ -6298,7 +6298,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "1.23.2",
+    "version": "1.24.0",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/modsecurity"
   },
   {
