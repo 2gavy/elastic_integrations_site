@@ -60,7 +60,7 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
   const repaired = [
     "ibm_verify_identity_access", "nvidia_triton", "nvidia_nim", "aws_ec2_vpcs",
     "cisco_identity_intelligence", "citrix_analytics", "sap_ase", "oauth2_proxy",
-    "fortinet_fortiddos",
+    "fortinet_fortiddos", "ray", "temporal_cloud", "red_hat_directory_server",
   ];
   for (const slug of repaired) {
     const item = custom.find((record) => record.slug === slug);
@@ -72,9 +72,13 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
   assert.deepEqual(
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
     [
-      "arize_phoenix", "digitalarts_ifilter", "dnsfilter", "hypr", "kea_dhcp",
-      "kiteworks", "mitre_attack", "ray", "red_hat_directory_server", "temporal_cloud",
-      "thinkst_canary", "vsftpd",
+      "digitalarts_ifilter", "dnsfilter", "hypr", "kea_dhcp", "kiteworks",
+      "mitre_attack", "thinkst_canary", "vsftpd",
     ].sort(),
   );
+
+  const phoenix = custom.find((record) => record.slug === "arize_phoenix");
+  assert.equal(phoenix.icon, "arize_phoenix.png");
+  const phoenixPng = await readFile(new URL("../public/icons/custom/arize_phoenix.png", import.meta.url));
+  assert.deepEqual([...phoenixPng.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
 });

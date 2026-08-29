@@ -40846,7 +40846,7 @@
     "slug": "red_hat_directory_server",
     "name": "Red Hat Directory Server",
     "description": "Parse one evidence-bounded RHDS 13 successful original-format LDIF modify audit family from operator-selected files; current live bytes, alternate audit formats and log families, rotation, production completeness, and lossless collection remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
     "validationStatus": "Static validated",
@@ -40862,7 +40862,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "red_hat_directory_server.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/red_hat_directory_server",
     "source": "custom",
     "fields": [
@@ -41793,7 +41793,7 @@
     "slug": "ray",
     "name": "Ray",
     "description": "Collect the bounded Ray 2.58.0 application and driver JSONL contract from operator-selected files; worker/system logs, metrics, traces, APIs, rotation, runtime durability, and production losslessness remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "28 August 2026",
     "buildDuration": "28 minutes 29 seconds (measured)",
     "validationStatus": "Static validated",
@@ -41810,7 +41810,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "ray.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/ray",
     "source": "custom",
     "fields": [
@@ -44445,7 +44445,7 @@
     "slug": "arize_phoenix",
     "name": "Arize Phoenix",
     "description": "Collect one bounded Phoenix 20.4.0 observability stored-span REST family through a cursor-paginated CEL policy; late arrivals, mutation/deletion, retention, rate limits, and production-lossless guarantees remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "28 August 2026",
     "buildDuration": "10 minutes 0 seconds (measured)",
     "validationStatus": "Static validated",
@@ -44461,7 +44461,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "arize_phoenix.png",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/arize_phoenix",
     "source": "custom",
     "fields": [
@@ -44916,7 +44916,7 @@
     "slug": "temporal_cloud",
     "name": "Temporal Cloud",
     "description": "Collect the bounded Temporal Cloud OpenMetrics v1 57-family gauge contract; live completeness, response ceiling, retry, cardinality, and production-lossless guarantees remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "28 August 2026",
     "buildDuration": "54 minutes 50 seconds (measured)",
     "validationStatus": "Static validated",
@@ -44934,7 +44934,7 @@
       "Logs",
       "Metrics"
     ],
-    "icon": null,
+    "icon": "temporal_cloud.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/temporal_cloud",
     "source": "custom",
     "fields": [
