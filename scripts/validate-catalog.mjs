@@ -17,6 +17,9 @@ function validate(records, source, minimum) {
     if (source === "custom" && !record.validationStatus) throw new Error(`Missing validation status: ${record.slug}`);
     if (record.status === "Experimental" && !record.experimentalReason) throw new Error(`Missing experimental reason: ${record.slug}`);
   }
+  if (source === "custom" && records.every((record) => record.status === "Experimental")) {
+    throw new Error("Blanket Experimental classification is forbidden");
+  }
 }
 
 validate(official, "official", 400);

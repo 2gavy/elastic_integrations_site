@@ -44,7 +44,7 @@ function itemIcon(item: Integration) {
 }
 
 function itemStatus(item: Integration): IntegrationStatus {
-  return item.status ?? (item.source === "official" ? "Production" : "Experimental");
+  return item.status ?? "Production";
 }
 
 function PlaceholderIcon({ name }: { name: string }) {

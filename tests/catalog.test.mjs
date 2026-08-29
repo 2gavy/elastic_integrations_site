@@ -23,6 +23,9 @@ test("keeps custom metadata protected and namespaced", () => {
   assert.ok(custom.every((item) => allowedStatuses.has(item.status)));
   assert.ok(custom.every((item) => item.validationStatus));
   assert.ok(custom.filter((item) => item.status === "Experimental").every((item) => item.experimentalReason));
+  assert.ok(custom.some((item) => item.status === "Production"));
+  assert.ok(custom.some((item) => item.status === "Experimental"));
+  assert.ok(custom.filter((item) => item.status === "Experimental").length < custom.length / 10);
 });
 
 test("publishes the bounded FortiDDoS experimental contract", () => {
