@@ -50,6 +50,17 @@ test("publishes the bounded DigitalArts i-FILTER experimental contract", () => {
   assert.ok(item.fields.some((field) => field.field === "digitalarts_ifilter.access.checksum"));
 });
 
+test("publishes the bounded Airlock IAM experimental contract", () => {
+  const item = custom.find((record) => record.slug === "airlock_iam");
+  assert.ok(item);
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.validationStatus, "Static validated");
+  assert.match(item.experimentalReason, /bounded authoritative documentation/);
+  assert.ok(item.fields.some((field) => field.field === "airlock_iam.log_id"));
+  assert.equal(item.icon, "airlock-iam.svg");
+});
+
 test("publishes every declared custom logo and keeps the unresolved set explicit", async () => {
   for (const item of custom.filter((record) => record.icon)) {
     const extension = item.icon.slice(item.icon.lastIndexOf("."));
@@ -61,6 +72,7 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
     "ibm_verify_identity_access", "nvidia_triton", "nvidia_nim", "aws_ec2_vpcs",
     "cisco_identity_intelligence", "citrix_analytics", "sap_ase", "oauth2_proxy",
     "fortinet_fortiddos", "ray", "temporal_cloud", "red_hat_directory_server",
+    "airlock_iam",
   ];
   for (const slug of repaired) {
     const item = custom.find((record) => record.slug === slug);
