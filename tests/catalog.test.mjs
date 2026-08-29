@@ -83,10 +83,7 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
 
   assert.deepEqual(
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
-    [
-      "digitalarts_ifilter", "dnsfilter", "hypr", "kea_dhcp", "kiteworks",
-      "mitre_attack", "thinkst_canary", "vsftpd",
-    ].sort(),
+    ["vsftpd"],
   );
 
   const phoenix = custom.find((record) => record.slug === "arize_phoenix");

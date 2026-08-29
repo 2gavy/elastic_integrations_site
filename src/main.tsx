@@ -85,7 +85,6 @@ function DetailPage({ item }: { item: Integration }) {
           <dl className="detail-meta">
             {item.version && <><dt>Latest version</dt><dd>{item.version}</dd></>}
             {status && <><dt>Status</dt><dd>{status}</dd></>}
-            {item.validationStatus && <><dt>Validation</dt><dd>{item.validationStatus}</dd></>}
             <dt>Capabilities</dt><dd>{item.capabilities.join(", ")}</dd>
             <dt>Categories</dt><dd>{item.categories.filter((x) => x !== "Custom").join(", ")}</dd>
           </dl>

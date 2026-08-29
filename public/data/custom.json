@@ -40656,7 +40656,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "kea_dhcp.png",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/kea_dhcp",
     "source": "custom",
     "fields": [
@@ -41093,7 +41093,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "thinkst_canary.png",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/thinkst_canary",
     "source": "custom",
     "fields": [
@@ -44579,7 +44579,7 @@
       "Logs",
       "Threat Intelligence"
     ],
-    "icon": null,
+    "icon": "mitre_attack.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/mitre_attack",
     "source": "custom",
     "fields": [
@@ -45453,7 +45453,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "dnsfilter.png",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/dnsfilter",
     "source": "custom",
     "fields": [
@@ -46527,7 +46527,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "hypr.png",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/hypr",
     "source": "custom",
     "fields": [
@@ -46968,7 +46968,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "kiteworks.png",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/kiteworks",
     "source": "custom",
     "fields": [
@@ -48124,7 +48124,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "digitalarts_ifilter.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/digitalarts_ifilter",
     "source": "custom",
     "fields": [
