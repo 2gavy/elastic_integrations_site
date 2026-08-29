@@ -19,8 +19,7 @@ test("keeps custom metadata protected and namespaced", () => {
   assert.ok(custom.every((item) => !("download" in item) && !("readme" in item)));
   assert.ok(custom.every((item) => Array.isArray(item.fields) && item.fields.length > 0));
   assert.ok(custom.every((item) => item.fields.every((field) => field.field && field.description && field.type)));
-  const allowedStatuses = new Set(["Experimental", "Reuse", "Extend", "Vendor-native", "Hold", "Remap", "Retired"]);
-  assert.ok(custom.every((item) => item.status === undefined || allowedStatuses.has(item.status)));
+  assert.ok(custom.every((item) => item.status === undefined || item.status === "Experimental"));
   assert.ok(custom.every((item) => item.validationStatus));
   assert.ok(custom.filter((item) => item.status === "Experimental").every((item) => item.experimentalReason));
   assert.ok(custom.some((item) => item.status === undefined));
@@ -32,7 +31,7 @@ test("keeps custom metadata protected and namespaced", () => {
 test("publishes the bounded FortiDDoS experimental contract", () => {
   const item = custom.find((record) => record.slug === "fortinet_fortiddos");
   assert.ok(item);
-  assert.equal(item.version, "0.1.0");
+  assert.equal(item.version, "0.1.1");
   assert.equal(item.status, "Experimental");
   assert.equal(item.validationStatus, "Static validated");
   assert.match(item.experimentalReason, /two bounded KV shapes/);
@@ -49,4 +48,33 @@ test("publishes the bounded DigitalArts i-FILTER experimental contract", () => {
   assert.match(item.experimentalReason, /exact 250-byte official Ver\.10/);
   assert.match(item.experimentalReason, /current real-source records/);
   assert.ok(item.fields.some((field) => field.field === "digitalarts_ifilter.access.checksum"));
+});
+
+test("publishes every declared custom logo and keeps the unresolved set explicit", async () => {
+  for (const item of custom.filter((record) => record.icon)) {
+    const extension = item.icon.slice(item.icon.lastIndexOf("."));
+    const bytes = await readFile(new URL(`../public/icons/custom/${item.slug}${extension}`, import.meta.url));
+    assert.ok(bytes.length > 0, `empty logo for ${item.slug}`);
+  }
+
+  const repaired = [
+    "ibm_verify_identity_access", "nvidia_triton", "nvidia_nim", "aws_ec2_vpcs",
+    "cisco_identity_intelligence", "citrix_analytics", "sap_ase", "oauth2_proxy",
+    "fortinet_fortiddos",
+  ];
+  for (const slug of repaired) {
+    const item = custom.find((record) => record.slug === slug);
+    assert.match(item.icon, /\.svg$/);
+    const svg = await readFile(new URL(`../public/icons/custom/${slug}.svg`, import.meta.url), "utf8");
+    assert.match(svg, /<(?:path|circle|rect|polygon|ellipse|line|polyline)\b/);
+  }
+
+  assert.deepEqual(
+    custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
+    [
+      "arize_phoenix", "digitalarts_ifilter", "dnsfilter", "hypr", "kea_dhcp",
+      "kiteworks", "mitre_attack", "ray", "red_hat_directory_server", "temporal_cloud",
+      "thinkst_canary", "vsftpd",
+    ].sort(),
+  );
 });

@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./app.css";
 
 type Source = "official" | "custom";
-type IntegrationStatus = "Experimental" | "Reuse" | "Extend" | "Vendor-native" | "Hold" | "Remap" | "Retired";
+type IntegrationStatus = "Experimental";
 
 type ExportedField = {
   field: string;
@@ -210,7 +210,7 @@ function Catalogue({ items }: { items: Integration[] }) {
           <div className="source-row">
             <span>Status</span>
             <div className="source-tabs status-tabs" role="group" aria-label="Filter by integration status">
-              {["All Statuses", "Experimental", "Reuse", "Extend", "Vendor-native", "Hold", "Remap", "Retired"].map((value) => (
+              {["All Statuses", "Experimental"].map((value) => (
                 <button key={value} className={status === value ? "active" : ""} onClick={() => setStatus(value)}>{value}</button>
               ))}
             </div>

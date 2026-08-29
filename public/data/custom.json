@@ -40059,7 +40059,7 @@
     "slug": "ibm_verify_identity_access",
     "name": "IBM Verify Identity Access OIDC Provider",
     "description": "Parse bounded documentation-derived IBM Verify Identity Access OIDC Provider JSON audit records from selected container stdout or operator-managed files; licensed-live framing, runtime paths, rotation, retention, production completeness, and lossless collection remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
     "validationStatus": "Static validated",
@@ -40075,7 +40075,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "ibm-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/ibm_verify_identity_access",
     "source": "custom",
     "fields": [
@@ -41283,7 +41283,7 @@
     "slug": "nvidia_triton",
     "name": "NVIDIA Triton Inference Server",
     "description": "Scrape the bounded NVIDIA Triton 2.71.0 / r26.07 native Prometheus metric contract; later releases, backend custom metrics, native endpoint security, the held histogram mismatch, and exhaustive live compatibility remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "27 August 2026",
     "buildDuration": "12 hours 16 minutes (measured)",
     "validationStatus": "Static validated",
@@ -41302,7 +41302,7 @@
       "Logs",
       "Metrics"
     ],
-    "icon": null,
+    "icon": "nvidia-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/nvidia_triton",
     "source": "custom",
     "fields": [
@@ -41652,7 +41652,7 @@
     "slug": "nvidia_nim",
     "name": "NVIDIA NIM",
     "description": "Collect the bounded NVIDIA NIM for LLMs 3.0.0 standard-mode startup JSONL contract; worker/Dynamo and broader logs, metrics, traces, transport durability, and production losslessness remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "28 August 2026",
     "buildDuration": "35 minutes 31 seconds (measured)",
     "validationStatus": "Static validated",
@@ -41668,7 +41668,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "nvidia-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/nvidia_nim",
     "source": "custom",
     "fields": [
@@ -44709,7 +44709,7 @@
     "slug": "aws_ec2_vpcs",
     "name": "AWS EC2 VPCs",
     "description": "Collect bounded regional current-state EC2 VPC inventory through DescribeVpcs; snapshot isolation, deletion records, eventual consistency, rate and retry behavior, and production-lossless guarantees remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "28 August 2026",
     "buildDuration": "1 hour 17 minutes 50 seconds (measured)",
     "validationStatus": "Static validated",
@@ -44726,7 +44726,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "aws-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/aws_ec2_vpcs",
     "source": "custom",
     "fields": [
@@ -46362,7 +46362,7 @@
     "slug": "cisco_identity_intelligence",
     "name": "Cisco Identity Intelligence",
     "description": "Receive bounded Cisco Identity Intelligence FAILED_CHECK webhooks; WebhookTest is control-only, and producer delivery completeness and lossless guarantees remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "29 August 2026",
     "buildDuration": "4 minutes (measured)",
     "validationStatus": "Static validated",
@@ -46377,7 +46377,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "cisco-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/cisco_identity_intelligence",
     "source": "custom",
     "fields": [
@@ -46717,7 +46717,7 @@
     "slug": "citrix_analytics",
     "name": "Citrix Analytics",
     "description": "Collect bounded Citrix Analytics for Security schema-v2 risk insight JSON from tenant-provisioned Kafka topics; broader families and production lifecycle guarantees remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "29 August 2026",
     "buildDuration": "31 minutes (measured)",
     "validationStatus": "Static validated",
@@ -46733,7 +46733,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "citrix-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/citrix_analytics",
     "source": "custom",
     "fields": [
@@ -47348,7 +47348,7 @@
     "slug": "sap_ase",
     "name": "SAP Adaptive Server Enterprise",
     "description": "Parse the bounded native SAP ASE 16.0 SP04 PL08 `SAP_ASE_AUDIT` record from an operator-selected Linux syslog file; 16.1 byte compatibility, error logs, native forwarding, production completeness, and lossless collection remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "29 August 2026",
     "buildDuration": "14 minutes (measured)",
     "validationStatus": "Static validated",
@@ -47365,7 +47365,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "sap-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/sap_ase",
     "source": "custom",
     "fields": [
@@ -47571,7 +47571,7 @@
     "slug": "oauth2_proxy",
     "name": "OAuth2 Proxy",
     "description": "Collect the exact OAuth2 Proxy v7.15.3 timeless request-log format from local files; default/custom formats, stdout/stderr and other versions remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "29 August 2026",
     "buildDuration": "34 minutes 23 seconds (measured)",
     "validationStatus": "Static validated",
@@ -47586,7 +47586,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "oauth2-proxy.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/oauth2_proxy",
     "source": "custom",
     "fields": [
@@ -47756,7 +47756,7 @@
     "slug": "fortinet_fortiddos",
     "name": "Fortinet FortiDDoS",
     "description": "Collect the two exact FortiDDoS-F attack and event KV documentation shapes over UDP through version 7.2.4; broader grammar, later releases, delivery completeness, and real-appliance validation remain on hold.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "29 August 2026",
     "buildDuration": "31 minutes 50 seconds (measured)",
     "validationStatus": "Static validated",
@@ -47772,7 +47772,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "fortinet-logo.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/fortinet_fortiddos",
     "source": "custom",
     "fields": [

@@ -12,8 +12,7 @@ function validate(records, source, minimum) {
     seen.add(record.slug);
     if (source === "official" && !record.destinationUrl?.startsWith("https://")) throw new Error(`Invalid official URL: ${record.slug}`);
     if (source === "custom" && !record.repositoryUrl?.startsWith("https://github.com/2gavy/elastic_integrations/tree/main/")) throw new Error(`Invalid custom URL: ${record.slug}`);
-    const allowedStatuses = new Set(["Experimental", "Reuse", "Extend", "Vendor-native", "Hold", "Remap", "Retired"]);
-    if (source === "custom" && record.status !== undefined && !allowedStatuses.has(record.status)) throw new Error(`Invalid custom status: ${record.slug}`);
+    if (source === "custom" && record.status !== undefined && record.status !== "Experimental") throw new Error(`Invalid custom status: ${record.slug}`);
     if (source === "custom" && !record.validationStatus) throw new Error(`Missing validation status: ${record.slug}`);
     if (record.status === "Experimental" && !record.experimentalReason) throw new Error(`Missing experimental reason: ${record.slug}`);
   }

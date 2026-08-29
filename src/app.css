@@ -56,11 +56,7 @@ a { color:inherit; }
 .source-badge.official { color:#216243; background:#e5f6ed; }.source-badge.custom { color:#735100; background:#fff0b7; }
 .badge-row { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:6px; }
 .status-badge { display:inline-flex; align-items:center; border:1px solid transparent; border-radius:999px; padding:4px 8px; font-size:9px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
-.status-production { color:#16603b; background:#e5f6ed; border-color:#bce5cd; }
 .status-experimental { color:#7a4d00; background:#fff4cc; border-color:#efd27b; }
-.status-reuse,.status-extend,.status-vendor_native { color:#07577a; background:#e5f5fb; border-color:#b9deed; }
-.status-hold,.status-remap { color:#78410a; background:#f9eadc; border-color:#e8c7a7; }
-.status-retired { color:#5c6470; background:#edf0f3; border-color:#d2d8df; }
 .integration-card h3 { font-family:"Space Grotesk",sans-serif; margin:0 0 9px; padding-right:24px; font-size:17px; letter-spacing:-.02em; }
 .integration-card>p { margin:0 0 18px; color:#657385; font-size:13px; line-height:1.5; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
 .capability-row { display:flex; flex-wrap:wrap; gap:6px; }
