@@ -2,7 +2,7 @@
 
 Elastic Integrations (AI) is a unified, searchable catalogue for discovering official Elastic integrations alongside custom integrations developed for sources that need additional coverage.
 
-The catalogue currently includes **488 official integrations** and **165 custom integrations**.
+The catalogue currently includes **488 official integrations** and **166 custom integrations**.
 
 ## The problem this solves
 
