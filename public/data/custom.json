@@ -6,7 +6,6 @@
     "version": "0.1.2",
     "created": "4 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -283,7 +282,6 @@
     "version": "0.1.0",
     "created": "14 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -476,7 +474,6 @@
     "version": "0.2.0",
     "created": "4 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -798,7 +795,6 @@
     "version": "0.1.1",
     "created": "12 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -1006,7 +1002,6 @@
     "version": "0.1.1",
     "created": "4 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -1503,7 +1498,6 @@
     "version": "0.1.0",
     "created": "12 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -1681,7 +1675,6 @@
     "version": "0.1.1",
     "created": "4 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -1843,7 +1836,6 @@
     "version": "0.2.0",
     "created": "15 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -2173,7 +2165,6 @@
     "version": "0.1.0",
     "created": "12 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -2300,7 +2291,6 @@
     "version": "0.1.0",
     "created": "13 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -2433,7 +2423,6 @@
     "version": "0.1.0",
     "created": "13 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -2626,7 +2615,6 @@
     "version": "0.1.0",
     "created": "12 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -2941,7 +2929,6 @@
     "version": "3.2.2",
     "created": "7 August 2026",
     "buildDuration": "~3 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -7444,7 +7431,6 @@
     "version": "0.1.1",
     "created": "7 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -7658,7 +7644,6 @@
     "version": "0.1.0",
     "created": "12 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -7815,7 +7800,6 @@
     "version": "0.6.14",
     "created": "26 July 2026",
     "buildDuration": "~3 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -8963,7 +8947,6 @@
     "version": "0.1.1",
     "created": "13 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -9160,7 +9143,6 @@
     "version": "0.1.0",
     "created": "12 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -9358,7 +9340,6 @@
     "version": "0.1.0",
     "created": "12 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -9586,7 +9567,6 @@
     "version": "0.1.0",
     "created": "12 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -9834,7 +9814,6 @@
     "version": "0.1.0",
     "created": "12 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -10116,7 +10095,6 @@
     "version": "0.1.0",
     "created": "12 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -10409,7 +10387,6 @@
     "version": "0.1.1",
     "created": "7 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -10723,7 +10700,6 @@
     "version": "0.2.0",
     "created": "12 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -11061,7 +11037,6 @@
     "version": "0.1.0",
     "created": "12 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -11294,7 +11269,6 @@
     "version": "0.1.5",
     "created": "4 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -11516,7 +11490,6 @@
     "version": "0.1.0",
     "created": "14 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -11834,7 +11807,6 @@
     "version": "0.1.0",
     "created": "14 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -12007,7 +11979,6 @@
     "version": "0.1.0",
     "created": "15 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -12201,7 +12172,6 @@
     "version": "0.1.0",
     "created": "15 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -12395,7 +12365,6 @@
     "version": "0.1.0",
     "created": "15 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -12608,7 +12577,6 @@
     "version": "0.1.0",
     "created": "15 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -12850,7 +12818,6 @@
     "version": "0.1.0",
     "created": "15 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -13059,7 +13026,6 @@
     "version": "0.1.0",
     "created": "15 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -13291,7 +13257,6 @@
     "version": "0.1.0",
     "created": "15 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -13497,7 +13462,6 @@
     "version": "0.1.2",
     "created": "15 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -13781,7 +13745,6 @@
     "version": "0.1.0",
     "created": "15 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -13964,7 +13927,6 @@
     "version": "0.1.0",
     "created": "16 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -14175,7 +14137,6 @@
     "version": "0.1.0",
     "created": "16 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -14432,7 +14393,6 @@
     "version": "0.1.0",
     "created": "16 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -14584,7 +14544,6 @@
     "version": "0.1.0",
     "created": "16 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -14711,7 +14670,6 @@
     "version": "0.1.0",
     "created": "16 August 2026",
     "buildDuration": "~3 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -15303,7 +15261,6 @@
     "version": "0.1.0",
     "created": "16 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -15535,7 +15492,6 @@
     "version": "0.1.0",
     "created": "16 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -15988,7 +15944,6 @@
     "version": "0.1.1",
     "created": "16 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -16406,7 +16361,6 @@
     "version": "0.1.0",
     "created": "16 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -16713,7 +16667,6 @@
     "version": "0.1.0",
     "created": "16 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -17006,7 +16959,6 @@
     "version": "0.1.0",
     "created": "16 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -17229,7 +17181,6 @@
     "version": "0.1.0",
     "created": "17 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -17552,7 +17503,6 @@
     "version": "0.1.0",
     "created": "17 August 2026",
     "buildDuration": "~1 hour (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -17793,7 +17743,6 @@
     "version": "0.1.1",
     "created": "21 August 2026",
     "buildDuration": "~30 minutes (0.1.1 remediation)",
-    "status": "Experimental",
     "validationStatus": "Static validated",
     "experimentalReason": "Built from bounded authoritative documentation or structural evidence. Real-world compatibility and completeness validation are still required.",
     "categories": [
@@ -18488,7 +18437,8 @@
         "description": "Multi-field of `user_agent.original`.",
         "type": "match_only_text"
       }
-    ]
+    ],
+    "status": "Experimental"
   },
   {
     "slug": "fortinet_fortiadc",
@@ -18497,7 +18447,6 @@
     "version": "0.1.0",
     "created": "18 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -19000,7 +18949,6 @@
     "version": "0.1.0",
     "created": "20 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -19393,7 +19341,6 @@
     "version": "0.1.0",
     "created": "20 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -19781,7 +19728,6 @@
     "version": "0.1.0",
     "created": "20 August 2026",
     "buildDuration": "~30 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -20012,7 +19958,6 @@
     "version": "0.1.0",
     "created": "21 August 2026",
     "buildDuration": "~1 hour 15 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -20259,7 +20204,6 @@
     "version": "0.1.0",
     "created": "21 August 2026",
     "buildDuration": "~30 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -20427,7 +20371,6 @@
     "version": "0.1.0",
     "created": "21 August 2026",
     "buildDuration": "~35 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -20644,7 +20587,6 @@
     "version": "0.1.0",
     "created": "21 August 2026",
     "buildDuration": "~45 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -20761,7 +20703,6 @@
     "version": "0.1.0",
     "created": "21 August 2026",
     "buildDuration": "~1 hour 45 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -21008,7 +20949,6 @@
     "version": "0.1.0",
     "created": "21 August 2026",
     "buildDuration": "~2 hours 35 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -21285,7 +21225,6 @@
     "version": "0.1.0",
     "created": "21 August 2026",
     "buildDuration": "~3 hours 50 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -21677,7 +21616,6 @@
     "version": "0.1.0",
     "created": "22 August 2026",
     "buildDuration": "~50 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -21938,7 +21876,6 @@
     "version": "0.1.0",
     "created": "22 August 2026",
     "buildDuration": "~35 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -22246,7 +22183,6 @@
     "version": "0.1.0",
     "created": "22 August 2026",
     "buildDuration": "~1 hour 20 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -22477,7 +22413,6 @@
     "version": "0.1.0",
     "created": "22 August 2026",
     "buildDuration": "~1 hour 15 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -22675,7 +22610,6 @@
     "version": "0.1.0",
     "created": "22 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -22953,7 +22887,6 @@
     "version": "0.1.0",
     "created": "22 August 2026",
     "buildDuration": "~40 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -23220,7 +23153,6 @@
     "version": "0.1.0",
     "created": "22 August 2026",
     "buildDuration": "~45 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -23493,7 +23425,6 @@
     "version": "0.1.0",
     "created": "22 August 2026",
     "buildDuration": "~35 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -23811,7 +23742,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~45 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -24038,7 +23968,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -24340,7 +24269,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~50 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -24606,7 +24534,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour 10 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -24823,7 +24750,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~55 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -25060,7 +24986,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -25301,7 +25226,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -25583,7 +25507,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -25840,7 +25763,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour 15 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -26236,7 +26158,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -26643,7 +26564,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour 15 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -27020,7 +26940,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -27181,7 +27100,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour 15 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -27429,7 +27347,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -27586,7 +27503,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~2 hours 15 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -27783,7 +27699,6 @@
     "version": "0.1.0",
     "created": "23 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -27935,7 +27850,6 @@
     "version": "0.1.0",
     "created": "24 August 2026",
     "buildDuration": "~1 hour 30 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -28222,7 +28136,6 @@
     "version": "0.1.0",
     "created": "24 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -28399,7 +28312,6 @@
     "version": "0.1.0",
     "created": "24 August 2026",
     "buildDuration": "~4 hours 45 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -28656,7 +28568,6 @@
     "version": "0.1.0",
     "created": "24 August 2026",
     "buildDuration": "10 minutes 43 seconds",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -28843,7 +28754,6 @@
     "version": "0.1.0",
     "created": "24 August 2026",
     "buildDuration": "5 minutes 5 seconds",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -29201,7 +29111,6 @@
     "version": "0.1.0",
     "created": "24 August 2026",
     "buildDuration": "~2 hours 39 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -29498,7 +29407,6 @@
     "version": "0.1.0",
     "created": "24 August 2026",
     "buildDuration": "~30 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -29685,7 +29593,6 @@
     "version": "0.1.0",
     "created": "25 August 2026",
     "buildDuration": "~2 hours 11 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -29892,7 +29799,6 @@
     "version": "0.1.0",
     "created": "25 August 2026",
     "buildDuration": "~52 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -30093,7 +29999,6 @@
     "version": "0.1.0",
     "created": "25 August 2026",
     "buildDuration": "~1 hour 19 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -30349,7 +30254,6 @@
     "version": "0.1.0",
     "created": "25 August 2026",
     "buildDuration": "~51 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -30511,7 +30415,6 @@
     "version": "0.1.0",
     "created": "25 August 2026",
     "buildDuration": "~55 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -30758,7 +30661,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -30955,7 +30857,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~45 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -31172,7 +31073,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~45 minutes",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -31288,7 +31188,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -31505,7 +31404,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -31713,7 +31611,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -31904,7 +31801,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -32065,7 +31961,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -32197,7 +32092,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -32353,7 +32247,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -32534,7 +32427,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -32727,7 +32619,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -32939,7 +32830,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -33191,7 +33081,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -33373,7 +33262,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -33576,7 +33464,6 @@
     "version": "0.1.0",
     "created": "26 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -33757,7 +33644,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -33974,7 +33860,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -34217,7 +34102,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -34398,7 +34282,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -34590,7 +34473,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -34778,7 +34660,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -35016,7 +34897,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -35249,7 +35129,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -35476,7 +35355,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -35684,7 +35562,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -35940,7 +35817,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -36137,7 +36013,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -36369,7 +36244,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -36596,7 +36470,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -36837,7 +36710,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -37034,7 +36906,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -37240,7 +37111,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -37467,7 +37337,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -37688,7 +37557,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -38031,7 +37899,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -38278,7 +38145,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -38481,7 +38347,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -38768,7 +38633,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -38954,7 +38818,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -39160,7 +39023,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~1 hour",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -39341,7 +39203,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -39537,7 +39398,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -39723,7 +39583,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -40007,7 +39866,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -40204,7 +40062,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -40516,7 +40373,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -40788,7 +40644,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -40994,7 +40849,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -41226,7 +41080,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "~2 hours (estimated; not measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -41433,7 +41286,6 @@
     "version": "0.1.0",
     "created": "27 August 2026",
     "buildDuration": "12 hours 16 minutes (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -41803,7 +41655,6 @@
     "version": "0.1.0",
     "created": "28 August 2026",
     "buildDuration": "35 minutes 31 seconds (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -41945,7 +41796,6 @@
     "version": "0.1.0",
     "created": "28 August 2026",
     "buildDuration": "28 minutes 29 seconds (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -42138,7 +41988,6 @@
     "version": "0.2.0",
     "created": "28 August 2026",
     "buildDuration": "43 minutes 24 seconds (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -42646,7 +42495,6 @@
     "version": "2.8.0",
     "created": "28 August 2026",
     "buildDuration": "20 minutes 11 seconds (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -44600,7 +44448,6 @@
     "version": "0.1.0",
     "created": "28 August 2026",
     "buildDuration": "10 minutes 0 seconds (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -44717,7 +44564,6 @@
     "version": "0.0.1",
     "created": "28 August 2026",
     "buildDuration": "21 minutes 45 seconds (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -44866,7 +44712,6 @@
     "version": "0.1.0",
     "created": "28 August 2026",
     "buildDuration": "1 hour 17 minutes 50 seconds (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -45074,7 +44919,6 @@
     "version": "0.1.0",
     "created": "28 August 2026",
     "buildDuration": "54 minutes 50 seconds (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -45593,7 +45437,6 @@
     "version": "0.1.0",
     "created": "28 August 2026",
     "buildDuration": "28 minutes (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -46003,7 +45846,6 @@
     "version": "1.34.0",
     "created": "29 August 2026",
     "buildDuration": "43 minutes (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -46523,7 +46365,6 @@
     "version": "0.1.0",
     "created": "29 August 2026",
     "buildDuration": "4 minutes (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -46674,7 +46515,6 @@
     "version": "0.1.0",
     "created": "29 August 2026",
     "buildDuration": "24 minutes (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -46880,7 +46720,6 @@
     "version": "0.1.0",
     "created": "29 August 2026",
     "buildDuration": "31 minutes (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -47117,7 +46956,6 @@
     "version": "0.1.0",
     "created": "29 August 2026",
     "buildDuration": "25 minutes (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -47308,7 +47146,6 @@
     "version": "0.1.0",
     "created": "29 August 2026",
     "buildDuration": "15 minutes (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -47514,7 +47351,6 @@
     "version": "0.1.0",
     "created": "29 August 2026",
     "buildDuration": "14 minutes (measured)",
-    "status": "Experimental",
     "validationStatus": "Static validated",
     "experimentalReason": "Built from bounded authoritative documentation or structural evidence. Real-world compatibility and completeness validation are still required.",
     "categories": [
@@ -47728,7 +47564,8 @@
         "description": "Multi-field of `user.name`.",
         "type": "match_only_text"
       }
-    ]
+    ],
+    "status": "Experimental"
   },
   {
     "slug": "oauth2_proxy",
@@ -47737,7 +47574,6 @@
     "version": "0.1.0",
     "created": "29 August 2026",
     "buildDuration": "34 minutes 23 seconds (measured)",
-    "status": "Production",
     "validationStatus": "Static validated",
     "experimentalReason": "",
     "categories": [
@@ -47923,7 +47759,6 @@
     "version": "0.1.0",
     "created": "29 August 2026",
     "buildDuration": "31 minutes 50 seconds (measured)",
-    "status": "Experimental",
     "validationStatus": "Static validated",
     "experimentalReason": "Exact Fortinet documentation records recurring in FortiDDoS-F 7.0.0 and 7.2.4 support only two bounded KV shapes. Elasticsearch pipeline simulation, UDP input-path testing, real-appliance captures, later-version compatibility, exhaustive grammar, and delivery completeness remain unvalidated.",
     "categories": [
@@ -48266,6 +48101,7 @@
         "description": "Multi-field of `user.name`.",
         "type": "match_only_text"
       }
-    ]
+    ],
+    "status": "Experimental"
   }
 ]

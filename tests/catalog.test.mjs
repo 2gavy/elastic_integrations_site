@@ -19,11 +19,12 @@ test("keeps custom metadata protected and namespaced", () => {
   assert.ok(custom.every((item) => !("download" in item) && !("readme" in item)));
   assert.ok(custom.every((item) => Array.isArray(item.fields) && item.fields.length > 0));
   assert.ok(custom.every((item) => item.fields.every((field) => field.field && field.description && field.type)));
-  const allowedStatuses = new Set(["Production", "Experimental", "Reuse", "Extend", "Vendor-native", "Hold", "Remap", "Retired"]);
-  assert.ok(custom.every((item) => allowedStatuses.has(item.status)));
+  const allowedStatuses = new Set(["Experimental", "Reuse", "Extend", "Vendor-native", "Hold", "Remap", "Retired"]);
+  assert.ok(custom.every((item) => item.status === undefined || allowedStatuses.has(item.status)));
   assert.ok(custom.every((item) => item.validationStatus));
   assert.ok(custom.filter((item) => item.status === "Experimental").every((item) => item.experimentalReason));
-  assert.ok(custom.some((item) => item.status === "Production"));
+  assert.ok(custom.some((item) => item.status === undefined));
+  assert.equal(custom.filter((item) => item.status === "Production").length, 0);
   assert.ok(custom.some((item) => item.status === "Experimental"));
   assert.ok(custom.filter((item) => item.status === "Experimental").length < custom.length / 10);
 });

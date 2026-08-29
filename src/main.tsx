@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./app.css";
 
 type Source = "official" | "custom";
-type IntegrationStatus = "Production" | "Experimental" | "Reuse" | "Extend" | "Vendor-native" | "Hold" | "Remap" | "Retired";
+type IntegrationStatus = "Experimental" | "Reuse" | "Extend" | "Vendor-native" | "Hold" | "Remap" | "Retired";
 
 type ExportedField = {
   field: string;
@@ -43,10 +43,6 @@ function itemIcon(item: Integration) {
   return item.source === "custom" ? customIcon(item) : item.icon;
 }
 
-function itemStatus(item: Integration): IntegrationStatus {
-  return item.status ?? "Production";
-}
-
 function PlaceholderIcon({ name }: { name: string }) {
   return <span className="placeholder-icon" aria-hidden="true">{name.slice(0, 2).toUpperCase()}</span>;
 }
@@ -61,7 +57,7 @@ function BrandMark() {
 
 function DetailPage({ item }: { item: Integration }) {
   const icon = itemIcon(item);
-  const status = itemStatus(item);
+  const status = item.status;
   return (
     <div className="site-shell detail-shell">
       <header className="topbar">
@@ -75,7 +71,7 @@ function DetailPage({ item }: { item: Integration }) {
           </div>
           <div className="badge-row">
             <span className="source-badge custom">Custom</span>
-            <span className={`status-badge status-${status.toLowerCase().replaceAll("-", "_")}`}>{status}</span>
+            {status && <span className={`status-badge status-${status.toLowerCase().replaceAll("-", "_")}`}>{status}</span>}
           </div>
           <h1>{item.name}</h1>
           <p className="detail-description">{item.description}</p>
@@ -88,7 +84,7 @@ function DetailPage({ item }: { item: Integration }) {
           )}
           <dl className="detail-meta">
             {item.version && <><dt>Latest version</dt><dd>{item.version}</dd></>}
-            <dt>Status</dt><dd>{status}</dd>
+            {status && <><dt>Status</dt><dd>{status}</dd></>}
             {item.validationStatus && <><dt>Validation</dt><dd>{item.validationStatus}</dd></>}
             <dt>Capabilities</dt><dd>{item.capabilities.join(", ")}</dd>
             <dt>Categories</dt><dd>{item.categories.filter((x) => x !== "Custom").join(", ")}</dd>
@@ -155,7 +151,7 @@ function Catalogue({ items }: { items: Integration[] }) {
     return items.filter((item) => {
       if (solution !== "All Solutions" && !item.solutions.includes(solution)) return false;
       if (source !== "All" && item.source !== source.toLowerCase()) return false;
-      if (status !== "All Statuses" && itemStatus(item) !== status) return false;
+      if (status !== "All Statuses" && item.status !== status) return false;
       if (categories.length && !categories.every((category) => item.categories.includes(category))) return false;
       if (!needle) return true;
       return [item.name, item.description, item.source, ...item.categories, ...item.capabilities, ...item.solutions]
@@ -214,7 +210,7 @@ function Catalogue({ items }: { items: Integration[] }) {
           <div className="source-row">
             <span>Status</span>
             <div className="source-tabs status-tabs" role="group" aria-label="Filter by integration status">
-              {["All Statuses", "Production", "Experimental", "Reuse", "Extend", "Vendor-native", "Hold", "Remap", "Retired"].map((value) => (
+              {["All Statuses", "Experimental", "Reuse", "Extend", "Vendor-native", "Hold", "Remap", "Retired"].map((value) => (
                 <button key={value} className={status === value ? "active" : ""} onClick={() => setStatus(value)}>{value}</button>
               ))}
             </div>
@@ -244,7 +240,7 @@ function Catalogue({ items }: { items: Integration[] }) {
                       <div className="icon-wrap">{icon ? <img src={icon} alt="" loading="lazy" /> : <PlaceholderIcon name={item.name} />}</div>
                       <div className="badge-row">
                         <span className={`source-badge ${item.source}`}>{item.source === "official" ? "Official" : "Custom"}</span>
-                        <span className={`status-badge status-${itemStatus(item).toLowerCase().replaceAll("-", "_")}`}>{itemStatus(item)}</span>
+                        {item.status && <span className={`status-badge status-${item.status.toLowerCase().replaceAll("-", "_")}`}>{item.status}</span>}
                       </div>
                     </div>
                     <h3>{item.name}</h3>
