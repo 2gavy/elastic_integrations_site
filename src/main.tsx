@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./app.css";
 
 type Source = "official" | "custom";
+type IntegrationStatus = "Production" | "Experimental" | "Reuse" | "Extend" | "Vendor-native" | "Hold" | "Remap" | "Retired";
 
 type ExportedField = {
   field: string;
@@ -24,6 +25,9 @@ type Integration = {
   repositoryUrl?: string;
   created?: string;
   fields?: ExportedField[];
+  status?: IntegrationStatus;
+  validationStatus?: string;
+  experimentalReason?: string;
 };
 
 const base = import.meta.env.BASE_URL;
@@ -37,6 +41,10 @@ function customIcon(item: Integration) {
 
 function itemIcon(item: Integration) {
   return item.source === "custom" ? customIcon(item) : item.icon;
+}
+
+function itemStatus(item: Integration): IntegrationStatus {
+  return item.status ?? (item.source === "official" ? "Production" : "Experimental");
 }
 
 function PlaceholderIcon({ name }: { name: string }) {
@@ -53,6 +61,7 @@ function BrandMark() {
 
 function DetailPage({ item }: { item: Integration }) {
   const icon = itemIcon(item);
+  const status = itemStatus(item);
   return (
     <div className="site-shell detail-shell">
       <header className="topbar">
@@ -64,11 +73,23 @@ function DetailPage({ item }: { item: Integration }) {
           <div className="detail-icon-wrap">
             {icon ? <img src={icon} alt="" /> : <PlaceholderIcon name={item.name} />}
           </div>
-          <span className="source-badge custom">Custom</span>
+          <div className="badge-row">
+            <span className="source-badge custom">Custom</span>
+            <span className={`status-badge status-${status.toLowerCase().replaceAll("-", "_")}`}>{status}</span>
+          </div>
           <h1>{item.name}</h1>
           <p className="detail-description">{item.description}</p>
+          {status === "Experimental" && (
+            <aside className="experimental-warning" aria-label="Experimental integration warning">
+              <strong>Experimental</strong>
+              <p>Built from bounded authoritative documentation or structural evidence. Real-world compatibility and completeness validation are still required.</p>
+              {item.experimentalReason && <p>{item.experimentalReason}</p>}
+            </aside>
+          )}
           <dl className="detail-meta">
             {item.version && <><dt>Latest version</dt><dd>{item.version}</dd></>}
+            <dt>Status</dt><dd>{status}</dd>
+            {item.validationStatus && <><dt>Validation</dt><dd>{item.validationStatus}</dd></>}
             <dt>Capabilities</dt><dd>{item.capabilities.join(", ")}</dd>
             <dt>Categories</dt><dd>{item.categories.filter((x) => x !== "Custom").join(", ")}</dd>
           </dl>
@@ -119,6 +140,7 @@ function Catalogue({ items }: { items: Integration[] }) {
   const [query, setQuery] = useState("");
   const [solution, setSolution] = useState("All Solutions");
   const [source, setSource] = useState("All");
+  const [status, setStatus] = useState("All Statuses");
   const [categories, setCategories] = useState<string[]>([]);
   const [visible, setVisible] = useState(48);
 
@@ -133,14 +155,15 @@ function Catalogue({ items }: { items: Integration[] }) {
     return items.filter((item) => {
       if (solution !== "All Solutions" && !item.solutions.includes(solution)) return false;
       if (source !== "All" && item.source !== source.toLowerCase()) return false;
+      if (status !== "All Statuses" && itemStatus(item) !== status) return false;
       if (categories.length && !categories.every((category) => item.categories.includes(category))) return false;
       if (!needle) return true;
       return [item.name, item.description, item.source, ...item.categories, ...item.capabilities, ...item.solutions]
         .join(" ").toLowerCase().includes(needle);
     });
-  }, [items, query, solution, source, categories]);
+  }, [items, query, solution, source, status, categories]);
 
-  useEffect(() => setVisible(48), [query, solution, source, categories]);
+  useEffect(() => setVisible(48), [query, solution, source, status, categories]);
 
   function toggleCategory(category: string) {
     setCategories((current) => current.includes(category)
@@ -188,6 +211,15 @@ function Catalogue({ items }: { items: Integration[] }) {
             </div>
           </div>
 
+          <div className="source-row">
+            <span>Status</span>
+            <div className="source-tabs status-tabs" role="group" aria-label="Filter by integration status">
+              {["All Statuses", "Production", "Experimental", "Reuse", "Extend", "Vendor-native", "Hold", "Remap", "Retired"].map((value) => (
+                <button key={value} className={status === value ? "active" : ""} onClick={() => setStatus(value)}>{value}</button>
+              ))}
+            </div>
+          </div>
+
           <div className="category-list" aria-label="Filter by category">
             {allCategories.map((category) => (
               <button key={category} aria-pressed={categories.includes(category)} className={categories.includes(category) ? "active" : ""} onClick={() => toggleCategory(category)}>{category}</button>
@@ -196,8 +228,8 @@ function Catalogue({ items }: { items: Integration[] }) {
 
           <div className="result-heading" aria-live="polite">
             <div><strong>{filtered.length}</strong> integrations</div>
-            {(query || solution !== "All Solutions" || source !== "All" || categories.length > 0) && (
-              <button onClick={() => { setQuery(""); setSolution("All Solutions"); setSource("All"); setCategories([]); }}>Reset filters</button>
+            {(query || solution !== "All Solutions" || source !== "All" || status !== "All Statuses" || categories.length > 0) && (
+              <button onClick={() => { setQuery(""); setSolution("All Solutions"); setSource("All"); setStatus("All Statuses"); setCategories([]); }}>Reset filters</button>
             )}
           </div>
 
@@ -210,7 +242,10 @@ function Catalogue({ items }: { items: Integration[] }) {
                   <a className="integration-card" key={`${item.source}-${item.slug}`} href={href} target={item.source === "official" ? "_blank" : undefined} rel={item.source === "official" ? "noreferrer" : undefined}>
                     <div className="card-top">
                       <div className="icon-wrap">{icon ? <img src={icon} alt="" loading="lazy" /> : <PlaceholderIcon name={item.name} />}</div>
-                      <span className={`source-badge ${item.source}`}>{item.source === "official" ? "Official" : "Custom"}</span>
+                      <div className="badge-row">
+                        <span className={`source-badge ${item.source}`}>{item.source === "official" ? "Official" : "Custom"}</span>
+                        <span className={`status-badge status-${itemStatus(item).toLowerCase().replaceAll("-", "_")}`}>{itemStatus(item)}</span>
+                      </div>
                     </div>
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>
