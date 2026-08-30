@@ -49794,7 +49794,7 @@
     "description": "Collect audit and system events from the Veza Access Platform.",
     "version": "0.1.0",
     "created": "30 August 2026",
-    "buildDuration": "Best-effort experimental build",
+    "buildDuration": "1 hour 21 minutes 48 seconds (measured)",
     "status": "Experimental",
     "validationStatus": "Static validated",
     "experimentalReason": "Built from official historical documentation examples without a current customer-tenant capture. Validate endpoint version, audit schema variant, pagination durability, ordering, and completeness against real deployment data before operational reliance.",

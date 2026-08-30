@@ -70,6 +70,9 @@ OFFICIAL_ICONS = {
 EXPERIMENTAL_REASON_OVERRIDES = {
     "veza": "Built from official historical documentation examples without a current customer-tenant capture. Validate endpoint version, audit schema variant, pagination durability, ordering, and completeness against real deployment data before operational reliance.",
 }
+BUILD_DURATION_OVERRIDES = {
+    "veza": "1 hour 21 minutes 48 seconds (measured)",
+}
 requested_slugs = os.environ.get("EXPERIMENTAL_SLUGS")
 SLUGS = requested_slugs.split(",") if requested_slugs else ALL_SLUGS
 
@@ -130,7 +133,7 @@ for slug in SLUGS:
         "description": description,
         "version": version,
         "created": "30 August 2026",
-        "buildDuration": "Best-effort experimental build",
+        "buildDuration": BUILD_DURATION_OVERRIDES.get(slug, "Best-effort experimental build"),
         "status": "Experimental",
         "validationStatus": "Static validated",
         "experimentalReason": EXPERIMENTAL_REASON_OVERRIDES.get(

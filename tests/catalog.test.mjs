@@ -103,6 +103,7 @@ test("publishes the Experimental Veza integration with an initials fallback", ()
   assert.equal(item.name, "Veza");
   assert.equal(item.version, "0.1.0");
   assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "1 hour 21 minutes 48 seconds (measured)");
   assert.equal(item.icon, null);
   assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/veza");
   assert.match(item.experimentalReason, /current customer-tenant capture/);
