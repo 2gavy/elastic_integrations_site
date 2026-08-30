@@ -147,7 +147,7 @@ test("publishes the bounded Experimental ScienceLogic Skylar One receiver with a
   assert.equal(item.name, "ScienceLogic Skylar One");
   assert.equal(item.version, "0.1.0");
   assert.equal(item.status, "Experimental");
-  assert.equal(item.buildDuration, "Best-effort experimental build");
+  assert.equal(item.buildDuration, "20 minutes 8 seconds (measured)");
   assert.equal(item.validationStatus, "Package and negative raw-fallback pipeline validated; positive fixtures blocked");
   assert.equal(item.icon, null);
   assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/sciencelogic_sl1");

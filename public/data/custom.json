@@ -42795,7 +42795,7 @@
     "description": "Collect appliance-local syslog records forwarded by ScienceLogic Skylar One.",
     "version": "0.1.0",
     "created": "31 August 2026",
-    "buildDuration": "Best-effort experimental build",
+    "buildDuration": "20 minutes 8 seconds (measured)",
     "status": "Experimental",
     "validationStatus": "Package and negative raw-fallback pipeline validated; positive fixtures blocked",
     "experimentalReason": "Built from ScienceLogic's documented rsyslog transport without an attributable complete outbound record. Validate the emitted RFC/template, TCP framing, included programs and facilities, event-family coverage, authenticated TLS, SaaS export path, and completeness against a real Skylar One deployment.",
