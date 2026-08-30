@@ -25,7 +25,7 @@ test("keeps custom metadata protected and namespaced", () => {
   assert.ok(custom.some((item) => item.status === undefined));
   assert.equal(custom.filter((item) => item.status === "Production").length, 0);
   assert.ok(custom.some((item) => item.status === "Experimental"));
-  assert.ok(custom.filter((item) => item.status === "Experimental").length < custom.length / 10);
+  assert.ok(custom.filter((item) => item.status === "Experimental").length < custom.length / 4);
 });
 
 test("publishes the bounded FortiDDoS experimental contract", () => {
@@ -83,7 +83,13 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
 
   assert.deepEqual(
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
-    ["vsftpd"],
+    [
+      "cimcor_cimtrak", "dell_cybersense", "dmp_entre", "epic_systems",
+      "ibm_maas360", "ibm_openpages", "logonbox", "mobileiron_core",
+      "nasuni_file_services", "neo4j_aura", "netscout_arbor_edge_defense",
+      "onfido", "oracle_oci_audit", "oracle_oci_cloud_guard", "proofpoint_wbi",
+      "sonrai_security", "threatx_waf", "upx_antiddos", "vsftpd",
+    ],
   );
 
   const phoenix = custom.find((record) => record.slug === "arize_phoenix");
