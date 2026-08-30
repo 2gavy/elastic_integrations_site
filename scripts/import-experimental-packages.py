@@ -19,6 +19,32 @@ SLUGS = [
     "onfido", "oracle_oci_audit", "oracle_oci_cloud_guard", "proofpoint_wbi",
     "sonrai_security", "threatx_waf", "upx_antiddos",
 ]
+OFFICIAL_ICONS = {
+    "cequence_bot_defense": "favicon.ico",
+    "cimcor_cimtrak": "favicon.png",
+    "cisco_catalyst_center": "favicon.ico",
+    "dell_cybersense": "favicon.ico",
+    "dmp_entre": "favicon.ico",
+    "epic_systems": "favicon.ico",
+    "fortinet_fortinac": "favicon.ico",
+    "fortinet_fortiweb_waf": "favicon.ico",
+    "ibm_maas360": "apple-touch-icon-152x152.png",
+    "ibm_openpages": "apple-touch-icon-152x152.png",
+    "logonbox": "favicon-192x192.png",
+    "mobileiron_core": "ivanti-favicon-152.png",
+    "nasuni_file_services": None,
+    "neo4j_aura": "favicon-194x194.png",
+    "netapp_ontap": None,
+    "netscout_arbor_edge_defense": "favicon.ico",
+    "onfido": None,
+    "oracle_oci_audit": "favicon.ico",
+    "oracle_oci_cloud_guard": "favicon.ico",
+    "proofpoint_wbi": "favicon.svg",
+    "sonrai_security": "cropped-Sonrai-Favicon-32x32.png",
+    "threatx_waf": "apple-touch-icon-144x144.png",
+    "upx_antiddos": None,
+    "watchguard_edr": "favicon.ico",
+}
 
 spec = importlib.util.spec_from_file_location(
     "catalog_generator", SOURCE / "scripts/generate_public_site_catalog.py"
@@ -68,13 +94,7 @@ for slug in SLUGS:
     description = scalar(manifest, "description")
     version = scalar(manifest, "version")
     categories, solutions, capabilities = generator.classify(name, description)
-    icon_files = sorted((package / "img").glob("*")) if (package / "img").exists() else []
-    icon_files = [p for p in icon_files if p.suffix.lower() in {".svg", ".png", ".jpg", ".jpeg", ".webp"}]
-    icon = None
-    if icon_files:
-        source_icon = icon_files[0]
-        icon = source_icon.name
-        shutil.copyfile(source_icon, SITE / "public/icons/custom" / f"{slug}{source_icon.suffix.lower()}")
+    icon = OFFICIAL_ICONS[slug]
     records.append({
         "slug": slug,
         "name": name,

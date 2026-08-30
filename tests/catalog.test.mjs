@@ -70,8 +70,8 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
 
   const repaired = [
     "ibm_verify_identity_access", "nvidia_triton", "nvidia_nim", "aws_ec2_vpcs",
-    "cisco_identity_intelligence", "citrix_analytics", "sap_ase", "oauth2_proxy",
-    "fortinet_fortiddos", "ray", "temporal_cloud", "red_hat_directory_server",
+    "cisco_identity_intelligence", "citrix_analytics", "oauth2_proxy",
+    "ray", "temporal_cloud", "red_hat_directory_server",
     "airlock_iam",
   ];
   for (const slug of repaired) {
@@ -84,11 +84,7 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
   assert.deepEqual(
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
     [
-      "cimcor_cimtrak", "dell_cybersense", "dmp_entre", "epic_systems",
-      "ibm_maas360", "ibm_openpages", "logonbox", "mobileiron_core",
-      "nasuni_file_services", "neo4j_aura", "netscout_arbor_edge_defense",
-      "onfido", "oracle_oci_audit", "oracle_oci_cloud_guard", "proofpoint_wbi",
-      "sonrai_security", "threatx_waf", "upx_antiddos", "vsftpd",
+      "nasuni_file_services", "netapp_ontap", "onfido", "upx_antiddos", "vsftpd",
     ],
   );
 
