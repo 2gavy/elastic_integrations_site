@@ -66,7 +66,7 @@ function DetailPage({ item }: { item: Integration }) {
       <main className="detail-main">
         <a className="back-link" href={base}>← Back to all integrations</a>
         <article className="detail-card">
-          <div className="detail-icon-wrap">
+          <div className={`detail-icon-wrap${item.slug === "logonbox" ? " logo-on-dark" : ""}`}>
             {icon ? <img src={icon} alt="" /> : <PlaceholderIcon name={item.name} />}
           </div>
           <div className="badge-row">
@@ -236,7 +236,7 @@ function Catalogue({ items }: { items: Integration[] }) {
                 return (
                   <a className="integration-card" key={`${item.source}-${item.slug}`} href={href} target={item.source === "official" ? "_blank" : undefined} rel={item.source === "official" ? "noreferrer" : undefined}>
                     <div className="card-top">
-                      <div className="icon-wrap">{icon ? <img src={icon} alt="" loading="lazy" /> : <PlaceholderIcon name={item.name} />}</div>
+                      <div className={`icon-wrap${item.slug === "logonbox" ? " logo-on-dark" : ""}`}>{icon ? <img src={icon} alt="" loading="lazy" /> : <PlaceholderIcon name={item.name} />}</div>
                       <div className="badge-row">
                         <span className={`source-badge ${item.source}`}>{item.source === "official" ? "Official" : "Custom"}</span>
                         {item.status && <span className={`status-badge status-${item.status.toLowerCase().replaceAll("-", "_")}`}>{item.status}</span>}

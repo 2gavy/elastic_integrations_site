@@ -51,6 +51,9 @@ a { color:inherit; }
 .card-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:17px; }
 .icon-wrap { width:55px; height:55px; display:grid; place-items:center; }
 .icon-wrap img,.detail-icon-wrap img { max-width:100%; max-height:100%; object-fit:contain; }
+.icon-wrap.logo-on-dark,.detail-icon-wrap.logo-on-dark { width:auto; padding:9px 11px; border-radius:6px; background:#07182d; }
+.icon-wrap.logo-on-dark img { width:100px; }
+.detail-icon-wrap.logo-on-dark img { width:170px; }
 .placeholder-icon { width:52px; height:52px; display:grid; place-items:center; border-radius:8px; background:linear-gradient(135deg,#dff5fa,#e7e2fa); color:#205373; font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:16px; }
 .source-badge { display:inline-flex; align-items:center; border-radius:999px; padding:5px 9px; font-size:10px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
 .source-badge.official { color:#216243; background:#e5f6ed; }.source-badge.custom { color:#735100; background:#fff0b7; }
