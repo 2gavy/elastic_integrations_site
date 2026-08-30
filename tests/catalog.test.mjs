@@ -88,7 +88,7 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
     [
       "appdynamics_controller_audit", "logicmonitor", "nasuni_file_services",
-      "netapp_ontap", "onfido", "upx_antiddos", "vsftpd",
+      "netapp_ontap", "onfido", "upx_antiddos", "veza", "vsftpd",
     ],
   );
 
@@ -96,4 +96,17 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
   assert.equal(phoenix.icon, "arize_phoenix.png");
   const phoenixPng = await readFile(new URL("../public/icons/custom/arize_phoenix.png", import.meta.url));
   assert.deepEqual([...phoenixPng.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+});
+
+test("publishes the Experimental Veza integration with an initials fallback", () => {
+  const item = custom.find((record) => record.slug === "veza");
+  assert.equal(item.name, "Veza");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.icon, null);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/veza");
+  assert.match(item.experimentalReason, /current customer-tenant capture/);
+  assert.ok(item.fields.some((field) => field.field === "@timestamp"));
+  assert.ok(item.fields.some((field) => field.field === "veza.audit" && field.type === "flattened"));
+  assert.ok(item.fields.some((field) => field.field === "veza.event" && field.type === "flattened"));
 });

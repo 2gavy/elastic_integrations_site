@@ -49789,6 +49789,83 @@
     ]
   },
   {
+    "slug": "veza",
+    "name": "Veza",
+    "description": "Collect audit and system events from the Veza Access Platform.",
+    "version": "0.1.0",
+    "created": "30 August 2026",
+    "buildDuration": "Best-effort experimental build",
+    "status": "Experimental",
+    "validationStatus": "Static validated",
+    "experimentalReason": "Built from official historical documentation examples without a current customer-tenant capture. Validate endpoint version, audit schema variant, pagination durability, ordering, and completeness against real deployment data before operational reliance.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/veza",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "data_stream.type",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "@timestamp",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "veza.audit",
+        "description": "Original Veza audit record, retained schema-tolerantly.",
+        "type": "flattened"
+      },
+      {
+        "field": "veza.event",
+        "description": "Original Veza system-event record, retained schema-tolerantly.",
+        "type": "flattened"
+      }
+    ]
+  },
+  {
     "slug": "vmware_nsx_firewall",
     "name": "VMware NSX Firewall",
     "description": "Collect current and legacy NSX Distributed Firewall packet logs over TCP or UDP.",

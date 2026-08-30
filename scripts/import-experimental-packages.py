@@ -24,7 +24,7 @@ ALL_SLUGS = [
     "sonrai_security", "threatx_waf", "upx_antiddos",
     "dynatrace", "rapid7_insightidr", "logicmonitor",
     "exabeam_threat_center", "appdynamics_controller_audit", "saviynt_eic",
-    "orca_security", "grafana_enterprise_audit",
+    "orca_security", "grafana_enterprise_audit", "veza",
 ]
 PACKAGE_BY_SLUG = {
     "grafana_enterprise_audit": "grafana",
@@ -65,6 +65,10 @@ OFFICIAL_ICONS = {
     "saviynt_eic": "favicon.svg",
     "orca_security": "favicon.svg",
     "grafana_enterprise_audit": "logo.svg",
+    "veza": None,
+}
+EXPERIMENTAL_REASON_OVERRIDES = {
+    "veza": "Built from official historical documentation examples without a current customer-tenant capture. Validate endpoint version, audit schema variant, pagination durability, ordering, and completeness against real deployment data before operational reliance.",
 }
 requested_slugs = os.environ.get("EXPERIMENTAL_SLUGS")
 SLUGS = requested_slugs.split(",") if requested_slugs else ALL_SLUGS
@@ -99,6 +103,7 @@ def exported_fields(package):
                 "type": field_type.group(1).strip() if field_type else "keyword",
             })
         for field in parsed:
+            field["field"] = field["field"].strip("'\"")
             key = (field["field"], field["type"])
             if key not in seen:
                 seen.add(key)
@@ -128,7 +133,10 @@ for slug in SLUGS:
         "buildDuration": "Best-effort experimental build",
         "status": "Experimental",
         "validationStatus": "Static validated",
-        "experimentalReason": "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",
+        "experimentalReason": EXPERIMENTAL_REASON_OVERRIDES.get(
+            slug,
+            "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",
+        ),
         "categories": categories,
         "solutions": solutions,
         "capabilities": capabilities,
