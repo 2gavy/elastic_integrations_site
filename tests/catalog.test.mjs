@@ -132,6 +132,7 @@ test("publishes the Experimental SecurityScorecard Ratings integration with an i
   assert.equal(item.name, "SecurityScorecard Ratings");
   assert.equal(item.version, "0.1.0");
   assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "5 hours 43 minutes 24 seconds (measured)");
   assert.equal(item.validationStatus, "Package, pipeline, and system validated");
   assert.equal(item.icon, null);
   assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/securityscorecard");

@@ -42997,7 +42997,7 @@
     "description": "Collect company history events from the SecurityScorecard Ratings Platform.",
     "version": "0.1.0",
     "created": "31 August 2026",
-    "buildDuration": "Best-effort experimental build",
+    "buildDuration": "5 hours 43 minutes 24 seconds (measured)",
     "status": "Experimental",
     "validationStatus": "Package, pipeline, and system validated",
     "experimentalReason": "Built from the official API contract and one anonymized ecosystem-published issue-history response without a current customer-tenant capture. Breach and recalibration parsing, ordering, date-bound semantics, late arrivals, multi-page consistency, entitlements, and completeness require live validation.",

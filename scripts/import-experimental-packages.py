@@ -74,6 +74,7 @@ EXPERIMENTAL_REASON_OVERRIDES = {
 }
 BUILD_DURATION_OVERRIDES = {
     "veza": "1 hour 21 minutes 48 seconds (measured)",
+    "securityscorecard": "5 hours 43 minutes 24 seconds (measured)",
 }
 CREATED_OVERRIDES = {
     "securityscorecard": "31 August 2026",
