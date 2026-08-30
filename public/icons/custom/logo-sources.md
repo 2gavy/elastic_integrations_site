@@ -41,4 +41,4 @@ The catalogue uses vendor-hosted assets without redrawing or modifying the marks
 | Orca Cloud Security Platform | `https://orca.security/wp-content/themes/orca-2023/assets/images/favicon/favicon.svg` | Orca Security official website |
 | Grafana Enterprise Audit | `packages/grafana/img/logo.svg` at `elastic/integrations` commit `36f1ca3b` | Maintained upstream Elastic Grafana package |
 
-Splunk AppDynamics Controller Audit, LogicMonitor, Nasuni File Services, NetApp ONTAP, Onfido / Entrust, UPX AntiDDoS, Veza, and VSFTPD intentionally retain the initials fallback because no safely reusable official mark was verified. NetApp's published trademark guidelines explicitly prohibit unlicensed use of its Arch logo. A third-party or invented logo must not be substituted.
+Splunk AppDynamics Controller Audit, Dragos Platform, LogicMonitor, Nasuni File Services, NetApp ONTAP, Onfido / Entrust, UPX AntiDDoS, Veza, and VSFTPD intentionally retain the initials fallback because no safely reusable official mark was verified. NetApp's published trademark guidelines explicitly prohibit unlicensed use of its Arch logo. A third-party or invented logo must not be substituted.

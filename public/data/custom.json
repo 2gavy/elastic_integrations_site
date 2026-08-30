@@ -52699,5 +52699,88 @@
         "type": "flattened"
       }
     ]
+  },
+  {
+    "slug": "dragos",
+    "name": "Dragos Platform",
+    "description": "Collect Experimental Dragos Platform notification records over TCP, TLS, or UDP syslog receivers.",
+    "version": "0.1.0",
+    "created": "31 August 2026",
+    "buildDuration": "Pending measured completion",
+    "status": "Experimental",
+    "validationStatus": "Package, pipeline, and system validated",
+    "experimentalReason": "Built from bounded attributable CEF, key-value, and JSON examples without current licensed-tenant production captures. LEEF recognition is based on an official template but lacks a literal emitted record; TLS interoperability, complete event-family coverage, severity semantics, and current-version compatibility remain unvalidated.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/dragos",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Timestamp at which the Dragos notification occurred.",
+        "type": "date"
+      },
+      {
+        "field": "event.kind",
+        "description": "High-level classification of the notification.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "ECS categories assigned when supported by the notification content.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.id",
+        "description": "Dragos notification identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Original syslog record received from Dragos Platform.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.severity",
+        "description": "Numeric severity provided by Dragos Platform.",
+        "type": "long"
+      },
+      {
+        "field": "source.ip",
+        "description": "Source asset IP address when valid and present.",
+        "type": "ip"
+      },
+      {
+        "field": "destination.ip",
+        "description": "Destination asset IP address when valid and present.",
+        "type": "ip"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Vendor of the observing platform.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.product",
+        "description": "Name of the observing product.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "dragos.notification",
+        "description": "Documented and unknown Dragos Platform notification fields preserved schema-tolerantly.",
+        "type": "flattened"
+      }
+    ]
   }
 ]

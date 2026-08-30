@@ -87,7 +87,7 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
   assert.deepEqual(
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
     [
-      "appdynamics_controller_audit", "logicmonitor", "nasuni_file_services",
+      "appdynamics_controller_audit", "dragos", "logicmonitor", "nasuni_file_services",
       "netapp_ontap", "onfido", "upx_antiddos", "veza", "vsftpd",
     ],
   );
@@ -110,4 +110,18 @@ test("publishes the Experimental Veza integration with an initials fallback", ()
   assert.ok(item.fields.some((field) => field.field === "@timestamp"));
   assert.ok(item.fields.some((field) => field.field === "veza.audit" && field.type === "flattened"));
   assert.ok(item.fields.some((field) => field.field === "veza.event" && field.type === "flattened"));
+});
+
+test("publishes the Experimental Dragos Platform integration with an initials fallback", () => {
+  const item = custom.find((record) => record.slug === "dragos");
+  assert.equal(item.name, "Dragos Platform");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.validationStatus, "Package, pipeline, and system validated");
+  assert.equal(item.icon, null);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/dragos");
+  assert.match(item.experimentalReason, /licensed-tenant production captures/);
+  assert.match(item.experimentalReason, /LEEF recognition/);
+  assert.ok(item.fields.some((field) => field.field === "event.original"));
+  assert.ok(item.fields.some((field) => field.field === "dragos.notification" && field.type === "flattened"));
 });
