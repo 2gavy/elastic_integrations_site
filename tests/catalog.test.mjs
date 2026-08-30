@@ -87,7 +87,8 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
   assert.deepEqual(
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
     [
-      "nasuni_file_services", "netapp_ontap", "onfido", "upx_antiddos", "vsftpd",
+      "appdynamics_controller_audit", "logicmonitor", "nasuni_file_services",
+      "netapp_ontap", "onfido", "upx_antiddos", "vsftpd",
     ],
   );
 

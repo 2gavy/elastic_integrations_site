@@ -34,5 +34,11 @@ The catalogue uses vendor-hosted assets without redrawing or modifying the marks
 | Sonrai Security | `https://sonraisecurity.com/favicon.ico` | Sonrai Security official website redirect |
 | ThreatX WAF | `https://www.threatx.com/wp-content/themes/threatx/assets/favicon/apple-touch-icon-144x144.png` | ThreatX official website |
 | WatchGuard EDR | `https://www.watchguard.com/favicon.ico` | WatchGuard official website |
+| Dynatrace Audit | `https://dt-cdn.net/images/apple-touch-icon-180x180-180-80738a22c0.png` | Dynatrace official CDN, linked from the Dynatrace website |
+| Rapid7 SIEM (InsightIDR) | `https://www.rapid7.com/favicon.ico` | Rapid7 official website |
+| Exabeam Threat Center | `https://cdn-ilemogb.nitrocdn.com/hxeNzoFtzCLhholgTkBlCriLCctWhMdW/assets/images/optimized/rev-cfe986a/www.exabeam.com/wp-content/uploads/Favicon-02-300x300.png` | Exabeam official website favicon |
+| Saviynt Enterprise Identity Cloud | `https://saviynt.com/hubfs/favicon.svg` | Saviynt official website |
+| Orca Cloud Security Platform | `https://orca.security/wp-content/themes/orca-2023/assets/images/favicon/favicon.svg` | Orca Security official website |
+| Grafana Enterprise Audit | `packages/grafana/img/logo.svg` at `elastic/integrations` commit `36f1ca3b` | Maintained upstream Elastic Grafana package |
 
-Nasuni File Services, NetApp ONTAP, Onfido / Entrust, UPX AntiDDoS, and VSFTPD intentionally retain the initials fallback because no safely reusable official mark was verified. NetApp's published trademark guidelines explicitly prohibit unlicensed use of its Arch logo. A third-party or invented logo must not be substituted.
+Splunk AppDynamics Controller Audit, LogicMonitor, Nasuni File Services, NetApp ONTAP, Onfido / Entrust, UPX AntiDDoS, and VSFTPD intentionally retain the initials fallback because no safely reusable official mark was verified. NetApp's published trademark guidelines explicitly prohibit unlicensed use of its Arch logo. A third-party or invented logo must not be substituted.

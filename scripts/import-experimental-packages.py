@@ -3,14 +3,18 @@
 
 import importlib.util
 import json
+import os
 import re
 import shutil
 from pathlib import Path
 
 SITE = Path(__file__).resolve().parents[1]
-SOURCE = Path("/Users/zingzailoo/Documents/codex workspace/elastic_integrations")
+SOURCE = Path(os.environ.get(
+    "INTEGRATIONS_SOURCE",
+    "/Users/zingzailoo/Documents/codex workspace/elastic_integrations",
+))
 CATALOG = SITE / "public/data/custom.json"
-SLUGS = [
+ALL_SLUGS = [
     "cisco_catalyst_center", "fortinet_fortinac", "fortinet_fortiweb_waf",
     "cequence_bot_defense", "netapp_ontap", "watchguard_edr",
     "cimcor_cimtrak", "dell_cybersense", "dmp_entre", "epic_systems",
@@ -18,7 +22,16 @@ SLUGS = [
     "nasuni_file_services", "neo4j_aura", "netscout_arbor_edge_defense",
     "onfido", "oracle_oci_audit", "oracle_oci_cloud_guard", "proofpoint_wbi",
     "sonrai_security", "threatx_waf", "upx_antiddos",
+    "dynatrace", "rapid7_insightidr", "logicmonitor",
+    "exabeam_threat_center", "appdynamics_controller_audit", "saviynt_eic",
+    "orca_security", "grafana_enterprise_audit",
 ]
+PACKAGE_BY_SLUG = {
+    "grafana_enterprise_audit": "grafana",
+}
+TITLE_OVERRIDES = {
+    "grafana_enterprise_audit": "Grafana Enterprise Audit",
+}
 OFFICIAL_ICONS = {
     "cequence_bot_defense": "favicon.ico",
     "cimcor_cimtrak": "favicon.png",
@@ -44,7 +57,17 @@ OFFICIAL_ICONS = {
     "threatx_waf": "apple-touch-icon-144x144.png",
     "upx_antiddos": None,
     "watchguard_edr": "favicon.ico",
+    "dynatrace": "favicon.png",
+    "rapid7_insightidr": "favicon.ico",
+    "logicmonitor": None,
+    "exabeam_threat_center": "favicon.png",
+    "appdynamics_controller_audit": None,
+    "saviynt_eic": "favicon.svg",
+    "orca_security": "favicon.svg",
+    "grafana_enterprise_audit": "logo.svg",
 }
+requested_slugs = os.environ.get("EXPERIMENTAL_SLUGS")
+SLUGS = requested_slugs.split(",") if requested_slugs else ALL_SLUGS
 
 spec = importlib.util.spec_from_file_location(
     "catalog_generator", SOURCE / "scripts/generate_public_site_catalog.py"
@@ -88,9 +111,10 @@ def exported_fields(package):
 records = json.loads(CATALOG.read_text())
 records = [record for record in records if record["slug"] not in SLUGS]
 for slug in SLUGS:
-    package = SOURCE / "packages" / slug
+    package_slug = PACKAGE_BY_SLUG.get(slug, slug)
+    package = SOURCE / "packages" / package_slug
     manifest = (package / "manifest.yml").read_text()
-    name = scalar(manifest, "title")
+    name = TITLE_OVERRIDES.get(slug, scalar(manifest, "title"))
     description = scalar(manifest, "description")
     version = scalar(manifest, "version")
     categories, solutions, capabilities = generator.classify(name, description)
@@ -109,7 +133,7 @@ for slug in SLUGS:
         "solutions": solutions,
         "capabilities": capabilities,
         "icon": icon,
-        "repositoryUrl": f"https://github.com/2gavy/elastic_integrations/tree/main/packages/{slug}",
+        "repositoryUrl": f"https://github.com/2gavy/elastic_integrations/tree/main/packages/{package_slug}",
         "source": "custom",
         "fields": exported_fields(package),
     })
