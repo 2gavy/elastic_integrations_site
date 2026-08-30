@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./app.css";
 
@@ -138,6 +138,7 @@ function Catalogue({ items }: { items: Integration[] }) {
   const [status, setStatus] = useState("All Statuses");
   const [categories, setCategories] = useState<string[]>([]);
   const [visible, setVisible] = useState(48);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
 
   const allCategories = useMemo(() => {
     const values = new Set(items.flatMap((item) => item.categories));
@@ -159,6 +160,20 @@ function Catalogue({ items }: { items: Integration[] }) {
   }, [items, query, solution, source, status, categories]);
 
   useEffect(() => setVisible(48), [query, solution, source, status, categories]);
+
+  useEffect(() => {
+    const sentinel = loadMoreRef.current;
+    if (!sentinel || visible >= filtered.length || !("IntersectionObserver" in window)) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setVisible((count) => Math.min(count + 48, filtered.length));
+      }
+    }, { rootMargin: "0px 0px 500px" });
+
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [filtered.length, visible]);
 
   function toggleCategory(category: string) {
     setCategories((current) => current.includes(category)
@@ -256,7 +271,12 @@ function Catalogue({ items }: { items: Integration[] }) {
             <div className="empty-state"><h3>No integrations found</h3><p>Try a different search or remove a filter.</p></div>
           )}
 
-          {visible < filtered.length && <button className="load-more" onClick={() => setVisible((count) => count + 48)}>Load more integrations</button>}
+          {visible < filtered.length && (
+            <div className="load-more-wrap" ref={loadMoreRef}>
+              <button className="load-more" onClick={() => setVisible((count) => Math.min(count + 48, filtered.length))}>Load more integrations</button>
+              <span className="auto-load-note">More integrations load automatically as you scroll.</span>
+            </div>
+          )}
         </section>
 
         <section className="about" id="about">

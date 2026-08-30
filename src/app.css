@@ -65,7 +65,9 @@ a { color:inherit; }
 .capability-row { display:flex; flex-wrap:wrap; gap:6px; }
 .capability-row span { font-size:10px; padding:4px 7px; background:#f0f3f6; color:#526175; border-radius:3px; }
 .card-arrow { position:absolute; right:20px; bottom:18px; color:#008aba; font-size:18px; }
-.load-more { display:block; margin:38px auto 0; padding:12px 24px; border:1px solid #087da7; border-radius:3px; color:#087da7; background:white; cursor:pointer; font-weight:600; }
+.load-more-wrap { display:grid; justify-items:center; gap:9px; margin-top:38px; }
+.load-more { display:block; padding:12px 24px; border:1px solid #087da7; border-radius:3px; color:#087da7; background:white; cursor:pointer; font-weight:600; }
+.auto-load-note { color:#778494; font-size:11px; }
 .empty-state { padding:80px 20px; text-align:center; border:1px dashed #c8d2dc; background:#f8fafb; }
 .empty-state h3 { margin:0 0 8px; }.empty-state p { color:#657385; }
 .about { padding:90px 24px; text-align:center; background:#f2f6f8; border-top:1px solid #dbe3e9; }
