@@ -8942,7 +8942,7 @@
       },
       {
         "field": "cisco.umbrella.traffic_source",
-        "description": "The source of the user-generated traffic (0-Unknown, 1-VPN,2–ZTNA or 3-Network Tunnel).",
+        "description": "The source of the user-generated traffic (0-Unknown, 1-VPN,2\u2013ZTNA or 3-Network Tunnel).",
         "type": "keyword"
       },
       {
@@ -11082,17 +11082,17 @@
       },
       {
         "field": "threat.tactic.id",
-        "description": "The id of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
+        "description": "The id of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
         "type": "keyword"
       },
       {
         "field": "threat.tactic.name",
-        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
+        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
         "type": "keyword"
       },
       {
         "field": "threat.tactic.reference",
-        "description": "The reference url of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
+        "description": "The reference url of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
         "type": "keyword"
       },
       {
@@ -13019,7 +13019,7 @@
   },
   {
     "slug": "dmp_entre",
-    "name": "DMP Entré",
+    "name": "DMP Entr\u00e9",
     "description": "Collect the experimental schema-tolerant file records.",
     "version": "0.1.0",
     "created": "30 August 2026",
@@ -22969,7 +22969,7 @@
       },
       {
         "field": "threat.indicator.id",
-        "description": "The ID of the indicator used by this threat to conduct behavior commonly modeled using MITRE ATT&CK®. This field can have multiple values to allow for the identification of the same indicator across systems that use different ID formats. While not required, a common approach is to use a STIX 2.x indicator ID.",
+        "description": "The ID of the indicator used by this threat to conduct behavior commonly modeled using MITRE ATT&CK\u00ae. This field can have multiple values to allow for the identification of the same indicator across systems that use different ID formats. While not required, a common approach is to use a STIX 2.x indicator ID.",
         "type": "keyword"
       },
       {
@@ -23014,7 +23014,7 @@
       },
       {
         "field": "threat.software.name",
-        "description": "The name of the software used by this threat to conduct behavior commonly modeled using MITRE ATT&CK®. While not required, you can use a MITRE ATT&CK® software name.",
+        "description": "The name of the software used by this threat to conduct behavior commonly modeled using MITRE ATT&CK\u00ae. While not required, you can use a MITRE ATT&CK\u00ae software name.",
         "type": "keyword"
       },
       {
@@ -24692,7 +24692,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": "favicon-192x192.png",
+    "icon": "LogonBox-Transparent.png",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/logonbox",
     "source": "custom",
     "fields": [
@@ -28159,7 +28159,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": "favicon.ico",
+    "icon": "NS_LOGO_COL_POS_RGB.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/netscout_arbor_edge_defense",
     "source": "custom",
     "fields": [
@@ -32132,12 +32132,12 @@
       },
       {
         "field": "netskope.transaction.cs_username",
-        "description": "The client’s username.",
+        "description": "The client\u2019s username.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.date",
-        "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the “x-cs-timestamp” field.",
+        "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
         "type": "date"
       },
       {
@@ -32147,7 +32147,7 @@
       },
       {
         "field": "netskope.transaction.s_ip",
-        "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it’s neither IPv4 or IPv6.",
+        "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it\u2019s neither IPv4 or IPv6.",
         "type": "ip"
       },
       {
@@ -32167,7 +32167,7 @@
       },
       {
         "field": "netskope.transaction.time",
-        "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the “x-cs-timestamp” field.",
+        "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
         "type": "keyword"
       },
       {
@@ -32177,12 +32177,12 @@
       },
       {
         "field": "netskope.transaction.x_c_browser",
-        "description": "Client’s browser.",
+        "description": "Client\u2019s browser.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.x_c_browser_version",
-        "description": "Client’s browser version.",
+        "description": "Client\u2019s browser version.",
         "type": "keyword"
       },
       {
@@ -32192,7 +32192,7 @@
       },
       {
         "field": "netskope.transaction.x_c_device",
-        "description": "Client’s device type.",
+        "description": "Client\u2019s device type.",
         "type": "keyword"
       },
       {
@@ -32442,12 +32442,12 @@
       },
       {
         "field": "netskope.transaction.x_cs_timestamp",
-        "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the “date” and “time” fields.",
+        "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the \u201cdate\u201d and \u201ctime\u201d fields.",
         "type": "date"
       },
       {
         "field": "netskope.transaction.x_cs_traffic_type",
-        "description": "Type of traffic could be “Web” or “CloudApp”. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
+        "description": "Type of traffic could be \u201cWeb\u201d or \u201cCloudApp\u201d. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
         "type": "keyword"
       },
       {
@@ -32507,12 +32507,12 @@
       },
       {
         "field": "netskope.transaction.x_policy_justification_reason",
-        "description": "The justification provided by the end user in case of “useralert” action.",
+        "description": "The justification provided by the end user in case of \u201cuseralert\u201d action.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.x_policy_justification_type",
-        "description": "The justification type selected by the end user in case of “useralert” action.",
+        "description": "The justification type selected by the end user in case of \u201cuseralert\u201d action.",
         "type": "keyword"
       },
       {
@@ -32582,7 +32582,7 @@
       },
       {
         "field": "netskope.transaction.x_r_cert_valid",
-        "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn’t reflect the action of the SSL Engine.",
+        "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn\u2019t reflect the action of the SSL Engine.",
         "type": "keyword"
       },
       {
@@ -32662,7 +32662,7 @@
       },
       {
         "field": "netskope.transaction.x_sc_notification_name",
-        "description": "The name of the user notification displayed to the end user in case of action “block” or “useralert”.",
+        "description": "The name of the user notification displayed to the end user in case of action \u201cblock\u201d or \u201cuseralert\u201d.",
         "type": "keyword"
       },
       {
@@ -32792,7 +32792,7 @@
       },
       {
         "field": "netskope.transaction.x_type",
-        "description": "The type of log message, which can be “http_transaction” or “WebSocket”.  NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
+        "description": "The type of log message, which can be \u201chttp_transaction\u201d or \u201cWebSocket\u201d.  NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
         "type": "keyword"
       }
     ]
@@ -51125,7 +51125,7 @@
       },
       {
         "field": "threat.technique.id",
-        "description": "The id of technique used by this threat. You can use a MITRE ATT&CK® technique, for example. (ex. https://attack.mitre.org/techniques/T1059/)",
+        "description": "The id of technique used by this threat. You can use a MITRE ATT&CK\u00ae technique, for example. (ex. https://attack.mitre.org/techniques/T1059/)",
         "type": "keyword"
       },
       {

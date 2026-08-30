@@ -24,10 +24,10 @@ The catalogue uses vendor-hosted assets without redrawing or modifying the marks
 | Fortinet FortiWeb WAF | `https://www.fortinet.com/favicon.ico` | Fortinet official website |
 | IBM MaaS360 | `https://www.ibm.com/content/dam/adobe-cms/default-images/apple-touch-icon-152x152.png` | IBM official website |
 | IBM OpenPages | `https://www.ibm.com/content/dam/adobe-cms/default-images/apple-touch-icon-152x152.png` | IBM official website |
-| LogonBox | `https://www.logonbox.com/favicon-192x192.png` | LogonBox official website |
+| LogonBox | `https://www.logonbox.com/app/api/files/public/f3de9c3d-120c-4eb4-a012-3672d5dc6089/LogonBox-Transparent.png` | LogonBox official documentation site |
 | Ivanti MobileIron Core | `https://static.ivanti.com/sites/marketing/media/images/icons/ivanti-favicon-152.png` | Ivanti official CDN |
 | Neo4j Aura | `https://neo4j.com/favicon-194x194.png?v=bOXynyJWa61` | Neo4j official website |
-| NETSCOUT Arbor Edge Defense | `https://www.netscout.com/sites/default/files/favicon.ico` | NETSCOUT official website |
+| NETSCOUT Arbor Edge Defense | `https://www.netscout.com/themes/custom/netscout/images/NS_LOGO_COL_POS_RGB.svg` | NETSCOUT official website header |
 | Oracle OCI Audit | `https://www.oracle.com/favicon.ico` | Oracle official website |
 | Oracle OCI Cloud Guard | `https://www.oracle.com/favicon.ico` | Oracle official website |
 | Proofpoint Web Browser Isolation | `https://www.proofpoint.com/themes/custom/proofpoint/apps/drupal/images/favicons/favicon.svg` | Proofpoint official website |

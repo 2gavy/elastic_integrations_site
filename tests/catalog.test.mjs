@@ -66,6 +66,9 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
     const extension = item.icon.slice(item.icon.lastIndexOf("."));
     const bytes = await readFile(new URL(`../public/icons/custom/${item.slug}${extension}`, import.meta.url));
     assert.ok(bytes.length > 0, `empty logo for ${item.slug}`);
+    if (extension === ".png") assert.deepEqual([...bytes.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10], `invalid PNG for ${item.slug}`);
+    if (extension === ".ico") assert.deepEqual([...bytes.subarray(0, 4)], [0, 0, 1, 0], `invalid ICO for ${item.slug}`);
+    if (extension === ".svg") assert.match(bytes.toString("utf8", 0, 512), /<svg\b/, `invalid SVG for ${item.slug}`);
   }
 
   const repaired = [
