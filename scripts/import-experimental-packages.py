@@ -24,7 +24,7 @@ ALL_SLUGS = [
     "sonrai_security", "threatx_waf", "upx_antiddos",
     "dynatrace", "rapid7_insightidr", "logicmonitor",
     "exabeam_threat_center", "appdynamics_controller_audit", "saviynt_eic",
-    "orca_security", "grafana_enterprise_audit", "veza",
+    "orca_security", "grafana_enterprise_audit", "veza", "securityscorecard",
 ]
 PACKAGE_BY_SLUG = {
     "grafana_enterprise_audit": "grafana",
@@ -66,12 +66,20 @@ OFFICIAL_ICONS = {
     "orca_security": "favicon.svg",
     "grafana_enterprise_audit": "logo.svg",
     "veza": None,
+    "securityscorecard": None,
 }
 EXPERIMENTAL_REASON_OVERRIDES = {
     "veza": "Built from official historical documentation examples without a current customer-tenant capture. Validate endpoint version, audit schema variant, pagination durability, ordering, and completeness against real deployment data before operational reliance.",
+    "securityscorecard": "Built from the official API contract and one anonymized ecosystem-published issue-history response without a current customer-tenant capture. Breach and recalibration parsing, ordering, date-bound semantics, late arrivals, multi-page consistency, entitlements, and completeness require live validation.",
 }
 BUILD_DURATION_OVERRIDES = {
     "veza": "1 hour 21 minutes 48 seconds (measured)",
+}
+CREATED_OVERRIDES = {
+    "securityscorecard": "31 August 2026",
+}
+VALIDATION_OVERRIDES = {
+    "securityscorecard": "Package, pipeline, and system validated",
 }
 requested_slugs = os.environ.get("EXPERIMENTAL_SLUGS")
 SLUGS = requested_slugs.split(",") if requested_slugs else ALL_SLUGS
@@ -132,10 +140,10 @@ for slug in SLUGS:
         "name": name,
         "description": description,
         "version": version,
-        "created": "30 August 2026",
+        "created": CREATED_OVERRIDES.get(slug, "30 August 2026"),
         "buildDuration": BUILD_DURATION_OVERRIDES.get(slug, "Best-effort experimental build"),
         "status": "Experimental",
-        "validationStatus": "Static validated",
+        "validationStatus": VALIDATION_OVERRIDES.get(slug, "Static validated"),
         "experimentalReason": EXPERIMENTAL_REASON_OVERRIDES.get(
             slug,
             "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",

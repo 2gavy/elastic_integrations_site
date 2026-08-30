@@ -88,7 +88,7 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
     [
       "appdynamics_controller_audit", "dragos", "logicmonitor", "nasuni_file_services",
-      "netapp_ontap", "onfido", "upx_antiddos", "veza", "vsftpd",
+      "netapp_ontap", "onfido", "securityscorecard", "upx_antiddos", "veza", "vsftpd",
     ],
   );
 
@@ -125,4 +125,18 @@ test("publishes the Experimental Dragos Platform integration with an initials fa
   assert.match(item.experimentalReason, /LEEF recognition/);
   assert.ok(item.fields.some((field) => field.field === "event.original"));
   assert.ok(item.fields.some((field) => field.field === "dragos.notification" && field.type === "flattened"));
+});
+
+test("publishes the Experimental SecurityScorecard Ratings integration with an initials fallback", () => {
+  const item = custom.find((record) => record.slug === "securityscorecard");
+  assert.equal(item.name, "SecurityScorecard Ratings");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.validationStatus, "Package, pipeline, and system validated");
+  assert.equal(item.icon, null);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/securityscorecard");
+  assert.match(item.experimentalReason, /current customer-tenant capture/);
+  assert.match(item.experimentalReason, /date-bound semantics/);
+  assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
+  assert.ok(item.fields.some((field) => field.field === "securityscorecard.event" && field.type === "flattened"));
 });
