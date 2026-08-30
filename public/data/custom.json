@@ -42790,6 +42790,63 @@
     ]
   },
   {
+    "slug": "sciencelogic_sl1",
+    "name": "ScienceLogic Skylar One",
+    "description": "Collect appliance-local syslog records forwarded by ScienceLogic Skylar One.",
+    "version": "0.1.0",
+    "created": "31 August 2026",
+    "buildDuration": "Best-effort experimental build",
+    "status": "Experimental",
+    "validationStatus": "Package and negative raw-fallback pipeline validated; positive fixtures blocked",
+    "experimentalReason": "Built from ScienceLogic's documented rsyslog transport without an attributable complete outbound record. Validate the emitted RFC/template, TCP framing, included programs and facilities, event-family coverage, authenticated TLS, SaaS export path, and completeness against a real Skylar One deployment.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/sciencelogic_sl1",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "log.source.address",
+        "description": "Source address from which the network input received the record.",
+        "type": "keyword"
+      },
+      {
+        "field": "sciencelogic_sl1.syslog.structured_data",
+        "description": "Raw RFC 5424 structured-data text when a standard envelope is recognized.",
+        "type": "keyword"
+      }
+    ]
+  },
+  {
     "slug": "secureauth_identity_platform",
     "name": "SecureAuth Identity Platform",
     "description": "Parse one bounded SecureAuth appliance audit record from operator-staged files; current 26.x bytes, native syslog framing, broader event families, production completeness, and lossless guarantees remain on hold.",

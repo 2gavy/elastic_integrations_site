@@ -25,6 +25,7 @@ ALL_SLUGS = [
     "dynatrace", "rapid7_insightidr", "logicmonitor",
     "exabeam_threat_center", "appdynamics_controller_audit", "saviynt_eic",
     "orca_security", "grafana_enterprise_audit", "veza", "securityscorecard",
+    "sciencelogic_sl1",
 ]
 PACKAGE_BY_SLUG = {
     "grafana_enterprise_audit": "grafana",
@@ -67,10 +68,12 @@ OFFICIAL_ICONS = {
     "grafana_enterprise_audit": "logo.svg",
     "veza": None,
     "securityscorecard": None,
+    "sciencelogic_sl1": None,
 }
 EXPERIMENTAL_REASON_OVERRIDES = {
     "veza": "Built from official historical documentation examples without a current customer-tenant capture. Validate endpoint version, audit schema variant, pagination durability, ordering, and completeness against real deployment data before operational reliance.",
     "securityscorecard": "Built from the official API contract and one anonymized ecosystem-published issue-history response without a current customer-tenant capture. Breach and recalibration parsing, ordering, date-bound semantics, late arrivals, multi-page consistency, entitlements, and completeness require live validation.",
+    "sciencelogic_sl1": "Built from ScienceLogic's documented rsyslog transport without an attributable complete outbound record. Validate the emitted RFC/template, TCP framing, included programs and facilities, event-family coverage, authenticated TLS, SaaS export path, and completeness against a real Skylar One deployment.",
 }
 BUILD_DURATION_OVERRIDES = {
     "veza": "1 hour 21 minutes 48 seconds (measured)",
@@ -78,9 +81,11 @@ BUILD_DURATION_OVERRIDES = {
 }
 CREATED_OVERRIDES = {
     "securityscorecard": "31 August 2026",
+    "sciencelogic_sl1": "31 August 2026",
 }
 VALIDATION_OVERRIDES = {
     "securityscorecard": "Package, pipeline, and system validated",
+    "sciencelogic_sl1": "Package and negative raw-fallback pipeline validated; positive fixtures blocked",
 }
 requested_slugs = os.environ.get("EXPERIMENTAL_SLUGS")
 SLUGS = requested_slugs.split(",") if requested_slugs else ALL_SLUGS

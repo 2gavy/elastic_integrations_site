@@ -88,7 +88,7 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
     [
       "appdynamics_controller_audit", "dragos", "logicmonitor", "nasuni_file_services",
-      "netapp_ontap", "onfido", "securityscorecard", "upx_antiddos", "veza", "vsftpd",
+      "netapp_ontap", "onfido", "sciencelogic_sl1", "securityscorecard", "upx_antiddos", "veza", "vsftpd",
     ],
   );
 
@@ -140,4 +140,19 @@ test("publishes the Experimental SecurityScorecard Ratings integration with an i
   assert.match(item.experimentalReason, /date-bound semantics/);
   assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
   assert.ok(item.fields.some((field) => field.field === "securityscorecard.event" && field.type === "flattened"));
+});
+
+test("publishes the bounded Experimental ScienceLogic Skylar One receiver with an initials fallback", () => {
+  const item = custom.find((record) => record.slug === "sciencelogic_sl1");
+  assert.equal(item.name, "ScienceLogic Skylar One");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "Best-effort experimental build");
+  assert.equal(item.validationStatus, "Package and negative raw-fallback pipeline validated; positive fixtures blocked");
+  assert.equal(item.icon, null);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/sciencelogic_sl1");
+  assert.match(item.experimentalReason, /complete outbound record/);
+  assert.match(item.experimentalReason, /TCP framing/);
+  assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
+  assert.ok(item.fields.some((field) => field.field === "sciencelogic_sl1.syslog.structured_data" && field.type === "keyword"));
 });
