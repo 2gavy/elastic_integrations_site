@@ -117,6 +117,7 @@ test("publishes the Experimental Dragos Platform integration with an initials fa
   assert.equal(item.name, "Dragos Platform");
   assert.equal(item.version, "0.1.0");
   assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "36 minutes 15 seconds (measured)");
   assert.equal(item.validationStatus, "Package, pipeline, and system validated");
   assert.equal(item.icon, null);
   assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/dragos");

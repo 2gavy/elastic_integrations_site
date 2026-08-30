@@ -52706,7 +52706,7 @@
     "description": "Collect Experimental Dragos Platform notification records over TCP, TLS, or UDP syslog receivers.",
     "version": "0.1.0",
     "created": "31 August 2026",
-    "buildDuration": "Pending measured completion",
+    "buildDuration": "36 minutes 15 seconds (measured)",
     "status": "Experimental",
     "validationStatus": "Package, pipeline, and system validated",
     "experimentalReason": "Built from bounded attributable CEF, key-value, and JSON examples without current licensed-tenant production captures. LEEF recognition is based on an official template but lacks a literal emitted record; TLS interoperability, complete event-family coverage, severity semantics, and current-version compatibility remain unvalidated.",
