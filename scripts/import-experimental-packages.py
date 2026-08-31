@@ -72,7 +72,7 @@ OFFICIAL_ICONS = {
     "veza": None,
     "securityscorecard": None,
     "sciencelogic_sl1": None,
-    "microsoft_entra_id_graph": None,
+    "microsoft_entra_id_graph": "microsoft_entra_id_graph.svg",
 }
 EXPERIMENTAL_REASON_OVERRIDES = {
     "veza": "Built from official historical documentation examples without a current customer-tenant capture. Validate endpoint version, audit schema variant, pagination durability, ordering, and completeness against real deployment data before operational reliance.",

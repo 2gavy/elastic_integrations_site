@@ -40,5 +40,6 @@ The catalogue uses vendor-hosted assets without redrawing or modifying the marks
 | Saviynt Enterprise Identity Cloud | `https://saviynt.com/hubfs/favicon.svg` | Saviynt official website |
 | Orca Cloud Security Platform | `https://orca.security/wp-content/themes/orca-2023/assets/images/favicon/favicon.svg` | Orca Security official website |
 | Grafana Enterprise Audit | `packages/grafana/img/logo.svg` at `elastic/integrations` commit `36f1ca3b` | Maintained upstream Elastic Grafana package |
+| Microsoft Entra ID Graph | `Microsoft Entra ID color icon.svg` from Microsoft's official October 2023 Microsoft Entra architecture icon archive | Microsoft Learn, Microsoft Entra architecture icons |
 
 Splunk AppDynamics Controller Audit, Dragos Platform, LogicMonitor, Nasuni File Services, NetApp ONTAP, Onfido / Entrust, SecurityScorecard Ratings, UPX AntiDDoS, Veza, and VSFTPD intentionally retain the initials fallback because no safely reusable official mark was verified. NetApp's published trademark guidelines explicitly prohibit unlicensed use of its Arch logo. A third-party or invented logo must not be substituted.

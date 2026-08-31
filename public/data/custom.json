@@ -27736,7 +27736,7 @@
     "slug": "microsoft_entra_id_graph",
     "name": "Microsoft Entra ID Graph",
     "description": "Collect Experimental Microsoft Entra ID activity and risk data directly through Microsoft Graph.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "31 August 2026",
     "buildDuration": "1 hour 41 minutes 53 seconds (measured)",
     "status": "Experimental",
@@ -27752,7 +27752,7 @@
     "capabilities": [
       "Logs"
     ],
-    "icon": null,
+    "icon": "microsoft_entra_id_graph.svg",
     "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/microsoft_entra_id_graph",
     "source": "custom",
     "fields": [
