@@ -30,6 +30,9 @@ ALL_SLUGS = [
 PACKAGE_BY_SLUG = {
     "grafana_enterprise_audit": "grafana",
 }
+REPOSITORY_PATH_OVERRIDES = {
+    "microsoft_entra_id_graph": "microsoft_entra_id_graph",
+}
 TITLE_OVERRIDES = {
     "grafana_enterprise_audit": "Grafana Enterprise Audit",
 }
@@ -166,7 +169,7 @@ for slug in SLUGS:
         "solutions": solutions,
         "capabilities": capabilities,
         "icon": icon,
-        "repositoryUrl": f"https://github.com/2gavy/elastic_integrations/tree/main/packages/{package_slug}",
+        "repositoryUrl": f"https://github.com/2gavy/elastic_integrations/tree/main/{REPOSITORY_PATH_OVERRIDES.get(slug, f'packages/{package_slug}')}",
         "source": "custom",
         "fields": exported_fields(package),
     })

@@ -165,7 +165,7 @@ test("publishes the Experimental Microsoft Entra ID Graph integration with an in
   assert.equal(item.buildDuration, "1 hour 41 minutes 53 seconds (measured)");
   assert.match(item.validationStatus, /live tenant validation blocked/);
   assert.equal(item.icon, null);
-  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/microsoft_entra_id_graph");
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/microsoft_entra_id_graph");
   assert.match(item.experimentalReason, /without a current customer-tenant capture/);
   assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
   assert.ok(item.fields.some((field) => field.field === "microsoft_entra_id_graph.risky_user.additional" && field.type === "flattened"));

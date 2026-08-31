@@ -27753,7 +27753,7 @@
       "Logs"
     ],
     "icon": null,
-    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/microsoft_entra_id_graph",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/microsoft_entra_id_graph",
     "source": "custom",
     "fields": [
       {
