@@ -25,13 +25,14 @@ ALL_SLUGS = [
     "dynatrace", "rapid7_insightidr", "logicmonitor",
     "exabeam_threat_center", "appdynamics_controller_audit", "saviynt_eic",
     "orca_security", "grafana_enterprise_audit", "veza", "securityscorecard",
-    "sciencelogic_sl1", "microsoft_entra_id_graph",
+    "sciencelogic_sl1", "microsoft_entra_id_graph", "microsoft_graph_activity_logs",
 ]
 PACKAGE_BY_SLUG = {
     "grafana_enterprise_audit": "grafana",
 }
 REPOSITORY_PATH_OVERRIDES = {
     "microsoft_entra_id_graph": "microsoft_entra_id_graph",
+    "microsoft_graph_activity_logs": "microsoft_graph_activity_logs",
 }
 TITLE_OVERRIDES = {
     "grafana_enterprise_audit": "Grafana Enterprise Audit",
@@ -73,28 +74,33 @@ OFFICIAL_ICONS = {
     "securityscorecard": None,
     "sciencelogic_sl1": None,
     "microsoft_entra_id_graph": "microsoft_entra_id_graph.svg",
+    "microsoft_graph_activity_logs": "microsoft_graph_activity_logs.svg",
 }
 EXPERIMENTAL_REASON_OVERRIDES = {
     "veza": "Built from official historical documentation examples without a current customer-tenant capture. Validate endpoint version, audit schema variant, pagination durability, ordering, and completeness against real deployment data before operational reliance.",
     "securityscorecard": "Built from the official API contract and one anonymized ecosystem-published issue-history response without a current customer-tenant capture. Breach and recalibration parsing, ordering, date-bound semantics, late arrivals, multi-page consistency, entitlements, and completeness require live validation.",
     "sciencelogic_sl1": "Built from ScienceLogic's documented rsyslog transport without an attributable complete outbound record. Validate the emitted RFC/template, TCP framing, included programs and facilities, event-family coverage, authenticated TLS, SaaS export path, and completeness against a real Skylar One deployment.",
     "microsoft_entra_id_graph": "Built from official Microsoft Graph schemas and bounded documentation examples without a current customer-tenant capture. Validate tenant permissions, pagination, late arrivals, risk-state updates, and completeness before operational reliance.",
+    "microsoft_graph_activity_logs": "Built from official Microsoft and Elastic documentation plus a bounded Log Analytics mock contract without a current tenant response. Validate OAuth client credentials, workspace RBAC, live field types, pagination, delayed delivery, sovereign-cloud endpoints, throttling, and completeness before operational reliance.",
 }
 BUILD_DURATION_OVERRIDES = {
     "veza": "1 hour 21 minutes 48 seconds (measured)",
     "securityscorecard": "5 hours 43 minutes 24 seconds (measured)",
     "sciencelogic_sl1": "20 minutes 8 seconds (measured)",
     "microsoft_entra_id_graph": "1 hour 41 minutes 53 seconds (measured)",
+    "microsoft_graph_activity_logs": "Pending live verification (measured)",
 }
 CREATED_OVERRIDES = {
     "securityscorecard": "31 August 2026",
     "sciencelogic_sl1": "31 August 2026",
     "microsoft_entra_id_graph": "31 August 2026",
+    "microsoft_graph_activity_logs": "31 August 2026",
 }
 VALIDATION_OVERRIDES = {
     "securityscorecard": "Package, pipeline, and system validated",
     "sciencelogic_sl1": "Package and negative raw-fallback pipeline validated; positive fixtures blocked",
     "microsoft_entra_id_graph": "Package and attributable pipeline fixtures validated; direct Graph collection mock-validated; live tenant validation blocked",
+    "microsoft_graph_activity_logs": "Package, CEL pagination/resume, and system collection validated; positive semantic and live-tenant validation blocked",
 }
 requested_slugs = os.environ.get("EXPERIMENTAL_SLUGS")
 SLUGS = requested_slugs.split(",") if requested_slugs else ALL_SLUGS

@@ -28204,6 +28204,259 @@
     ]
   },
   {
+    "slug": "microsoft_graph_activity_logs",
+    "name": "Microsoft Graph Activity Logs",
+    "description": "Collect Experimental Microsoft Graph Activity Logs from Azure Monitor Log Analytics without Azure Event Hub.",
+    "version": "0.1.0",
+    "created": "31 August 2026",
+    "buildDuration": "Pending live verification (measured)",
+    "status": "Experimental",
+    "validationStatus": "Package, CEL pagination/resume, and system collection validated; positive semantic and live-tenant validation blocked",
+    "experimentalReason": "Built from official Microsoft and Elastic documentation plus a bounded Log Analytics mock contract without a current tenant response. Validate OAuth client credentials, workspace RBAC, live field types, pagination, delayed delivery, sovereign-cloud endpoints, throttling, and completeness before operational reliance.",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Monitoring"
+    ],
+    "solutions": [
+      "Observability"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "microsoft_graph_activity_logs.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/microsoft_graph_activity_logs",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "data_stream.type",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.raw",
+        "description": "Complete MicrosoftGraphActivityLogs row returned by RecordJson, including future columns.",
+        "type": "flattened"
+      },
+      {
+        "field": "session.id",
+        "description": "Authentication session ID, compatible with Elastic's maintained Azure Graph Activity Logs field model.",
+        "type": "keyword"
+      },
+      {
+        "field": "token.id",
+        "description": "Unique token identifier, compatible with Elastic's maintained Azure Graph Activity Logs field model.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.aad_tenant_id",
+        "description": "Microsoft Entra tenant ID.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.api_version",
+        "description": "Microsoft Graph API version.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.app_id",
+        "description": "Calling application ID.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.at_content",
+        "description": "Reserved Microsoft Graph activity content field.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.at_content_h",
+        "description": "Reserved Microsoft Graph activity content field.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.at_content_p",
+        "description": "Reserved Microsoft Graph activity content field.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.billed_size",
+        "description": "Record size in bytes used by Azure Monitor billing.",
+        "type": "double"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.client_auth_method",
+        "description": "Client authentication method code.",
+        "type": "long"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.client_request_id",
+        "description": "Client-provided request identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.device_id",
+        "description": "Originating device ID when present.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.duration_ms",
+        "description": "Request duration in milliseconds.",
+        "type": "long"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.identity_provider",
+        "description": "Identity provider that authenticated the token subject.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.ip_address",
+        "description": "Client IP address exactly as supplied by Microsoft.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.is_billable",
+        "description": "Azure Monitor billable status as documented by the source table.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.location",
+        "description": "Microsoft service region that handled the request.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.operation_id",
+        "description": "Operation or batch identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.request_id",
+        "description": "Identifier for the individual Microsoft Graph request.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.request_method",
+        "description": "HTTP request method.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.request_uri",
+        "description": "Full Microsoft Graph request URI; it may contain sensitive values.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.response_size_bytes",
+        "description": "Response size in bytes.",
+        "type": "long"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.response_status_code",
+        "description": "HTTP response status code.",
+        "type": "long"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.roles",
+        "description": "Roles from token claims.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.scopes",
+        "description": "Scopes from token claims.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.service_principal_id",
+        "description": "Calling service principal ID.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.session_id",
+        "description": "Authentication session ID.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.sign_in_activity_id",
+        "description": "Correlation identifier for the related sign-in activity.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.source_system",
+        "description": "Azure Monitor collection source.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.workspace_tenant_id",
+        "description": "Log Analytics workspace ID exposed by the source as TenantId.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.time_generated",
+        "description": "Time Microsoft Graph received the request.",
+        "type": "date"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.token_issued_at",
+        "description": "Token issue time when available.",
+        "type": "date"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.type",
+        "description": "Azure Monitor table name.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.unique_token_id",
+        "description": "Unique token identifier used for the request.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.user_agent",
+        "description": "Request user-agent string.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.user_id",
+        "description": "Calling user ID when present.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_graph_activity_logs.activity.wids",
+        "description": "Tenant-wide role IDs assigned to the user.",
+        "type": "keyword"
+      }
+    ]
+  },
+  {
     "slug": "mikrotik_routeros",
     "name": "MikroTik RouterOS",
     "description": "Parse one bounded RouterOS `script,info` console-log family from operator-staged files; current native delivery and production compatibility remain on hold.",

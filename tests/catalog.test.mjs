@@ -170,3 +170,16 @@ test("publishes the Experimental Microsoft Entra ID Graph integration with its o
   assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
   assert.ok(item.fields.some((field) => field.field === "microsoft_entra_id_graph.risky_user.additional" && field.type === "flattened"));
 });
+
+test("publishes Microsoft Graph Activity Logs without Event Hub and with its official icon", () => {
+  const item = custom.find((record) => record.slug === "microsoft_graph_activity_logs");
+  assert.equal(item.name, "Microsoft Graph Activity Logs");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.match(item.validationStatus, /system collection validated/);
+  assert.equal(item.icon, "microsoft_graph_activity_logs.svg");
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/microsoft_graph_activity_logs");
+  assert.match(item.experimentalReason, /Log Analytics mock contract/);
+  assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
+  assert.ok(item.fields.some((field) => field.field === "microsoft_graph_activity_logs.activity.raw" && field.type === "flattened"));
+});
