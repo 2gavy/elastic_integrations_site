@@ -27738,7 +27738,7 @@
     "description": "Collect Experimental Microsoft Entra ID activity and risk data directly through Microsoft Graph.",
     "version": "0.1.0",
     "created": "31 August 2026",
-    "buildDuration": "Final measured duration pending publication",
+    "buildDuration": "1 hour 41 minutes 53 seconds (measured)",
     "status": "Experimental",
     "validationStatus": "Package and attributable pipeline fixtures validated; direct Graph collection mock-validated; live tenant validation blocked",
     "experimentalReason": "Built from official Microsoft Graph schemas and bounded documentation examples without a current customer-tenant capture. Validate tenant permissions, pagination, late arrivals, risk-state updates, and completeness before operational reliance.",

@@ -81,7 +81,7 @@ BUILD_DURATION_OVERRIDES = {
     "veza": "1 hour 21 minutes 48 seconds (measured)",
     "securityscorecard": "5 hours 43 minutes 24 seconds (measured)",
     "sciencelogic_sl1": "20 minutes 8 seconds (measured)",
-    "microsoft_entra_id_graph": "Final measured duration pending publication",
+    "microsoft_entra_id_graph": "1 hour 41 minutes 53 seconds (measured)",
 }
 CREATED_OVERRIDES = {
     "securityscorecard": "31 August 2026",

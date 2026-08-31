@@ -162,7 +162,7 @@ test("publishes the Experimental Microsoft Entra ID Graph integration with an in
   assert.equal(item.name, "Microsoft Entra ID Graph");
   assert.equal(item.version, "0.1.0");
   assert.equal(item.status, "Experimental");
-  assert.equal(item.buildDuration, "Final measured duration pending publication");
+  assert.equal(item.buildDuration, "1 hour 41 minutes 53 seconds (measured)");
   assert.match(item.validationStatus, /live tenant validation blocked/);
   assert.equal(item.icon, null);
   assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/microsoft_entra_id_graph");
