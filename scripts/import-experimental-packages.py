@@ -88,7 +88,7 @@ BUILD_DURATION_OVERRIDES = {
     "securityscorecard": "5 hours 43 minutes 24 seconds (measured)",
     "sciencelogic_sl1": "20 minutes 8 seconds (measured)",
     "microsoft_entra_id_graph": "1 hour 41 minutes 53 seconds (measured)",
-    "microsoft_graph_activity_logs": "Pending live verification (measured)",
+    "microsoft_graph_activity_logs": "1 hour 21 minutes 32 seconds (measured)",
 }
 CREATED_OVERRIDES = {
     "securityscorecard": "31 August 2026",

@@ -28209,7 +28209,7 @@
     "description": "Collect Experimental Microsoft Graph Activity Logs from Azure Monitor Log Analytics without Azure Event Hub.",
     "version": "0.1.0",
     "created": "31 August 2026",
-    "buildDuration": "Pending live verification (measured)",
+    "buildDuration": "1 hour 21 minutes 32 seconds (measured)",
     "status": "Experimental",
     "validationStatus": "Package, CEL pagination/resume, and system collection validated; positive semantic and live-tenant validation blocked",
     "experimentalReason": "Built from official Microsoft and Elastic documentation plus a bounded Log Analytics mock contract without a current tenant response. Validate OAuth client credentials, workspace RBAC, live field types, pagination, delayed delivery, sovereign-cloud endpoints, throttling, and completeness before operational reliance.",

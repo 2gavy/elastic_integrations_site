@@ -176,6 +176,7 @@ test("publishes Microsoft Graph Activity Logs without Event Hub and with its off
   assert.equal(item.name, "Microsoft Graph Activity Logs");
   assert.equal(item.version, "0.1.0");
   assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "1 hour 21 minutes 32 seconds (measured)");
   assert.match(item.validationStatus, /system collection validated/);
   assert.equal(item.icon, "microsoft_graph_activity_logs.svg");
   assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/microsoft_graph_activity_logs");
