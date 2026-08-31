@@ -27733,6 +27733,477 @@
     ]
   },
   {
+    "slug": "microsoft_entra_id_graph",
+    "name": "Microsoft Entra ID Graph",
+    "description": "Collect Experimental Microsoft Entra ID activity and risk data directly through Microsoft Graph.",
+    "version": "0.1.0",
+    "created": "31 August 2026",
+    "buildDuration": "Final measured duration pending publication",
+    "status": "Experimental",
+    "validationStatus": "Package and attributable pipeline fixtures validated; direct Graph collection mock-validated; live tenant validation blocked",
+    "experimentalReason": "Built from official Microsoft Graph schemas and bounded documentation examples without a current customer-tenant capture. Validate tenant permissions, pagination, late arrivals, risk-state updates, and completeness before operational reliance.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/microsoft_entra_id_graph",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.product",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.additional",
+        "description": "Additional Microsoft Graph directory audit properties.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.additional_details",
+        "description": "Additional key-value details for the directory audit event.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.category",
+        "description": "Microsoft Graph directory audit category.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.correlation_id",
+        "description": "Microsoft Graph correlation identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.app_id",
+        "description": "Application identifier of the initiating application.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.display_name",
+        "description": "Display name of the initiating application.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.ip_address",
+        "description": "Original initiator IP string when it is not a valid IP literal.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.logged_by_service",
+        "description": "Service that logged the directory audit event.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.odata_type",
+        "description": "Microsoft Graph OData type discriminator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.operation_type",
+        "description": "Microsoft Graph directory audit operation type.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.result",
+        "description": "Result enum when it cannot be mapped to an ECS outcome.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.result_reason",
+        "description": "Reason reported for the operation result.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.target_resources",
+        "description": "Target resources and modified properties affected by the operation.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.additional",
+        "description": "Additional Microsoft Graph provisioning properties.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.change_id",
+        "description": "Identifier of the provisioning change.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.cycle_id",
+        "description": "Identifier of the provisioning cycle.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.duration_ms",
+        "description": "Duration of the provisioning operation.",
+        "type": "long"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.initiator_type",
+        "description": "Type of provisioning initiator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.job_id",
+        "description": "Identifier of the provisioning job.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.modified_properties",
+        "description": "Properties modified by the provisioning operation.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.odata_type",
+        "description": "Microsoft Graph OData type discriminator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.provisioning_steps",
+        "description": "Steps and open details for the provisioning operation.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.service_principal",
+        "description": "Additional service principal properties.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.source_identity",
+        "description": "Source identity and open details.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.source_system",
+        "description": "Source provisioning system and open details.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.error_information",
+        "description": "Provisioning error information.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.status",
+        "description": "Status enum when it cannot be mapped to an ECS outcome.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.target_identity",
+        "description": "Target identity and open details.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.target_system",
+        "description": "Target provisioning system and open details.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.tenant_id",
+        "description": "Tenant identifier associated with the operation.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.activity",
+        "description": "Activity associated with the risk detection.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.activity_date_time",
+        "description": "Time of the activity associated with the detection.",
+        "type": "date"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.additional",
+        "description": "Additional Microsoft Graph risk detection properties.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.additional_info",
+        "description": "Parsed open key-value information supplied by Microsoft Graph.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.additional_info_original",
+        "description": "Original additionalInfo string when it cannot be parsed as JSON.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.correlation_id",
+        "description": "Microsoft Graph correlation identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.detection_source",
+        "description": "Source that identified the risk.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.detection_timing_type",
+        "description": "Timing classification of the risk detection.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.ip_address",
+        "description": "Original IP string when it is not a valid IP literal.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.last_updated_date_time",
+        "description": "Time the risk detection state was last updated.",
+        "type": "date"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.location",
+        "description": "Location associated with the risk detection.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.odata_type",
+        "description": "Microsoft Graph OData type discriminator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.request_id",
+        "description": "Request identifier associated with the risk detection.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.risk_detail",
+        "description": "Detail describing the risk.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.risk_level",
+        "description": "Assessed level of risk.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.risk_state",
+        "description": "Current state of the risk detection.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.token_issuer_type",
+        "description": "Type of token issuer associated with the activity.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.additional",
+        "description": "Additional Microsoft Graph risky-user properties.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.history",
+        "description": "Expanded risky-user history when Microsoft Graph includes the relationship.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.is_deleted",
+        "description": "Indicates whether the risky user is deleted.",
+        "type": "boolean"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.is_processing",
+        "description": "Indicates whether Microsoft Entra ID is processing the risky user.",
+        "type": "boolean"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.odata_type",
+        "description": "Microsoft Graph OData type discriminator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.risk_detail",
+        "description": "Detail describing the user's risk.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.risk_last_updated_date_time",
+        "description": "Time the risky-user state was last updated.",
+        "type": "date"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.risk_level",
+        "description": "Assessed risk level of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.risk_state",
+        "description": "Current risk state of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.additional",
+        "description": "Additional Microsoft Graph sign-in properties not explicitly mapped by this integration.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.app_display_name",
+        "description": "Display name of the application used for the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.app_id",
+        "description": "Identifier of the application used for the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.applied_conditional_access_policies",
+        "description": "Conditional Access policies applied to the sign-in.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.authentication_app_device_details",
+        "description": "Authentication application and device details.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.client_app_used",
+        "description": "Client application used for the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.conditional_access_status",
+        "description": "Status of Conditional Access evaluation.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.correlation_id",
+        "description": "Correlation identifier supplied by Microsoft Graph.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.device_detail",
+        "description": "Device details associated with the sign-in.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.home_tenant_id",
+        "description": "Home tenant identifier of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.ip_address",
+        "description": "Original IP string when it is not a valid IP literal.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.is_interactive",
+        "description": "Indicates whether the sign-in was interactive.",
+        "type": "boolean"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.location",
+        "description": "Location reported by Microsoft Graph.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.odata_type",
+        "description": "Microsoft Graph OData type discriminator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.resource_display_name",
+        "description": "Display name of the accessed resource.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.resource_id",
+        "description": "Identifier of the accessed resource.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.resource_tenant_id",
+        "description": "Tenant identifier of the accessed resource.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_detail",
+        "description": "Detail describing the sign-in risk.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_event_types",
+        "description": "Legacy risk event types associated with the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_event_types_v2",
+        "description": "Risk event type strings associated with the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_level_aggregated",
+        "description": "Aggregated risk level for the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_level_during_sign_in",
+        "description": "Risk level at the time of sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_state",
+        "description": "Risk state of the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.service_principal_id",
+        "description": "Identifier of the sign-in service principal.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.service_principal_name",
+        "description": "Name of the sign-in service principal.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.additional_details",
+        "description": "Additional sign-in status details.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.error_code",
+        "description": "Microsoft Graph sign-in status error code.",
+        "type": "long"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.failure_reason",
+        "description": "Reason the sign-in failed.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.user_agent",
+        "description": "User agent string supplied with the sign-in.",
+        "type": "keyword"
+      }
+    ]
+  },
+  {
     "slug": "mikrotik_routeros",
     "name": "MikroTik RouterOS",
     "description": "Parse one bounded RouterOS `script,info` console-log family from operator-staged files; current native delivery and production compatibility remain on hold.",

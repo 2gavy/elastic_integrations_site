@@ -87,7 +87,7 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
   assert.deepEqual(
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
     [
-      "appdynamics_controller_audit", "dragos", "logicmonitor", "nasuni_file_services",
+      "appdynamics_controller_audit", "dragos", "logicmonitor", "microsoft_entra_id_graph", "nasuni_file_services",
       "netapp_ontap", "onfido", "sciencelogic_sl1", "securityscorecard", "upx_antiddos", "veza", "vsftpd",
     ],
   );
@@ -155,4 +155,18 @@ test("publishes the bounded Experimental ScienceLogic Skylar One receiver with a
   assert.match(item.experimentalReason, /TCP framing/);
   assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
   assert.ok(item.fields.some((field) => field.field === "sciencelogic_sl1.syslog.structured_data" && field.type === "keyword"));
+});
+
+test("publishes the Experimental Microsoft Entra ID Graph integration with an initials fallback", () => {
+  const item = custom.find((record) => record.slug === "microsoft_entra_id_graph");
+  assert.equal(item.name, "Microsoft Entra ID Graph");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "Final measured duration pending publication");
+  assert.match(item.validationStatus, /live tenant validation blocked/);
+  assert.equal(item.icon, null);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/microsoft_entra_id_graph");
+  assert.match(item.experimentalReason, /without a current customer-tenant capture/);
+  assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
+  assert.ok(item.fields.some((field) => field.field === "microsoft_entra_id_graph.risky_user.additional" && field.type === "flattened"));
 });
