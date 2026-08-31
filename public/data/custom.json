@@ -13478,6 +13478,89 @@
     ]
   },
   {
+    "slug": "dragos",
+    "name": "Dragos Platform",
+    "description": "Collect Experimental Dragos Platform notification records over TCP, TLS, or UDP syslog receivers.",
+    "version": "0.1.0",
+    "created": "31 August 2026",
+    "buildDuration": "36 minutes 15 seconds (measured)",
+    "status": "Experimental",
+    "validationStatus": "Package, pipeline, and system validated",
+    "experimentalReason": "Built from bounded attributable CEF, key-value, and JSON examples without current licensed-tenant production captures. LEEF recognition is based on an official template but lacks a literal emitted record; TLS interoperability, complete event-family coverage, severity semantics, and current-version compatibility remain unvalidated.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/dragos",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Timestamp at which the Dragos notification occurred.",
+        "type": "date"
+      },
+      {
+        "field": "event.kind",
+        "description": "High-level classification of the notification.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "ECS categories assigned when supported by the notification content.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.id",
+        "description": "Dragos notification identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Original syslog record received from Dragos Platform.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.severity",
+        "description": "Numeric severity provided by Dragos Platform.",
+        "type": "long"
+      },
+      {
+        "field": "source.ip",
+        "description": "Source asset IP address when valid and present.",
+        "type": "ip"
+      },
+      {
+        "field": "destination.ip",
+        "description": "Destination asset IP address when valid and present.",
+        "type": "ip"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Vendor of the observing platform.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.product",
+        "description": "Name of the observing product.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "dragos.notification",
+        "description": "Documented and unknown Dragos Platform notification fields preserved schema-tolerantly.",
+        "type": "flattened"
+      }
+    ]
+  },
+  {
     "slug": "druva",
     "name": "Druva Data Resiliency Cloud",
     "description": "Collect the 37 documented Druva Cloud Platform v3 EVENT control-plane types with a bounded fresh-page laboratory collector; production continuity remains on hold.",
@@ -13750,6 +13833,73 @@
         "field": "tags",
         "description": "List of keywords used to tag each event.",
         "type": "keyword"
+      }
+    ]
+  },
+  {
+    "slug": "dynatrace",
+    "name": "Dynatrace Audit",
+    "description": "Collect Dynatrace account and environment audit logs.",
+    "version": "0.1.0",
+    "created": "30 August 2026",
+    "buildDuration": "Best-effort experimental build",
+    "status": "Experimental",
+    "validationStatus": "Static validated",
+    "experimentalReason": "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "favicon.png",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/dynatrace",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "observer.product",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "dynatrace.account_audit",
+        "description": "Additive Dynatrace account audit fields not mapped to ECS, including arbitrary details.",
+        "type": "flattened"
+      },
+      {
+        "field": "dynatrace.environment_audit",
+        "description": "Additive Dynatrace environment audit fields not mapped to ECS, including arbitrary patches and literal dotted keys.",
+        "type": "flattened"
       }
     ]
   },
@@ -14537,6 +14687,63 @@
         "field": "epic_systems.log.unparsed",
         "description": "True when the integration preserves a record without vendor-semantic parsing.",
         "type": "boolean"
+      }
+    ]
+  },
+  {
+    "slug": "exabeam_threat_center",
+    "name": "Exabeam Threat Center",
+    "description": "Collect bounded filtered alert and case queries from Exabeam Threat Center.",
+    "version": "0.1.0",
+    "created": "30 August 2026",
+    "buildDuration": "Best-effort experimental build",
+    "status": "Experimental",
+    "validationStatus": "Static validated",
+    "experimentalReason": "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "favicon.png",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/exabeam_threat_center",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "exabeam_threat_center.alert",
+        "description": "Full decoded Exabeam Threat Center alert search row.",
+        "type": "flattened"
+      },
+      {
+        "field": "exabeam_threat_center.case",
+        "description": "Full decoded Exabeam Threat Center case search row.",
+        "type": "flattened"
       }
     ]
   },
@@ -19976,6 +20183,846 @@
     ]
   },
   {
+    "slug": "grafana_enterprise_audit",
+    "name": "Grafana Enterprise Audit",
+    "description": "Collect metrics, application logs, and Enterprise audit logs from Grafana instances with Elastic Agent.",
+    "version": "0.2.0",
+    "created": "30 August 2026",
+    "buildDuration": "Best-effort experimental build",
+    "status": "Experimental",
+    "validationStatus": "Static validated",
+    "experimentalReason": "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Monitoring",
+      "Security"
+    ],
+    "solutions": [
+      "Observability",
+      "Security"
+    ],
+    "capabilities": [
+      "Logs",
+      "Metrics"
+    ],
+    "icon": "logo.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/grafana",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of Filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.file.device_id",
+        "description": "Device identifier of the harvested file.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.file.fingerprint",
+        "description": "Fingerprint identity of the harvested file.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.file.inode",
+        "description": "Inode identifier of the harvested file.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.flags",
+        "description": "Filebeat flags describing collection behavior such as multiline assembly.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.audit",
+        "description": "Original parsed Grafana Enterprise audit object. The schema is open and version-sensitive; historical examples use names that differ from current documentation. JSON duplicate keys cannot be represented here, so use event.original when byte fidelity is required.",
+        "type": "flattened"
+      },
+      {
+        "field": "grafana.audit_parse_error",
+        "description": "Bounded diagnostic set to malformed_json when the audit record cannot be parsed.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloud.account.id",
+        "description": "Cloud account ID.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloud.availability_zone",
+        "description": "Cloud availability zone.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloud.instance.id",
+        "description": "Cloud instance ID.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloud.provider",
+        "description": "Cloud provider name.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloud.region",
+        "description": "Cloud region.",
+        "type": "keyword"
+      },
+      {
+        "field": "cloud.image.id",
+        "description": "Image ID for the cloud instance.",
+        "type": "keyword"
+      },
+      {
+        "field": "container.id",
+        "description": "Container ID.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.name",
+        "description": "Host name.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.containerized",
+        "description": "Whether the host is a container.",
+        "type": "boolean"
+      },
+      {
+        "field": "host.os.build",
+        "description": "OS build information.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.os.codename",
+        "description": "OS codename, if any.",
+        "type": "keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "\"@timestamp\"",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "grafana.log.subUrl",
+        "description": "Grafana sub-URL prefix.",
+        "type": "keyword"
+      },
+      {
+        "field": "grafana.log.orgId",
+        "description": "Organization ID in context.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.log.handler",
+        "description": "Request handler name.",
+        "type": "keyword"
+      },
+      {
+        "field": "prometheus.labels.*",
+        "description": "Prometheus metric labels.",
+        "type": "keyword"
+      },
+      {
+        "field": "grafana.http.request.count",
+        "description": "HTTP request count by handler, method, and status code.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.http.request.duration.seconds",
+        "description": "HTTP request duration sum in seconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.http.request.in_flight",
+        "description": "Number of HTTP requests currently in flight.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.http.response.size.count",
+        "description": "HTTP response count by handler.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.http.response.size.bytes",
+        "description": "HTTP response size sum in bytes.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.api.response.status.total",
+        "description": "Total API responses by status code.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.api.dashboard.get.milliseconds",
+        "description": "Dashboard GET request duration quantile in milliseconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.api.dashboard.get.count",
+        "description": "Dashboard GET request count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.api.dashboard.get.sum",
+        "description": "Dashboard GET request duration sum in milliseconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.api.dashboard.save.milliseconds",
+        "description": "Dashboard save duration quantile in milliseconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.api.dashboard.save.count",
+        "description": "Dashboard save request count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.api.dashboard.save.sum",
+        "description": "Dashboard save duration sum in milliseconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.api.dashboard.search.milliseconds",
+        "description": "Dashboard search duration quantile in milliseconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.api.dashboard.search.count",
+        "description": "Dashboard search request count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.api.dashboard.search.sum",
+        "description": "Dashboard search duration sum in milliseconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.api.dashboard.insert.total",
+        "description": "Total dashboard inserts.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.api.dashboard.snapshot.create.total",
+        "description": "Total dashboard snapshots created.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.api.dashboard.snapshot.get.total",
+        "description": "Total dashboard snapshot retrievals.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.api.dataproxy.request.milliseconds",
+        "description": "Data proxy request duration quantile in milliseconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.api.dataproxy.request.count",
+        "description": "Data proxy request count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.api.dataproxy.request.sum",
+        "description": "Data proxy request duration sum in milliseconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.api.login.post.total",
+        "description": "Total POST login attempts.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.api.login.oauth.total",
+        "description": "Total OAuth login attempts.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.page.response.status.total",
+        "description": "Total page responses by status code.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.proxy.response.status.total",
+        "description": "Total proxy responses by status code.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.active_alerts",
+        "description": "Number of active alerts.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.active_configurations",
+        "description": "Number of active alerting configurations.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.alerts",
+        "description": "Number of alerts by state.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.alerts_received.total",
+        "description": "Total alerts received.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.alerts_invalid.total",
+        "description": "Total invalid alerts received.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.silences",
+        "description": "Number of silences by state.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.result.total",
+        "description": "Alert execution results by state.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.notification.sent.total",
+        "description": "Alert notifications sent by type.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.notification.failed.total",
+        "description": "Alert notifications failed by type.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.notification_latency.count",
+        "description": "Alert notification latency count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.notification_latency.seconds",
+        "description": "Alert notification latency sum in seconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.alerting.execution_time.count",
+        "description": "Alert execution time observation count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.execution_time.milliseconds",
+        "description": "Alert execution time sum in milliseconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.alerting.schedule.alert_rules",
+        "description": "Number of alert rules scheduled.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.alerting.scheduler.behind_seconds",
+        "description": "How far behind the alerting scheduler is in seconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.alerting.ticker.interval_seconds",
+        "description": "Alerting ticker interval in seconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.datasource.request.total",
+        "description": "Total datasource requests.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.datasource.query_by_id.total",
+        "description": "Total datasource queries by ID.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.database.connections.open",
+        "description": "Open database connections.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.database.connections.in_use",
+        "description": "In-use database connections.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.database.connections.idle",
+        "description": "Idle database connections.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.database.connections.max_open",
+        "description": "Maximum open database connections allowed.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.database.connections.wait_count",
+        "description": "Total connection wait count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.database.connections.wait_duration_seconds",
+        "description": "Total time blocked waiting for a connection in seconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.database.connections.max_idle_closed",
+        "description": "Total connections closed due to max idle limit.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.database.connections.max_idle_closed_seconds",
+        "description": "Total time of max idle closed connections.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.database.connections.max_lifetime_closed",
+        "description": "Total connections closed due to max lifetime.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.dashboards.total",
+        "description": "Total number of dashboards.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.users.total",
+        "description": "Total users.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.users.active",
+        "description": "Active users.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.datasources.total",
+        "description": "Total datasources.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.alert_rules.total",
+        "description": "Total alert rules.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.orgs.total",
+        "description": "Total organizations.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.teams.total",
+        "description": "Total teams.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.playlists.total",
+        "description": "Total playlists.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.service_accounts.total",
+        "description": "Total service accounts.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.folders.total",
+        "description": "Total folders.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.annotations.total",
+        "description": "Total annotations.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.admins.total",
+        "description": "Total admin users.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.editors.total",
+        "description": "Total editor users.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.viewers.total",
+        "description": "Total viewer users.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.active_admins.total",
+        "description": "Active admin users.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.active_editors.total",
+        "description": "Active editor users.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.active_viewers.total",
+        "description": "Active viewer users.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.dashboard_versions.total",
+        "description": "Total dashboard versions.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.library_panels.total",
+        "description": "Total library panels.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.public_dashboards.total",
+        "description": "Total public dashboards.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.rule_groups.total",
+        "description": "Total rule groups.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.correlations.total",
+        "description": "Total correlations.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.data_keys.total",
+        "description": "Total data keys.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.stat.repositories.total",
+        "description": "Total repositories.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.authentication.attempts",
+        "description": "Total authentication attempts.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.authentication.successful.total",
+        "description": "Total successful authentications.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.authentication.failed.total",
+        "description": "Total failed authentications.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.authentication.user_requests",
+        "description": "Authenticated user requests.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.emails.sent.total",
+        "description": "Total emails sent.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.emails.sent.failed",
+        "description": "Total emails failed to send.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.live.channels",
+        "description": "Number of live channels.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.live.clients",
+        "description": "Number of live clients.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.live.subscriptions",
+        "description": "Number of live subscriptions.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.live.users",
+        "description": "Number of live users.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.frontend.boot.load_time.count",
+        "description": "Frontend boot load time observation count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.frontend.boot.load_time.seconds",
+        "description": "Frontend boot load time sum in seconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.frontend.boot.fcp.count",
+        "description": "First Contentful Paint observation count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.frontend.boot.fcp.seconds",
+        "description": "First Contentful Paint time sum in seconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.public_dashboard.request_count",
+        "description": "Public dashboard request count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.rendering.queue_size",
+        "description": "Rendering queue size.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.process.cpu.seconds.total",
+        "description": "Total user and system CPU time in seconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.process.memory.resident_bytes",
+        "description": "Resident memory size in bytes.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.process.memory.virtual_bytes",
+        "description": "Virtual memory size in bytes.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.process.open_fds",
+        "description": "Number of open file descriptors.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.process.max_fds",
+        "description": "Maximum number of file descriptors.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.process.start_time_seconds",
+        "description": "Process start time in seconds since epoch.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.process.network.receive_bytes",
+        "description": "Network bytes received.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.process.network.transmit_bytes",
+        "description": "Network bytes transmitted.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.goroutines",
+        "description": "Number of goroutines.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.threads",
+        "description": "Number of OS threads created.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.heap_alloc_bytes",
+        "description": "Heap bytes allocated and in use.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.alloc_bytes",
+        "description": "Bytes allocated and in use.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.alloc_bytes_total",
+        "description": "Total bytes allocated even if freed.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.sys_bytes",
+        "description": "Total bytes of memory obtained from the OS.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.heap_idle_bytes",
+        "description": "Heap bytes waiting to be used.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.heap_inuse_bytes",
+        "description": "Heap bytes in use by spans.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.heap_objects",
+        "description": "Number of allocated heap objects.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.heap_released_bytes",
+        "description": "Heap bytes released to the OS.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.heap_sys_bytes",
+        "description": "Heap bytes obtained from the OS.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.stack_inuse_bytes",
+        "description": "Stack bytes in use.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.stack_sys_bytes",
+        "description": "Stack bytes obtained from the OS.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.next_gc_bytes",
+        "description": "Target heap size for next GC cycle.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.mallocs_total",
+        "description": "Total number of heap object allocations.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.frees_total",
+        "description": "Total number of heap object frees.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.buck_hash_sys_bytes",
+        "description": "Bytes used by profiling bucket hash table.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.gc_sys_bytes",
+        "description": "Bytes used for GC metadata.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.mcache_inuse_bytes",
+        "description": "MCache structures in use.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.mcache_sys_bytes",
+        "description": "MCache structures obtained from OS.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.mspan_inuse_bytes",
+        "description": "MSpan structures in use.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.mspan_sys_bytes",
+        "description": "MSpan structures obtained from OS.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.other_sys_bytes",
+        "description": "Other system bytes.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.memstats.last_gc_time_seconds",
+        "description": "Last GC time in seconds since epoch.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.go.gc.duration.count",
+        "description": "GC pause count.",
+        "type": "long"
+      },
+      {
+        "field": "grafana.go.gc.duration.seconds",
+        "description": "GC pause duration sum in seconds.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.build_info._value",
+        "description": "Build info metric value (always 1).",
+        "type": "double"
+      },
+      {
+        "field": "grafana.build_info.version",
+        "description": "Grafana version from build info.",
+        "type": "keyword"
+      },
+      {
+        "field": "grafana.build_info.edition",
+        "description": "Grafana edition (oss or enterprise).",
+        "type": "keyword"
+      },
+      {
+        "field": "grafana.build_info.timestamp",
+        "description": "Build timestamp.",
+        "type": "double"
+      },
+      {
+        "field": "grafana.environment_info._value",
+        "description": "Environment info metric value (always 1).",
+        "type": "double"
+      },
+      {
+        "field": "grafana.instance.id",
+        "description": "Unique Grafana instance identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "grafana.instance.start_total",
+        "description": "Total instance starts.",
+        "type": "long"
+      }
+    ]
+  },
+  {
     "slug": "hashicorp_boundary",
     "name": "HashiCorp Boundary",
     "description": "Collect one capture-gated self-managed Boundary SessionService/AuthorizeConnection audit CloudEvent from a dedicated NDJSON file; exact-head filestream and pipeline validation passed while current-version and production file lifecycle compatibility remain on hold.",
@@ -24672,6 +25719,60 @@
     ]
   },
   {
+    "slug": "logicmonitor",
+    "name": "LogicMonitor",
+    "description": "Collect LogicMonitor account audit logs.",
+    "version": "0.1.0",
+    "created": "30 August 2026",
+    "buildDuration": "Best-effort experimental build",
+    "status": "Experimental",
+    "validationStatus": "Static validated",
+    "experimentalReason": "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Monitoring",
+      "Security"
+    ],
+    "solutions": [
+      "Observability",
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/logicmonitor",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "logicmonitor.audit",
+        "description": "Complete decoded LogicMonitor audit/access-log object returned by REST API v3.",
+        "type": "flattened"
+      }
+    ]
+  },
+  {
     "slug": "logonbox",
     "name": "LogonBox",
     "description": "Collect experimental LogonBox syslog events.",
@@ -26628,6 +27729,477 @@
         "field": "mde_inventory_extension.recommendation.weaknesses",
         "description": "No description provided.",
         "type": "long"
+      }
+    ]
+  },
+  {
+    "slug": "microsoft_entra_id_graph",
+    "name": "Microsoft Entra ID Graph",
+    "description": "Collect Experimental Microsoft Entra ID activity and risk data directly through Microsoft Graph.",
+    "version": "0.1.0",
+    "created": "31 August 2026",
+    "buildDuration": "Final measured duration pending publication",
+    "status": "Experimental",
+    "validationStatus": "Package and attributable pipeline fixtures validated; direct Graph collection mock-validated; live tenant validation blocked",
+    "experimentalReason": "Built from official Microsoft Graph schemas and bounded documentation examples without a current customer-tenant capture. Validate tenant permissions, pagination, late arrivals, risk-state updates, and completeness before operational reliance.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/microsoft_entra_id_graph",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.product",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.additional",
+        "description": "Additional Microsoft Graph directory audit properties.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.additional_details",
+        "description": "Additional key-value details for the directory audit event.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.category",
+        "description": "Microsoft Graph directory audit category.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.correlation_id",
+        "description": "Microsoft Graph correlation identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.app_id",
+        "description": "Application identifier of the initiating application.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.display_name",
+        "description": "Display name of the initiating application.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.ip_address",
+        "description": "Original initiator IP string when it is not a valid IP literal.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.logged_by_service",
+        "description": "Service that logged the directory audit event.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.odata_type",
+        "description": "Microsoft Graph OData type discriminator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.operation_type",
+        "description": "Microsoft Graph directory audit operation type.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.result",
+        "description": "Result enum when it cannot be mapped to an ECS outcome.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.result_reason",
+        "description": "Reason reported for the operation result.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.directory_audit.target_resources",
+        "description": "Target resources and modified properties affected by the operation.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.additional",
+        "description": "Additional Microsoft Graph provisioning properties.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.change_id",
+        "description": "Identifier of the provisioning change.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.cycle_id",
+        "description": "Identifier of the provisioning cycle.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.duration_ms",
+        "description": "Duration of the provisioning operation.",
+        "type": "long"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.initiator_type",
+        "description": "Type of provisioning initiator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.job_id",
+        "description": "Identifier of the provisioning job.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.modified_properties",
+        "description": "Properties modified by the provisioning operation.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.odata_type",
+        "description": "Microsoft Graph OData type discriminator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.provisioning_steps",
+        "description": "Steps and open details for the provisioning operation.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.service_principal",
+        "description": "Additional service principal properties.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.source_identity",
+        "description": "Source identity and open details.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.source_system",
+        "description": "Source provisioning system and open details.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.error_information",
+        "description": "Provisioning error information.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.status",
+        "description": "Status enum when it cannot be mapped to an ECS outcome.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.target_identity",
+        "description": "Target identity and open details.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.target_system",
+        "description": "Target provisioning system and open details.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.provisioning.tenant_id",
+        "description": "Tenant identifier associated with the operation.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.activity",
+        "description": "Activity associated with the risk detection.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.activity_date_time",
+        "description": "Time of the activity associated with the detection.",
+        "type": "date"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.additional",
+        "description": "Additional Microsoft Graph risk detection properties.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.additional_info",
+        "description": "Parsed open key-value information supplied by Microsoft Graph.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.additional_info_original",
+        "description": "Original additionalInfo string when it cannot be parsed as JSON.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.correlation_id",
+        "description": "Microsoft Graph correlation identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.detection_source",
+        "description": "Source that identified the risk.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.detection_timing_type",
+        "description": "Timing classification of the risk detection.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.ip_address",
+        "description": "Original IP string when it is not a valid IP literal.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.last_updated_date_time",
+        "description": "Time the risk detection state was last updated.",
+        "type": "date"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.location",
+        "description": "Location associated with the risk detection.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.odata_type",
+        "description": "Microsoft Graph OData type discriminator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.request_id",
+        "description": "Request identifier associated with the risk detection.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.risk_detail",
+        "description": "Detail describing the risk.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.risk_level",
+        "description": "Assessed level of risk.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.risk_state",
+        "description": "Current state of the risk detection.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risk_detection.token_issuer_type",
+        "description": "Type of token issuer associated with the activity.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.additional",
+        "description": "Additional Microsoft Graph risky-user properties.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.history",
+        "description": "Expanded risky-user history when Microsoft Graph includes the relationship.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.is_deleted",
+        "description": "Indicates whether the risky user is deleted.",
+        "type": "boolean"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.is_processing",
+        "description": "Indicates whether Microsoft Entra ID is processing the risky user.",
+        "type": "boolean"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.odata_type",
+        "description": "Microsoft Graph OData type discriminator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.risk_detail",
+        "description": "Detail describing the user's risk.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.risk_last_updated_date_time",
+        "description": "Time the risky-user state was last updated.",
+        "type": "date"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.risk_level",
+        "description": "Assessed risk level of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.risky_user.risk_state",
+        "description": "Current risk state of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.additional",
+        "description": "Additional Microsoft Graph sign-in properties not explicitly mapped by this integration.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.app_display_name",
+        "description": "Display name of the application used for the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.app_id",
+        "description": "Identifier of the application used for the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.applied_conditional_access_policies",
+        "description": "Conditional Access policies applied to the sign-in.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.authentication_app_device_details",
+        "description": "Authentication application and device details.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.client_app_used",
+        "description": "Client application used for the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.conditional_access_status",
+        "description": "Status of Conditional Access evaluation.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.correlation_id",
+        "description": "Correlation identifier supplied by Microsoft Graph.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.device_detail",
+        "description": "Device details associated with the sign-in.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.home_tenant_id",
+        "description": "Home tenant identifier of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.ip_address",
+        "description": "Original IP string when it is not a valid IP literal.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.is_interactive",
+        "description": "Indicates whether the sign-in was interactive.",
+        "type": "boolean"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.location",
+        "description": "Location reported by Microsoft Graph.",
+        "type": "flattened"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.odata_type",
+        "description": "Microsoft Graph OData type discriminator.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.resource_display_name",
+        "description": "Display name of the accessed resource.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.resource_id",
+        "description": "Identifier of the accessed resource.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.resource_tenant_id",
+        "description": "Tenant identifier of the accessed resource.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_detail",
+        "description": "Detail describing the sign-in risk.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_event_types",
+        "description": "Legacy risk event types associated with the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_event_types_v2",
+        "description": "Risk event type strings associated with the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_level_aggregated",
+        "description": "Aggregated risk level for the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_level_during_sign_in",
+        "description": "Risk level at the time of sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.risk_state",
+        "description": "Risk state of the sign-in.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.service_principal_id",
+        "description": "Identifier of the sign-in service principal.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.service_principal_name",
+        "description": "Name of the sign-in service principal.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.additional_details",
+        "description": "Additional sign-in status details.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.error_code",
+        "description": "Microsoft Graph sign-in status error code.",
+        "type": "long"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.failure_reason",
+        "description": "Reason the sign-in failed.",
+        "type": "keyword"
+      },
+      {
+        "field": "microsoft_entra_id_graph.sign_in.user_agent",
+        "description": "User agent string supplied with the sign-in.",
+        "type": "keyword"
       }
     ]
   },
@@ -35610,6 +37182,94 @@
     ]
   },
   {
+    "slug": "orca_security",
+    "name": "Orca Cloud Security Platform",
+    "description": "Collect Experimental alert updates from the Orca Cloud Security Platform.",
+    "version": "0.1.0",
+    "created": "30 August 2026",
+    "buildDuration": "Best-effort experimental build",
+    "status": "Experimental",
+    "validationStatus": "Static validated",
+    "experimentalReason": "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "favicon.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/orca_security",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "data_stream.type",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "orca_security.alert.additional_fields",
+        "description": "Complete original Orca alert record returned by the Serving Layer API.",
+        "type": "flattened"
+      },
+      {
+        "field": "orca_security.alert.diagnostic.type",
+        "description": "Stable diagnostic type.",
+        "type": "keyword"
+      },
+      {
+        "field": "orca_security.alert.diagnostic.message",
+        "description": "Human-readable diagnostic message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "orca_security.alert.diagnostic.http_status",
+        "description": "Unexpected HTTP response status, when available.",
+        "type": "long"
+      },
+      {
+        "field": "orca_security.alert.diagnostic.state_advanced",
+        "description": "Whether the collector advanced its cursor while producing the diagnostic.",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
     "slug": "osv_scanner",
     "name": "OSV-Scanner",
     "description": "Parse bounded OSV-Scanner v2.5.1 JSON vulnerability reports published as completed immutable files; current-version bytes, recurring operation, production completeness, and lossless collection remain on hold.",
@@ -39533,6 +41193,63 @@
     ]
   },
   {
+    "slug": "rapid7_insightidr",
+    "name": "Rapid7 SIEM (InsightIDR)",
+    "description": "Collect Rapid7 SIEM Alerts and Investigations.",
+    "version": "0.1.0",
+    "created": "30 August 2026",
+    "buildDuration": "Best-effort experimental build",
+    "status": "Experimental",
+    "validationStatus": "Static validated",
+    "experimentalReason": "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Web"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "favicon.ico",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/rapid7_insightidr",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "rapid7_insightidr.alert",
+        "description": "Raw Rapid7 SIEM Alert object. Semantics require validation against representative current-version responses.",
+        "type": "flattened"
+      },
+      {
+        "field": "rapid7_insightidr.investigation",
+        "description": "Raw Rapid7 SIEM Investigation object. Semantics require validation against representative current-version responses.",
+        "type": "flattened"
+      }
+    ]
+  },
+  {
     "slug": "ray",
     "name": "Ray",
     "description": "Collect the bounded Ray 2.58.0 application and driver JSONL contract from operator-selected files; worker/system logs, metrics, traces, APIs, rotation, runtime durability, and production losslessness remain on hold.",
@@ -41391,6 +43108,216 @@
     ]
   },
   {
+    "slug": "saviynt_eic",
+    "name": "Saviynt Enterprise Identity Cloud",
+    "description": "Collect Experimental audit events from Saviynt Enterprise Identity Cloud Runtime Analytics.",
+    "version": "0.1.0",
+    "created": "30 August 2026",
+    "buildDuration": "Best-effort experimental build",
+    "status": "Experimental",
+    "validationStatus": "Static validated",
+    "experimentalReason": "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "favicon.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/saviynt_eic",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.product",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.id",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.action",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.type",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.code",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.id",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.name",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.ip",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "message",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "url.original",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "related.ip",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "related.user",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "saviynt.eic.audit.additional_fields",
+        "description": "Complete result object returned by the tenant-configured Runtime Analytics control, including unknown aliases.",
+        "type": "flattened"
+      },
+      {
+        "field": "saviynt.eic.audit.object.type",
+        "description": "Type of object affected by the audit event.",
+        "type": "keyword"
+      },
+      {
+        "field": "saviynt.eic.audit.object.name",
+        "description": "Name or key of the object affected by the audit event.",
+        "type": "keyword"
+      }
+    ]
+  },
+  {
+    "slug": "sciencelogic_sl1",
+    "name": "ScienceLogic Skylar One",
+    "description": "Collect appliance-local syslog records forwarded by ScienceLogic Skylar One.",
+    "version": "0.1.0",
+    "created": "31 August 2026",
+    "buildDuration": "20 minutes 8 seconds (measured)",
+    "status": "Experimental",
+    "validationStatus": "Package and negative raw-fallback pipeline validated; positive fixtures blocked",
+    "experimentalReason": "Built from ScienceLogic's documented rsyslog transport without an attributable complete outbound record. Validate the emitted RFC/template, TCP framing, included programs and facilities, event-family coverage, authenticated TLS, SaaS export path, and completeness against a real Skylar One deployment.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Network"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/sciencelogic_sl1",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "log.source.address",
+        "description": "Source address from which the network input received the record.",
+        "type": "keyword"
+      },
+      {
+        "field": "sciencelogic_sl1.syslog.structured_data",
+        "description": "Raw RFC 5424 structured-data text when a standard envelope is recognized.",
+        "type": "keyword"
+      }
+    ]
+  },
+  {
     "slug": "secureauth_identity_platform",
     "name": "SecureAuth Identity Platform",
     "description": "Parse one bounded SecureAuth appliance audit record from operator-staged files; current 26.x bytes, native syslog framing, broader event families, production completeness, and lossless guarantees remain on hold.",
@@ -41589,6 +43516,68 @@
         "field": "user_agent.original.text",
         "description": "Multi-field of `user_agent.original`.",
         "type": "match_only_text"
+      }
+    ]
+  },
+  {
+    "slug": "securityscorecard",
+    "name": "SecurityScorecard Ratings",
+    "description": "Collect company history events from the SecurityScorecard Ratings Platform.",
+    "version": "0.1.0",
+    "created": "31 August 2026",
+    "buildDuration": "5 hours 43 minutes 24 seconds (measured)",
+    "status": "Experimental",
+    "validationStatus": "Package, pipeline, and system validated",
+    "experimentalReason": "Built from the official API contract and one anonymized ecosystem-published issue-history response without a current customer-tenant capture. Breach and recalibration parsing, ordering, date-bound semantics, late arrivals, multi-page consistency, entitlements, and completeness require live validation.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/securityscorecard",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "securityscorecard.scorecard_identifier",
+        "description": "Configured company domain or scorecard UUID used for this API request.",
+        "type": "keyword"
+      },
+      {
+        "field": "securityscorecard.event",
+        "description": "Complete SecurityScorecard history event returned by the API.",
+        "type": "flattened"
+      },
+      {
+        "field": "securityscorecard.pipeline_error_message",
+        "description": "JSON parsing error retained for malformed source documents.",
+        "type": "keyword"
       }
     ]
   },
@@ -44332,6 +46321,133 @@
         "field": "sonrai_security.event.event",
         "description": "Complete decoded experimental Security security object.",
         "type": "flattened"
+      }
+    ]
+  },
+  {
+    "slug": "appdynamics_controller_audit",
+    "name": "Splunk AppDynamics Controller Audit",
+    "description": "Collect Experimental bounded audit events from Splunk AppDynamics Controller.",
+    "version": "0.1.0",
+    "created": "30 August 2026",
+    "buildDuration": "Best-effort experimental build",
+    "status": "Experimental",
+    "validationStatus": "Static validated",
+    "experimentalReason": "Built without customer sample logs. Validate parsing and transport behavior against real deployment data before production use.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/appdynamics_controller_audit",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "observer.product",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "ecs.version",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.action",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.code",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.outcome",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.type",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "organization.name",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "related.user",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "service.name",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "tags",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.name",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
       }
     ]
   },
@@ -48342,6 +50458,83 @@
         "field": "veeam.vbr.categoryId",
         "description": "Veeam event category identifier.",
         "type": "keyword"
+      }
+    ]
+  },
+  {
+    "slug": "veza",
+    "name": "Veza",
+    "description": "Collect audit and system events from the Veza Access Platform.",
+    "version": "0.1.0",
+    "created": "30 August 2026",
+    "buildDuration": "1 hour 21 minutes 48 seconds (measured)",
+    "status": "Experimental",
+    "validationStatus": "Static validated",
+    "experimentalReason": "Built from official historical documentation examples without a current customer-tenant capture. Validate endpoint version, audit schema variant, pagination durability, ordering, and completeness against real deployment data before operational reliance.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": null,
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/packages/veza",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "data_stream.type",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Field exported by the integration.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "@timestamp",
+        "description": "Field exported by the integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "veza.audit",
+        "description": "Original Veza audit record, retained schema-tolerantly.",
+        "type": "flattened"
+      },
+      {
+        "field": "veza.event",
+        "description": "Original Veza system-event record, retained schema-tolerantly.",
+        "type": "flattened"
       }
     ]
   },

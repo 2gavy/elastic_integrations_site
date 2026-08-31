@@ -87,7 +87,8 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
   assert.deepEqual(
     custom.filter((record) => !record.icon).map((record) => record.slug).sort(),
     [
-      "nasuni_file_services", "netapp_ontap", "onfido", "upx_antiddos", "vsftpd",
+      "appdynamics_controller_audit", "dragos", "logicmonitor", "microsoft_entra_id_graph", "nasuni_file_services",
+      "netapp_ontap", "onfido", "sciencelogic_sl1", "securityscorecard", "upx_antiddos", "veza", "vsftpd",
     ],
   );
 
@@ -95,4 +96,77 @@ test("publishes every declared custom logo and keeps the unresolved set explicit
   assert.equal(phoenix.icon, "arize_phoenix.png");
   const phoenixPng = await readFile(new URL("../public/icons/custom/arize_phoenix.png", import.meta.url));
   assert.deepEqual([...phoenixPng.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+});
+
+test("publishes the Experimental Veza integration with an initials fallback", () => {
+  const item = custom.find((record) => record.slug === "veza");
+  assert.equal(item.name, "Veza");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "1 hour 21 minutes 48 seconds (measured)");
+  assert.equal(item.icon, null);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/veza");
+  assert.match(item.experimentalReason, /current customer-tenant capture/);
+  assert.ok(item.fields.some((field) => field.field === "@timestamp"));
+  assert.ok(item.fields.some((field) => field.field === "veza.audit" && field.type === "flattened"));
+  assert.ok(item.fields.some((field) => field.field === "veza.event" && field.type === "flattened"));
+});
+
+test("publishes the Experimental Dragos Platform integration with an initials fallback", () => {
+  const item = custom.find((record) => record.slug === "dragos");
+  assert.equal(item.name, "Dragos Platform");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "36 minutes 15 seconds (measured)");
+  assert.equal(item.validationStatus, "Package, pipeline, and system validated");
+  assert.equal(item.icon, null);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/dragos");
+  assert.match(item.experimentalReason, /licensed-tenant production captures/);
+  assert.match(item.experimentalReason, /LEEF recognition/);
+  assert.ok(item.fields.some((field) => field.field === "event.original"));
+  assert.ok(item.fields.some((field) => field.field === "dragos.notification" && field.type === "flattened"));
+});
+
+test("publishes the Experimental SecurityScorecard Ratings integration with an initials fallback", () => {
+  const item = custom.find((record) => record.slug === "securityscorecard");
+  assert.equal(item.name, "SecurityScorecard Ratings");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "5 hours 43 minutes 24 seconds (measured)");
+  assert.equal(item.validationStatus, "Package, pipeline, and system validated");
+  assert.equal(item.icon, null);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/securityscorecard");
+  assert.match(item.experimentalReason, /current customer-tenant capture/);
+  assert.match(item.experimentalReason, /date-bound semantics/);
+  assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
+  assert.ok(item.fields.some((field) => field.field === "securityscorecard.event" && field.type === "flattened"));
+});
+
+test("publishes the bounded Experimental ScienceLogic Skylar One receiver with an initials fallback", () => {
+  const item = custom.find((record) => record.slug === "sciencelogic_sl1");
+  assert.equal(item.name, "ScienceLogic Skylar One");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "20 minutes 8 seconds (measured)");
+  assert.equal(item.validationStatus, "Package and negative raw-fallback pipeline validated; positive fixtures blocked");
+  assert.equal(item.icon, null);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/sciencelogic_sl1");
+  assert.match(item.experimentalReason, /complete outbound record/);
+  assert.match(item.experimentalReason, /TCP framing/);
+  assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
+  assert.ok(item.fields.some((field) => field.field === "sciencelogic_sl1.syslog.structured_data" && field.type === "keyword"));
+});
+
+test("publishes the Experimental Microsoft Entra ID Graph integration with an initials fallback", () => {
+  const item = custom.find((record) => record.slug === "microsoft_entra_id_graph");
+  assert.equal(item.name, "Microsoft Entra ID Graph");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.buildDuration, "Final measured duration pending publication");
+  assert.match(item.validationStatus, /live tenant validation blocked/);
+  assert.equal(item.icon, null);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/packages/microsoft_entra_id_graph");
+  assert.match(item.experimentalReason, /without a current customer-tenant capture/);
+  assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
+  assert.ok(item.fields.some((field) => field.field === "microsoft_entra_id_graph.risky_user.additional" && field.type === "flattened"));
 });
