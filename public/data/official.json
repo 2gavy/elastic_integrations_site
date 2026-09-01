@@ -3372,7 +3372,7 @@
       "Unified agent"
     ],
     "source": "official",
-    "version": "2.9.4",
+    "version": "2.9.5",
     "destinationUrl": "https://www.elastic.co/guide/en/fleet/current/elastic-agent-installation-configuration.html"
   },
   {
@@ -3525,7 +3525,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "2.6.0",
+    "version": "2.6.1",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/eset_protect"
   },
   {
@@ -7193,7 +7193,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.9.2",
+    "version": "3.9.3",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/windows"
   },
   {
@@ -8330,7 +8330,7 @@
       "Logs"
     ],
     "source": "official",
-    "version": "3.9.2",
+    "version": "3.9.3",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/windows"
   },
   {
@@ -8369,7 +8369,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "2.23.2",
+    "version": "2.23.3",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/system"
   },
   {
@@ -9002,7 +9002,7 @@
       "Logs and Metrics"
     ],
     "source": "official",
-    "version": "3.9.2",
+    "version": "3.9.3",
     "destinationUrl": "https://www.elastic.co/docs/reference/integrations/windows"
   },
   {
