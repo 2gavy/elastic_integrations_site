@@ -12,6 +12,18 @@ test("contains the complete official catalogue", () => {
   assert.ok(official.some((item) => item.solutions.includes("Observability")));
 });
 
+test("publishes Netskope 3.2.3 with Experimental scoped to API collection", () => {
+  const item = custom.find((record) => record.slug === "netskope");
+  assert.ok(item);
+  assert.equal(item.version, "3.2.3");
+  assert.match(item.description, /REST API v2 \(Experimental\)/);
+  assert.match(item.description, /existing TCP\/cloud-storage inputs/);
+  assert.equal(item.status, undefined);
+  assert.match(item.validationStatus, /legacy static gaps/);
+  assert.match(item.buildDuration, /measured/);
+  assert.equal(item.icon, "netskope-logo.svg");
+});
+
 test("keeps custom metadata protected and namespaced", () => {
   assert.ok(custom.length > 0);
   assert.ok(custom.every((item) => item.source === "custom"));

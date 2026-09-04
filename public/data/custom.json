@@ -30123,15 +30123,17 @@
   {
     "slug": "netskope",
     "name": "Netskope",
-    "description": "Collect security events directly from the REST API v2 or through supported log-streaming inputs.",
-    "version": "3.2.2",
+    "description": "Collect security events through direct REST API v2 (Experimental) or existing TCP/cloud-storage inputs.",
+    "version": "3.2.3",
     "created": "7 August 2026",
-    "buildDuration": "~3 hours (estimated; not measured)",
-    "validationStatus": "Static validated",
+    "buildDuration": "12m 59s hardening/validation; ZIP build 0.289s (measured)",
+    "validationStatus": "CEL mock + package checks; legacy static gaps",
     "experimentalReason": "",
     "categories": [
+      "Cloud",
       "Custom",
       "Elastic Agent Enabled",
+      "Network",
       "Security",
       "Web"
     ],
