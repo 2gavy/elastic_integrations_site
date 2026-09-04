@@ -24,6 +24,20 @@ test("publishes Netskope 3.2.3 with Experimental scoped to API collection", () =
   assert.equal(item.icon, "netskope-logo.svg");
 });
 
+test("publishes Salesforce as a separate custom fork", () => {
+  const item = custom.find((record) => record.slug === "salesforce_custom");
+  assert.ok(item);
+  assert.equal(item.name, "Salesforce (Custom)");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, undefined);
+  assert.match(item.description, /Experimental Client Credentials/);
+  assert.match(item.description, /independent datasets and dashboards/);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/salesforce_custom");
+  assert.equal(item.icon, "salesforce.svg");
+  assert.equal(item.fields.length, 102);
+  assert.ok(item.fields.some((field) => field.field.startsWith("salesforce.")));
+});
+
 test("keeps custom metadata protected and namespaced", () => {
   assert.ok(custom.length > 0);
   assert.ok(custom.every((item) => item.source === "custom"));

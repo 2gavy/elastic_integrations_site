@@ -53627,5 +53627,542 @@
         "type": "flattened"
       }
     ]
+  },
+  {
+    "slug": "salesforce_custom",
+    "name": "Salesforce (Custom)",
+    "description": "Separate custom fork of the official Salesforce integration with Experimental Client Credentials API collection; independent datasets and dashboards, retained native inputs and vendor fields.",
+    "version": "0.1.0",
+    "created": "4 September 2026",
+    "buildDuration": "5m 11s identity migration; ZIP build 0.118s (measured); prior collector build 34m 14s",
+    "validationStatus": "Identity/package checks passed; unchanged 112-tested collectors; live validation pending",
+    "experimentalReason": "Only the added Client Credentials collection option is Experimental; tenant and installed-Agent validation remain outstanding.",
+    "categories": [
+      "Custom",
+      "Elastic Agent Enabled",
+      "CRM"
+    ],
+    "solutions": [
+      "Security",
+      "Observability"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "salesforce.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/salesforce_custom",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Event timestamp.",
+        "type": "date"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "Data stream dataset.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "Data stream namespace.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "Data stream type.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "input.type",
+        "description": "Input type.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.action",
+        "description": "Action performed by the callout.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.callout_time",
+        "description": "Time spent waiting on web service callouts, in milliseconds.",
+        "type": "float"
+      },
+      {
+        "field": "salesforce.apex.class_name",
+        "description": "The Apex class name. If the class is part of a managed package, this string includes the package namespace.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.client_name",
+        "description": "The name of the client that's using Salesforce services. This field is an optional parameter that can be passed in API calls. If blank, the caller didn't specify a client in the CallOptions header.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.cpu_time",
+        "description": "The CPU time in milliseconds used to complete the request.",
+        "type": "float"
+      },
+      {
+        "field": "salesforce.apex.db_blocks",
+        "description": "Indicates how much activity is occurring in the database. A high value for this field suggests that adding indexes or filters on your queries would benefit performance.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.apex.db_cpu_time",
+        "description": "The CPU time in milliseconds to complete the request. Indicates the amount of activity taking place in the database layer during the request.",
+        "type": "float"
+      },
+      {
+        "field": "salesforce.apex.db_total_time",
+        "description": "Time (in milliseconds) spent waiting for database processing in aggregate for all operations in the request. Compare this field to cpu_time to determine whether performance issues are occurring in the database layer or in your own code.",
+        "type": "float"
+      },
+      {
+        "field": "salesforce.apex.entity",
+        "description": "Name of the external object being accessed.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.entity_name",
+        "description": "The name of the object affected by the trigger.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.entry_point",
+        "description": "The entry point for this Apex execution.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.event_type",
+        "description": "The type of event.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.execute_ms",
+        "description": "How long it took (in milliseconds) for Salesforce to prepare and execute the query. Available in API version 42.0 and later.",
+        "type": "float"
+      },
+      {
+        "field": "salesforce.apex.fetch_ms",
+        "description": "How long it took (in milliseconds) to retrieve the query results from the external system. Available in API version 42.0 and later.",
+        "type": "float"
+      },
+      {
+        "field": "salesforce.apex.fields_count",
+        "description": "The number of fields or columns, where applicable.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.apex.filter",
+        "description": "Field expressions to filter which rows to return. Corresponds to WHERE in SOQL queries.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.is_long_running_request",
+        "description": "Indicates whether the request is counted against your org's concurrent long-running Apex request limit.",
+        "type": "boolean"
+      },
+      {
+        "field": "salesforce.apex.limit",
+        "description": "Maximum number of rows to return for a query. Corresponds to LIMIT in SOQL queries.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.apex.limit_usage_pct",
+        "description": "The percentage of Apex SOAP calls that were made against the organization's limit.",
+        "type": "float"
+      },
+      {
+        "field": "salesforce.apex.login_key",
+        "description": "The string that ties together all events in a given user's login session. It starts with a login event and ends with either a logout event or the user session expiring.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.media_type",
+        "description": "The media type of the response.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.message",
+        "description": "Error or warning message associated with the failed call.",
+        "type": "text"
+      },
+      {
+        "field": "salesforce.apex.method_name",
+        "description": "The name of the calling Apex method.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.offset",
+        "description": "Number of rows to skip when paging through a result set. Corresponds to OFFSET in SOQL queries.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.apex.orderby",
+        "description": "Field or column to use for sorting query results, and whether to sort the results in ascending (default) or descending order. Corresponds to ORDER BY in SOQL queries.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.organization_id",
+        "description": "The 15-character ID of the organization.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.query",
+        "description": "The SOQL query, if one was performed.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.quiddity",
+        "description": "The type of outer execution associated with this event.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.request_id",
+        "description": "The unique ID of a single transaction. A transaction can contain one or more events. Each event in a given transaction has the same request_id.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.request_status",
+        "description": "The status of the request for a page view or user interface action.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.rows_fetched",
+        "description": "Number of rows fetched by the callout. Available in API version 42.0 and later.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.apex.rows_processed",
+        "description": "The number of rows that were processed in the request.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.apex.rows_total",
+        "description": "Total number of records in the result set. The value is always -1 if the custom adapter's DataSource.Provider class doesn't declare the QUERY_TOTAL_SIZE capability.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.apex.run_time",
+        "description": "The amount of time that the request took in milliseconds.",
+        "type": "float"
+      },
+      {
+        "field": "salesforce.apex.select",
+        "description": "Comma-separated list of fields being queried. Corresponds to SELECT in SOQL queries.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.soql_queries_count",
+        "description": "The number of SOQL queries that were executed during the event.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.apex.subqueries",
+        "description": "Reserved for future use.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.throughput",
+        "description": "Number of records retrieved in one second.",
+        "type": "float"
+      },
+      {
+        "field": "salesforce.apex.trigger_id",
+        "description": "The 15-character ID of the trigger that was fired.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.trigger_name",
+        "description": "For triggers coming from managed packages, trigger_name includes a namespace prefix separated with a dot (.) character. If no namespace prefix is present, the trigger is from an unmanaged trigger.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.trigger_type",
+        "description": "The type of this trigger.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.type",
+        "description": "The type of Apex callout.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.uri",
+        "description": "The URI of the page that's receiving the request.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.uri_derived_id",
+        "description": "The 18-character case-safe ID of the URI of the page that's receiving the request.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.user_agent",
+        "description": "The numeric code for the type of client used to make the request (for example, the browser, application, or API).",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.apex.user_id_derived",
+        "description": "The 18-character case-safe ID of the user who's using Salesforce services through the UI or the API.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.instance_url",
+        "description": "The Salesforce instance URL.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.additional_info",
+        "description": "Additional information that's captured from the HTTP headers during a login request.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "salesforce.login.api.type",
+        "description": "The type of Salesforce API request.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.api.version",
+        "description": "The version of the Salesforce API used for the login request.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.application",
+        "description": "The application used to access the Salesforce organization.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.auth.method_reference",
+        "description": "The authentication method reference used by a third-party identity provider for SSO using the OpenID Connect protocol. This field is available in API version 51.0 and later.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.auth.service_id",
+        "description": "The authentication service ID used by a third-party identity provider for single sign-on (SSO) using the OpenID Connect protocol.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.client.ip",
+        "description": "The IP address of the client using Salesforce services. Internal Salesforce IP addresses are shown as \"Salesforce.com IP\".",
+        "type": "ip"
+      },
+      {
+        "field": "salesforce.login.client_version",
+        "description": "The version of the client used for the login request.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.cpu_time",
+        "description": "The CPU time in milliseconds used to complete the login request, indicating the amount of activity in the application server layer.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.login.db_total_time",
+        "description": "The time in nanoseconds for the database round trip during login, including time spent in the JDBC driver, network, and database CPU time.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.login.evaluation_time",
+        "description": "The amount of time it took to evaluate the transaction security policy, in milliseconds. This field is available in API version 46.0 and later.",
+        "type": "double"
+      },
+      {
+        "field": "salesforce.login.event_type",
+        "description": "The type of event. For login events, the value is always \"Login\".",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.geo_id",
+        "description": "The Salesforce ID of the LoginGeo object associated with the user's IP address during login.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.history_id",
+        "description": "The identifier that tracks a user session, allowing correlation of user activity with a specific login instance.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.key",
+        "description": "The string that ties together all events in a given user's login session, starting with the login event and ending with either a logout event or the user session expiring.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.organization_id",
+        "description": "The 15-character ID of the Salesforce organization.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.related_event_identifier",
+        "description": "The identifier of a related event associated with the login event.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.request.id",
+        "description": "The unique identifier for the login request transaction.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.request.status",
+        "description": "The status of the login request (e.g., Success, Failed).",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.run_time",
+        "description": "The total time in milliseconds taken by the login request.",
+        "type": "long"
+      },
+      {
+        "field": "salesforce.login.transaction_security.policy.id",
+        "description": "The ID of the transaction security policy used to evaluate the login event.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.transaction_security.policy.outcome",
+        "description": "The outcome of the transaction security policy evaluation (e.g., Block, Notified, NoAction).",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.type",
+        "description": "The type of login used to access the session.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.uri.id",
+        "description": "The 18-character case-safe ID of the URI of the page receiving the login request.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.login.user_id",
+        "description": "The 15-character ID of the user logging in to Salesforce.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.api.type",
+        "description": "The type of Salesforce API request.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.api.version",
+        "description": "The version of the Salesforce API that's being used.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.app_type",
+        "description": "The application type that was in use upon logging out.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.browser_type",
+        "description": "The identifier string returned by the browser used at login.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.client_version",
+        "description": "The version of the client that was in use upon logging out.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.event_identifier",
+        "description": "This field is populated only when the activity that this event monitors requires extra authentication, such as multi-factor authentication. In this case, Salesforce generates more events and sets the RelatedEventIdentifier field of the new events to the value of the EventIdentifier field of the original event. Use this field with the EventIdentifier field to correlate all the related events. If no extra authentication is required, this field is blank.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.event_type",
+        "description": "The type of event. The value is always Logout.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.login_key",
+        "description": "The string that ties together all events in a given user's login session. It starts with a login event and ends with either a logout event or the user session expiring.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.organization_id",
+        "description": "The 15-character ID of the organization.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.platform_type",
+        "description": "The code for the client platform. If a timeout caused the logout, this field is null.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.resolution_type",
+        "description": "The screen resolution of the client. If a timeout caused the logout, this field is null.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.session.key",
+        "description": "The user's unique session ID. You can use this value to identify all user events within a session. When a user logs out and logs in again, a new session is started.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.session.level",
+        "description": "The security level of the session that was used when logging out (e.g. Standard Session or High-Assurance Session).",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.session.type",
+        "description": "The session type that was used when logging out (for example, API, OAuth 2.0, or UI).",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.user.roles",
+        "description": "The roles of the user who's using Salesforce services through the UI or the API.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.user_id",
+        "description": "The 15-character ID of the user who's using Salesforce services through the UI or the API.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.user_id_derived",
+        "description": "The 18-character case-safe ID of the user who's using Salesforce services through the UI or the API.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.logout.user_initiated_logout",
+        "description": "The value is true if the user intentionally logged out of the organization by clicking the Logout button. If the user's session timed out due to inactivity or another implicit logout action, the value is false.",
+        "type": "boolean"
+      },
+      {
+        "field": "salesforce.setup_audit_trail.created_by_context",
+        "description": "The context under which the Setup change was made. For example, if Einstein uses cloud-to-cloud services to make a change in Setup, the value of this field is Einstein.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.setup_audit_trail.created_by_id",
+        "description": "The ID under which the Setup change was made. For example, if Einstein uses cloud-to-cloud services to make a change in Setup, this field contains the ID of Einstein.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.setup_audit_trail.created_by_issuer",
+        "description": "Reserved for future use.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.setup_audit_trail.delegate_user",
+        "description": "The Login-As user who executed the action in Setup. If a Login-As user didn't perform the action, this field is blank. This field is available in API version 35.0 and later.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.setup_audit_trail.display",
+        "description": "The full description of changes made in Setup. For example, if the Action field has a value of PermSetCreate, the Display field might be “Created permission set MAD: with user license Salesforce.”",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.setup_audit_trail.responsible_namespace_prefix",
+        "description": "The namespace of the package responsible for this change, if applicable.",
+        "type": "keyword"
+      },
+      {
+        "field": "salesforce.setup_audit_trail.section",
+        "description": "The section in the Setup menu where the action occurred. For example, Manage Users or Company Profile.",
+        "type": "keyword"
+      }
+    ]
   }
 ]
