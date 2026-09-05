@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DNS network nodes">
+  <rect width="64" height="64" rx="12" fill="#0B1F33"/>
+  <path d="M18 20h28M18 44h28M18 20v24M46 20v24M18 20l28 24M46 20L18 44" fill="none" stroke="#48EFCF" stroke-width="3"/>
+  <circle cx="18" cy="20" r="6" fill="#F7FAFC"/>
+  <circle cx="46" cy="20" r="6" fill="#F7FAFC"/>
+  <circle cx="18" cy="44" r="6" fill="#F7FAFC"/>
+  <circle cx="46" cy="44" r="6" fill="#F7FAFC"/>
+  <circle cx="32" cy="32" r="7" fill="#FEC514"/>
+</svg>

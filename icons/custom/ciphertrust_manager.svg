@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title desc">
+  <title id="title">Key management audit integration</title>
+  <desc id="desc">A neutral shield containing a keyhole and audit lines.</desc>
+  <metadata>Original neutral artwork created for this integration; no vendor trademark or third-party asset is incorporated.</metadata>
+  <rect width="32" height="32" rx="7" fill="#F5F7FA"/>
+  <path d="M16 4.5 25.5 8v7.1c0 5.8-3.6 10-9.5 12.4-5.9-2.4-9.5-6.6-9.5-12.4V8L16 4.5Z" fill="#1F5A7A"/>
+  <circle cx="16" cy="14" r="3.1" fill="#F5C451"/>
+  <path d="M14.8 16.6h2.4v5h-2.4z" fill="#F5C451"/>
+  <path d="M9.8 10.3h3.2M19 10.3h3.2M9.8 23h3.2M19 23h3.2" fill="none" stroke="#FFF" stroke-linecap="round" stroke-width="1.35"/>
+</svg>

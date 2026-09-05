@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title">
+  <title id="title">Firewall text logs</title>
+  <path fill="#36A2AE" d="M16 2 28 7v8c0 7.7-4.8 12.5-12 15C8.8 27.5 4 22.7 4 15V7l12-5Z"/>
+  <path fill="#FFF" d="M9 10h14v2H9zm0 5h14v2H9zm0 5h9v2H9z"/>
+</svg>

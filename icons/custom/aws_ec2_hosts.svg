@@ -1,0 +1,10 @@
+<!-- Original generic cloud-host icon created for this package; no AWS trademark or vendor artwork is used. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Cloud host inventory</title>
+  <rect x="7" y="19" width="50" height="34" rx="6" fill="#F04E98"/>
+  <path d="M17 19v-3a15 15 0 0 1 30 0v3" fill="none" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+  <rect x="16" y="28" width="32" height="7" rx="2" fill="#FFFFFF"/>
+  <rect x="16" y="40" width="32" height="7" rx="2" fill="#FFFFFF"/>
+  <circle cx="21" cy="31.5" r="1.8" fill="#111827"/>
+  <circle cx="21" cy="43.5" r="1.8" fill="#111827"/>
+</svg>

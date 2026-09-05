@@ -1,0 +1,7 @@
+<!-- Original neutral catalogue glyph authored for this package; not a GitGuardian logo. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Abstract shield and keyhole">
+  <rect width="32" height="32" rx="6" fill="#0B64DD"/>
+  <path d="M16 5 25 9v7c0 6-3.8 9.4-9 12-5.2-2.6-9-6-9-12V9l9-4Z" fill="#fff"/>
+  <circle cx="16" cy="15" r="3" fill="#0B64DD"/>
+  <path d="M14.8 17h2.4l1 6h-4.4l1-6Z" fill="#0B64DD"/>
+</svg>

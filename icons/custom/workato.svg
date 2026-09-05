@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Workato integration</title>
+  <rect width="64" height="64" rx="12" fill="#143B5D"/>
+  <path d="M14 19h8l5 22 5-16h7l5 16 5-22h7L48 46h-8l-5-15-5 15h-8z" fill="#FFFFFF"/>
+</svg>

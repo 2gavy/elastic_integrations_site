@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Absolute Secure Endpoint">
+  <rect width="64" height="64" rx="12" fill="#1f2937"/>
+  <path d="M32 10 51 18v14c0 12-8 20-19 24C21 52 13 44 13 32V18l19-8Z" fill="#00bfb3"/>
+  <path d="m23 35 6 6 13-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

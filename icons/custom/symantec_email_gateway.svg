@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Email gateway shield">
+  <path fill="#343741" d="M32 3 57 12v17c0 16-10 26-25 32C17 55 7 45 7 29V12L32 3Z"/>
+  <rect x="15" y="19" width="34" height="25" rx="3" fill="#00BFB3"/>
+  <path fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="m17 22 15 12 15-12M17 41l10-10m20 10L37 31"/>
+</svg>

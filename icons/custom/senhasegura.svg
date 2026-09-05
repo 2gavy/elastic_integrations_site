@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Privileged authentication telemetry</title>
+  <desc id="desc">Neutral original shield and keyhole artwork.</desc>
+  <path fill="#1b6ac9" d="M32 3 55 12v17c0 15-9.6 26.5-23 32C18.6 55.5 9 44 9 29V12L32 3Z"/>
+  <path fill="#fff" d="M32 17a10 10 0 0 0-5 18.7V47h10V35.7A10 10 0 0 0 32 17Zm0 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">AlgoSec ASMS integration</title>
+  <desc id="desc">A neutral shield containing connected policy nodes</desc>
+  <path fill="#343741" d="M32 3 55 12v17c0 14.9-9.3 25.7-23 32C18.3 54.7 9 43.9 9 29V12L32 3Z"/>
+  <path fill="#F5F7FA" d="M32 9.4 49 16v13c0 11.2-6.5 19.8-17 25.5C21.5 48.8 15 40.2 15 29V16l17-6.6Z"/>
+  <path fill="none" stroke="#343741" stroke-width="3" stroke-linecap="round" d="m23 35 9-12 9 12M23 35h18"/>
+  <circle cx="32" cy="23" r="4" fill="#00BFB3"/>
+  <circle cx="23" cy="35" r="4" fill="#1BA9F5"/>
+  <circle cx="41" cy="35" r="4" fill="#F04E98"/>
+</svg>

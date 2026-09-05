@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Commvault integration</title>
+  <desc id="description">Neutral original shield and data-stack icon for the community Commvault integration.</desc>
+  <metadata>Original neutral artwork created for the 2gavy community integration catalogue on 2026-08-21. It is not a Commvault trademark or vendor-supplied asset. Licensed under Elastic-2.0 with this package.</metadata>
+  <path fill="#353740" d="M32 3 55 12v16c0 15-9.3 27.1-23 33C18.3 55.1 9 43 9 28V12L32 3Z"/>
+  <path fill="#F5F7FA" d="M32 10.5 48 17v11c0 10.2-5.8 19-16 24.3C21.8 47 16 38.2 16 28V17l16-6.5Z"/>
+  <ellipse cx="32" cy="24" rx="10" ry="4" fill="#00BFB3"/>
+  <path fill="#00BFB3" d="M22 24v6c0 2.2 4.5 4 10 4s10-1.8 10-4v-6c0 2.2-4.5 4-10 4s-10-1.8-10-4Zm0 8v6c0 2.2 4.5 4 10 4s10-1.8 10-4v-6c0 2.2-4.5 4-10 4s-10-1.8-10-4Z"/>
+</svg>

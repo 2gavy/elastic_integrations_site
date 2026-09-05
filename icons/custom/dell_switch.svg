@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Dell switch">
+  <rect x="2" y="6" width="28" height="20" rx="3" fill="#0672ce"/>
+  <rect x="5" y="10" width="22" height="5" rx="1" fill="#ffffff"/>
+  <rect x="5" y="18" width="3" height="3" rx="0.5" fill="#ffffff"/>
+  <rect x="10" y="18" width="3" height="3" rx="0.5" fill="#ffffff"/>
+  <rect x="15" y="18" width="3" height="3" rx="0.5" fill="#ffffff"/>
+  <rect x="20" y="18" width="3" height="3" rx="0.5" fill="#ffffff"/>
+  <circle cx="26" cy="19.5" r="1.5" fill="#00bfb3"/>
+</svg>

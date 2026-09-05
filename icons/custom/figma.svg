@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Figma Enterprise Activity Logs">
+  <rect width="32" height="32" rx="7" fill="#171717"/>
+  <path d="M10 7h7a4 4 0 0 1 0 8h-7V7Z" fill="#ff7262"/>
+  <path d="M10 15h7a4 4 0 0 1 0 8h-7v-8Z" fill="#a259ff"/>
+  <path d="M10 23h4v2a4 4 0 1 1-4-4v2Z" fill="#1abcfe"/>
+  <circle cx="21" cy="11" r="4" fill="#f24e1e"/>
+  <circle cx="21" cy="19" r="4" fill="#0acf83"/>
+</svg>
