@@ -504,7 +504,7 @@
   {
     "slug": "amazon-s3",
     "name": "Amazon S3",
-    "description": "Connect Amazon S3 data to Elastic for actions and logs and metrics and content.",
+    "description": "Collect logs and metrics from Amazon Web Services (AWS) with Elastic Agent.",
     "icon": "https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt05038e11af55459d/5ed6bf3e7968ce38f26fca74/logo-integrations-amazon-s3.svg",
     "categories": [
       "Cloud",
@@ -523,7 +523,8 @@
       "Content"
     ],
     "source": "official",
-    "destinationUrl": "https://www.elastic.co/guide/en/logstash/current/plugins-outputs-s3.html"
+    "version": "8.1.3",
+    "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
     "slug": "amazon-s3-storage-lens",
@@ -586,7 +587,7 @@
   {
     "slug": "amazon-sqs",
     "name": "Amazon SQS",
-    "description": "Connect Amazon SQS data to Elastic for logs and metrics.",
+    "description": "Collect logs and metrics from Amazon Web Services (AWS) with Elastic Agent.",
     "icon": "https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt3c34e28e36508a76/5ed6bf5fe92db173fb37c689/logo-integrations-amazon-sqs.svg",
     "categories": [
       "Cloud",
@@ -602,7 +603,8 @@
       "Metrics"
     ],
     "source": "official",
-    "destinationUrl": "https://www.elastic.co/guide/en/logstash/current/plugins-inputs-sqs.html"
+    "version": "8.1.3",
+    "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
     "slug": "amazon-vpc",
@@ -1019,7 +1021,7 @@
   {
     "slug": "aws-ecs",
     "name": "AWS ECS",
-    "description": "Connect AWS ECS data to Elastic for logs and metrics.",
+    "description": "Collect logs and metrics from Amazon Web Services (AWS) with Elastic Agent.",
     "icon": "https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt2cba414ec5e85f15/6192bd3c652f291696fdbe60/logo-aws-ecs.png",
     "categories": [
       "AWS",
@@ -1033,7 +1035,8 @@
       "Metrics"
     ],
     "source": "official",
-    "destinationUrl": "https://github.com/aws-samples/amazon-ecs-firelens-examples/tree/mainline/examples/fluent-bit/elastic-cloud"
+    "version": "8.1.3",
+    "destinationUrl": "https://www.elastic.co/docs/reference/integrations/aws"
   },
   {
     "slug": "aws-elastic-load-balancing",
@@ -2837,7 +2840,7 @@
     ],
     "source": "official",
     "version": "1.5.1",
-    "destinationUrl": "https://www.elastic.co/guide/en/logstash/current/plugins-inputs-couchdb_changes.html"
+    "destinationUrl": "https://www.elastic.co/docs/reference/integrations/couchdb"
   },
   {
     "slug": "cribl",
@@ -3995,7 +3998,7 @@
     ],
     "source": "official",
     "version": "2.27.0",
-    "destinationUrl": "https://www.elastic.co/guide/en/enterprise-search/current/connectors-github.html"
+    "destinationUrl": "https://www.elastic.co/docs/reference/integrations/github"
   },
   {
     "slug": "gitlab",
@@ -4699,7 +4702,7 @@
     ],
     "source": "official",
     "version": "1.9.0",
-    "destinationUrl": "https://www.elastic.co/guide/en/elasticsearch/hadoop/current/index.html"
+    "destinationUrl": "https://www.elastic.co/docs/reference/integrations/hadoop"
   },
   {
     "slug": "hashicorp-vault",
@@ -5936,7 +5939,7 @@
   {
     "slug": "microsoft-365-office-365-and-onedrive",
     "name": "Microsoft 365 (Office 365) & OneDrive",
-    "description": "Connect Microsoft 365 (Office 365) & OneDrive data to Elastic for content and logs and metrics.",
+    "description": "Collect logs from Microsoft Office 365 with Elastic Agent.",
     "icon": "https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt5f7c49314516a874/5ee2b7d5b522543a8d526f11/logo-integrations-microsoft-365.svg",
     "categories": [
       "Cloud",
@@ -5955,7 +5958,8 @@
       "Metrics"
     ],
     "source": "official",
-    "destinationUrl": "https://www.elastic.co/guide/en/enterprise-search/current/connectors-onedrive.html"
+    "version": "3.11.0",
+    "destinationUrl": "https://www.elastic.co/docs/reference/integrations/o365"
   },
   {
     "slug": "microsoft-defender-for-cloud",
@@ -7811,7 +7815,7 @@
   {
     "slug": "slack",
     "name": "Slack",
-    "description": "Connect Slack data to Elastic for actions and content and logs.",
+    "description": "Slack Logs Integration",
     "icon": "https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt5cfeb07c04a82a70/5ee2c975a1cefa3b5ed1dad8/logo-integrations-slack.svg",
     "categories": [
       "Notification",
@@ -7829,7 +7833,8 @@
       "Logs"
     ],
     "source": "official",
-    "destinationUrl": "https://www.elastic.co/guide/en/kibana/current/slack-action-type.html"
+    "version": "1.32.0",
+    "destinationUrl": "https://www.elastic.co/docs/reference/integrations/slack"
   },
   {
     "slug": "snmp",
@@ -9160,7 +9165,7 @@
   {
     "slug": "zookeeper",
     "name": "ZooKeeper",
-    "description": "Connect ZooKeeper data to Elastic for logs and metrics.",
+    "description": "Collect metrics from ZooKeeper service with Elastic Agent.",
     "icon": "https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt7bf83562f6fa1a25/5ed7c1950d08b7333aa78c5b/logo-integrations-zookeeper.jpg",
     "categories": [
       "Orchestration",
@@ -9175,7 +9180,8 @@
       "Metrics"
     ],
     "source": "official",
-    "destinationUrl": "https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html"
+    "version": "1.14.0",
+    "destinationUrl": "https://www.elastic.co/docs/reference/integrations/zookeeper"
   },
   {
     "slug": "zoom",
