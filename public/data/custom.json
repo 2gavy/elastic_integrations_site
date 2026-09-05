@@ -54971,7 +54971,7 @@
     "description": "Collect identity and access-management events from the OneLogin Events API v1 with guarded OAuth, cursor pagination, replay overlap, and deterministic event-ID deduplication; live-tenant completeness remains unvalidated.",
     "version": "0.1.0",
     "created": "5 September 2026",
-    "buildDuration": "Final package build completed in 0.13 seconds (measured); total development time not recorded",
+    "buildDuration": "2 hours 27 minutes 4 seconds research + build (measured)",
     "validationStatus": "Package, CEL mock, pipeline, and system collection validated; live-tenant validation blocked",
     "experimentalReason": "OneLogin's current public Events API v1 contract, synthetic mock tests, and a local system test support the bounded collector. An authorized live tenant, real event-shape variation, retention behavior, and production completeness remain unvalidated.",
     "categories": [
