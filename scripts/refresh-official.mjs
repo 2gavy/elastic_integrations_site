@@ -1,4 +1,5 @@
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
+import { pathToFileURL } from "node:url";
 
 const pageUrl = "https://www.elastic.co/integrations/data-integrations";
 const registryUrl = "https://epr.elastic.co/search?package_policy_template=true&prerelease=false";
@@ -20,8 +21,13 @@ function normalizeUrl(url, packageName) {
 }
 
 function packageNameFromUrl(url) {
-  const match = url?.match(/integrations\/([^/?#]+)/i);
+  const match = url?.match(/(?:docs\.elastic\.co\/(?:en\/)?integrations|elastic\.co\/(?:docs\/(?:current|reference)\/integrations|guide\/en\/integrations\/current))\/([^/?#]+)/i);
   return match?.[1] ?? null;
+}
+
+export function selectDestination(integrationTypes = []) {
+  const urls = integrationTypes.map((item) => item.url).filter(Boolean);
+  return urls.find((url) => packageNameFromUrl(url)) || urls[0];
 }
 
 async function fetchJson(url) {
@@ -51,8 +57,8 @@ async function refresh() {
     if (entry.active === false) continue;
     const name = text(entry.title_l10n || entry.title);
     const types = (entry.integration_types || []).map((item) => text(item.cta_title_l10n)).filter(Boolean);
-    const firstUrl = entry.integration_types?.find((item) => item.url)?.url;
-    const hintedPackage = packageNameFromUrl(firstUrl);
+    const destination = selectDestination(entry.integration_types);
+    const hintedPackage = packageNameFromUrl(destination);
     const pkg = (hintedPackage && packagesByName.get(hintedPackage)) || packagesByTitle.get(name.toLowerCase());
     const packageName = pkg?.name || hintedPackage || slugify(name).replace(/-/g, "_");
     const baseSlug = slugify(name) || packageName;
@@ -74,7 +80,7 @@ async function refresh() {
       capabilities: capabilities.length ? capabilities : ["Integration"],
       source: "official",
       version: pkg?.version,
-      destinationUrl: normalizeUrl(firstUrl, packageName),
+      destinationUrl: normalizeUrl(destination, packageName),
     });
   }
 
@@ -87,7 +93,7 @@ async function refresh() {
   console.log(`Refreshed ${records.length} official integrations`);
 }
 
-refresh().catch(async (error) => {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) refresh().catch(async (error) => {
   try {
     const previous = JSON.parse(await readFile(output, "utf8"));
     if (Array.isArray(previous) && previous.length >= 400) {

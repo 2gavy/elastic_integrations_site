@@ -1,9 +1,25 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import { selectDestination } from "../scripts/refresh-official.mjs";
 
 const official = JSON.parse(await readFile(new URL("../public/data/official.json", import.meta.url), "utf8"));
 const custom = JSON.parse(await readFile(new URL("../public/data/custom.json", import.meta.url), "utf8"));
+
+test("mixed-capability cards select ingestion docs regardless of source ordering", () => {
+  const actions = { url: "https://www.elastic.co/guide/en/kibana/current/slack-action-type.html" };
+  const content = { url: "https://www.elastic.co/guide/en/enterprise-search/current/connectors-slack.html" };
+  const logs = { url: "https://docs.elastic.co/integrations/slack" };
+  assert.equal(selectDestination([actions, content, logs]), logs.url);
+  assert.equal(selectDestination([logs, content, actions]), logs.url);
+  assert.equal(selectDestination([actions]), actions.url);
+  assert.equal(selectDestination([content]), content.url);
+  assert.equal(selectDestination([]), undefined);
+  const slack = official.find((item) => item.slug === "slack");
+  assert.equal(slack.destinationUrl, "https://www.elastic.co/docs/reference/integrations/slack");
+  assert.ok(slack.version);
+  assert.ok(slack.capabilities.includes("Logs"));
+});
 
 test("contains the complete official catalogue", () => {
   assert.ok(official.length >= 400);
