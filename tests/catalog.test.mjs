@@ -28,14 +28,15 @@ test("contains the complete official catalogue", () => {
   assert.ok(official.some((item) => item.solutions.includes("Observability")));
 });
 
-test("publishes Netskope 3.2.3 with Experimental scoped to API collection", () => {
+test("publishes Netskope 3.2.4 with Experimental scoped to API collection", () => {
   const item = custom.find((record) => record.slug === "netskope");
   assert.ok(item);
-  assert.equal(item.version, "3.2.3");
+  assert.equal(item.version, "3.2.4");
   assert.match(item.description, /REST API v2 \(Experimental\)/);
   assert.match(item.description, /existing TCP\/cloud-storage inputs/);
   assert.equal(item.status, undefined);
   assert.match(item.validationStatus, /legacy static gaps/);
+  assert.match(item.validationStatus, /Agent 9\.5\.3 recovery and known-limit verification/);
   assert.match(item.buildDuration, /measured/);
   assert.equal(item.icon, "netskope-logo.svg");
 });
@@ -44,7 +45,9 @@ test("publishes Salesforce as a separate custom fork", () => {
   const item = custom.find((record) => record.slug === "salesforce_custom");
   assert.ok(item);
   assert.equal(item.name, "Salesforce (Custom)");
-  assert.equal(item.version, "0.1.0");
+  assert.equal(item.version, "0.1.1");
+  assert.match(item.validationStatus, /93 Agent 9\.5\.3 assertions across four collectors/);
+  assert.match(item.experimentalReason, /live tenant.*remain unvalidated/);
   assert.equal(item.status, undefined);
   assert.match(item.description, /Experimental Client Credentials/);
   assert.match(item.description, /independent datasets and dashboards/);
@@ -202,10 +205,11 @@ test("publishes the bounded Experimental ScienceLogic Skylar One receiver with a
 test("publishes the Experimental Microsoft Entra ID Graph integration with its official icon", () => {
   const item = custom.find((record) => record.slug === "microsoft_entra_id_graph");
   assert.equal(item.name, "Microsoft Entra ID Graph");
-  assert.equal(item.version, "0.1.1");
+  assert.equal(item.version, "0.1.2");
   assert.equal(item.status, "Experimental");
-  assert.equal(item.buildDuration, "1 hour 41 minutes 53 seconds (measured)");
-  assert.match(item.validationStatus, /live tenant validation blocked/);
+  assert.match(item.buildDuration, /reliability research\/build phases/);
+  assert.match(item.validationStatus, /representative Agent 9\.5\.3/);
+  assert.match(item.validationStatus, /live tenant unvalidated/);
   assert.equal(item.icon, "microsoft_entra_id_graph.svg");
   assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/microsoft_entra_id_graph");
   assert.match(item.experimentalReason, /without a current customer-tenant capture/);
