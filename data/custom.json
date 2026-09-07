@@ -2926,10 +2926,10 @@
     "slug": "netskope",
     "name": "Netskope",
     "description": "Collect security events through direct REST API v2 (Experimental) or existing TCP/cloud-storage inputs.",
-    "version": "3.2.3",
-    "created": "7 August 2026",
-    "buildDuration": "12m 59s hardening/validation; ZIP build 0.289s (measured)",
-    "validationStatus": "CEL mock + package checks; legacy static gaps",
+    "version": "3.2.4",
+    "created": "7 September 2026",
+    "buildDuration": "9m 14s reliability research/build/testing/reporting (measured); release timing separate; prior hardening 12m 59s",
+    "validationStatus": "CEL mock and package checks; Agent 9.5.3 recovery and known-limit verification; legacy static gaps; live tenant unvalidated",
     "experimentalReason": "",
     "categories": [
       "Cloud",
@@ -49570,11 +49570,11 @@
     "slug": "salesforce_custom",
     "name": "Salesforce (Custom)",
     "description": "Separate custom fork of the official Salesforce integration with Experimental Client Credentials API collection; independent datasets and dashboards, retained native inputs and vendor fields.",
-    "version": "0.1.0",
-    "created": "4 September 2026",
-    "buildDuration": "5m 11s identity migration; ZIP build 0.118s (measured); prior collector build 34m 14s",
-    "validationStatus": "Identity/package checks passed; unchanged 112-tested collectors; live validation pending",
-    "experimentalReason": "Only the added Client Credentials collection option is Experimental; tenant and installed-Agent validation remain outstanding.",
+    "version": "0.1.1",
+    "created": "7 September 2026",
+    "buildDuration": "18m 27s reliability research/build/testing/reporting (measured); release timing separate; prior collector build 34m 14s and identity migration 5m 11s",
+    "validationStatus": "Package and retry-only contract; 112 transport scenarios; 93 Agent 9.5.3 assertions across four collectors; live tenant unvalidated",
+    "experimentalReason": "Only the added Client Credentials collection option is Experimental; controlled native Agent 9.5.3 recovery tests passed, but live tenant, installed-package pipeline behavior and production completeness remain unvalidated.",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -52953,11 +52953,10 @@
     "slug": "microsoft_entra_id_graph",
     "name": "Microsoft Entra ID Graph",
     "description": "Collect Experimental Microsoft Entra ID activity and risk data directly through Microsoft Graph.",
-    "version": "0.1.1",
-    "created": "31 August 2026",
-    "buildDuration": "1 hour 41 minutes 53 seconds (measured)",
-    "status": "Experimental",
-    "validationStatus": "Package and attributable pipeline fixtures validated; direct Graph collection mock-validated; live tenant validation blocked",
+    "version": "0.1.2",
+    "created": "7 September 2026",
+    "buildDuration": "Original build 1h 41m 53s; reliability research/build phases 23m plus 18m 29s including shared tooling; release timing recorded separately",
+    "validationStatus": "Package checks; all-five response matrix; representative Agent 9.5.3 recovery/restart/output-outage tests; live tenant unvalidated",
     "experimentalReason": "Built from official Microsoft Graph schemas and bounded documentation examples without a current customer-tenant capture. Validate tenant permissions, pagination, late arrivals, risk-state updates, and completeness before operational reliance.",
     "categories": [
       "Custom",
@@ -53418,7 +53417,8 @@
         "description": "User agent string supplied with the sign-in.",
         "type": "keyword"
       }
-    ]
+    ],
+    "status": "Experimental"
   },
   {
     "slug": "nasuni_file_services",
