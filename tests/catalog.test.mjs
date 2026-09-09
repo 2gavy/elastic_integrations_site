@@ -100,6 +100,18 @@ test("publishes bounded McAfee DLP XML without claiming full Devo parity", () =>
   assert.ok(item.fields.some((field) => field.field === "trellix_epo_onprem.dlp_xml.Event.GMTTime" && field.type === "keyword"));
 });
 
+test("publishes Huawei HSS with two bounded API datasets and private implementation", () => {
+  const item = custom.find(record => record.slug === "huawei_hss");
+  assert.ok(item);
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/huawei_hss");
+  assert.match(item.description, /host alarm observations/);
+  assert.match(item.description, /container alarms excluded/);
+  assert.ok(item.fields.some(field => field.field === "entity.id"));
+  assert.ok(item.fields.every(field => Object.keys(field).sort().join(",") === "description,field,type"));
+});
+
 test("publishes the bounded FortiDDoS experimental contract", () => {
   const item = custom.find((record) => record.slug === "fortinet_fortiddos");
   assert.ok(item);
