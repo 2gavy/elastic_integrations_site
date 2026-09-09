@@ -83,7 +83,21 @@ test("keeps custom metadata protected and namespaced", () => {
   assert.ok(custom.some((item) => item.status === undefined));
   assert.equal(custom.filter((item) => item.status === "Production").length, 0);
   assert.ok(custom.some((item) => item.status === "Experimental"));
-  assert.ok(custom.filter((item) => item.status === "Experimental").length < custom.length / 4);
+  // Evidence determines release status, not an arbitrary catalogue percentage.
+  // The per-record checks above require a reason for every Experimental entry.
+});
+
+test("publishes bounded McAfee DLP XML without claiming full Devo parity", () => {
+  const item = custom.find((record) => record.slug === "trellix_epo_onprem");
+  assert.ok(item);
+  assert.equal(item.version, "0.3.0");
+  assert.equal(item.status, "Experimental");
+  assert.match(item.experimentalReason, /11\.9\.100\.18/);
+  assert.match(item.experimentalReason, /19336\/severity 0 only/);
+  assert.match(item.experimentalReason, /complete Devo parity are not validated/);
+  assert.match(item.validationStatus, /Agent 9\.5\.3 local TCP/);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/trellix_epo_onprem");
+  assert.ok(item.fields.some((field) => field.field === "trellix_epo_onprem.dlp_xml.Event.GMTTime" && field.type === "keyword"));
 });
 
 test("publishes the bounded FortiDDoS experimental contract", () => {

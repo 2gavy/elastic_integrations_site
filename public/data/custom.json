@@ -10698,12 +10698,12 @@
   {
     "slug": "trellix_epo_onprem",
     "name": "Trellix ePO On-Prem",
-    "description": "Collect bounded DLP CEF plus McAfee Agent and Endpoint Security RFC 5424 XML over TCP.",
-    "version": "0.2.0",
-    "created": "12 August 2026",
-    "buildDuration": "~2 hours (estimated; not measured)",
-    "validationStatus": "Static validated",
-    "experimentalReason": "",
+    "description": "Collect bounded McAfee Agent and Endpoint Security XML, DLP CEF, and an experimental DLP XML relay shape over TCP; not full Devo parity.",
+    "version": "0.3.0",
+    "created": "9 September 2026",
+    "buildDuration": "At least 54 minutes research through validation; earlier instruction reading unmeasured; publication and cleanup recorded in release evidence",
+    "validationStatus": "Agent 9.5.3 local TCP, pipeline, mapping and indexed-diagnostic tests passed; native ePO and live tenant unvalidated",
+    "experimentalReason": "The new DLP XML stream accepts one evidenced relay envelope for McAfee DLP Endpoint 11.9.100.18, event 19336/severity 0 only. Native ePO transport, current versions, other event families and complete Devo parity are not validated. Opaque DLP content is not decoded. Existing bounded Agent XML, ENS XML and DLP CEF streams remain unchanged; validate target traffic before production use.",
     "categories": [
       "Custom",
       "Elastic Agent Enabled",
@@ -11029,8 +11029,79 @@
         "field": "user.target.name.text",
         "description": "Multi-field of `user.target.name`.",
         "type": "match_only_text"
+      },
+      {
+        "field": "log.source.address",
+        "description": "Address of the TCP connection that supplied the relay event.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.Event.GMTTime",
+        "description": "Literal event time without an offset; no UTC conversion is inferred from its name.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.Event.TimeSZone",
+        "description": "Literal vendor timezone label; not used to resolve ambiguous event time.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.EventList.ProductFamily",
+        "description": "DLP product family from the verified EventList attribute.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.EventList.ProductName",
+        "description": "DLP product name from the verified EventList attribute.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.EventList.ProductVersion",
+        "description": "DLP product version from the verified EventList attribute.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.MachineInfo.AgentGUID",
+        "description": "Literal agent identifier, retained without repairing malformed placeholders.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.MachineInfo.AgentVersion",
+        "description": "Version of the source McAfee Agent.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.MachineInfo.RawMACAddress",
+        "description": "Literal raw MAC value, which may not be a valid MAC address.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.MachineInfo.TimeZoneBias",
+        "description": "Source timezone bias value; not used to resolve ambiguous event time.",
+        "type": "long"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.agentInfo.bpsId",
+        "description": "BPS identifier from the agentInfo structured-data element.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.agentInfo.tenantGUID",
+        "description": "Tenant GUID from the agentInfo structured-data element.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.agentInfo.tenantId",
+        "description": "Tenant identifier from the agentInfo structured-data element.",
+        "type": "keyword"
+      },
+      {
+        "field": "trellix_epo_onprem.dlp_xml.agentInfo.tenantNodePath",
+        "description": "Tenant node path from the agentInfo structured-data element.",
+        "type": "keyword"
       }
-    ]
+    ],
+    "status": "Experimental"
   },
   {
     "slug": "vmware_nsx_firewall",
