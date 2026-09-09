@@ -2,7 +2,9 @@
 
 Elastic Integrations (AI) is a unified, searchable catalogue for discovering official Elastic integrations alongside custom integrations developed for sources that need additional coverage.
 
-The catalogue currently includes **488 official integrations** and **218 custom integrations**.
+The catalogue currently includes **488 official integrations** and **219 custom integrations**.
+
+New: **Ingest Volume Monitor v0.2.7** provides asset-only ECH daily primary-storage-change reporting, using either existing Stack Monitoring plus a transform or an hourly Workflow without an additional Agent. Selected-period totals floor negative daily values at zero. Figures are estimates, not raw-byte or billing measurements; review the catalogue's upgrade and data-coverage limitations before use.
 
 ## The problem this solves
 

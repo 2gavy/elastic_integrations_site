@@ -6,6 +6,19 @@ import { selectDestination } from "../scripts/refresh-official.mjs";
 const official = JSON.parse(await readFile(new URL("../public/data/official.json", import.meta.url), "utf8"));
 const custom = JSON.parse(await readFile(new URL("../public/data/custom.json", import.meta.url), "utf8"));
 
+test("publishes asset-only Ingest Volume Monitor without exposing private deployment material", () => {
+  const item = custom.find(record => record.slug === "ingest_volume_monitor");
+  assert.equal(item?.version, "0.2.7");
+  assert.deepEqual(item.capabilities, ["Metrics"]);
+  assert.deepEqual(item.solutions, ["Observability"]);
+  assert.ok(!item.categories.includes("Elastic Agent Enabled"));
+  assert.equal(item.fields.length, 7);
+  assert.match(item.description, /hourly Workflow only/);
+  assert.match(item.description, /negative days at zero/);
+  assert.match(item.experimentalReason, /back up history/);
+  assert.doesNotMatch(JSON.stringify(item), /singtel-asoc|J-Wrnf7|daily-ingest-dashboard|\.zip|ApiKey/);
+});
+
 test("mixed-capability cards select ingestion docs regardless of source ordering", () => {
   const actions = { url: "https://www.elastic.co/guide/en/kibana/current/slack-action-type.html" };
   const content = { url: "https://www.elastic.co/guide/en/enterprise-search/current/connectors-slack.html" };

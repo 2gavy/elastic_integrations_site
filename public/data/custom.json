@@ -58845,5 +58845,66 @@
       }
     ],
     "status": "Experimental"
+  },
+  {
+    "slug": "ingest_volume_monitor",
+    "name": "Ingest Volume Monitor",
+    "description": "Asset-only ECH dashboard for daily primary-storage-change estimates: reuse Stack Monitoring plus a transform, or collect index statistics with an hourly Workflow only. Selected-period totals floor negative days at zero; no additional Agent required. Not raw-byte or billing metering.",
+    "version": "0.2.7",
+    "created": "9 September 2026",
+    "buildDuration": "Development duration not recorded",
+    "validationStatus": "Package checks, dashboard query tests and ECH installation validated; upgrades require backed-up history restoration",
+    "experimentalReason": "ECH 9.5.x development package with two setup paths: existing Stack Monitoring plus transform, or hourly Workflow only. No additional Agent installation is required. Daily primary-storage changes are estimates, not measured raw ingest or billing data. Retention, compression and missing baselines affect totals. Fleet upgrades can recreate the daily destination; back up history and test restoration before upgrading.",
+    "categories": [
+      "Custom",
+      "Monitoring"
+    ],
+    "solutions": [
+      "Observability"
+    ],
+    "capabilities": [
+      "Metrics"
+    ],
+    "icon": "ingest-volume-monitor.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/ingest_volume_monitor",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "ingest_volume.day_key",
+        "description": "Unique lookup key formed as cluster ID, a vertical bar, and the Singapore calendar date in yyyy-MM-dd format. One destination record per key.",
+        "type": "keyword"
+      },
+      {
+        "field": "ingest_volume.cluster_id",
+        "description": "Monitored Elasticsearch cluster identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "ingest_volume.day_start",
+        "description": "Start of the calendar day at midnight in Asia/Singapore.",
+        "type": "date"
+      },
+      {
+        "field": "ingest_volume.primary_bytes",
+        "description": "Whole-cluster primary-store bytes from the latest valid sample by source timestamp in this Singapore day, including system and monitoring indices and excluding replicas. Not a sum, maximum, or measurement of raw ingest.",
+        "type": "long"
+      },
+      {
+        "field": "ingest_volume.first_sample_at",
+        "description": "Earliest valid source sample timestamp in this cluster/day.",
+        "type": "date"
+      },
+      {
+        "field": "ingest_volume.last_sample_at",
+        "description": "Latest valid source sample timestamp in this cluster/day.",
+        "type": "date"
+      },
+      {
+        "field": "ingest_volume.sample_count",
+        "description": "Number of valid source sample documents in this cluster/day. Duplicate source records count separately and do not add to the storage gauge.",
+        "type": "long"
+      }
+    ],
+    "status": "Experimental"
   }
 ]
