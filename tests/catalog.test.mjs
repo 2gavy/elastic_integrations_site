@@ -100,14 +100,21 @@ test("publishes bounded McAfee DLP XML without claiming full Devo parity", () =>
   assert.ok(item.fields.some((field) => field.field === "trellix_epo_onprem.dlp_xml.Event.GMTTime" && field.type === "keyword"));
 });
 
-test("publishes Huawei HSS with two bounded API datasets and private implementation", () => {
+test("publishes Huawei HSS with four bounded API datasets and private implementation", () => {
   const item = custom.find(record => record.slug === "huawei_hss");
   assert.ok(item);
-  assert.equal(item.version, "0.1.0");
+  assert.equal(item.version, "0.2.0");
   assert.equal(item.status, "Experimental");
   assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/huawei_hss");
-  assert.match(item.description, /host alarm observations/);
-  assert.match(item.description, /container alarms excluded/);
+  assert.match(item.description, /host alarms/);
+  assert.match(item.description, /application vulnerabilities/);
+  assert.match(item.description, /unhandled hw_standard/);
+  assert.match(item.experimentalReason, /Container alarms, other vulnerability families/);
+  assert.match(item.experimentalReason, /weak passwords are excluded/);
+  assert.match(item.experimentalReason, /Live tenant, region and edition compatibility remain unvalidated/);
+  assert.equal(item.fields.length, 154);
+  assert.ok(item.fields.some(field => field.field === "huawei_hss.vulnerability.disabled_operate_types.reason" && field.type === "text"));
+  assert.ok(item.fields.some(field => field.field === "huawei_hss.baseline.scan_time_date" && field.type === "date"));
   assert.ok(item.fields.some(field => field.field === "entity.id"));
   assert.ok(item.fields.every(field => Object.keys(field).sort().join(",") === "description,field,type"));
 });

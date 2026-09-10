@@ -58981,12 +58981,12 @@
   {
     "slug": "huawei_hss",
     "name": "Huawei HSS API",
-    "description": "Collect host alarm observations and HSS-managed host snapshots directly through the signed regional v5 API; vulnerability details, baseline findings and container alarms excluded.",
-    "version": "0.1.0",
-    "created": "9 September 2026",
-    "buildDuration": "At least 3 hours 31 minutes 21 seconds recorded research-through-validation work; intervening hold/unrelated work excluded; publication and cleanup recorded in release evidence",
-    "validationStatus": "Agent 9.5.3 mocked collection and exact-ZIP ASOC installed pipeline/indexing checks; live Huawei tenant unvalidated",
-    "experimentalReason": "International HSS v5 examples support bounded host alarm observations and HSS-managed host snapshots. Live tenant and exhaustive subtype, region and edition compatibility remain unvalidated. Container alarms and detailed vulnerability or baseline findings are excluded; offset scans do not guarantee complete or exactly-once ingestion.",
+    "description": "Collect signed HSS host alarms, managed-host snapshots, application vulnerabilities and unhandled hw_standard host-rule observations; other families, weak passwords and raw host logs excluded.",
+    "version": "0.2.0",
+    "created": "10 September 2026",
+    "buildDuration": "6 hours 5 minutes 28 seconds elapsed span from conservative research-start bound through validation; publication and cleanup extend this in release evidence",
+    "validationStatus": "Agent 9.5.3 mocked collection and exact-ZIP ASOC pipeline/indexing checks; live Huawei tenant unvalidated",
+    "experimentalReason": "International HSS v5 examples support bounded host alarms, managed-host snapshots, application-vulnerability observations and unhandled hw_standard baseline host-rule findings. Independent parent and child examples are not a joined vendor capture. Live tenant, region and edition compatibility remain unvalidated. Container alarms, other vulnerability families, other baseline standards/results, populated report details and weak passwords are excluded. Current-state scans do not guarantee complete history, atomic snapshots or exactly-once ingestion.",
     "categories": [
       "Cloud",
       "Custom",
@@ -59422,6 +59422,356 @@
         "field": "huawei_hss.hosts.vulnerability",
         "description": "Source vulnerability risk-summary count; not individual findings.",
         "type": "long"
+      },
+      {
+        "field": "huawei_hss.vulnerability.app_list.app_name",
+        "description": "Affected software name.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.app_list.app_path",
+        "description": "Affected software path.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.app_list.app_version",
+        "description": "Affected software version.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.app_list.unknown_fields",
+        "description": "Unrecognized application attributes retained unindexed within their source entry.",
+        "type": "object"
+      },
+      {
+        "field": "huawei_hss.vulnerability.app_list.upgrade_version",
+        "description": "Vendor suggested upgrade version.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.app_name",
+        "description": "Top-level affected application name.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.app_path",
+        "description": "Top-level affected application path.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.backup_name",
+        "description": "Vendor backup name.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.cve_list.cve_id",
+        "description": "CVE identifier as supplied in this source entry.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.cve_list.cvss",
+        "description": "CVSS base score supplied in the same CVE entry; version/vector are not inferred.",
+        "type": "double"
+      },
+      {
+        "field": "huawei_hss.vulnerability.cve_list.unknown_fields",
+        "description": "Unrecognized CVE attributes retained unindexed within their source entry.",
+        "type": "object"
+      },
+      {
+        "field": "huawei_hss.vulnerability.disabled_operate_types.operate_type",
+        "description": "Operation the vendor reports as unavailable.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.disabled_operate_types.reason",
+        "description": "Reason the operation is unavailable.",
+        "type": "text"
+      },
+      {
+        "field": "huawei_hss.vulnerability.disabled_operate_types.unknown_fields",
+        "description": "Unrecognized operation attributes retained unindexed within their source entry.",
+        "type": "object"
+      },
+      {
+        "field": "huawei_hss.vulnerability.failed_reason",
+        "description": "Vendor repair failure reason.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "huawei_hss.vulnerability.first_scan_time",
+        "description": "Raw first scan value. Units are not explicit in the selected operation contract.",
+        "type": "long"
+      },
+      {
+        "field": "huawei_hss.vulnerability.invalid_request_context",
+        "description": "Original invalid request context preserved under value on failure; disabled mapping prevents malformed input from causing an indexing conflict.",
+        "type": "object"
+      },
+      {
+        "field": "huawei_hss.vulnerability.is_affect_business",
+        "description": "Whether the vendor reports an effect on services.",
+        "type": "boolean"
+      },
+      {
+        "field": "huawei_hss.vulnerability.label_list",
+        "description": "Vendor vulnerability labels.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.repair_cmd",
+        "description": "Vendor repair command string; never executed by this integration.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.repair_necessity",
+        "description": "Vendor repair urgency.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.repair_priority",
+        "description": "Vendor repair priority.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.repair_success_num",
+        "description": "Number of successful fixes by HSS across the entire network, not just this host.",
+        "type": "long"
+      },
+      {
+        "field": "huawei_hss.vulnerability.request_context.enterprise_project_id",
+        "description": "Configured enterprise-project selector, not an inferred returned host attribute.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.request_context.host_id",
+        "description": "Raw host identifier discovered by ListHostStatus and used in the child request; not returned in the finding body.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.request_context.project_id",
+        "description": "Configured HSS control-plane project scope of the request.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.request_context.region",
+        "description": "Configured HSS control-plane region; not necessarily the host infrastructure location.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.request_context.type",
+        "description": "Explicit request family app_vul.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.scan_time",
+        "description": "Raw last scan value. Units are not explicit in the selected operation contract.",
+        "type": "long"
+      },
+      {
+        "field": "huawei_hss.vulnerability.software_version",
+        "description": "Vendor current and fixed software information.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.solution_detail",
+        "description": "Vendor remediation prose; not executed or independently verified.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "huawei_hss.vulnerability.status",
+        "description": "Vendor handling status; verified means verification in progress.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.support_restore",
+        "description": "Whether the vendor reports restoration capability.",
+        "type": "boolean"
+      },
+      {
+        "field": "huawei_hss.vulnerability.type",
+        "description": "Returned vulnerability family; the collector requests app_vul.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.unknown_fields",
+        "description": "Unrecognized child properties retained without indexing or interpretation, including fields that resemble collector context.",
+        "type": "object"
+      },
+      {
+        "field": "huawei_hss.vulnerability.url",
+        "description": "Raw vendor reference string, including serialized JSON text when supplied.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.version",
+        "description": "HSS quota edition, not an application version.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.vul_id",
+        "description": "Vendor vulnerability/advisory identifier; not necessarily a CVE.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.vulnerability.vul_name",
+        "description": "Vendor vulnerability name.",
+        "type": "keyword"
+      },
+      {
+        "field": "vulnerability.description",
+        "description": "The description of the vulnerability that provides additional context of the vulnerability. For example (https://cve.mitre.org/about/faqs.html#cve_entry_descriptions_created)",
+        "type": "keyword"
+      },
+      {
+        "field": "vulnerability.description.text",
+        "description": "Multi-field of `vulnerability.description`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "vulnerability.id",
+        "description": "The identification (ID) is the number portion of a vulnerability entry. It includes a unique identification number for the vulnerability. For example (https://cve.mitre.org/about/faqs.html#what_is_cve_id)",
+        "type": "keyword"
+      },
+      {
+        "field": "vulnerability.score.base",
+        "description": "Scores can range from 0.0 to 10.0, with 10.0 being the most severe. Base scores cover an assessment for exploitability metrics (attack vector, complexity, privileges, and user interaction), impact metrics (confidentiality, integrity, and availability), and scope. For example (https://www.first.org/cvss/specification-document)",
+        "type": "float"
+      },
+      {
+        "field": "vulnerability.severity",
+        "description": "The severity of the vulnerability can help with metrics and internal prioritization regarding remediation. For example (https://nvd.nist.gov/vuln-metrics/cvss)",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.baseline_name",
+        "description": "Returned baseline name.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.cancel_ignore_enable_click",
+        "description": "Returned ignored-item UI capability.",
+        "type": "boolean"
+      },
+      {
+        "field": "huawei_hss.baseline.check_name",
+        "description": "Returned child configuration check name, not silently replaced by request selector.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.cluster_id",
+        "description": "Returned cluster identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.description",
+        "description": "Returned ignore/whitelist remarks, retained as inert text.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.diff_description",
+        "description": "Returned differentiated display message, retained as inert text.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.enable_click",
+        "description": "Returned UI control capability.",
+        "type": "boolean"
+      },
+      {
+        "field": "huawei_hss.baseline.enable_fix",
+        "description": "Returned one-click fix capability, zero or one; not a performed action.",
+        "type": "long"
+      },
+      {
+        "field": "huawei_hss.baseline.enable_verify",
+        "description": "Returned verification capability.",
+        "type": "boolean"
+      },
+      {
+        "field": "huawei_hss.baseline.failed_num",
+        "description": "Source number of risk items; no global count inferred.",
+        "type": "long"
+      },
+      {
+        "field": "huawei_hss.baseline.fix_failed_reason",
+        "description": "Returned fix-failure explanation, not an inferred outcome.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.host_id",
+        "description": "Unchanged source-local host ID; scoped host.id is derived separately.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.host_type",
+        "description": "Returned source host type.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.invalid_request_context",
+        "description": "Opaque invalid collector context under value; no malformed typed context is indexed.",
+        "type": "object"
+      },
+      {
+        "field": "huawei_hss.baseline.passed_num",
+        "description": "Source number of passed items.",
+        "type": "long"
+      },
+      {
+        "field": "huawei_hss.baseline.request_context.check_name",
+        "description": "Requested baseline selector; may differ from returned child check_name.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.request_context.check_rule_id",
+        "description": "Requested rule selector; not returned in the literal child.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.request_context.enterprise_project_id",
+        "description": "Explicit authorized request enterprise-project scope.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.request_context.project_id",
+        "description": "HSS control-plane project, not underlying host provider.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.request_context.region",
+        "description": "HSS control-plane region, not host location.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.request_context.result_type",
+        "description": "Requested unhandled result scope, not outcome.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.request_context.standard",
+        "description": "Requested baseline standard; hw_standard only.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.result_type",
+        "description": "Returned check result; only unhandled supported, with no inferred success/failure.",
+        "type": "keyword"
+      },
+      {
+        "field": "huawei_hss.baseline.scan_time",
+        "description": "Unchanged nonnegative scan timestamp integer, documented milliseconds since epoch; not collection or modification time.",
+        "type": "long"
+      },
+      {
+        "field": "huawei_hss.baseline.scan_time_date",
+        "description": "Date view of scan_time using epoch_millis. Date retrieval may render text; raw scan_time remains an integer.",
+        "type": "date"
+      },
+      {
+        "field": "huawei_hss.baseline.unknown_fields",
+        "description": "Opaque unindexed unknown child fields, including request-context lookalikes.",
+        "type": "object"
       }
     ],
     "status": "Experimental"
