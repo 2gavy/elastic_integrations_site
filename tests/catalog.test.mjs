@@ -293,3 +293,21 @@ test("publishes bounded Alibaba Cloud Firewall direct-API coverage", () => {
   assert.ok(item.fields.some((field) => field.field === "alibaba_cloud_firewall.traffic.SrcIP" && field.type === "keyword"));
   assert.ok(item.fields.some((field) => field.field === "event.original" && field.type === "keyword"));
 });
+
+test("publishes bounded Alibaba Cloud WAF security-event API coverage", () => {
+  const item = custom.find((record) => record.slug === "alibaba_cloud_waf");
+  assert.equal(item.name, "Alibaba Cloud Web Application Firewall");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.match(item.validationStatus, /Agent 9\.5\.4/);
+  assert.match(item.validationStatus, /exact-ZIP ASOC/);
+  assert.equal(item.icon, "alibaba-cloud.svg");
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/alibaba_cloud_waf");
+  assert.match(item.experimentalReason, /DescribeSecurityEventLogs/);
+  assert.match(item.experimentalReason, /Complete\/raw SLS access logs/);
+  assert.match(item.experimentalReason, /no complete-history or exactly-once guarantee/);
+  assert.equal(item.capabilities.join(","), "Logs");
+  assert.equal(item.fields.length, 76);
+  assert.ok(item.fields.some((field) => field.field === "alibaba_cloud_waf.event.additional_fields" && field.type === "flattened"));
+  assert.ok(item.fields.some((field) => field.field === "event.original" && field.type === "keyword"));
+});
