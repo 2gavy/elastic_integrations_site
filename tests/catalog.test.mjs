@@ -276,3 +276,20 @@ test("publishes Microsoft Graph Activity Logs without Event Hub and with its off
   assert.ok(item.fields.some((field) => field.field === "event.module" && field.type === "constant_keyword"));
   assert.ok(item.fields.some((field) => field.field === "microsoft_graph_activity_logs.activity.raw" && field.type === "flattened"));
 });
+
+test("publishes bounded Alibaba Cloud Firewall direct-API coverage", () => {
+  const item = custom.find((record) => record.slug === "alibaba_cloud_firewall");
+  assert.equal(item.name, "Alibaba Cloud Firewall API");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.match(item.validationStatus, /Agent 9\.5\.4/);
+  assert.match(item.validationStatus, /exact-ZIP ASOC/);
+  assert.equal(item.icon, "alibaba-cloud.svg");
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/alibaba_cloud_firewall");
+  assert.match(item.experimentalReason, /DescribeTrafficLog/);
+  assert.match(item.experimentalReason, /SLS access, IPS and inspection logs/);
+  assert.match(item.experimentalReason, /no complete-history or exactly-once guarantee/);
+  assert.equal(item.capabilities.join(","), "Logs");
+  assert.ok(item.fields.some((field) => field.field === "alibaba_cloud_firewall.traffic.SrcIP" && field.type === "keyword"));
+  assert.ok(item.fields.some((field) => field.field === "event.original" && field.type === "keyword"));
+});
