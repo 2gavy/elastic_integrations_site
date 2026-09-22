@@ -2098,7 +2098,7 @@
       },
       {
         "field": "threat.indicator.id",
-        "description": "The ID of the indicator used by this threat to conduct behavior commonly modeled using MITRE ATT&CK\u00ae. This field can have multiple values to allow for the identification of the same indicator across systems that use different ID formats. While not required, a common approach is to use a STIX 2.x indicator ID.",
+        "description": "The ID of the indicator used by this threat to conduct behavior commonly modeled using MITRE ATT&CK®. This field can have multiple values to allow for the identification of the same indicator across systems that use different ID formats. While not required, a common approach is to use a STIX 2.x indicator ID.",
         "type": "keyword"
       },
       {
@@ -2143,7 +2143,7 @@
       },
       {
         "field": "threat.software.name",
-        "description": "The name of the software used by this threat to conduct behavior commonly modeled using MITRE ATT&CK\u00ae. While not required, you can use a MITRE ATT&CK\u00ae software name.",
+        "description": "The name of the software used by this threat to conduct behavior commonly modeled using MITRE ATT&CK®. While not required, you can use a MITRE ATT&CK® software name.",
         "type": "keyword"
       },
       {
@@ -6761,12 +6761,12 @@
       },
       {
         "field": "netskope.transaction.cs_username",
-        "description": "The client\u2019s username.",
+        "description": "The client’s username.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.date",
-        "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
+        "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the “x-cs-timestamp” field.",
         "type": "date"
       },
       {
@@ -6776,7 +6776,7 @@
       },
       {
         "field": "netskope.transaction.s_ip",
-        "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it\u2019s neither IPv4 or IPv6.",
+        "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it’s neither IPv4 or IPv6.",
         "type": "ip"
       },
       {
@@ -6796,7 +6796,7 @@
       },
       {
         "field": "netskope.transaction.time",
-        "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
+        "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the “x-cs-timestamp” field.",
         "type": "keyword"
       },
       {
@@ -6806,12 +6806,12 @@
       },
       {
         "field": "netskope.transaction.x_c_browser",
-        "description": "Client\u2019s browser.",
+        "description": "Client’s browser.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.x_c_browser_version",
-        "description": "Client\u2019s browser version.",
+        "description": "Client’s browser version.",
         "type": "keyword"
       },
       {
@@ -6821,7 +6821,7 @@
       },
       {
         "field": "netskope.transaction.x_c_device",
-        "description": "Client\u2019s device type.",
+        "description": "Client’s device type.",
         "type": "keyword"
       },
       {
@@ -7071,12 +7071,12 @@
       },
       {
         "field": "netskope.transaction.x_cs_timestamp",
-        "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the \u201cdate\u201d and \u201ctime\u201d fields.",
+        "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the “date” and “time” fields.",
         "type": "date"
       },
       {
         "field": "netskope.transaction.x_cs_traffic_type",
-        "description": "Type of traffic could be \u201cWeb\u201d or \u201cCloudApp\u201d. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
+        "description": "Type of traffic could be “Web” or “CloudApp”. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
         "type": "keyword"
       },
       {
@@ -7136,12 +7136,12 @@
       },
       {
         "field": "netskope.transaction.x_policy_justification_reason",
-        "description": "The justification provided by the end user in case of \u201cuseralert\u201d action.",
+        "description": "The justification provided by the end user in case of “useralert” action.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.x_policy_justification_type",
-        "description": "The justification type selected by the end user in case of \u201cuseralert\u201d action.",
+        "description": "The justification type selected by the end user in case of “useralert” action.",
         "type": "keyword"
       },
       {
@@ -7211,7 +7211,7 @@
       },
       {
         "field": "netskope.transaction.x_r_cert_valid",
-        "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn\u2019t reflect the action of the SSL Engine.",
+        "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn’t reflect the action of the SSL Engine.",
         "type": "keyword"
       },
       {
@@ -7291,7 +7291,7 @@
       },
       {
         "field": "netskope.transaction.x_sc_notification_name",
-        "description": "The name of the user notification displayed to the end user in case of action \u201cblock\u201d or \u201cuseralert\u201d.",
+        "description": "The name of the user notification displayed to the end user in case of action “block” or “useralert”.",
         "type": "keyword"
       },
       {
@@ -7421,7 +7421,7 @@
       },
       {
         "field": "netskope.transaction.x_type",
-        "description": "The type of log message, which can be \u201chttp_transaction\u201d or \u201cWebSocket\u201d.  NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
+        "description": "The type of log message, which can be “http_transaction” or “WebSocket”.  NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
         "type": "keyword"
       }
     ]
@@ -40655,7 +40655,7 @@
       },
       {
         "field": "threat.technique.id",
-        "description": "The id of technique used by this threat. You can use a MITRE ATT&CK\u00ae technique, for example. (ex. https://attack.mitre.org/techniques/T1059/)",
+        "description": "The id of technique used by this threat. You can use a MITRE ATT&CK® technique, for example. (ex. https://attack.mitre.org/techniques/T1059/)",
         "type": "keyword"
       },
       {
@@ -42311,17 +42311,17 @@
       },
       {
         "field": "threat.tactic.id",
-        "description": "The id of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
+        "description": "The id of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
         "type": "keyword"
       },
       {
         "field": "threat.tactic.name",
-        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
+        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
         "type": "keyword"
       },
       {
         "field": "threat.tactic.reference",
-        "description": "The reference url of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
+        "description": "The reference url of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
         "type": "keyword"
       },
       {
@@ -46251,7 +46251,7 @@
       },
       {
         "field": "cisco.umbrella.traffic_source",
-        "description": "The source of the user-generated traffic (0-Unknown, 1-VPN,2\u2013ZTNA or 3-Network Tunnel).",
+        "description": "The source of the user-generated traffic (0-Unknown, 1-VPN,2–ZTNA or 3-Network Tunnel).",
         "type": "keyword"
       },
       {
@@ -49481,7 +49481,7 @@
       },
       {
         "field": "threat.tactic.name",
-        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
+        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
         "type": "keyword"
       },
       {
@@ -50159,7 +50159,7 @@
       },
       {
         "field": "salesforce.setup_audit_trail.display",
-        "description": "The full description of changes made in Setup. For example, if the Action field has a value of PermSetCreate, the Display field might be \u201cCreated permission set MAD: with user license Salesforce.\u201d",
+        "description": "The full description of changes made in Setup. For example, if the Action field has a value of PermSetCreate, the Display field might be “Created permission set MAD: with user license Salesforce.”",
         "type": "keyword"
       },
       {
@@ -50904,7 +50904,7 @@
   },
   {
     "slug": "dmp_entre",
-    "name": "DMP Entr\u00e9",
+    "name": "DMP Entré",
     "description": "Collect the experimental schema-tolerant file records.",
     "version": "0.1.0",
     "created": "30 August 2026",
@@ -57095,7 +57095,7 @@
       },
       {
         "field": "entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -57190,7 +57190,7 @@
       },
       {
         "field": "user.entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -57510,7 +57510,7 @@
       },
       {
         "field": "host.entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -59178,7 +59178,7 @@
         "type": "keyword"
       },
       {
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "field": "entity.type",
         "type": "keyword"
       },
@@ -59188,7 +59188,7 @@
         "type": "keyword"
       },
       {
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "field": "host.entity.type",
         "type": "keyword"
       },
@@ -60032,7 +60032,7 @@
       },
       {
         "field": "entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -60062,7 +60062,7 @@
       },
       {
         "field": "host.entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -63921,7 +63921,7 @@
       },
       {
         "field": "entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -63986,7 +63986,7 @@
       },
       {
         "field": "user.entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -64003,6 +64003,774 @@
         "field": "user.name.text",
         "description": "Multi-field of `user.name`.",
         "type": "match_only_text"
+      }
+    ],
+    "status": "Experimental"
+  },
+  {
+    "slug": "trend_micro_apex_central",
+    "name": "Trend Micro Apex Central SaaS API",
+    "description": "Collect seven selected security-event families and engine/pattern update events through the native SaaS API; other API families and current-state inventory excluded.",
+    "version": "0.1.0",
+    "created": "22 September 2026",
+    "buildDuration": "Research began 21 September; full elapsed timing includes overnight usage and sign-in waits; see integration timing ledger",
+    "validationStatus": "Agent 9.5.4 controlled collection/recovery, exact-ZIP ASOC parsing/indexing/policy checks and Fleet visuals passed; live tenant unvalidated",
+    "experimentalReason": "Literal documentation examples and bounded historical captures support seven selected security-event families and engine/pattern update events through the Apex Central SaaS log API. API response envelopes are schema-derived mocks, not captured tenant responses. Live tenant compatibility, per-family entitlement, retention and cursor expiry remain unvalidated. Other log families, inventory, on-premises compatibility, Deep Security and Vision One are excluded. Recovery can replay duplicates; no complete-history or exactly-once guarantee.",
+    "categories": [
+      "Cloud",
+      "Custom",
+      "Elastic Agent Enabled",
+      "Security"
+    ],
+    "solutions": [
+      "Security"
+    ],
+    "capabilities": [
+      "Logs"
+    ],
+    "icon": "trend-micro.svg",
+    "repositoryUrl": "https://github.com/2gavy/elastic_integrations/tree/main/trend_micro_apex_central",
+    "source": "custom",
+    "fields": [
+      {
+        "field": "@timestamp",
+        "description": "Date/time when the event originated. This is the date/time extracted from the event, typically representing when the event was generated by the source. If the event source has no original timestamp, this value is typically populated by the first time the event was received by the pipeline. Required field for all events.",
+        "type": "date"
+      },
+      {
+        "field": "data_stream.dataset",
+        "description": "The field can contain anything that makes sense to signify the source of the data. Examples include `nginx.access`, `prometheus`, `endpoint` etc. For data streams that otherwise fit, but that do not have dataset set we use the value \"generic\" for the dataset value. `event.dataset` should have the same value as `data_stream.dataset`. Beyond the Elasticsearch data stream naming criteria noted above, the `dataset` value has additional restrictions:   * Must not contain `-`   * No longer than 100 characters",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.namespace",
+        "description": "A user defined namespace. Namespaces are useful to allow grouping of data. Many users already organize their indices this way, and the data stream naming scheme now provides this best practice as a default. Many users will populate this field with `default`. If no value is used, it falls back to `default`. Beyond the Elasticsearch index naming criteria noted above, `namespace` value has the additional restrictions:   * Must not contain `-`   * No longer than 100 characters",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "data_stream.type",
+        "description": "An overarching type for the data stream. Currently allowed values are \"logs\" and \"metrics\". We expect to also add \"traces\" and \"synthetics\" in the near future.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "destination.as.number",
+        "description": "Unique number allocated to the autonomous system. The autonomous system number (ASN) uniquely identifies each network on the Internet.",
+        "type": "long"
+      },
+      {
+        "field": "destination.as.organization.name",
+        "description": "Organization name.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.as.organization.name.text",
+        "description": "Multi-field of `destination.as.organization.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "destination.geo.city_name",
+        "description": "City name.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.continent_name",
+        "description": "Name of the continent.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.country_iso_code",
+        "description": "Country ISO code.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.country_name",
+        "description": "Country name.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.location",
+        "description": "Longitude and latitude.",
+        "type": "geo_point"
+      },
+      {
+        "field": "destination.geo.region_iso_code",
+        "description": "Region ISO code.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.geo.region_name",
+        "description": "Region name.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.ip",
+        "description": "IP address of the destination (IPv4 or IPv6).",
+        "type": "ip"
+      },
+      {
+        "field": "destination.mac",
+        "description": "MAC address of the destination. The notation format from RFC 7042 is suggested: Each octet (that is, 8-bit byte) is represented by two [uppercase] hexadecimal digits giving the value of the octet as an unsigned integer. Successive octets are separated by a hyphen.",
+        "type": "keyword"
+      },
+      {
+        "field": "destination.port",
+        "description": "Port of the destination.",
+        "type": "long"
+      },
+      {
+        "field": "ecs.version",
+        "description": "ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.code",
+        "description": "Error code describing the error.",
+        "type": "keyword"
+      },
+      {
+        "field": "error.message",
+        "description": "Error message.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "error.type",
+        "description": "The type of the error, for example the class name of the exception.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.action",
+        "description": "The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.category",
+        "description": "This is one of four ECS Categorization Fields, and indicates the second level in the ECS category hierarchy. `event.category` represents the \"big buckets\" of ECS categories. For example, filtering on `event.category:process` yields all events relating to process activity. This field is closely related to `event.type`, which is used as a subcategory. This field is an array. This will allow proper categorization of some events that fall in multiple categories.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.code",
+        "description": "Identification code for this event, if one exists. Some event sources use event codes to identify messages unambiguously, regardless of message language or wording adjustments over time. An example of this is the Windows Event ID.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.dataset",
+        "description": "Name of the dataset. If an event source publishes more than one type of log or events (e.g. access log, error log), the dataset is used to specify which one the event comes from. It's recommended but not required to start the dataset name with the module name, followed by a dot, then the dataset name.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.id",
+        "description": "Unique ID to describe the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.kind",
+        "description": "This is one of four ECS Categorization Fields, and indicates the highest level in the ECS category hierarchy. `event.kind` gives high-level information about what type of information the event contains, without being specific to the contents of the event. For example, values of this field distinguish alert events from metric events. The value of this field can be used to inform how these kinds of events should be handled. They may warrant different retention, different access control, it may also help understand whether the data is coming in at a regular interval or not.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.module",
+        "description": "Name of the module this data is coming from. If your monitoring agent supports the concept of modules or plugins to process events of a given source (e.g. Apache logs), `event.module` should contain the name of this module.",
+        "type": "constant_keyword"
+      },
+      {
+        "field": "event.original",
+        "description": "Raw text message of entire event. Used to demonstrate log integrity or where the full log message (before splitting it up in multiple parts) may be required, e.g. for reindex. This field is not indexed and doc_values are disabled. It cannot be searched, but it can be retrieved from `_source`. If users wish to override this and index this field, please see `Field data types` in the `Elasticsearch Reference`.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.outcome",
+        "description": "This is one of four ECS Categorization Fields, and indicates the lowest level in the ECS category hierarchy. `event.outcome` simply denotes whether the event represents a success or a failure from the perspective of the entity that produced the event. Note that when a single transaction is described in multiple events, each event may populate different values of `event.outcome`, according to their perspective. Also note that in the case of a compound event (a single event that contains multiple logical events), this field should be populated with the value that best captures the overall success or failure from the perspective of the event producer. Further note that not all events will have an associated outcome. For example, this field is generally not populated for metric events, events with `event.type:info`, or any events for which an outcome does not make logical sense.",
+        "type": "keyword"
+      },
+      {
+        "field": "event.severity",
+        "description": "The numeric severity of the event according to your event source. What the different severity values mean can be different between sources and use cases. It's up to the implementer to make sure severities are consistent across events from the same source. The Syslog severity belongs in `log.syslog.severity.code`. `event.severity` is meant to represent the severity according to the event source (e.g. firewall, IDS). If the event source does not publish its own severity, you may optionally copy the `log.syslog.severity.code` to `event.severity`.",
+        "type": "long"
+      },
+      {
+        "field": "event.type",
+        "description": "This is one of four ECS Categorization Fields, and indicates the third level in the ECS category hierarchy. `event.type` represents a categorization \"sub-bucket\" that, when used along with the `event.category` field values, enables filtering events down to a level appropriate for single visualization. This field is an array. This will allow proper categorization of some events that fall in multiple event types.",
+        "type": "keyword"
+      },
+      {
+        "field": "file.created",
+        "description": "File creation time. Note that not all filesystems store the creation time.",
+        "type": "date"
+      },
+      {
+        "field": "file.hash.sha1",
+        "description": "SHA1 hash.",
+        "type": "keyword"
+      },
+      {
+        "field": "file.name",
+        "description": "Name of the file including the extension, without the directory.",
+        "type": "keyword"
+      },
+      {
+        "field": "file.path",
+        "description": "Full path to the file, including the file name. It should include the drive letter, when appropriate.",
+        "type": "keyword"
+      },
+      {
+        "field": "file.path.text",
+        "description": "Multi-field of `file.path`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "host.domain",
+        "description": "Name of the domain of which the host is a member. For example, on Windows this could be the host's Active Directory domain or NetBIOS domain name. For Linux this could be the domain of the host's LDAP provider.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.hostname",
+        "description": "Hostname of the host. It normally contains what the `hostname` command returns on the host machine.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.ip",
+        "description": "Host ip addresses.",
+        "type": "ip"
+      },
+      {
+        "field": "host.name",
+        "description": "Name of the host. It can contain what hostname returns on Unix systems, the fully qualified domain name (FQDN), or a name specified by the user. The recommended value is the lowercase FQDN of the host.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.os.full",
+        "description": "Operating system name, including the version or code name.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.os.full.text",
+        "description": "Multi-field of `host.os.full`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "input.type",
+        "description": "Type of filebeat input.",
+        "type": "keyword"
+      },
+      {
+        "field": "log.offset",
+        "description": "Log offset.",
+        "type": "long"
+      },
+      {
+        "field": "network.application",
+        "description": "When a specific application or service is identified from network connection details (source/dest IPs, ports, certificates, or wire format), this field captures the application's or service's name. For example, the original event identifies the network connection being from a specific web service in a `https` network connection, like `facebook` or `twitter`. The field value must be normalized to lowercase for querying.",
+        "type": "keyword"
+      },
+      {
+        "field": "network.direction",
+        "description": "Direction of the network traffic. When mapping events from a host-based monitoring context, populate this field from the host's point of view, using the values \"ingress\" or \"egress\". When mapping events from a network or perimeter-based monitoring context, populate this field from the point of view of the network perimeter, using the values \"inbound\", \"outbound\", \"internal\" or \"external\". Note that \"internal\" is not crossing perimeter boundaries, and is meant to describe communication between two hosts within the perimeter. Note also that \"external\" is meant to describe traffic between two hosts that are external to the perimeter. This could for example be useful for ISPs or VPN service providers.",
+        "type": "keyword"
+      },
+      {
+        "field": "network.protocol",
+        "description": "In the OSI Model this would be the Application Layer protocol. For example, `http`, `dns`, or `ssh`. The field value must be normalized to lowercase for querying.",
+        "type": "keyword"
+      },
+      {
+        "field": "network.transport",
+        "description": "Same as network.iana_number, but instead using the Keyword name of the transport layer (udp, tcp, ipv6-icmp, etc.) The field value must be normalized to lowercase for querying.",
+        "type": "keyword"
+      },
+      {
+        "field": "observer.name",
+        "description": "Custom name of the observer. This is a name that can be given to an observer. This can be helpful for example if multiple firewalls of the same model are used in an organization. If no custom name is needed, the field can be left empty.",
+        "type": "keyword"
+      },
+      {
+        "field": "observer.product",
+        "description": "The product name of the observer.",
+        "type": "keyword"
+      },
+      {
+        "field": "observer.vendor",
+        "description": "Vendor name of the observer.",
+        "type": "keyword"
+      },
+      {
+        "field": "observer.version",
+        "description": "Observer version.",
+        "type": "keyword"
+      },
+      {
+        "field": "process.command_line",
+        "description": "Full command line that started the process, including the absolute path to the executable, and all arguments. Some arguments may be filtered to protect sensitive information.",
+        "type": "wildcard"
+      },
+      {
+        "field": "process.command_line.text",
+        "description": "Multi-field of `process.command_line`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "process.executable",
+        "description": "Absolute path to the process executable.",
+        "type": "keyword"
+      },
+      {
+        "field": "process.executable.text",
+        "description": "Multi-field of `process.executable`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "process.name",
+        "description": "Process name. Sometimes called program name or similar.",
+        "type": "keyword"
+      },
+      {
+        "field": "process.name.text",
+        "description": "Multi-field of `process.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "process.user.name",
+        "description": "Short name or login of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "process.user.name.text",
+        "description": "Multi-field of `process.user.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "related.hash",
+        "description": "All the hashes seen on your event. Populating this field, then using it to search for hashes can help in situations where you're unsure what the hash algorithm is (and therefore which key name to search).",
+        "type": "keyword"
+      },
+      {
+        "field": "related.hosts",
+        "description": "All hostnames or other host identifiers seen on your event. Example identifiers include FQDNs, domain names, workstation names, or aliases.",
+        "type": "keyword"
+      },
+      {
+        "field": "related.ip",
+        "description": "All of the IPs seen on your event.",
+        "type": "ip"
+      },
+      {
+        "field": "related.user",
+        "description": "All the user names or other user identifiers seen on the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "rule.description",
+        "description": "The description of the rule generating the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "rule.id",
+        "description": "A rule ID that is unique within the scope of an agent, observer, or other entity using the rule for detection of this event.",
+        "type": "keyword"
+      },
+      {
+        "field": "rule.name",
+        "description": "The name of the rule or signature generating the event.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.as.number",
+        "description": "Unique number allocated to the autonomous system. The autonomous system number (ASN) uniquely identifies each network on the Internet.",
+        "type": "long"
+      },
+      {
+        "field": "source.as.organization.name",
+        "description": "Organization name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.as.organization.name.text",
+        "description": "Multi-field of `source.as.organization.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "source.geo.city_name",
+        "description": "City name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.continent_name",
+        "description": "Name of the continent.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.country_iso_code",
+        "description": "Country ISO code.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.country_name",
+        "description": "Country name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.location",
+        "description": "Longitude and latitude.",
+        "type": "geo_point"
+      },
+      {
+        "field": "source.geo.region_iso_code",
+        "description": "Region ISO code.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.region_name",
+        "description": "Region name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.ip",
+        "description": "IP address of the source (IPv4 or IPv6).",
+        "type": "ip"
+      },
+      {
+        "field": "source.mac",
+        "description": "MAC address of the source. The notation format from RFC 7042 is suggested: Each octet (that is, 8-bit byte) is represented by two [uppercase] hexadecimal digits giving the value of the octet as an unsigned integer. Successive octets are separated by a hyphen.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.port",
+        "description": "Port of the source.",
+        "type": "long"
+      },
+      {
+        "field": "tags",
+        "description": "List of keywords used to tag each event.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.EACV_Information.cn1",
+        "description": "Connection_Status: 1 rebuilding database, 2 online, 3 offline. Source 0 is undefined and retained.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.EACV_Information.cs1",
+        "description": "Product-server pattern version; not a numeric counter.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.EACV_Information.cs5",
+        "description": "Application-control policy.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.Predictive_Machine_Learning.app",
+        "description": "Infection channel: 0 unknown, 1 local drive, 2 network drive, 3 AutoRun, 10 web, 11 email, 999 local/network drive.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.Predictive_Machine_Learning.cn1",
+        "description": "ThreatType vendor code 35140–35160; source 1 is undefined and retained.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.Predictive_Machine_Learning.cn2",
+        "description": "DetectionType: 0 file, 1 process.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.Predictive_Machine_Learning.cn3",
+        "description": "Confidence probability as reported, with unverified scale; not event risk or severity.",
+        "type": "double"
+      },
+      {
+        "field": "trend_micro_apex_central.Predictive_Machine_Learning.cs2",
+        "description": "DetectionName.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.Predictive_Machine_Learning.cs3",
+        "description": "InfectionLocation, potentially a URL; not necessarily a requested URL.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.behaviormonitor_rule.TMCMLogTarget",
+        "description": "Polymorphic behavior target. A registry-looking target is not assumed to be a registry event when Event_Type disagrees.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.behaviormonitor_rule.cs2",
+        "description": "Behavior Monitoring policy (Policy).",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.behaviormonitor_rule.cs3",
+        "description": "Source Event_Type, such as Process, Registry or File system.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.behaviormonitor_rule.cs4",
+        "description": "Source Operation; retained independently of Event_Type.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.behaviormonitor_rule.cs5",
+        "description": "Risk_Level: 0 low, 1 high; translated source strings are retained.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.cef_version",
+        "description": "CEF format version; source spelling is retained in event.original.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.cnt",
+        "description": "Source detection count, including aggregated intrusion and web detections.",
+        "type": "long"
+      },
+      {
+        "field": "trend_micro_apex_central.device_access_control.cn1",
+        "description": "Managed product identifier: 15 denotes Apex One.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.device_access_control.cn2",
+        "description": "Device_Type: 0 USB storage, 1 non-storage USB, 2 CD/DVD, 3 floppy, 4 network driver.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.device_access_control.cn3",
+        "description": "Permission: 0 modify, 1 read-and-execute, 2 read, 3 list-content-only, 4 block.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.device_access_control.cs1",
+        "description": "Product_Entity/Endpoint server hostname, distinct from the affected host.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.extensions",
+        "description": "Unmapped CEF source fields and labels, retaining source names without dynamic mapping expansion.",
+        "type": "flattened"
+      },
+      {
+        "field": "trend_micro_apex_central.intrusion_prevention.cn2",
+        "description": "Mode: 1 detection-only; 0 or explicit NULL means not detection-only. Missing remains unknown.",
+        "type": "boolean"
+      },
+      {
+        "field": "trend_micro_apex_central.intrusion_prevention.cn3",
+        "description": "Priority, calculated by source from severity and asset value.",
+        "type": "long"
+      },
+      {
+        "field": "trend_micro_apex_central.intrusion_prevention.cn4",
+        "description": "Source severity: 1 low, 2 medium, 3 high, 4 critical; distinct from CEF header severity.",
+        "type": "long"
+      },
+      {
+        "field": "trend_micro_apex_central.intrusion_prevention.proto",
+        "description": "Vendor protocol code, not an IANA protocol number.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.log_type",
+        "description": "Exact native API log family requested by the collector.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.name",
+        "description": "CEF event name from the source header.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.spyware.cn1",
+        "description": "PatternType identifier, not severity.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.spyware.cn2",
+        "description": "Scan_Type vendor code or translated value; 11 real-time, 12 manual, 13 scheduled, 16 scan-now.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.spyware.cn3",
+        "description": "Security_Threat_Type vendor risk-type code or translated value.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.spyware.cs1",
+        "description": "VirusName: detected spyware/grayware name.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.spyware.cs2",
+        "description": "EngineVersion as reported.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.spyware.cs6",
+        "description": "PatternVersion as reported.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.web_security.app",
+        "description": "Vendor application/protocol code; not an IANA protocol number.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.web_security.cn1",
+        "description": "CLF_SeverityCode: 0 unknown, 1 information, 2 warning, 3 error, 4 critical.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.web_security.cn2",
+        "description": "SLF_SeverityLevel: 100 high, 300 medium-high, 500 medium, 700 medium-low, 900 low.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.web_security.cn3",
+        "description": "Web reputation rating/score, with unverified scale; not normalized event risk.",
+        "type": "double"
+      },
+      {
+        "field": "trend_micro_apex_central.web_security.cs1",
+        "description": "SLF_PolicyName web security policy.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.web_security.cs4",
+        "description": "CLF_ReasonCode source reason code.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.web_security.cs5",
+        "description": "CLF_ReasonCodeSource source of reason code.",
+        "type": "keyword"
+      },
+      {
+        "field": "url.original",
+        "description": "Unmodified original url as seen in the event source. Note that in network monitoring, the observed URL may be a full URL, whereas in access logs, the URL is often just represented as a path. This field is meant to represent the URL as it was observed, complete or not.",
+        "type": "wildcard"
+      },
+      {
+        "field": "url.original.text",
+        "description": "Multi-field of `url.original`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "user.domain",
+        "description": "Name of the directory the user is a member of. For example, an LDAP or Active Directory domain name.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.name",
+        "description": "Short name or login of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.name.text",
+        "description": "Multi-field of `user.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "user.target.name",
+        "description": "Short name or login of the user.",
+        "type": "keyword"
+      },
+      {
+        "field": "user.target.name.text",
+        "description": "Multi-field of `user.target.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "host.os.name",
+        "description": "Operating system name, without the version.",
+        "type": "keyword"
+      },
+      {
+        "field": "host.os.name.text",
+        "description": "Multi-field of `host.os.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "observer.hostname",
+        "description": "Hostname of the observer.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.deviceFacility",
+        "description": "Managed product name; not the CEF observer or syslog facility.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.dntdom",
+        "description": "Apex One management hierarchy; distinct from the Active Directory domain.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.engine_updated_status.cn1",
+        "description": "Connection status: 0 cannot connect, 1 active, 2 inactive, 100 product active, 101 product inactive but agent active, 102 roaming.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.engine_updated_status.cn2",
+        "description": "Engine component identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.engine_updated_status.cn3",
+        "description": "Engine freshness: 1 up-to-date, 2 out-of-date. This is not an attempted update outcome.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.engine_updated_status.cs5",
+        "description": "Engine version string.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.engine_updated_status.cs6",
+        "description": "AUComponent_Type code: 1 engine.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.engine_updated_status.msg",
+        "description": "Engine display name, when supplied.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.pattern_updated_status.cn1",
+        "description": "Connection status: 0 cannot connect, 1 active, 2 inactive, 100 product active, 101 product inactive but agent active, 102 roaming.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.pattern_updated_status.cn2",
+        "description": "Pattern/rule component identifier.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.pattern_updated_status.cn3",
+        "description": "Pattern/rule freshness: 1 current, 2 one version old, 3 two, 4 three, 5 four, 6 five, 7 six-or-more versions old. Not an attempted update outcome.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.pattern_updated_status.cs3",
+        "description": "Source update-agent string; the documented value 0 has no established boolean semantics.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.pattern_updated_status.cs4",
+        "description": "Management domain; not established as an Active Directory domain.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.pattern_updated_status.cs5",
+        "description": "Pattern/rule version string.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.pattern_updated_status.cs6",
+        "description": "AUComponent_Type code: 2 pattern.",
+        "type": "keyword"
+      },
+      {
+        "field": "trend_micro_apex_central.pattern_updated_status.msg",
+        "description": "Pattern display name, when supplied.",
+        "type": "keyword"
       }
     ],
     "status": "Experimental"
