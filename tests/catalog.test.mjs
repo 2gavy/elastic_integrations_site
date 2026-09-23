@@ -350,3 +350,24 @@ test("publishes bounded Tencent Cloud Monitor CVM metrics", () => {
   assert.ok(item.fields.some((field) => field.field === "tencent_cloudmonitor.cvm_metrics.value" && field.type === "double"));
   assert.ok(item.fields.some((field) => field.field === "cloud.instance.id" && field.type === "keyword"));
 });
+
+test("publishes only approved Huawei ECS inventory metadata", () => {
+  const item = custom.find((record) => record.slug === "huawei_ecs");
+  assert.equal(item.name, "Huawei Cloud ECS");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.equal(item.source, "custom");
+  assert.equal(item.icon, "huawei-ecs.svg");
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/huawei_ecs");
+  assert.match(item.validationStatus, /Agent 9\.5\.4 mocked six-instance collection/);
+  assert.match(item.experimentalReason, /Live Huawei authentication/);
+  assert.match(item.experimentalReason, /metadata, and encoded user data are excluded/);
+  assert.deepEqual(item.categories, ["Cloud", "Custom", "Elastic Agent Enabled"]);
+  assert.deepEqual(item.solutions, ["Observability", "Security"]);
+  assert.deepEqual(item.capabilities, ["Logs"]);
+  assert.equal(item.fields.length, 41);
+  assert.ok(item.fields.some((field) => field.field === "host.id" && field.type === "keyword"));
+  assert.ok(item.fields.some((field) => field.field === "cloud.instance.id" && field.type === "keyword"));
+  assert.ok(item.fields.some((field) => field.field === "huawei_ecs.instances.flavor.vcpus" && field.type === "long"));
+  assert.ok(!item.fields.some((field) => /metadata|user_data|secret|password/i.test(field.field)));
+});
