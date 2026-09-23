@@ -27571,13 +27571,13 @@
   },
   {
     "slug": "fastly",
-    "name": "Fastly Account Audit and Next-Gen WAF Request Feed, Corp Activity, and Site Security Events",
-    "description": "Collect account audit, legacy stored attack/anomaly requests, corp administrative activity, and site-scoped security events; licensed-live compatibility, full WAF coverage, and lossless collection remain unvalidated.",
-    "version": "0.4.0",
+    "name": "Fastly Account Audit and Next-Gen WAF Request Feed, Corp Activity, Site Security Events, and Site Activity",
+    "description": "Collect account audit, legacy stored attack/anomaly requests, corp administrative activity, site security events, and the distinct site activity timeline; licensed-live compatibility, full WAF coverage, and lossless collection remain unvalidated.",
+    "version": "0.5.0",
     "created": "23 September 2026",
-    "buildDuration": "56 minutes 16 seconds site-event research through live Pages verification; 3 hours 34 minutes 46 seconds from first Fastly research",
-    "validationStatus": "Agent 9.5.4 synthetic transport and pipeline validated; no licensed tenant or stock system test",
-    "experimentalReason": "Fastly account audit, legacy Next-Gen WAF stored attack/anomaly requests, corp administrative activity, and site security events are four distinct streams. The site-event endpoint is site-scoped, not corp activity or site activity. Site-event parsing uses a sanitized historical official example and collection uses synthetic mocks and Agent tests; no current licensed tenant was tested. The site-event API has a 10,000-result query ceiling with no verified safe bypass. CDN access logs, all WAF traffic, and site activity are excluded. Retention, late arrivals, replay, and high-volume windows prevent complete-history, lossless or exactly-once claims.",
+    "buildDuration": "Site-activity research began 08:56:21 UTC on 23 September 2026; final research-to-live duration pending verification",
+    "validationStatus": "Agent 9.5.4 synthetic transport and official-example parser validated; no licensed tenant or stock system test",
+    "experimentalReason": "Fastly account audit, legacy Next-Gen WAF stored attack/anomaly requests, corp administrative activity, site security events, and the separate site activity timeline are five distinct streams. The site-activity endpoint is /analytics/events, not the site security /events endpoint. Its parser uses a sanitized historical official example; collection testing uses synthetic mocks rather than a current licensed tenant. The legacy activity APIs have a 10,000-result query ceiling without a verified safe bypass. CDN access logs and all WAF traffic are excluded. Permissions, retention, late arrivals, replay, and high-volume windows prevent complete-history, lossless or exactly-once claims.",
     "categories": [
       "Cloud",
       "Custom",
@@ -27924,6 +27924,21 @@
       {
         "field": "source.geo.region_name",
         "description": "Region name.",
+        "type": "keyword"
+      },
+      {
+        "field": "fastly.ngwaf_site_activity.corp",
+        "description": "Configured Next-Gen WAF corporation name used as the event scope.",
+        "type": "keyword"
+      },
+      {
+        "field": "fastly.ngwaf_site_activity.raw",
+        "description": "Full vendor site-activity record with internal collector context removed.",
+        "type": "flattened"
+      },
+      {
+        "field": "fastly.ngwaf_site_activity.site",
+        "description": "Configured Next-Gen WAF site name used as the event scope.",
         "type": "keyword"
       }
     ],

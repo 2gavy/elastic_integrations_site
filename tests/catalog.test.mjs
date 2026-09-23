@@ -372,24 +372,26 @@ test("publishes only approved Huawei ECS inventory metadata", () => {
   assert.ok(!item.fields.some((field) => /metadata|user_data|secret|password/i.test(field.field)));
 });
 
-test("publishes only approved Fastly NGWAF request-feed, corp-activity, and site-event metadata", () => {
+test("publishes only approved Fastly NGWAF request-feed, corp-activity, site-event, and site-activity metadata", () => {
   const item = custom.find((record) => record.slug === "fastly");
-  assert.equal(item.name, "Fastly Account Audit and Next-Gen WAF Request Feed, Corp Activity, and Site Security Events");
-  assert.equal(item.version, "0.4.0");
+  assert.equal(item.name, "Fastly Account Audit and Next-Gen WAF Request Feed, Corp Activity, Site Security Events, and Site Activity");
+  assert.equal(item.version, "0.5.0");
   assert.equal(item.status, "Experimental");
   assert.equal(item.icon, "fastly.svg");
   assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/fastly");
-  assert.match(item.experimentalReason, /site-scoped, not corp activity or site activity/);
+  assert.match(item.experimentalReason, /site-activity endpoint is \/analytics\/events, not the site security \/events endpoint/);
   assert.match(item.experimentalReason, /10,000-result query ceiling/);
-  assert.match(item.experimentalReason, /no current licensed tenant was tested/);
-  assert.match(item.experimentalReason, /site activity are excluded/);
+  assert.match(item.experimentalReason, /rather than a current licensed tenant/);
+  assert.match(item.experimentalReason, /CDN access logs and all WAF traffic are excluded/);
   assert.deepEqual(item.capabilities, ["Logs"]);
-  assert.equal(item.fields.length, 66);
+  assert.equal(item.fields.length, 69);
   assert.ok(item.fields.some((field) => field.field === "fastly.ngwaf_request.raw" && field.type === "flattened"));
   assert.ok(item.fields.some((field) => field.field === "fastly.ngwaf_request.site" && field.type === "keyword"));
   assert.ok(item.fields.some((field) => field.field === "fastly.ngwaf_corp_activity.raw" && field.type === "flattened"));
   assert.ok(item.fields.some((field) => field.field === "fastly.ngwaf_corp_activity.corp" && field.type === "keyword"));
   assert.ok(item.fields.some((field) => field.field === "fastly.ngwaf_site_event.raw" && field.type === "flattened"));
   assert.ok(item.fields.some((field) => field.field === "fastly.ngwaf_site_event.site" && field.type === "keyword"));
+  assert.ok(item.fields.some((field) => field.field === "fastly.ngwaf_site_activity.raw" && field.type === "flattened"));
+  assert.ok(item.fields.some((field) => field.field === "fastly.ngwaf_site_activity.site" && field.type === "keyword"));
   assert.doesNotMatch(JSON.stringify(item), /\.zip|x-api-token|synthetic-token|README\.md|data_stream\/ngwaf_request\/agent/);
 });
