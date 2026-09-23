@@ -27571,13 +27571,13 @@
   },
   {
     "slug": "fastly",
-    "name": "Fastly Account Audit and Next-Gen WAF Request Feed",
-    "description": "Collect account audit events and legacy Signal Sciences stored attack/anomaly requests through separate API streams; licensed-live compatibility, full WAF coverage, and lossless collection remain unvalidated.",
-    "version": "0.2.0",
+    "name": "Fastly Account Audit and Next-Gen WAF Request Feed and Corp Activity",
+    "description": "Collect account audit, legacy stored attack/anomaly requests, and distinct corp administrative activity; licensed-live compatibility, full WAF coverage, and lossless collection remain unvalidated.",
+    "version": "0.3.0",
     "created": "23 September 2026",
-    "buildDuration": "58 minutes research through validation; publication tracked separately",
-    "validationStatus": "Agent mock validated",
-    "experimentalReason": "Fastly account audit and legacy Signal Sciences Next-Gen WAF request-feed collection are separate API streams with different credentials. The WAF stream collects stored attack/anomaly requests, not every HTTP request. Vendor documentation and an official-derived repaired JSON example support bounded collection and parsing; synthetic mock and Agent tests do not establish current licensed-tenant compatibility. WAF corp activity, site events, site activity, CDN access logs and full request traffic are excluded. The short WAF extraction horizon, expiring page cursors and replay mean no complete-history, lossless or exactly-once guarantee.",
+    "buildDuration": "2 hours 11 minutes 42 seconds research through validation; publication tracked separately",
+    "validationStatus": "Agent 9.5.4 synthetic transport and pipeline validated",
+    "experimentalReason": "Fastly account audit, legacy Signal Sciences stored attack/anomaly request feed, and legacy corp administrative activity are three distinct API streams. The request feed is not full HTTP access logging; corp activity is not site security events or site activity. Corp parsing uses a historical official example and collection uses synthetic mocks, not a current licensed tenant. The corp API has a 10,000-result query ceiling with no verified safe ID-cursor bypass. Site events, site activity, CDN access logs and full WAF traffic are excluded. Retention, late arrivals, replay, and high-volume windows prevent complete-history, lossless or exactly-once claims.",
     "categories": [
       "Cloud",
       "Custom",
@@ -27815,6 +27815,21 @@
         "field": "user_agent.original.text",
         "description": "Multi-field of `user_agent.original`.",
         "type": "match_only_text"
+      },
+      {
+        "field": "error.code",
+        "description": "Error code describing the error.",
+        "type": "keyword"
+      },
+      {
+        "field": "fastly.ngwaf_corp_activity.corp",
+        "description": "Configured Next-Gen WAF corporation name used as the event scope.",
+        "type": "keyword"
+      },
+      {
+        "field": "fastly.ngwaf_corp_activity.raw",
+        "description": "Full vendor activity record with internal collector context removed.",
+        "type": "flattened"
       }
     ],
     "status": "Experimental"
