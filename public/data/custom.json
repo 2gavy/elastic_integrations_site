@@ -27571,13 +27571,13 @@
   },
   {
     "slug": "fastly",
-    "name": "Fastly Account Audit and Next-Gen WAF Request Feed and Corp Activity",
-    "description": "Collect account audit, legacy stored attack/anomaly requests, and distinct corp administrative activity; licensed-live compatibility, full WAF coverage, and lossless collection remain unvalidated.",
-    "version": "0.3.0",
+    "name": "Fastly Account Audit and Next-Gen WAF Request Feed, Corp Activity, and Site Security Events",
+    "description": "Collect account audit, legacy stored attack/anomaly requests, corp administrative activity, and site-scoped security events; licensed-live compatibility, full WAF coverage, and lossless collection remain unvalidated.",
+    "version": "0.4.0",
     "created": "23 September 2026",
-    "buildDuration": "2 hours 11 minutes 42 seconds research through validation; publication tracked separately",
-    "validationStatus": "Agent 9.5.4 synthetic transport and pipeline validated",
-    "experimentalReason": "Fastly account audit, legacy Signal Sciences stored attack/anomaly request feed, and legacy corp administrative activity are three distinct API streams. The request feed is not full HTTP access logging; corp activity is not site security events or site activity. Corp parsing uses a historical official example and collection uses synthetic mocks, not a current licensed tenant. The corp API has a 10,000-result query ceiling with no verified safe ID-cursor bypass. Site events, site activity, CDN access logs and full WAF traffic are excluded. Retention, late arrivals, replay, and high-volume windows prevent complete-history, lossless or exactly-once claims.",
+    "buildDuration": "Research-to-publication timing in [site-event evidence](research_results/fastly_ngwaf/site-events-plan-and-timing.md); live deployment tracked separately",
+    "validationStatus": "Agent 9.5.4 synthetic transport and pipeline validated; no licensed tenant or stock system test",
+    "experimentalReason": "Fastly account audit, legacy Next-Gen WAF stored attack/anomaly requests, corp administrative activity, and site security events are four distinct streams. The site-event endpoint is site-scoped, not corp activity or site activity. Site-event parsing uses a sanitized historical official example and collection uses synthetic mocks and Agent tests; no current licensed tenant was tested. The site-event API has a 10,000-result query ceiling with no verified safe bypass. CDN access logs, all WAF traffic, and site activity are excluded. Retention, late arrivals, replay, and high-volume windows prevent complete-history, lossless or exactly-once claims.",
     "categories": [
       "Cloud",
       "Custom",
@@ -27830,6 +27830,101 @@
         "field": "fastly.ngwaf_corp_activity.raw",
         "description": "Full vendor activity record with internal collector context removed.",
         "type": "flattened"
+      },
+      {
+        "field": "fastly.ngwaf_site_event.corp",
+        "description": "Configured Next-Gen WAF corporation name used as the event scope.",
+        "type": "keyword"
+      },
+      {
+        "field": "fastly.ngwaf_site_event.expires",
+        "description": "Time at which the site event expires.",
+        "type": "date"
+      },
+      {
+        "field": "fastly.ngwaf_site_event.raw",
+        "description": "Full vendor site-event record with internal collector context removed.",
+        "type": "flattened"
+      },
+      {
+        "field": "fastly.ngwaf_site_event.requestCount",
+        "description": "Number of requests associated with the security event.",
+        "type": "long"
+      },
+      {
+        "field": "fastly.ngwaf_site_event.site",
+        "description": "Configured Next-Gen WAF site name used as the event scope.",
+        "type": "keyword"
+      },
+      {
+        "field": "fastly.ngwaf_site_event.tagCount",
+        "description": "Number of tags associated with the security event.",
+        "type": "long"
+      },
+      {
+        "field": "fastly.ngwaf_site_event.window",
+        "description": "Event aggregation window in seconds.",
+        "type": "long"
+      },
+      {
+        "field": "source.address",
+        "description": "Some event source addresses are defined ambiguously. The event will sometimes list an IP, a domain or a unix socket.  You should always store the raw address in the `.address` field. Then it should be duplicated to `.ip` or `.domain`, depending on which one it is.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.as.number",
+        "description": "Unique number allocated to the autonomous system. The autonomous system number (ASN) uniquely identifies each network on the Internet.",
+        "type": "long"
+      },
+      {
+        "field": "source.as.organization.name",
+        "description": "Organization name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.as.organization.name.text",
+        "description": "Multi-field of `source.as.organization.name`.",
+        "type": "match_only_text"
+      },
+      {
+        "field": "source.domain",
+        "description": "The domain name of the source system. This value may be a host name, a fully qualified domain name, or another host naming format. The value may derive from the original event or be added from enrichment.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.city_name",
+        "description": "City name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.continent_name",
+        "description": "Name of the continent.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.country_iso_code",
+        "description": "Country ISO code.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.country_name",
+        "description": "Country name.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.location",
+        "description": "Longitude and latitude.",
+        "type": "geo_point"
+      },
+      {
+        "field": "source.geo.region_iso_code",
+        "description": "Region ISO code.",
+        "type": "keyword"
+      },
+      {
+        "field": "source.geo.region_name",
+        "description": "Region name.",
+        "type": "keyword"
       }
     ],
     "status": "Experimental"
