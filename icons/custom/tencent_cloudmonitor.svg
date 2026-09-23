@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Cloud metrics</title>
+  <rect width="64" height="64" rx="14" fill="#142C4E"/>
+  <path d="M17 42h29a9 9 0 0 0 1-18 14 14 0 0 0-27-1 10 10 0 0 0-3 19Z" fill="#DCEBFA"/>
+  <path d="M20 35h8l4-7 5 11 4-5h6" fill="none" stroke="#0B9FDB" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+</svg>
