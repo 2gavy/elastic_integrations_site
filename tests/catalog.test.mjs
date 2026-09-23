@@ -311,3 +311,23 @@ test("publishes bounded Alibaba Cloud WAF security-event API coverage", () => {
   assert.ok(item.fields.some((field) => field.field === "alibaba_cloud_waf.event.additional_fields" && field.type === "flattened"));
   assert.ok(item.fields.some((field) => field.field === "event.original" && field.type === "keyword"));
 });
+
+test("publishes bounded Alibaba CloudMonitor agentless ECS metrics", () => {
+  const item = custom.find((record) => record.slug === "alibaba_cloudmonitor");
+  assert.equal(item.name, "Alibaba CloudMonitor");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.match(item.buildDuration, /2 hours 13 minutes 24 seconds/);
+  assert.match(item.validationStatus, /Agent 9\.5\.3/);
+  assert.match(item.validationStatus, /three-document/);
+  assert.equal(item.icon, "alibaba-cloud.svg");
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/alibaba_cloudmonitor");
+  assert.match(item.experimentalReason, /exactly nine agentless 60-second ECS/);
+  assert.match(item.experimentalReason, /Missing samples do not imply zero/);
+  assert.deepEqual(item.categories, ["Cloud", "Custom", "Elastic Agent Enabled", "Monitoring"]);
+  assert.deepEqual(item.solutions, ["Observability"]);
+  assert.deepEqual(item.capabilities, ["Metrics"]);
+  assert.equal(item.fields.length, 56);
+  assert.ok(item.fields.some((field) => field.field === "alibaba_cloudmonitor.ecs.cpu.utilization.average" && field.type === "double"));
+  assert.ok(item.fields.some((field) => field.field === "alibaba_cloudmonitor.ecs.disk.write.operations_per_second.maximum" && field.type === "double"));
+});
