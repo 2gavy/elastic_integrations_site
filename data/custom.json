@@ -2098,7 +2098,7 @@
       },
       {
         "field": "threat.indicator.id",
-        "description": "The ID of the indicator used by this threat to conduct behavior commonly modeled using MITRE ATT&CK\u00ae. This field can have multiple values to allow for the identification of the same indicator across systems that use different ID formats. While not required, a common approach is to use a STIX 2.x indicator ID.",
+        "description": "The ID of the indicator used by this threat to conduct behavior commonly modeled using MITRE ATT&CK®. This field can have multiple values to allow for the identification of the same indicator across systems that use different ID formats. While not required, a common approach is to use a STIX 2.x indicator ID.",
         "type": "keyword"
       },
       {
@@ -2143,7 +2143,7 @@
       },
       {
         "field": "threat.software.name",
-        "description": "The name of the software used by this threat to conduct behavior commonly modeled using MITRE ATT&CK\u00ae. While not required, you can use a MITRE ATT&CK\u00ae software name.",
+        "description": "The name of the software used by this threat to conduct behavior commonly modeled using MITRE ATT&CK®. While not required, you can use a MITRE ATT&CK® software name.",
         "type": "keyword"
       },
       {
@@ -6761,12 +6761,12 @@
       },
       {
         "field": "netskope.transaction.cs_username",
-        "description": "The client\u2019s username.",
+        "description": "The client’s username.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.date",
-        "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
+        "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the “x-cs-timestamp” field.",
         "type": "date"
       },
       {
@@ -6776,7 +6776,7 @@
       },
       {
         "field": "netskope.transaction.s_ip",
-        "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it\u2019s neither IPv4 or IPv6.",
+        "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it’s neither IPv4 or IPv6.",
         "type": "ip"
       },
       {
@@ -6796,7 +6796,7 @@
       },
       {
         "field": "netskope.transaction.time",
-        "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
+        "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the “x-cs-timestamp” field.",
         "type": "keyword"
       },
       {
@@ -6806,12 +6806,12 @@
       },
       {
         "field": "netskope.transaction.x_c_browser",
-        "description": "Client\u2019s browser.",
+        "description": "Client’s browser.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.x_c_browser_version",
-        "description": "Client\u2019s browser version.",
+        "description": "Client’s browser version.",
         "type": "keyword"
       },
       {
@@ -6821,7 +6821,7 @@
       },
       {
         "field": "netskope.transaction.x_c_device",
-        "description": "Client\u2019s device type.",
+        "description": "Client’s device type.",
         "type": "keyword"
       },
       {
@@ -7071,12 +7071,12 @@
       },
       {
         "field": "netskope.transaction.x_cs_timestamp",
-        "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the \u201cdate\u201d and \u201ctime\u201d fields.",
+        "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the “date” and “time” fields.",
         "type": "date"
       },
       {
         "field": "netskope.transaction.x_cs_traffic_type",
-        "description": "Type of traffic could be \u201cWeb\u201d or \u201cCloudApp\u201d. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
+        "description": "Type of traffic could be “Web” or “CloudApp”. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
         "type": "keyword"
       },
       {
@@ -7136,12 +7136,12 @@
       },
       {
         "field": "netskope.transaction.x_policy_justification_reason",
-        "description": "The justification provided by the end user in case of \u201cuseralert\u201d action.",
+        "description": "The justification provided by the end user in case of “useralert” action.",
         "type": "keyword"
       },
       {
         "field": "netskope.transaction.x_policy_justification_type",
-        "description": "The justification type selected by the end user in case of \u201cuseralert\u201d action.",
+        "description": "The justification type selected by the end user in case of “useralert” action.",
         "type": "keyword"
       },
       {
@@ -7211,7 +7211,7 @@
       },
       {
         "field": "netskope.transaction.x_r_cert_valid",
-        "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn\u2019t reflect the action of the SSL Engine.",
+        "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn’t reflect the action of the SSL Engine.",
         "type": "keyword"
       },
       {
@@ -7291,7 +7291,7 @@
       },
       {
         "field": "netskope.transaction.x_sc_notification_name",
-        "description": "The name of the user notification displayed to the end user in case of action \u201cblock\u201d or \u201cuseralert\u201d.",
+        "description": "The name of the user notification displayed to the end user in case of action “block” or “useralert”.",
         "type": "keyword"
       },
       {
@@ -7421,7 +7421,7 @@
       },
       {
         "field": "netskope.transaction.x_type",
-        "description": "The type of log message, which can be \u201chttp_transaction\u201d or \u201cWebSocket\u201d.  NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
+        "description": "The type of log message, which can be “http_transaction” or “WebSocket”.  NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
         "type": "keyword"
       }
     ]
@@ -27571,13 +27571,13 @@
   },
   {
     "slug": "fastly",
-    "name": "Fastly Account Audit and Next-Gen WAF Request Feed, Corp Activity, and Site Security Events",
-    "description": "Collect account audit, legacy stored attack/anomaly requests, corp administrative activity, and site-scoped security events; licensed-live compatibility, full WAF coverage, and lossless collection remain unvalidated.",
-    "version": "0.4.0",
+    "name": "Fastly Account Audit and Next-Gen WAF Request Feed, Corp Activity, Site Security Events, and Site Activity",
+    "description": "Collect account audit, legacy stored attack/anomaly requests, corp administrative activity, site security events, and the distinct site activity timeline; licensed-live compatibility, full WAF coverage, and lossless collection remain unvalidated.",
+    "version": "0.5.0",
     "created": "23 September 2026",
-    "buildDuration": "56 minutes 16 seconds site-event research through live Pages verification; 3 hours 34 minutes 46 seconds from first Fastly research",
-    "validationStatus": "Agent 9.5.4 synthetic transport and pipeline validated; no licensed tenant or stock system test",
-    "experimentalReason": "Fastly account audit, legacy Next-Gen WAF stored attack/anomaly requests, corp administrative activity, and site security events are four distinct streams. The site-event endpoint is site-scoped, not corp activity or site activity. Site-event parsing uses a sanitized historical official example and collection uses synthetic mocks and Agent tests; no current licensed tenant was tested. The site-event API has a 10,000-result query ceiling with no verified safe bypass. CDN access logs, all WAF traffic, and site activity are excluded. Retention, late arrivals, replay, and high-volume windows prevent complete-history, lossless or exactly-once claims.",
+    "buildDuration": "Site-activity research began 08:56:21 UTC on 23 September 2026; final research-to-live duration pending verification",
+    "validationStatus": "Agent 9.5.4 synthetic transport and official-example parser validated; no licensed tenant or stock system test",
+    "experimentalReason": "Fastly account audit, legacy Next-Gen WAF stored attack/anomaly requests, corp administrative activity, site security events, and the separate site activity timeline are five distinct streams. The site-activity endpoint is /analytics/events, not the site security /events endpoint. Its parser uses a sanitized historical official example; collection testing uses synthetic mocks rather than a current licensed tenant. The legacy activity APIs have a 10,000-result query ceiling without a verified safe bypass. CDN access logs and all WAF traffic are excluded. Permissions, retention, late arrivals, replay, and high-volume windows prevent complete-history, lossless or exactly-once claims.",
     "categories": [
       "Cloud",
       "Custom",
@@ -27924,6 +27924,21 @@
       {
         "field": "source.geo.region_name",
         "description": "Region name.",
+        "type": "keyword"
+      },
+      {
+        "field": "fastly.ngwaf_site_activity.corp",
+        "description": "Configured Next-Gen WAF corporation name used as the event scope.",
+        "type": "keyword"
+      },
+      {
+        "field": "fastly.ngwaf_site_activity.raw",
+        "description": "Full vendor site-activity record with internal collector context removed.",
+        "type": "flattened"
+      },
+      {
+        "field": "fastly.ngwaf_site_activity.site",
+        "description": "Configured Next-Gen WAF site name used as the event scope.",
         "type": "keyword"
       }
     ],
@@ -40819,7 +40834,7 @@
       },
       {
         "field": "threat.technique.id",
-        "description": "The id of technique used by this threat. You can use a MITRE ATT&CK\u00ae technique, for example. (ex. https://attack.mitre.org/techniques/T1059/)",
+        "description": "The id of technique used by this threat. You can use a MITRE ATT&CK® technique, for example. (ex. https://attack.mitre.org/techniques/T1059/)",
         "type": "keyword"
       },
       {
@@ -42475,17 +42490,17 @@
       },
       {
         "field": "threat.tactic.id",
-        "description": "The id of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
+        "description": "The id of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
         "type": "keyword"
       },
       {
         "field": "threat.tactic.name",
-        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
+        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
         "type": "keyword"
       },
       {
         "field": "threat.tactic.reference",
-        "description": "The reference url of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
+        "description": "The reference url of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/ )",
         "type": "keyword"
       },
       {
@@ -46415,7 +46430,7 @@
       },
       {
         "field": "cisco.umbrella.traffic_source",
-        "description": "The source of the user-generated traffic (0-Unknown, 1-VPN,2\u2013ZTNA or 3-Network Tunnel).",
+        "description": "The source of the user-generated traffic (0-Unknown, 1-VPN,2–ZTNA or 3-Network Tunnel).",
         "type": "keyword"
       },
       {
@@ -49645,7 +49660,7 @@
       },
       {
         "field": "threat.tactic.name",
-        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK\u00ae tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
+        "description": "Name of the type of tactic used by this threat. You can use a MITRE ATT&CK® tactic, for example. (ex. https://attack.mitre.org/tactics/TA0002/)",
         "type": "keyword"
       },
       {
@@ -50323,7 +50338,7 @@
       },
       {
         "field": "salesforce.setup_audit_trail.display",
-        "description": "The full description of changes made in Setup. For example, if the Action field has a value of PermSetCreate, the Display field might be \u201cCreated permission set MAD: with user license Salesforce.\u201d",
+        "description": "The full description of changes made in Setup. For example, if the Action field has a value of PermSetCreate, the Display field might be “Created permission set MAD: with user license Salesforce.”",
         "type": "keyword"
       },
       {
@@ -51068,7 +51083,7 @@
   },
   {
     "slug": "dmp_entre",
-    "name": "DMP Entr\u00e9",
+    "name": "DMP Entré",
     "description": "Collect the experimental schema-tolerant file records.",
     "version": "0.1.0",
     "created": "30 August 2026",
@@ -57259,7 +57274,7 @@
       },
       {
         "field": "entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -57354,7 +57369,7 @@
       },
       {
         "field": "user.entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -57674,7 +57689,7 @@
       },
       {
         "field": "host.entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -59353,7 +59368,7 @@
       },
       {
         "field": "entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -59363,7 +59378,7 @@
       },
       {
         "field": "host.entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -60196,7 +60211,7 @@
       },
       {
         "field": "entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -60226,7 +60241,7 @@
       },
       {
         "field": "host.entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -64085,7 +64100,7 @@
       },
       {
         "field": "entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -64150,7 +64165,7 @@
       },
       {
         "field": "user.entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -64628,7 +64643,7 @@
       },
       {
         "field": "trend_micro_apex_central.Predictive_Machine_Learning.cn1",
-        "description": "ThreatType vendor code 35140\u201335160; source 1 is undefined and retained.",
+        "description": "ThreatType vendor code 35140–35160; source 1 is undefined and retained.",
         "type": "keyword"
       },
       {
@@ -65530,7 +65545,7 @@
       },
       {
         "field": "entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
@@ -66998,7 +67013,7 @@
       },
       {
         "field": "threat.technique.name",
-        "description": "The name of technique used by this threat. You can use a MITRE ATT&CK\u00ae technique, for example. (ex. https://attack.mitre.org/techniques/T1059/)",
+        "description": "The name of technique used by this threat. You can use a MITRE ATT&CK® technique, for example. (ex. https://attack.mitre.org/techniques/T1059/)",
         "type": "keyword"
       },
       {
@@ -67602,7 +67617,7 @@
       },
       {
         "field": "entity.type",
-        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value \u2014 for example, `host` or `cloud`.",
+        "description": "A standardized high-level classification of the entity. This provides a normalized way to group similar entities across different providers or systems. Example values: `bucket`, `database`, `container`, `function`, `queue`, `host`, `user`, `application`, `session`, `cloud`, `orchestrator`, etc. If an entity is nested under a top-level namespace like `host` or `cloud`, or similar, its type array should include the matching value — for example, `host` or `cloud`.",
         "type": "keyword"
       },
       {
