@@ -27575,7 +27575,7 @@
     "description": "Collect account audit, legacy stored attack/anomaly requests, corp administrative activity, and site-scoped security events; licensed-live compatibility, full WAF coverage, and lossless collection remain unvalidated.",
     "version": "0.4.0",
     "created": "23 September 2026",
-    "buildDuration": "Research-to-publication timing in [site-event evidence](research_results/fastly_ngwaf/site-events-plan-and-timing.md); live deployment tracked separately",
+    "buildDuration": "56 minutes 16 seconds site-event research through live Pages verification; 3 hours 34 minutes 46 seconds from first Fastly research",
     "validationStatus": "Agent 9.5.4 synthetic transport and pipeline validated; no licensed tenant or stock system test",
     "experimentalReason": "Fastly account audit, legacy Next-Gen WAF stored attack/anomaly requests, corp administrative activity, and site security events are four distinct streams. The site-event endpoint is site-scoped, not corp activity or site activity. Site-event parsing uses a sanitized historical official example and collection uses synthetic mocks and Agent tests; no current licensed tenant was tested. The site-event API has a 10,000-result query ceiling with no verified safe bypass. CDN access logs, all WAF traffic, and site activity are excluded. Retention, late arrivals, replay, and high-volume windows prevent complete-history, lossless or exactly-once claims.",
     "categories": [
