@@ -27571,19 +27571,22 @@
   },
   {
     "slug": "fastly",
-    "name": "Fastly Account Audit Logs",
-    "description": "Collect Fastly account Event logs through bounded closed-window page-number CEL traversal; exact-head official-document parser and synthetic TLS collector validation passed while licensed-live completeness and lossless guarantees remain on hold.",
-    "version": "0.1.0",
-    "created": "23 August 2026",
-    "buildDuration": "~2 hours 15 minutes",
-    "validationStatus": "Static validated",
-    "experimentalReason": "",
+    "name": "Fastly Account Audit and Next-Gen WAF Request Feed",
+    "description": "Collect account audit events and legacy Signal Sciences stored attack/anomaly requests through separate API streams; licensed-live compatibility, full WAF coverage, and lossless collection remain unvalidated.",
+    "version": "0.2.0",
+    "created": "23 September 2026",
+    "buildDuration": "58 minutes research through validation; publication tracked separately",
+    "validationStatus": "Agent mock validated",
+    "experimentalReason": "Fastly account audit and legacy Signal Sciences Next-Gen WAF request-feed collection are separate API streams with different credentials. The WAF stream collects stored attack/anomaly requests, not every HTTP request. Vendor documentation and an official-derived repaired JSON example support bounded collection and parsing; synthetic mock and Agent tests do not establish current licensed-tenant compatibility. WAF corp activity, site events, site activity, CDN access logs and full request traffic are excluded. The short WAF extraction horizon, expiring page cursors and replay mean no complete-history, lossless or exactly-once guarantee.",
     "categories": [
+      "Cloud",
       "Custom",
       "Elastic Agent Enabled",
+      "Network",
       "Security"
     ],
     "solutions": [
+      "Observability",
       "Security"
     ],
     "capabilities": [
@@ -27762,8 +27765,59 @@
         "field": "user.id",
         "description": "Unique identifier of the user.",
         "type": "keyword"
+      },
+      {
+        "field": "fastly.ngwaf_request.corp",
+        "description": "Configured Fastly corp name for this request-feed collection.",
+        "type": "keyword"
+      },
+      {
+        "field": "fastly.ngwaf_request.raw",
+        "description": "Complete vendor request record, excluding internal collector context. Nested leaf values are keyword-indexed; the original JSON structure remains in _source.",
+        "type": "flattened"
+      },
+      {
+        "field": "fastly.ngwaf_request.site",
+        "description": "Configured Fastly site name for this request-feed collection.",
+        "type": "keyword"
+      },
+      {
+        "field": "http.request.method",
+        "description": "HTTP request method. The value should retain its casing from the original event. For example, `GET`, `get`, and `GeT` are all considered valid values for this field.",
+        "type": "keyword"
+      },
+      {
+        "field": "http.response.body.bytes",
+        "description": "Size in bytes of the response body.",
+        "type": "long"
+      },
+      {
+        "field": "http.response.status_code",
+        "description": "HTTP response status code.",
+        "type": "long"
+      },
+      {
+        "field": "observer.name",
+        "description": "Custom name of the observer. This is a name that can be given to an observer. This can be helpful for example if multiple firewalls of the same model are used in an organization. If no custom name is needed, the field can be left empty.",
+        "type": "keyword"
+      },
+      {
+        "field": "url.path",
+        "description": "Path of the request, such as \"/search\".",
+        "type": "wildcard"
+      },
+      {
+        "field": "user_agent.original",
+        "description": "Unparsed user_agent string.",
+        "type": "keyword"
+      },
+      {
+        "field": "user_agent.original.text",
+        "description": "Multi-field of `user_agent.original`.",
+        "type": "match_only_text"
       }
-    ]
+    ],
+    "status": "Experimental"
   },
   {
     "slug": "launchdarkly",
