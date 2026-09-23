@@ -331,3 +331,22 @@ test("publishes bounded Alibaba CloudMonitor agentless ECS metrics", () => {
   assert.ok(item.fields.some((field) => field.field === "alibaba_cloudmonitor.ecs.cpu.utilization.average" && field.type === "double"));
   assert.ok(item.fields.some((field) => field.field === "alibaba_cloudmonitor.ecs.disk.write.operations_per_second.maximum" && field.type === "double"));
 });
+
+test("publishes bounded Tencent Cloud Monitor CVM metrics", () => {
+  const item = custom.find((record) => record.slug === "tencent_cloudmonitor");
+  assert.equal(item.name, "Tencent Cloud Monitor CVM Metrics");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.match(item.buildDuration, /research timestamp through final PR-linked package validation/);
+  assert.match(item.validationStatus, /Agent 9\.5\.4 mocked six-point collection and indexing/);
+  assert.equal(item.icon, "tencent-cloud-monitor.svg");
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/tencent_cloudmonitor");
+  assert.match(item.experimentalReason, /synthetic timestamp adaptations/);
+  assert.match(item.experimentalReason, /API window inclusivity/);
+  assert.deepEqual(item.categories, ["Cloud", "Custom", "Elastic Agent Enabled", "Monitoring"]);
+  assert.deepEqual(item.solutions, ["Observability"]);
+  assert.deepEqual(item.capabilities, ["Metrics"]);
+  assert.equal(item.fields.length, 22);
+  assert.ok(item.fields.some((field) => field.field === "tencent_cloudmonitor.cvm_metrics.value" && field.type === "double"));
+  assert.ok(item.fields.some((field) => field.field === "cloud.instance.id" && field.type === "keyword"));
+});
