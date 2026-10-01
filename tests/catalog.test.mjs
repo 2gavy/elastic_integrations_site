@@ -266,10 +266,11 @@ test("publishes the Experimental Microsoft Entra ID Graph integration with its o
 test("publishes Microsoft Graph Activity Logs without Event Hub and with its official icon", () => {
   const item = custom.find((record) => record.slug === "microsoft_graph_activity_logs");
   assert.equal(item.name, "Microsoft Graph Activity Logs");
-  assert.equal(item.version, "0.1.0");
+  assert.equal(item.version, "0.1.1");
   assert.equal(item.status, "Experimental");
-  assert.equal(item.buildDuration, "1 hour 21 minutes 32 seconds (measured)");
-  assert.match(item.validationStatus, /system collection validated/);
+  assert.equal(item.buildDuration, "1 hour 21 minutes 32 seconds (initial release; patch duration not recorded)");
+  assert.match(item.validationStatus, /seven CEL\/query-contract regression tests passed/);
+  assert.match(item.validationStatus, /live Azure collection remains unverified/);
   assert.equal(item.icon, "microsoft_graph_activity_logs.svg");
   assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/microsoft_graph_activity_logs");
   assert.match(item.experimentalReason, /Log Analytics mock contract/);
