@@ -41,17 +41,25 @@ test("contains the complete official catalogue", () => {
   assert.ok(official.some((item) => item.solutions.includes("Observability")));
 });
 
-test("publishes Netskope 3.2.4 with Experimental scoped to API collection", () => {
-  const item = custom.find((record) => record.slug === "netskope");
+test("publishes one custom Netskope collector retaining the official v2 contract", () => {
+  const item = custom.find((record) => record.slug === "netskope_api");
   assert.ok(item);
-  assert.equal(item.version, "3.2.4");
-  assert.match(item.description, /REST API v2 \(Experimental\)/);
-  assert.match(item.description, /existing TCP\/cloud-storage inputs/);
-  assert.equal(item.status, undefined);
-  assert.match(item.validationStatus, /legacy static gaps/);
-  assert.match(item.validationStatus, /Agent 9\.5\.3 recovery and known-limit verification/);
+  assert.equal(custom.filter((record) => /netskope/i.test(record.name)).length, 1);
+  assert.ok(!custom.some((record) => record.slug === "netskope"));
+  assert.equal(item.name, "Netskope API Collector");
+  assert.equal(item.version, "0.1.0");
+  assert.match(item.description, /REST API v2/);
+  assert.match(item.description, /official Netskope 3\.3\.1/);
+  assert.equal(item.status, "Experimental");
+  assert.match(item.validationStatus, /Agent 9\.5\.4/);
+  assert.match(item.validationStatus, /live tenant and customer detections unvalidated/);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/netskope_api");
+  assert.equal(item.fields.length, 6);
+  assert.ok(item.fields.some((field) => field.field === "data_stream.dataset"));
+  assert.ok(item.fields.some((field) => field.field === "event.module"));
   assert.match(item.buildDuration, /measured/);
   assert.equal(item.icon, "netskope-logo.svg");
+  assert.doesNotMatch(JSON.stringify(item), /\.zip|api_token|create_dataset_templates|\/Users\/|\/private\/tmp\/|singtel-asoc/i);
 });
 
 test("publishes Salesforce as a separate custom fork", () => {
