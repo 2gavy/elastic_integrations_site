@@ -6,6 +6,28 @@ import { selectDestination } from "../scripts/refresh-official.mjs";
 const official = JSON.parse(await readFile(new URL("../public/data/official.json", import.meta.url), "utf8"));
 const custom = JSON.parse(await readFile(new URL("../public/data/custom.json", import.meta.url), "utf8"));
 
+test("publishes best-effort Hillstone with explicit evidence and privacy bounds", () => {
+  const matches = custom.filter((record) => record.slug === "hillstone_firewall");
+  assert.equal(matches.length, 1);
+  const item = matches[0];
+  assert.equal(item.name, "Hillstone Firewall");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.deepEqual(item.capabilities, ["Logs"]);
+  assert.deepEqual(item.solutions, ["Security"]);
+  assert.equal(item.fields.length, 62);
+  assert.ok(item.fields.some((field) => field.field === "source.ip" && field.type === "ip"));
+  assert.ok(item.fields.some((field) => field.field === "event.original" && field.type === "keyword"));
+  assert.match(item.experimentalReason, /44243630 SESSION-end/);
+  assert.match(item.experimentalReason, /wire framing remain unvalidated/);
+  assert.match(item.experimentalReason, /Native Block close reason is not a policy decision/);
+  assert.match(item.experimentalReason, /counter direction is unverified/);
+  assert.match(item.experimentalReason, /no complete-coverage or exactly-once guarantee/);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/hillstone_firewall");
+  assert.equal(item.icon, "firewall.svg");
+  assert.doesNotMatch(JSON.stringify(item), /\.zip|README\.md|\/Users\/|\/private\/tmp\/|singtel-asoc|53550->|2812242182000999/i);
+});
+
 test("publishes bounded AIDE reports without exposing private implementation", () => {
   const matches = custom.filter((record) => record.slug === "aide");
   assert.equal(matches.length, 1);
