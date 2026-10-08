@@ -6,6 +6,25 @@ import { selectDestination } from "../scripts/refresh-official.mjs";
 const official = JSON.parse(await readFile(new URL("../public/data/official.json", import.meta.url), "utf8"));
 const custom = JSON.parse(await readFile(new URL("../public/data/custom.json", import.meta.url), "utf8"));
 
+test("publishes bounded AIDE reports without exposing private implementation", () => {
+  const matches = custom.filter((record) => record.slug === "aide");
+  assert.equal(matches.length, 1);
+  const item = matches[0];
+  assert.equal(item.name, "AIDE File Integrity Reports");
+  assert.equal(item.version, "0.1.0");
+  assert.equal(item.status, "Experimental");
+  assert.deepEqual(item.capabilities, ["Logs"]);
+  assert.deepEqual(item.solutions, ["Security"]);
+  assert.equal(item.fields.length, 40);
+  assert.ok(item.fields.some((field) => field.field === "aide.report.paths" && field.type === "keyword"));
+  assert.match(item.experimentalReason, /one event per complete report/);
+  assert.match(item.experimentalReason, /initialization is not a detected addition/);
+  assert.match(item.experimentalReason, /rotation and retention require validation/);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/aide");
+  assert.equal(item.icon, "file-integrity.svg");
+  assert.doesNotMatch(JSON.stringify(item), /\.zip|\/Users\/|\/private\/tmp\/|singtel-asoc|report_url=/i);
+});
+
 test("distinguishes bounded Huawei on-premises parsing from Huawei Cloud Firewall", () => {
   const matches = custom.filter((record) => record.slug === "huawei_firewall");
   assert.equal(matches.length, 1);
