@@ -53981,8 +53981,8 @@
   },
   {
     "slug": "huawei_cloud_cts",
-    "name": "Huawei Cloud CTS API",
-    "description": "Collect regional Huawei Cloud CTS management audit events directly using the signed v3 API, with ECS actor/action/resource context; OBS data traces, LTS logs and metrics are excluded.",
+    "name": "Huawei Cloud Trace Service (CTS) API",
+    "description": "Collect regional Huawei Cloud Trace Service management audit events directly using the signed CTS v3 API, with ECS actor/action/resource context; OBS data traces, LTS logs and metrics are excluded.",
     "version": "0.1.0",
     "created": "8 September 2026",
     "buildDuration": "2 hours 16 minutes 28 seconds focused research through validation (full elapsed); publication and cleanup recorded in release evidence",
@@ -59165,11 +59165,11 @@
   },
   {
     "slug": "trend_micro_email_security",
-    "name": "Trend Micro Email Security API",
+    "name": "Trend Micro Email Security SaaS API",
     "description": "Collect native SaaS mail tracking, policy events and protected-recipient inventory through the regional API; no extra queue or storage intermediary required.",
     "version": "0.1.0",
     "created": "21 September 2026",
-    "buildDuration": "3 hours 11 minutes 3 seconds research through final validation, including waits and review; publication and cleanup extend the recorded total",
+    "buildDuration": "3 hours 22 minutes 24 seconds full shared research through live publication and runtime/build cleanup; administrative closeout recorded separately",
     "validationStatus": "Agent 9.5.4 mocked collection and exact-ZIP ASOC pipeline/indexing checks; live Trend Micro tenant unvalidated",
     "experimentalReason": "Documentation examples support regional v1 mail tracking, policy events and protected-recipient inventory. Literal parser evidence covers accepted Delivered mail and Suspicious URLs policy events; other shapes and live tenant compatibility remain unvalidated. Inventory uses whole-list reads with collector domain/time context, not activity or deletion events. Logs have a 72-hour API horizon; recovery may replay duplicates. No complete-history, atomic-snapshot or exactly-once guarantee.",
     "categories": [

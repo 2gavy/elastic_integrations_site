@@ -6,6 +6,32 @@ import { selectDestination } from "../scripts/refresh-official.mjs";
 const official = JSON.parse(await readFile(new URL("../public/data/official.json", import.meta.url), "utf8"));
 const custom = JSON.parse(await readFile(new URL("../public/data/custom.json", import.meta.url), "utf8"));
 
+test("keeps the requested Huawei and Trend Micro releases searchable with bounded collection claims", () => {
+  const expected = {
+    huawei_cloud_cts: 69,
+    huawei_cloud_iam: 119,
+    trend_micro_email_security: 122,
+    trend_micro_apex_central: 148,
+    trend_micro_web_security: 95,
+  };
+  for (const [slug, fieldCount] of Object.entries(expected)) {
+    const matches = custom.filter((record) => record.slug === slug);
+    assert.equal(matches.length, 1);
+    const item = matches[0];
+    assert.equal(item.version, "0.1.0");
+    assert.equal(item.status, "Experimental");
+    assert.equal(item.fields.length, fieldCount);
+    assert.equal(item.repositoryUrl, `https://github.com/2gavy/elastic_integrations/tree/main/${slug}`);
+    assert.doesNotMatch(JSON.stringify(item), /\.zip|\/Users\/|\/private\/tmp\/|singtel-asoc/i);
+  }
+  const find = (slug) => custom.find((record) => record.slug === slug);
+  assert.match(find("huawei_cloud_cts").name, /Huawei Cloud Trace Service \(CTS\) API/);
+  assert.match(find("trend_micro_email_security").name, /SaaS API/);
+  assert.match(find("huawei_cloud_iam").description, /audit activity remains separate CTS/);
+  assert.match(find("trend_micro_web_security").description, /not an API collector/);
+  assert.match(find("trend_micro_apex_central").description, /seven selected/);
+});
+
 test("publishes asset-only Ingest Volume Monitor without exposing private deployment material", () => {
   const item = custom.find(record => record.slug === "ingest_volume_monitor");
   assert.equal(item?.version, "0.2.7");
