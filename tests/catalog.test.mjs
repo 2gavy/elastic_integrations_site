@@ -6,6 +6,28 @@ import { selectDestination } from "../scripts/refresh-official.mjs";
 const official = JSON.parse(await readFile(new URL("../public/data/official.json", import.meta.url), "utf8"));
 const custom = JSON.parse(await readFile(new URL("../public/data/custom.json", import.meta.url), "utf8"));
 
+test("publishes bounded Arbor Sightline metadata without private handoff content", () => {
+  const matches = custom.filter((record) => record.slug === "arbor_sightline");
+  assert.equal(matches.length, 1);
+  const item = matches[0];
+  assert.equal(item.name, "Arbor Sightline");
+  assert.equal(item.version, "1.0.0");
+  assert.equal(item.status, "Experimental");
+  assert.deepEqual(item.capabilities, ["Logs"]);
+  assert.deepEqual(item.solutions, ["Security"]);
+  for (const resource of ["device", "managed_object", "annotations", "source_ip_addresses", "traffic", "packet_size_distribution"]) {
+    assert.ok(item.fields.some((field) => field.field === `arbor_sightline.${resource}.original` && field.type === "keyword"));
+  }
+  assert.match(item.experimentalReason, /Live appliance.*unvalidated/);
+  assert.match(item.experimentalReason, /Agent 9\.4/);
+  assert.match(item.experimentalReason, /no cursor/);
+  assert.match(item.experimentalReason, /not update-in-place/);
+  assert.match(item.experimentalReason, /certificate verification is deliberately disabled/);
+  assert.equal(item.repositoryUrl, "https://github.com/2gavy/elastic_integrations/tree/main/arbor_sightline");
+  assert.equal(item.icon, "arbor_sightline.svg");
+  assert.doesNotMatch(JSON.stringify(item), /\.zip|README\.md|\/Users\/|\/private\/tmp\/|X-Arbux-APIToken|test-token|custom_arbor|correlation_api\.yaml/i);
+});
+
 test("publishes best-effort Hillstone with explicit evidence and privacy bounds", () => {
   const matches = custom.filter((record) => record.slug === "hillstone_firewall");
   assert.equal(matches.length, 1);
